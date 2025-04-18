@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Webdeal – Your Partner in Digital Solutions",
   description: "Professional digital services for your business",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
