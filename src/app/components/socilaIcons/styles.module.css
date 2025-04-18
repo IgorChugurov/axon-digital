@@ -1,0 +1,22 @@
+.imageContainer {
+  display: flex;
+  width: 32px;
+  height: 32px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 99999px;
+  overflow: hidden;
+}
+.imageContainer.size40 {
+  width: 40px;
+  height: 40px;
+}
+.image {
+  object-fit: cover;
+  /* 
+  border-radius: var(--radius-400, 16px); */
+}

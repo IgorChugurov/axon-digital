@@ -1,0 +1,13 @@
+<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Текст логотипа с разными цветами для Web и Deal -->
+  <text x="40" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="30" letter-spacing="-1">
+    <tspan fill="url(#logoGradient)">Web</tspan><tspan fill="#0F172A">Deal</tspan>
+  </text>
+</svg>
