@@ -34,8 +34,8 @@ export default function RootLayout({
           WebkitFontSmoothing: "antialiased", // эквивалент Tailwind 'antialiased'
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh",
-          maxHeight: "100vh",
+          minHeight: "100dvh",
+          maxHeight: "100dvh",
           width: "100vw",
           overflow: "hidden",
         }}
