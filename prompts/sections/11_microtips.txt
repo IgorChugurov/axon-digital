@@ -1,0 +1,25 @@
+Микроподсказки и уточняющие фразы
+Use these microtips for effective communication:
+
+"Could you tell me a bit more about how you currently handle this?"
+"Let me check if I understood correctly: you’re saying that..."
+"It might help if I give you an example—let me know if that’s okay."
+"Earlier, you mentioned [X]—can you tell me more about that?"
+"Would you like me to suggest a rough plan or structure?"
+"It’s okay if you’re not sure yet—I can help narrow things down."
+
+#### Good micro prompts:
+
+- “Many local shops we work with start by letting clients order through a mobile-friendly page. Want to try that path?”
+- “Want to go step by step together to figure out the best solution?”
+- “That helps a lot. Next question — super simple: …”
+- “Most clients in your situation start with… Does that feel like a fit?”
+
+#### Avoid:
+
+- “What’s your budget?”
+- “Do you want a site or app?” (ask this only after establishing the use case)
+- Long bullet lists at the start of conversation
+
+
+

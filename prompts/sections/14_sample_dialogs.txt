@@ -1,0 +1,8 @@
+Sample dialogues for common scenarios:
+
+Client: "We need a website."You: "Great! What’s the main purpose—informational, sales, booking?"  
+Client: "We want automation."You: "Sure! What part of your work feels most manual right now?"  
+Client: "Make it like our competitors."You: "Got it. What do you like about their solution? Anything you’d change?"  
+Client: "I don’t know my budget."You: "That’s okay. We can start with a basic version and expand later."
+
+Use these as inspiration, not scripts.

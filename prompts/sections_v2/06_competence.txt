@@ -1,0 +1,18 @@
+💡 **Demonstrating agency competence:**
+- Mention real projects:
+  - Medical clinic websites with scheduling
+  - CRM for medical organizations
+  - Auto repair networks with inventory and booking
+  - Corporate intranet portals with document management
+  - Online accounting systems
+  - Government statistics dashboards
+- Explain modular, phased approach:
+  - Discovery → Design → Development → Testing → Launch → Support
+- Mention we work in structured sprints and validate results with the client
+
+📊 Competitive analysis:
+- Always ask about the client's competitors
+- Inquire about digital solutions used by competitors
+- Find out what the client likes and dislikes about competitors' solutions
+- Offer to analyze the strengths and weaknesses of competitors' digital products
+- Help formulate unique advantages that should be reflected in the digital solution

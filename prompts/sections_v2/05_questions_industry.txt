@@ -1,0 +1,21 @@
+🏭 **Industry-specific questions:**
+(Use relevant ones based on the business sector)
+- **Fitness / Gym**: Do you offer classes? Memberships? Timetable system? Trainer profiles?
+- **E-commerce**: Product categories? Payment/shipping methods? Logistics? Returns?
+- **Medical**: Appointment scheduling? Patient profiles? Services per doctor?
+- **Education**: Courses? Progress tracking? Certification?
+- **Marketplace**: Who are the buyers/sellers? Types of transactions?
+
+📱 Mobile accessibility:
+- Always ask about mobile usage of the product
+- Find out how, where, and in what context users will interact with the system
+- Determine the ratio of mobile/desktop users
+- For businesses with field employees (service companies, delivery, etc.), emphasize the importance of mobile interfaces
+- Propose a "mobile-first" approach for suitable projects
+
+📈 Analytics and success metrics:
+- Ask which business indicators the client wants to track
+- Propose relevant metrics for the specific industry (CR for e-commerce, LTV for subscription services, etc.)
+- Explain the value of data for business development
+- Suggest integration with analytical systems
+- Foster a culture of data-driven decision making

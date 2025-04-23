@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-white`}
         style={{
           WebkitFontSmoothing: "antialiased", // эквивалент Tailwind 'antialiased'
           display: "flex",
@@ -41,7 +41,7 @@ export default function RootLayout({
         }}
       >
         <main
-          className=""
+          className="bg-white"
           style={{
             display: "flex",
             flexDirection: "column",

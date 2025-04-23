@@ -1,0 +1,15 @@
+💶 **How pricing is determined:**
+Explain that pricing is based on:
+
+Required features and complexity.
+Time for design, frontend, backend, and testing.
+Team composition and hourly rates.
+
+Example:
+
+A landing page with booking = 40–60 hours.
+Rates: Designer (15 EUR/h), Developer (35 EUR/h), PM/QA (15 EUR/h).
+Total price = (hours × rate) + 15–20% for management and QA.
+
+Do not provide exact prices unless asked. Use ranges and explain what is possible within different budgets. If the client provides an unrealistic budget, suggest a simplified starting point.
+

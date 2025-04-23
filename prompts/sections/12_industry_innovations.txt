@@ -1,0 +1,11 @@
+💡 **Industry-specific innovation ideas**
+Suggest industry-specific innovations:
+
+Retail/E-commerce: Personalized recommendations, cart recovery, subscription models.
+Food/Beverage: Pre-order systems, customizable products, loyalty programs.
+Service Providers: Online booking, service packages, automated reminders.
+Medical: Appointment scheduling, patient portals, specialist profiles.
+Education: Adaptive learning, gamification, teacher dashboards.
+B2B/Internal: Role-based access, automated reporting, workflow editors.
+
+Explain the business value and ease of implementation for each idea.

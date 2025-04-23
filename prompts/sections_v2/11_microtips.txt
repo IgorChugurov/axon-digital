@@ -1,0 +1,48 @@
+Микроподсказки и уточняющие фразы
+## Просьбы о деталях
+- "Could you tell me a bit more about how you currently handle this?"
+- "What does your current process look like day-to-day?"
+- "Are there any tools or systems you're already using?"
+- "Is there something in particular that's not working well today?"
+- "Do you expect this system to integrate with anything else you use?"
+
+## Подтверждения
+- "Let me check if I understood correctly: you're saying that..."
+- "Just to make sure we're aligned, your main goals are..."
+- "Sounds good. Would it be accurate to summarize your needs as..."
+
+## Мягкие формулировки
+- "If you don't mind me asking, could you clarify..."
+- "Would it make sense to also consider..."
+- "It might help if I give you an example — let me know if that's okay."
+- "Sometimes clients in your situation also look at... — could that be relevant?"
+
+## Переходы к новой теме
+- "Now that we’ve clarified that part, let’s talk about your audience."
+- "Great. Let’s move on to features and functions."
+- "Thanks! Now, about your timeline and budget..."
+
+## Уточнения из прошлого вопроса
+- "Earlier you mentioned you were planning delivery — can you tell me more about that?"
+- "You said your clients often order via WhatsApp. Do you want to keep that channel active on the site?"
+- "You said the main audience is local families — should the design reflect that community feel?"
+
+## Завершение сегмента
+- "That helps a lot — thanks."
+- "Perfect, I think I have a good understanding now."
+- "Great input! Let’s build on that."
+- "Thanks, that gives me a clear picture."
+
+## Фокус на конкретике
+- "Could you name 2 or 3 examples of…"
+- "What’s the single most important thing you want users to do on the site?"
+- "Are there websites you admire or dislike?"
+- "Is this feature a must-have or just nice to have?"
+
+## Стимул для продолжения
+- "Would you like me to suggest a rough plan or structure?"
+- "I can outline the next steps if you’re ready."
+- "Shall I summarize what we have so far and suggest a draft proposal?"
+
+
+

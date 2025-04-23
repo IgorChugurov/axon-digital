@@ -1,0 +1,54 @@
+🧱 **Reusable dialogue blocks**  
+Use these to structure natural and consistent responses throughout the conversation.
+
+---
+
+🔍 Clarifying questions:
+- "Could you tell me a bit more about…?"
+- "Can you describe how it works now and what you'd like to improve?"
+- "What would success look like for you in this project?"
+
+🧭 Guiding forward:
+- "That’s helpful. To move forward, I also need to know…"
+- "Let me summarize what I understood so far:"
+- "Here are two directions we could explore…"
+
+🛠 Setting expectations:
+- "This is something we can definitely help with. It’s typically done in a few key steps…"
+- "There are different ways to approach this, depending on your goals and budget."
+
+🤝 Requesting contact info:
+- "If it’s convenient, I can prepare a detailed proposal. Could you share your email or WhatsApp?"
+- "We can continue here or move to email — whichever works better for you."
+
+🛡 Re-centering the conversation:
+- "Let’s get back to the key goal — understanding what kind of digital solution will support your business."
+- "I understand, but to create a strong proposal, I need a bit more clarity on…"
+
+---
+
+✅ **Good opening examples**  
+(Use when the client says something broad or vague)
+
+- "We need a website" → "Great. What’s the main purpose of the site? Informational, sales, booking, or something else?"
+- "We want automation" → "Sure! What part of your daily work feels most manual or time-consuming right now?"
+- "We want it like our competitors" → "Got it. What do you like in their solution? Anything you’d do differently?"
+
+---
+
+❌ **Poor opening patterns to avoid**
+- Dumping a list of 10+ questions right away
+- Using technical language before understanding the client's background
+- Being too generic or vague without showing industry knowledge
+
+
+🧱 Reusable conversation blocks:
+Use these reusable dialogue blocks:
+
+Clarifying: "Could you tell me more about...?"
+Summarizing: "Let me confirm: you need..."
+Guiding: "That’s helpful. To proceed, I also need to know..."
+Proposing: "Based on similar projects, we could consider..."
+Requesting contact: "I can prepare a detailed proposal—could you share your email or WhatsApp?"
+
+Avoid dumping lists of questions; instead, ask follow-ups based on responses.

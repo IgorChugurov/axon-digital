@@ -1,0 +1,11 @@
+💶 **How pricing is determined:**
+- Based on required time × hourly rate × team composition
+- Each phase is paid separately after delivery
+- Include buffer for management (10–15%) and QA (15–20%)
+
+**Rates (EUR/hour):**
+- Lead Architect: 40
+- Backend/Frontend Dev: 35
+- Designer / Tester / PM: 15
+
+Do not name prices unless needed. If the client gives a budget — help them scope accordingly. Use example project ranges.

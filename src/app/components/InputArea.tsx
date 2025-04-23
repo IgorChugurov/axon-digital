@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Loader2, Mic, SendHorizontal, RefreshCw } from "lucide-react";
 import TextareaAutosize from "react-textarea-autosize";
 
 interface Props {
   input: string;
-  setInput: (input: string) => void;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
   loading: boolean;
   handleSendMessage: (textOverride?: string) => void;
   resetThread: () => void;
@@ -14,6 +14,17 @@ interface Props {
   setIsListening: (isListening: boolean) => void;
   messagesLength: number;
 }
+
+const supportedLanguages = [
+  { code: "en-US", label: "English", flag: "🇬🇧" },
+  { code: "ru-RU", label: "Русский", flag: "🇷🇺" },
+  { code: "uk-UA", label: "Українська", flag: "🇺🇦" },
+  { code: "de-DE", label: "Deutsch", flag: "🇩🇪" },
+  { code: "sq-AL", label: "Shqip", flag: "🇦🇱" },
+  { code: "es-ES", label: "Español", flag: "🇪🇸" },
+  { code: "fr-FR", label: "Français", flag: "🇫🇷" },
+  { code: "it-IT", label: "Italiano", flag: "🇮🇹" },
+];
 
 export const InputArea = ({
   input,
@@ -25,9 +36,19 @@ export const InputArea = ({
   setIsListening,
   messagesLength,
 }: Props) => {
+  const [language, setLanguage] = useState<string | null>(null);
+  const [languagePickerOpen, setLanguagePickerOpen] = useState(false);
   const recognitionRef = useRef<any>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
+    const storedLang = localStorage.getItem("preferredLang");
+    if (storedLang) setLanguage(storedLang);
+  }, []);
+
+  useEffect(() => {
+    if (!language) return;
+
     const SpeechRecognition =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition;
@@ -35,18 +56,15 @@ export const InputArea = ({
     if (!SpeechRecognition) return;
 
     const recognition = new SpeechRecognition();
-    recognition.lang = navigator.language.startsWith("ru")
-      ? "ru-RU"
-      : navigator.language.startsWith("de")
-      ? "de-DE"
-      : "en-US";
-
+    recognition.lang = language || "en-US";
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
 
     recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript;
-      handleSendMessage(transcript);
+      console.log("transcript", transcript);
+      setInput((prev) => prev + " " + transcript);
+      //handleSendMessage(transcript);
     };
 
     recognition.onstart = () => setIsListening(true);
@@ -54,9 +72,13 @@ export const InputArea = ({
     recognition.onerror = () => setIsListening(false);
 
     recognitionRef.current = recognition;
-  }, [handleSendMessage, setIsListening]);
+  }, [language, handleSendMessage, setIsListening]);
 
   const toggleListening = () => {
+    if (!language) {
+      setLanguagePickerOpen(true);
+      return;
+    }
     if (!recognitionRef.current) return;
     if (isListening) {
       recognitionRef.current.stop();
@@ -64,11 +86,33 @@ export const InputArea = ({
       recognitionRef.current.start();
     }
   };
+  //console.log(language);
+
+  const handleSelectLanguage = (code: string) => {
+    //localStorage.setItem("preferredLang", code);
+    setLanguage(code);
+    setLanguagePickerOpen(false);
+  };
 
   return (
     <>
       <div className="relative pb-8 flex flex-col rounded-lg border border-gray-300 bg-gray-50 shadow-sm">
+        {languagePickerOpen && (
+          <div className="absolute bottom-16 left-3 z-10 flex flex-wrap gap-2 bg-white p-3 rounded-lg shadow-md">
+            {supportedLanguages.map((lang) => (
+              <button
+                key={lang.code}
+                className="text-sm px-2 py-1 rounded hover:bg-gray-200"
+                onClick={() => handleSelectLanguage(lang.code)}
+              >
+                {lang.flag} {lang.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         <TextareaAutosize
+          ref={textareaRef}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
@@ -77,19 +121,41 @@ export const InputArea = ({
               handleSendMessage();
             }
           }}
+          onFocus={() => {
+            setTimeout(() => {
+              textareaRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+              });
+            }, 300);
+          }}
           maxRows={10}
-          className="w-full py-3 pl-3 pr-12 pb-6 text-sm resize-none outline-none min-h-[50px] max-h-[300px] overflow-auto text-gray-900 placeholder-gray-400"
+          className="w-full py-3 pl-3 pr-12 pb-6 text-base resize-none outline-none min-h-[50px] max-h-[300px] overflow-auto text-gray-900 placeholder-gray-400"
           placeholder={
             !messagesLength
               ? "Tell me about your project, and I’ll help you create a detailed brief for its implementation."
               : "Message assistant"
           }
-          disabled={loading}
+          // placeholder={
+          //   isListening
+          //     ? `🎙 Listening...${
+          //         language
+          //           ? `   🌐 Language: ${
+          //               supportedLanguages.find((l) => l.code === language)
+          //                 ?.label
+          //             }`
+          //           : ""
+          //       }`
+          //     : !messagesLength
+          //     ? "Tell me about your project, and I’ll help you create a detailed brief for its implementation."
+          //     : "Message assistant"
+          // }
+          disabled={loading || isListening}
         />
 
-        {/* Микрофон */}
         <button
           type="button"
+          disabled={loading}
           onClick={toggleListening}
           className={`absolute right-13 bottom-2 p-2 rounded-full transition-colors ${
             isListening ? "bg-red-500 text-white" : "bg-gray-300 text-gray-600"
@@ -98,7 +164,6 @@ export const InputArea = ({
           <Mic className="w-5 h-5" />
         </button>
 
-        {/* Кнопка отправки */}
         <button
           onClick={() => handleSendMessage()}
           disabled={loading || !input.trim()}
@@ -115,7 +180,6 @@ export const InputArea = ({
           )}
         </button>
 
-        {/* Индикатор записи */}
         {isListening && (
           <div className="absolute left-14 bottom-3 text-xs text-red-500 animate-pulse">
             Listening...

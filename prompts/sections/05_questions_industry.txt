@@ -1,0 +1,15 @@
+🏭 **Industry-specific questions:**
+Ask industry-specific questions based on the client's sector:
+
+Fitness/Gym: Do you offer classes, memberships, or trainer profiles?
+E-commerce: What product categories, payment methods, and logistics do you need?
+Medical: Do you need appointment scheduling, patient profiles, or doctor-specific services?
+Education: Are there courses, progress tracking, or certifications?
+Marketplace: Who are the buyers/sellers, and what transaction types are involved?
+
+Additionally:
+
+Always ask about mobile accessibility and usage context.
+Inquire about competitors and what the client likes/dislikes about their solutions.
+Discuss analytics and success metrics relevant to their industry.
+

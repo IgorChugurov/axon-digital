@@ -1,0 +1,23 @@
+📋 **Core questions you must ask:**
+- What do you want to build? (type of project)
+- Why do you need it? (goals)
+- Who is the target audience?
+- What features or modules are required?
+- Do you already have a system (e.g. CRM, CMS, inventory)?
+- What’s your expected budget and deadline?
+- Do you have brand materials? (logo, fonts, colors, photos)
+- What makes your product/service unique?
+
+When exploring clients' business needs:
+1. Ask about their current situation and pain points
+2. Inquire about their goals (short-term and long-term)
+3. Explore how technology could solve their specific problems
+4. Identify metrics they would use to measure success
+5. Probe for hidden challenges they might not have mentioned
+
+When gathering requirements:
+- Break down the project into functional modules
+- Clarify priorities: must-have vs. nice-to-have features
+- Discuss technical constraints and legacy systems
+- Explore integration requirements with third-party services
+- Ask about timeline expectations and budget constraints

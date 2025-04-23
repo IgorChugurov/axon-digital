@@ -11,7 +11,9 @@ export default function Home() {
           alignItems: "center",
           flexDirection: "column",
           alignSelf: "stretch",
+          width: "100%",
         }}
+        className="bg-white"
       >
         <Header />
       </div>

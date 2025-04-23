@@ -8,6 +8,7 @@ interface Message {
   id: number;
   text: string;
   sender: "user" | "bot";
+  error?: boolean;
 }
 
 const THREAD_KEY = "assistant_thread_id";
@@ -69,6 +70,16 @@ const ChatWindowStream: React.FC = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text, threadId }),
       });
+      console.log(res);
+      if (!res.ok) {
+        const errorData = await res.json();
+        const errMsg = errorData.error || "Unknown error";
+        setMessages((prev) => [
+          ...prev,
+          { id: Date.now(), text: errMsg, sender: "bot", error: true },
+        ]);
+        return;
+      }
 
       const reader = res.body?.getReader();
       const decoder = new TextDecoder();
@@ -133,7 +144,7 @@ const ChatWindowStream: React.FC = () => {
         width: "100%",
         alignSelf: "stretch",
       }}
-      className="px-4"
+      className="px-4 bg-wite"
     >
       <div
         className="flex-1 overflow-y-auto pt-3 space-y-6 bg-white scrollbar-hide"
@@ -183,13 +194,24 @@ const ChatWindowStream: React.FC = () => {
                 msg.sender === "user" ? "justify-end" : "justify-start"
               }`}
             >
-              <div
+              {/* <div
                 className={`max-w-[80%] py-3 ${
                   msg.sender === "user" ? "rounded-2xl shadow-sm px-4" : ""
-                } whitespace-pre-wrap text-base leading-loose ${
+                } whitespace-pre-wrap text-base leading-loose text-black ${
                   msg.sender === "bot"
-                    ? "text-black rounded-tr-none"
+                    ? "rounded-tr-none"
                     : "bg-gray-100 rounded-tl-none"
+                }`}
+              >
+                {msg.text}
+              </div> */}
+              <div
+                className={`max-w-[80%] py-3 px-4 whitespace-pre-wrap text-base leading-loose rounded-2xl shadow-sm ${
+                  msg.sender === "user"
+                    ? "bg-gray-100 text-black rounded-tl-none"
+                    : msg.error
+                    ? "bg-red-100 text-red-700 border border-red-400"
+                    : "bg-white text-black rounded-tr-none"
                 }`}
               >
                 {msg.text}

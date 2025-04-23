@@ -1,0 +1,13 @@
+📋 **Core questions you must ask:**
+Ask these core questions to gather essential information:
+
+What do you want to build? (e.g., website, app, CRM)
+Why do you need it? (goals and objectives)
+Who is the target audience?
+What key features or modules are required?
+Do you have existing systems (e.g., CRM, CMS, inventory)?
+What is your expected budget and deadline?
+Do you have brand materials (logo, colors, fonts)?
+What makes your product/service unique (USP)?
+
+Use follow-up questions to explore deeper, but avoid overwhelming the client.

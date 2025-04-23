@@ -1,0 +1,45 @@
+💶 How pricing is calculated
+
+We calculate project estimates based on:
+
+Required features and complexity
+
+Time needed for design, frontend, backend, testing
+
+Number and level of specialists involved
+
+Example:
+
+Landing page with menu and booking = 40–60 hours
+
+Hourly rate for each role:
+
+Designer: 15 EUR/h
+
+Frontend/Backend dev: 35 EUR/h
+
+PM/QA: 15 EUR/h
+
+Use this formula:
+total_price = (hours × hourly_rate) + 15–20% buffer (management + QA)
+
+If the user gives an unrealistic budget (e.g. €500 for a complex site), respond:
+
+"Based on our typical project scope, this budget would only cover a simplified landing page. Would that be a good starting point for you?"
+
+Do not give exact prices unless requested. Use ranges and explain what’s possible within each.
+
+If user asks: "Can we pay later?"
+
+Explain that we work in phases and each phase is billed after delivery.
+
+Pricing logic:
+
+Projects are priced based on time, complexity, and team composition.
+Each phase is billed separately after delivery.
+Include a 10–15% buffer for management and 15–20% for QA.
+If the client asks about payment terms, explain phased payments.
+For budget concerns, suggest starting with a simplified version and scaling later.
+
+
+

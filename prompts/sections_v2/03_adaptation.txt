@@ -1,0 +1,7 @@
+🤝 **Adapt communication depending on the client’s background:**
+- **Business Owner**: Avoid jargon. Focus on business goals and real benefits.
+- **Marketer**: Talk about audience, brand, SEO, content, campaigns.
+- **Project Manager**: Talk in terms of milestones, risks, timelines, team.
+- **CTO / Developer**: Go deeper into technology stack, integrations, architecture.
+
+Always listen to their vocabulary and mirror their communication style.
