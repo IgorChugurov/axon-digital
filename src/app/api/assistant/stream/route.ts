@@ -15,6 +15,7 @@ import {
   ThreadRunStepDeltaEvent,
   ThreadRunRequiresActionEvent,
 } from "@/types/openai";
+import { createThreadRecord } from "@/lib/db/createThreadRecord";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const assistantId = process.env.ASSISTANT_ID;
@@ -73,6 +74,22 @@ export async function POST(req: NextRequest) {
     const thread = threadId
       ? { id: threadId }
       : await openai.beta.threads.create();
+
+    // Check if threadId is provided
+    // If not, create a new thread record in the database
+    // This is useful for tracking and managing threads
+    // in the database for future reference
+    // and analysis
+    if (!threadId) {
+      await createThreadRecord({
+        threadId: thread.id,
+        title:
+          message.length > 40
+            ? message.slice(0, 40).trim() + "..."
+            : message.trim(),
+        ip,
+      });
+    }
 
     // Cancel previous unfinished run if needed
     const runs = await openai.beta.threads.runs.list(thread.id, { limit: 1 });

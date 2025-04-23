@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import { SidebarDesktop } from "./components/SidebarDesktop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,13 +34,15 @@ export default function RootLayout({
         style={{
           WebkitFontSmoothing: "antialiased", // эквивалент Tailwind 'antialiased'
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           minHeight: "100dvh",
           maxHeight: "100dvh",
           width: "100vw",
           overflow: "hidden",
+          paddingBottom: "10px",
         }}
       >
+        <SidebarDesktop />
         <main
           className="bg-white"
           style={{
@@ -54,7 +57,7 @@ export default function RootLayout({
         >
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

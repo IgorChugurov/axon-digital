@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Bot } from "lucide-react";
 import { InputArea } from "./InputArea";
+import { sendMessage } from "@/utils/sendMessage";
 
 interface Message {
   id: number;
@@ -11,8 +12,7 @@ interface Message {
   error?: boolean;
 }
 
-const THREAD_KEY = "assistant_thread_id";
-const HISTORY_KEY = "assistant_chat_history";
+export const THREAD_KEY = "assistant_thread_id";
 
 const ChatWindowStream: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -24,10 +24,53 @@ const ChatWindowStream: React.FC = () => {
   const recognitionRef = useRef<SpeechRecognition | null>(null);
 
   useEffect(() => {
-    const savedHistory = localStorage.getItem(HISTORY_KEY);
+    const getMessages = async (threadId: string) => {
+      fetch(`/api/conversations/${threadId}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (Array.isArray(data)) {
+            const messages: Message[] = data.map((msg) => {
+              return {
+                id: new Date(msg.timestamp).getTime(),
+                text: msg.content,
+                sender: msg.role === "assistant" ? "bot" : "user",
+              };
+            });
+            setMessages(messages);
+          } else {
+            setMessages([]);
+          }
+        })
+        .catch(() => {
+          setMessages([]);
+        });
+    };
+
     const savedThreadId = localStorage.getItem(THREAD_KEY);
-    if (savedThreadId) setThreadId(savedThreadId);
-    if (savedHistory) setMessages(JSON.parse(savedHistory));
+    if (savedThreadId) {
+      setThreadId(savedThreadId);
+      getMessages(savedThreadId);
+    }
+
+    const handleSelectThreadHandler = (event: CustomEvent) => {
+      const { detail } = event;
+      if (detail) {
+        setThreadId(detail);
+        getMessages(detail);
+      }
+    };
+
+    window.addEventListener(
+      "selectThread",
+      handleSelectThreadHandler as EventListener
+    );
+
+    return () => {
+      window.removeEventListener(
+        "selectThread",
+        handleSelectThreadHandler as EventListener
+      );
+    };
   }, []);
 
   useEffect(() => {
@@ -62,7 +105,6 @@ const ChatWindowStream: React.FC = () => {
     setMessages(newMessages);
     setInput("");
     setLoading(true);
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(newMessages));
 
     try {
       const res = await fetch("/api/assistant/stream", {
@@ -70,7 +112,7 @@ const ChatWindowStream: React.FC = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text, threadId }),
       });
-      console.log(res);
+      //console.log(res);
       if (!res.ok) {
         const errorData = await res.json();
         const errMsg = errorData.error || "Unknown error";
@@ -103,16 +145,8 @@ const ChatWindowStream: React.FC = () => {
       if (newThreadId && newThreadId !== threadId) {
         setThreadId(newThreadId);
         localStorage.setItem(THREAD_KEY, newThreadId);
+        sendMessage("threadCreated");
       }
-
-      setTimeout(() => {
-        localStorage.setItem(
-          HISTORY_KEY,
-          JSON.stringify(
-            messages.concat({ id: botId, text: reply, sender: "bot" })
-          )
-        );
-      }, 300);
     } catch {
       setMessages((prev) => [
         ...prev,
@@ -125,7 +159,6 @@ const ChatWindowStream: React.FC = () => {
 
   const resetThread = () => {
     localStorage.removeItem(THREAD_KEY);
-    localStorage.removeItem(HISTORY_KEY);
     setThreadId(undefined);
     setMessages([]);
   };

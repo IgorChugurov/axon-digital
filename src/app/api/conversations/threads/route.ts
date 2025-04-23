@@ -1,29 +1,29 @@
-import { NextResponse } from "next/server";
-import { MongoClient } from "mongodb";
+// src/app/api/conversations/threads/route.ts
+import { NextRequest, NextResponse } from "next/server";
+import { getMongoClient, getDatabase } from "@/lib/db/client";
+import { extractClientIp } from "@/utils/getClientIp";
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost:27017";
-const dbName = "chatlogs";
-const collectionName = "messages";
+export async function GET(req: NextRequest) {
+  const ip = extractClientIp(req);
 
-export async function GET() {
+  if (!ip) {
+    return NextResponse.json([]); // Return empty list if IP not available
+  }
+
   try {
-    const client = new MongoClient(uri);
-    await client.connect();
-    const db = client.db(dbName);
-    const collection = db.collection(collectionName);
+    const client = await getMongoClient();
+    const db = getDatabase(client);
+    const collection = db.collection("threads");
 
     const threads = await collection
-      .aggregate([
-        { $group: { _id: "$threadId", latest: { $max: "$timestamp" } } },
-        { $sort: { latest: -1 } },
-      ])
+      .find({ ip })
+      .sort({ createdAt: -1 })
+      .project({ _id: 0 })
       .toArray();
-
-    await client.close();
 
     return NextResponse.json({ threads });
   } catch (error) {
-    console.error("Failed to fetch thread list:", error);
+    console.error("❌ Failed to fetch thread list:", error);
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }

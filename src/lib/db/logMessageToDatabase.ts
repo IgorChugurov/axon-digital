@@ -1,18 +1,5 @@
-import { MongoClient } from "mongodb";
-
-const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-const DB_NAME = "chatlogs";
-const COLLECTION = "messages";
-
-let cachedClient: MongoClient | null = null;
-
-async function getClient(): Promise<MongoClient> {
-  if (cachedClient) return cachedClient;
-  const client = new MongoClient(MONGO_URI);
-  await client.connect();
-  cachedClient = client;
-  return client;
-}
+// src/lib/db/logMessageToDatabase.ts
+import { getMongoClient, getDatabase } from "@/lib/db/client";
 
 export interface LogMessageInput {
   threadId: string;
@@ -24,9 +11,9 @@ export interface LogMessageInput {
 
 export async function logMessageToDatabase(data: LogMessageInput) {
   try {
-    const client = await getClient();
-    const db = client.db(DB_NAME);
-    const collection = db.collection(COLLECTION);
+    const client = await getMongoClient();
+    const db = getDatabase(client);
+    const collection = db.collection("messages");
 
     await collection.insertOne({
       threadId: data.threadId,

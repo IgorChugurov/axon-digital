@@ -9,7 +9,7 @@ const collectionName = "messages";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    console.log(body);
+
     const { threadId, role, content, timestamp = new Date() } = body;
 
     if (!threadId || !role || !content) {

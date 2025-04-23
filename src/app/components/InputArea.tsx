@@ -193,7 +193,7 @@ export const InputArea = ({
           className="flex items-center gap-1 hover:text-gray-600 transition-colors"
         >
           <RefreshCw className="h-3 w-3" />
-          <span>Clean history</span>
+          <span>New conversation</span>
         </button>
       </div>
     </>

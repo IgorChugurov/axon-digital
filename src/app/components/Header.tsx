@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import SocialIcon from "./socilaIcons/SocialIcon";
+import ButtonForLeftPanel from "./ButtonForLeftPanel";
 
 export default function Header() {
   return (
@@ -15,12 +16,14 @@ export default function Header() {
         height: "50px",
       }}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center align-center items-center pl-4">
+        <ButtonForLeftPanel hideWhenExpand={true} />
+
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.svg"
             alt="DigiAgency Logo"
-            width={180}
+            width={100}
             height={50}
             className="h-12 w-auto"
             priority
