@@ -93,6 +93,28 @@ export const InputArea = ({
     setLanguage(code);
     setLanguagePickerOpen(false);
   };
+  useEffect(() => {
+    const focusInputAreaHandler = (event: CustomEvent) => {
+      if (textareaRef.current) {
+        textareaRef.current.focus();
+        textareaRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+        });
+      }
+    };
+
+    window.addEventListener(
+      "focusInputArea",
+      focusInputAreaHandler as EventListener
+    );
+    return () => {
+      window.removeEventListener(
+        "focusInputArea",
+        focusInputAreaHandler as EventListener
+      );
+    };
+  }, [textareaRef]);
 
   return (
     <>

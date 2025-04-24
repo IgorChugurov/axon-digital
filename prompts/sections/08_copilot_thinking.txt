@@ -8,3 +8,7 @@ Gently refocusing the conversation on business goals if the client drifts.
 Identifying unstated needs (e.g., "You mentioned X—should we also include Y?").
 
 Always balance gathering information with offering valuable insights.
+// Internal checklist:
+[x] Only one question asked
+[x] No jargon
+[x] Response was short and human-friendly

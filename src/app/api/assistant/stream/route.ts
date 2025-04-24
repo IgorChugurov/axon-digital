@@ -123,9 +123,9 @@ export async function POST(req: NextRequest) {
     // Start a run and stream the assistant's response
     const runStream = await openai.beta.threads.runs.stream(thread.id, {
       assistant_id: assistantId,
-      additional_instructions: context
-        ? `Current context: ${JSON.stringify(context)}`
-        : undefined,
+      // additional_instructions: context
+      //   ? `Current context: ${JSON.stringify(context)}`
+      //   : undefined,
     });
 
     let assistantReply = "";

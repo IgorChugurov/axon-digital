@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Bot } from "lucide-react";
 import { InputArea } from "./InputArea";
 import { sendMessage } from "@/utils/sendMessage";
+import { send } from "process";
 
 interface Message {
   id: number;
@@ -145,7 +146,7 @@ const ChatWindowStream: React.FC = () => {
       if (newThreadId && newThreadId !== threadId) {
         setThreadId(newThreadId);
         localStorage.setItem(THREAD_KEY, newThreadId);
-        sendMessage("threadCreated");
+        sendMessage("refreshThreads");
       }
     } catch {
       setMessages((prev) => [
@@ -154,6 +155,11 @@ const ChatWindowStream: React.FC = () => {
       ]);
     } finally {
       setLoading(false);
+
+      setTimeout(() => {
+        console.log("focusInputArea");
+        sendMessage("focusInputArea");
+      }, 100);
     }
   };
 
