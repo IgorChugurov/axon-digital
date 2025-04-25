@@ -12,26 +12,24 @@ export default function Header() {
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
-        overflow: "hidden",
+
         height: "50px",
       }}
     >
-      <div className="flex justify-center align-center items-center pl-4">
+      <div className="flex justify-center align-center items-center pl-4 gap-1">
         <ButtonForLeftPanel hideWhenExpand={true} />
 
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            alt="DigiAgency Logo"
-            width={100}
-            height={50}
-            className="h-12 w-auto"
-            priority
-          />
+          <span
+            className="text-2xl text-black font-bold
+"
+          >
+            WebDeal
+          </span>
         </Link>
       </div>
 
-      <div
+      {/* <div
         style={{
           width: "190px",
           display: "flex",
@@ -48,7 +46,7 @@ export default function Header() {
         >
           <SocialIcon name="whatsapp" size={30} />
         </a>
-      </div>
+      </div> */}
     </header>
   );
 }

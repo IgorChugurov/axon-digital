@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { SidebarDesktop } from "./components/SidebarDesktop";
-
+import KeyboardAdaptiveLayout from "./components/KeyboardAdaptiveLayout/KeyboardAdaptiveLayout";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,20 +31,13 @@ export default function RootLayout({
     <html lang="ru">
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans bg-white flex flex-row text-lg`}
-        style={{
-          WebkitFontSmoothing: "antialiased", // эквивалент Tailwind 'antialiased'
-
-          height: "100dvh",
-          width: "100vw",
-          overflow: "hidden",
-          paddingBottom: "10px",
-        }}
       >
-        <SidebarDesktop />
-        <main className="flex flex-col flex-1 bg-white overflow-hidden items-center justify-center">
-          {children}
-        </main>
-        {/* <Footer /> */}
+        <KeyboardAdaptiveLayout>
+          <SidebarDesktop />
+          <main className="flex flex-col flex-1 bg-white overflow-hidden items-center justify-center">
+            {children}
+          </main>
+        </KeyboardAdaptiveLayout>
       </body>
     </html>
   );
