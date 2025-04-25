@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+
 import { SidebarDesktop } from "./components/SidebarDesktop";
 
 const geistSans = Geist({
@@ -30,31 +30,18 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-white flex flex-row text-lg`}
         style={{
           WebkitFontSmoothing: "antialiased", // эквивалент Tailwind 'antialiased'
-          display: "flex",
-          flexDirection: "row",
-          minHeight: "100dvh",
-          maxHeight: "100dvh",
+
+          height: "100dvh",
           width: "100vw",
           overflow: "hidden",
           paddingBottom: "10px",
         }}
       >
         <SidebarDesktop />
-        <main
-          className="bg-white"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: 1,
-            alignSelf: "stretch",
-            overflow: "hidden",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <main className="flex flex-col flex-1 bg-white overflow-hidden items-center justify-center">
           {children}
         </main>
         {/* <Footer /> */}

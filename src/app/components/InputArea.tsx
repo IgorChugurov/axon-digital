@@ -152,11 +152,9 @@ export const InputArea = ({
             }, 300);
           }}
           maxRows={10}
-          className="w-full py-3 pl-3 pr-12 pb-6 text-base resize-none outline-none min-h-[50px] max-h-[300px] overflow-auto text-gray-900 placeholder-gray-400"
+          className="w-full py-3 pl-3 pr-12 pb-6 text-lg resize-none outline-none min-h-[50px] max-h-[300px] overflow-auto text-gray-900 placeholder-gray-400"
           placeholder={
-            !messagesLength
-              ? "Tell me about your project, and I’ll help you create a detailed brief for its implementation."
-              : "Message assistant"
+            !messagesLength ? "Tell me about your project" : "Message assistant"
           }
           // placeholder={
           //   isListening

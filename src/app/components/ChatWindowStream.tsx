@@ -169,6 +169,10 @@ const ChatWindowStream: React.FC = () => {
     setMessages([]);
   };
 
+  const focusInputArea = () => {
+    sendMessage("focusInputArea");
+  };
+
   return (
     <div
       style={{
@@ -186,7 +190,7 @@ const ChatWindowStream: React.FC = () => {
       className="px-4 bg-wite"
     >
       <div
-        className="flex-1 overflow-y-auto pt-3 space-y-6 bg-white scrollbar-hide"
+        className="flex-1 flex flex-col overflow-y-auto pt-3 space-y-6 bg-white scrollbar-hide"
         id="chat"
       >
         {messages.length === 0 ? (
@@ -206,16 +210,22 @@ const ChatWindowStream: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <p className="text-lg" style={{ color: "#4B5563" }}>
+              <h1 className="text-4xl font-bold text-gray-900">
                 We are a digital agency — your partner in building smart digital
                 solutions. Our AI assistant makes it quick and easy to submit a
                 project request.
-              </p>
+              </h1>
             </div>
-            <div className="flex items-center justify-center h-full text-gray-400 text-center px-8">
+            <div
+              className="flex items-center justify-center  text-gray-400 text-center px-8"
+              style={{ flexDirection: "column", flex: 1, alignSelf: "stretch" }}
+            >
               <div>
                 <Bot className="h-12 w-12 mx-auto mb-4 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 bg-[length:200%_auto] bg-clip-text animate-gradient-text" />
-                <p className="text-lg font-medium mb-2 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
+                <p
+                  onClick={focusInputArea}
+                  className="cursor-pointer hover:underline text-lg font-medium mb-2 bg-gradient-to-r from-gray-600 via-gray-400 to-gray-600 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text"
+                >
                   Start a new conversation
                 </p>
                 <p className="text-lg" style={{ color: "#4B5563" }}>
