@@ -63,11 +63,16 @@ export default function KeyboardAdaptiveLayout({ children }) {
     width: "100vw",
     overflow: "hidden",
     display: "flex",
+
     ...containerStyle,
   };
 
   return (
-    <div ref={mainContainerRef} style={styles2}>
+    <div
+      ref={mainContainerRef}
+      style={styles2}
+      className="bg-white flex flex-row"
+    >
       {children}
     </div>
   );

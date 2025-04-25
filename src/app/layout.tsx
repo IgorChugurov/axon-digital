@@ -30,11 +30,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans bg-white flex flex-row text-lg`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans  text-lg`}
       >
         <KeyboardAdaptiveLayout>
           <SidebarDesktop />
-          <main className="flex flex-col flex-1 bg-white overflow-hidden items-center justify-center">
+          <main className="flex flex-col flex-1 bg-white overflow-auto">
             {children}
           </main>
         </KeyboardAdaptiveLayout>
