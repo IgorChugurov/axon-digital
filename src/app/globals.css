@@ -20,15 +20,35 @@
   }
 }
 
+/* --- КРИТИЧЕСКИ ВАЖНЫЕ СТИЛИ --- */
+html {
+  height: 100%;
+  overflow: hidden !important; /* Запрещаем скролл на уровне HTML (important для отладки) */
+  margin: 0;
+  padding: 0;
+  background: var(--background); /* Фон на весь html на случай "вытягивания" */
+  font-family: var(--font-sans); /* Устанавливаем базовый шрифт здесь */
+  color: var(--foreground); /* И базовый цвет */
+}
+
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden !important; /* Запрещаем скролл на уровне BODY (important для отладки) */
+  /* background и color наследуются от html */
+  /* font-family наследуется от html */
+  display: flex; /* Body должен растянуть __next */
+  flex-direction: column; /* Body должен растянуть __next */
 }
+
+#__next {
+  height: 100%;
+  display: flex; /* __next должен растянуть KeyboardAdaptiveLayout */
+  flex-direction: column; /* __next должен растянуть KeyboardAdaptiveLayout */
+}
+/* --- КОНЕЦ КРИТИЧЕСКИ ВАЖНЫХ СТИЛЕЙ --- */
+
 * {
   box-sizing: border-box;
 }
