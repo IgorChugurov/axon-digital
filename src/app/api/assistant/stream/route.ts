@@ -84,8 +84,8 @@ export async function POST(req: NextRequest) {
       await createThreadRecord({
         threadId: thread.id,
         title:
-          message.length > 40
-            ? message.slice(0, 40).trim() + "..."
+          message.length > 26
+            ? message.slice(0, 26).trim() + " ..."
             : message.trim(),
         ip,
       });

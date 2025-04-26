@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import SocialIcon from "./socilaIcons/SocialIcon";
 import ButtonForLeftPanel from "./ButtonForLeftPanel";
-
+import { usePathname } from "next/navigation";
 export default function Header() {
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
+  const isAbout = pathname === "/about";
   return (
     <header
       style={{
@@ -19,14 +24,13 @@ export default function Header() {
       <div className="flex justify-center align-center items-center pl-4 gap-1">
         <ButtonForLeftPanel hideWhenExpand={true} />
 
-        <Link href="/" className="flex items-center">
-          <span
-            className="text-2xl text-black font-bold
-"
-          >
-            WebDeal
-          </span>
-        </Link>
+        {isHome ? (
+          <span className="text-2xl text-black font-bold">WebDeal</span>
+        ) : (
+          <Link href="/" className="flex items-center">
+            <span className="text-2xl text-black font-bold">WebDeal</span>
+          </Link>
+        )}
       </div>
 
       {/* <div
@@ -47,6 +51,18 @@ export default function Header() {
           <SocialIcon name="whatsapp" size={30} />
         </a>
       </div> */}
+      <div className="pr-4">
+        {isAbout ? (
+          <span className="text-base text-gray-600">About</span>
+        ) : (
+          <Link
+            href="/about"
+            className="text-base text-gray-600 hover:text-gray-900 hover:underline"
+          >
+            About
+          </Link>
+        )}
+      </div>
     </header>
   );
 }

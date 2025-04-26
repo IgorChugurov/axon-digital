@@ -5,8 +5,9 @@ import { Bot } from "lucide-react";
 import { InputArea } from "./InputArea";
 import { sendMessage } from "@/utils/sendMessage";
 import { send } from "process";
+import { getMessagesFromServer } from "@/services/threads";
 
-interface Message {
+export interface Message {
   id: number;
   text: string;
   sender: "user" | "bot";
@@ -26,25 +27,8 @@ const ChatWindowStream: React.FC = () => {
 
   useEffect(() => {
     const getMessages = async (threadId: string) => {
-      fetch(`/api/conversations/${threadId}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (Array.isArray(data)) {
-            const messages: Message[] = data.map((msg) => {
-              return {
-                id: new Date(msg.timestamp).getTime(),
-                text: msg.content,
-                sender: msg.role === "assistant" ? "bot" : "user",
-              };
-            });
-            setMessages(messages);
-          } else {
-            setMessages([]);
-          }
-        })
-        .catch(() => {
-          setMessages([]);
-        });
+      const res = await getMessagesFromServer(threadId);
+      setMessages(res);
     };
 
     const savedThreadId = localStorage.getItem(THREAD_KEY);
@@ -58,6 +42,9 @@ const ChatWindowStream: React.FC = () => {
       if (detail) {
         setThreadId(detail);
         getMessages(detail);
+      } else {
+        setThreadId(undefined);
+        setMessages([]);
       }
     };
 
