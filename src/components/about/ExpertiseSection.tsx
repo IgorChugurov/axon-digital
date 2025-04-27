@@ -8,6 +8,8 @@ import {
   Building,
   Banknote,
   Activity,
+  BrainCircuit,
+  Bot,
 } from "lucide-react";
 
 interface ExpertiseSectionProps {
@@ -24,6 +26,8 @@ const iconsMap = {
   building: Building,
   banknote: Banknote,
   activity: Activity,
+  brainCircuit: BrainCircuit,
+  bot: Bot,
 };
 
 export default function ExpertiseSection({ content }: ExpertiseSectionProps) {

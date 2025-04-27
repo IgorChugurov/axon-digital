@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="py-2 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto flex   justify-between items-center">
         <div className="text-sm text-gray-500">
-          © {new Date().getFullYear()} WebDeal. All rights reserved.
+          © {new Date().getFullYear()} AxonDigital. All rights reserved.
         </div>
         <div className="flex space-x-6 items-center">
           <Link

@@ -5,8 +5,11 @@ import { SidebarDesktop } from "./components/SidebarDesktop";
 export default function Home() {
   return (
     <>
-      <Header />
-      <ChatWindowStream />
+      <SidebarDesktop />
+      <main className="flex flex-col flex-1 bg-white overflow-auto">
+        <Header />
+        <ChatWindowStream />
+      </main>
     </>
   );
 }

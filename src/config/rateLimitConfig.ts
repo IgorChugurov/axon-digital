@@ -13,6 +13,7 @@ export const RATE_LIMIT = {
     points: 60,
     duration: 60 * 60, // 1 час
   },
+  CONTACT_FORM: { points: 3, duration: 600 },
 };
 export const MAX_CHAR_LENGTH = 5000;
 export const MIN_CHAR_LENGTH = 2;

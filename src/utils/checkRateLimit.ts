@@ -1,6 +1,9 @@
-import rateLimiter from "./rateLimiter";
+import { createRateLimiter, defaultRateLimiter } from "./rateLimiter";
 
-export async function checkRateLimit(ip: string): Promise<
+export async function checkRateLimit(
+  ip: string,
+  limits?: { points: number; duration: number }
+): Promise<
   | { ok: true }
   | {
       ok: false;
@@ -9,8 +12,13 @@ export async function checkRateLimit(ip: string): Promise<
       body: string;
     }
 > {
+  const limiter = limits
+    ? createRateLimiter(limits.points, limits.duration)
+    : defaultRateLimiter;
+
   try {
-    await rateLimiter.consume(ip);
+    await limiter.consume(ip);
+
     return { ok: true };
   } catch (rateLimiterRes: any) {
     const retryAfter = Math.ceil(rateLimiterRes.msBeforeNext / 1000);

@@ -2,36 +2,11 @@ import Header from "../components/Header";
 
 export default function OfferPage() {
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          alignSelf: "stretch",
-          width: "100%",
-        }}
-        className="bg-white"
-      >
-        <Header />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          maxWidth: "48rem",
-          marginLeft: "auto",
-          marginRight: "auto",
-          overflow: "auto",
-          flex: 1,
-          position: "relative",
-          width: "100%",
-          alignSelf: "stretch",
-        }}
-        className="px-4 bg-wite"
-      >
-        <div className="flex-1 overflow-y-auto pt-3 space-y-6 bg-white scrollbar-hide">
+    <main className="flex flex-1 flex-col  bg-white overflow-auto">
+      <Header />
+
+      <div className="flex flex-col flex-1  overflow-hidden">
+        <div className="flex-1 flex flex-col overflow-y-auto  scrollbar-hide">
           <div className="max-w-4xl mx-auto py-12 px-4">
             <h1 className="text-3xl font-bold mb-8 text-center">
               Public Offer
@@ -40,7 +15,7 @@ export default function OfferPage() {
             <div className="prose prose-lg max-w-none">
               <h2>1. General Provisions</h2>
               <p>
-                This document is a public offer (proposal) of WebDeal
+                This document is a public offer (proposal) of AxonDigital
                 (hereinafter referred to as the &quot;Provider&quot;) for the
                 provision of information services on the website.
               </p>
@@ -88,6 +63,6 @@ export default function OfferPage() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }

@@ -22,13 +22,14 @@ export default function Header() {
       }}
     >
       <div className="flex justify-center align-center items-center pl-4 gap-1">
-        <ButtonForLeftPanel hideWhenExpand={true} />
-
         {isHome ? (
-          <span className="text-2xl text-black font-bold">WebDeal</span>
+          <>
+            <ButtonForLeftPanel hideWhenExpand={true} />
+            <span className="text-2xl text-black font-bold">AxonDigital</span>
+          </>
         ) : (
           <Link href="/" className="flex items-center">
-            <span className="text-2xl text-black font-bold">WebDeal</span>
+            <span className="text-2xl text-black font-bold">AxonDigital</span>
           </Link>
         )}
       </div>
