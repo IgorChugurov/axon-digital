@@ -1,38 +1,26 @@
-// src/app/api/chat/route.ts
-
 import { NextRequest } from "next/server";
-import OpenAI from "openai";
 
 import { extractClientIp } from "@/utils/getClientIp";
 import { validateMessageInput } from "@/utils/validateMessageInput";
 import { moderateMessage } from "@/utils/moderateMessage";
-import { logMessageToDatabase } from "@/lib/db/logMessageToDatabase";
 import { checkRateLimit } from "@/utils/checkRateLimit";
-import { handleToolCalls } from "@/utils/toolCallHandler";
-
-import {
-  ThreadMessageDeltaEvent,
-  ThreadRunStepDeltaEvent,
-  ThreadRunRequiresActionEvent,
-} from "@/types/openai";
 import { createThreadRecord } from "@/lib/db/createThreadRecord";
 
+import OpenAI from "openai";
+import { handleUserMessage } from "@/services/assistant.service";
+import { createEmptyAssistantContext } from "@/utils/assistant/createEmptyAssistantContext";
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const assistantId = process.env.ASSISTANT_ID;
+const assistantId = process.env.ASSISTANT_ID!;
 
 /**
  * Handles POST requests for AI assistant chat.
- *
- * Accepts user messages, performs validation and moderation,
- * initiates or continues a thread with OpenAI Assistant,
- * handles streaming response, tool calls, and logging.
- *
- * @param req - Incoming HTTP request (Next.js)
- * @returns Streaming AI response (text/plain)
  */
 export async function POST(req: NextRequest) {
-  // Extract client IP and apply rate limiting
+  // Extract client IP
   const ip = extractClientIp(req);
+
+  // Rate limiting
   const rateLimitResult = await checkRateLimit(ip);
   if (!rateLimitResult.ok) {
     return new Response(rateLimitResult.body, {
@@ -41,16 +29,15 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  // Parse request body
+  // Parse body
   const body = await req.json();
   const { threadId, message, context } = body;
 
-  // Ensure required fields are present
   if (!assistantId || !message) {
     return new Response("Missing required fields", { status: 400 });
   }
 
-  // Validate message input
+  // Validate message
   const validationResult = validateMessageInput(message);
   if (!validationResult.valid) {
     return new Response(JSON.stringify({ error: validationResult.reason }), {
@@ -59,7 +46,7 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  // Moderate the message via OpenAI API
+  // Moderate message
   const moderationResult = await moderateMessage(message);
   if (moderationResult.flagged) {
     return new Response(JSON.stringify({ error: moderationResult.message }), {
@@ -67,7 +54,6 @@ export async function POST(req: NextRequest) {
       headers: { "Content-Type": "application/json" },
     });
   }
-  console.log("Moderation result:", moderationResult);
 
   try {
     // Use existing thread or create a new one
@@ -75,11 +61,7 @@ export async function POST(req: NextRequest) {
       ? { id: threadId }
       : await openai.beta.threads.create();
 
-    // Check if threadId is provided
-    // If not, create a new thread record in the database
-    // This is useful for tracking and managing threads
-    // in the database for future reference
-    // and analysis
+    // Create thread record if new
     if (!threadId) {
       await createThreadRecord({
         threadId: thread.id,
@@ -104,107 +86,15 @@ export async function POST(req: NextRequest) {
       }
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
+    const initialContext = context || createEmptyAssistantContext(thread.id);
 
-    // Log user message to database
-    await logMessageToDatabase({
+    const { stream } = await handleUserMessage({
       threadId: thread.id,
-      role: "user",
-      content: message,
+      message,
+      context: initialContext,
       ip,
-      timestamp: new Date(),
     });
-
-    // Append the message to the thread
-    await openai.beta.threads.messages.create(thread.id, {
-      role: "user",
-      content: message,
-    });
-
-    // Start a run and stream the assistant's response
-    const runStream = await openai.beta.threads.runs.stream(thread.id, {
-      assistant_id: assistantId,
-      // additional_instructions: context
-      //   ? `Current context: ${JSON.stringify(context)}`
-      //   : undefined,
-    });
-
-    let assistantReply = "";
-    const encoder = new TextEncoder();
-
-    const stream = new ReadableStream({
-      async start(controller) {
-        console.log("Starting stream processing...");
-
-        try {
-          for await (const event of runStream as AsyncIterable<
-            | ThreadMessageDeltaEvent
-            | ThreadRunStepDeltaEvent
-            | ThreadRunRequiresActionEvent
-          >) {
-            console.log("Event received:", event.event);
-
-            // Handle text deltas from the assistant
-            if (event.event === "thread.message.delta") {
-              const delta = event.data.delta;
-              if (delta?.content?.[0]?.text?.value) {
-                const chunk = delta.content[0].text.value;
-                assistantReply += chunk;
-                controller.enqueue(encoder.encode(chunk));
-              }
-            }
-
-            // Optional: handle tool_call step delta (log only)
-            if (event.event === "thread.run.step.delta") {
-              const delta = event.data.delta;
-              if (delta?.step_details?.type === "tool_calls") {
-                delta.step_details.tool_calls?.forEach((toolCall) => {
-                  if (toolCall.function.arguments) {
-                    const args = toolCall.function.arguments;
-                    console.log("args", args);
-                    controller.enqueue(encoder.encode(args));
-                  }
-                });
-              }
-            }
-
-            // Handle required tool call execution
-            if (event.event === "thread.run.requires_action") {
-              const run = event.data;
-              const toolCalls =
-                run.required_action?.submit_tool_outputs?.tool_calls;
-
-              if (toolCalls) {
-                const toolOutputs = await handleToolCalls(toolCalls);
-                await openai.beta.threads.runs.submitToolOutputs(
-                  thread.id,
-                  run.id,
-                  {
-                    tool_outputs: toolOutputs,
-                  }
-                );
-              }
-            }
-          }
-
-          // Log assistant reply after full stream
-          await logMessageToDatabase({
-            threadId: thread.id,
-            role: "assistant",
-            content: assistantReply,
-            ip,
-            timestamp: new Date(),
-          });
-        } catch (error) {
-          const message =
-            error instanceof Error ? error.message : String(error);
-          console.error("Stream processing error:", message);
-          controller.enqueue(encoder.encode(`\n[ERROR] ${message}`));
-        }
-
-        console.log("Stream processing complete");
-        controller.close();
-      },
-    });
+    // 🧠 Delegate all assistant work to assistantService
 
     return new Response(stream, {
       headers: {

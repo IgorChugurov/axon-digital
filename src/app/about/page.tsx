@@ -5,8 +5,7 @@ import ApproachSection from "@/components/about/ApproachSection";
 import ServicesSection from "@/components/about/ServicesSection";
 import ExpertiseSection from "@/components/about/ExpertiseSection";
 import WhyUsSection from "@/components/about/WhyUsSection";
-// import PricingSection from "@/components/about/PricingSection";
-//import ProcessSection from "@/components/about/ProcessSection";
+import PricingSection from "@/components/about/PricingSection";
 import ContactFormSection from "@/components/about/ContactFormSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -40,12 +39,11 @@ export default function AboutPage() {
             <WhyUsSection content={content.whyUs} />
           </section>
 
-          {/*  <section className="bg-gray-50">
-          <PricingSection content={content.pricing} />
-        </section>*/}
-
-          <section className="bg-white">
+          <section className="bg-gray-50">
             <ProcessSection content={content.process} />
+          </section>
+          <section className="bg-white">
+            <PricingSection content={content.pricing} />
           </section>
 
           <section className="bg-gray-50">

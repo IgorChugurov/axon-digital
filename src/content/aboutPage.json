@@ -1,234 +1,250 @@
 {
   "hero": {
-    "title": "AxonDigital — цифровая студия полного цикла",
-    "description": "Мы создаём кастомные веб-решения, которые помогают бизнесу расти, автоматизировать процессы и достигать целей."
+    "title": "AxonDigital — Full-Cycle Digital Studio",
+    "description": "We craft custom web solutions to help businesses grow, automate processes, and achieve their goals."
   },
   "approach": {
-    "title": "Наш подход",
+    "title": "Our Approach",
     "items": [
       {
-        "title": "Agile и гибкость",
-        "description": "Мы работаем быстро, поэтапно и адаптивно. Каждый этап приносит клиенту конкретную пользу и измеримый результат."
+        "title": "Agile and Flexibility",
+        "description": "We work fast, iteratively, and adaptively. Each phase delivers measurable results and tangible value to the client."
       },
       {
-        "title": "Этапы работы",
-        "description": "Анализ требований, проектирование архитектуры, создание прототипов, разработка, тестирование и внедрение решения."
+        "title": "Structured Development Process",
+        "description": "Requirement analysis, architecture design, prototyping, development, testing, and solution deployment."
       },
       {
-        "title": "Прозрачность и контроль",
-        "description": "Фиксируем сроки и стоимость, регулярно демонстрируем прогресс и результаты, всегда на связи с клиентом."
+        "title": "Transparency and Control",
+        "description": "We fix timelines and budgets, provide regular updates, and maintain open communication throughout the project."
       },
       {
-        "title": "Ориентация на результат",
-        "description": "Мы сфокусированы на реальной ценности для бизнеса, а не просто на выпуске программного продукта."
+        "title": "Focus on Business Value",
+        "description": "We prioritize real business outcomes over simply delivering features."
       }
     ]
   },
   "services": {
-    "title": "Что мы делаем",
+    "title": "What We Do",
     "items": [
       {
-        "title": "Разработка веб-приложений",
-        "description": "Кастомные решения для любых бизнес-задач — от MVP до комплексных CRM-систем."
+        "title": "Web Application Development",
+        "description": "Tailored solutions for any business need — from MVPs to complex CRM platforms."
       },
       {
-        "title": "Создание сайтов",
-        "description": "Корпоративные сайты, лендинги, ecommerce-проекты с красивым дизайном и отличной производительностью."
+        "title": "Website Creation",
+        "description": "Corporate websites, landing pages, and ecommerce platforms with outstanding design and performance."
       },
       {
-        "title": "Автоматизация бизнеса",
-        "description": "Оцифровка процессов: от управления заказами до учёта персонала и автоматизированной отчётности."
+        "title": "Business Process Automation",
+        "description": "Digitalization of workflows: order management, HR processes, reporting automation, and more."
       },
       {
-        "title": "Интеграция ИИ в бизнес-процессы",
-        "description": "Подключение ИИ-агентов и моделей в существующие системы для автоматизации задач, повышения эффективности и роста бизнеса."
+        "title": "AI Integration into Business Workflows",
+        "description": "Embedding AI agents and models into existing systems to automate tasks, boost efficiency, and drive growth."
       }
     ]
   },
   "expertise": {
-    "title": "Наша экспертиза",
+    "title": "Our Expertise",
     "items": [
       {
         "icon": "brainCircuit",
-        "title": "Интеграция LLM-моделей",
-        "description": "Интеграция крупных языковых моделей (LLM) в существующие бизнес-системы для автоматизации процессов."
+        "title": "LLM Integration",
+        "description": "Integrating large language models (LLMs) into business systems to automate and optimize operations."
       },
       {
         "icon": "bot",
-        "title": "Разработка ИИ-ассистентов",
-        "description": "Создание интеллектуальных помощников для сайтов, CRM, внутренних порталов."
+        "title": "AI Assistant Development",
+        "description": "Building intelligent assistants for websites, CRM platforms, and internal portals."
       },
       {
         "icon": "stethoscope",
-        "title": "Медицина и документооборот",
-        "description": "Проекты в сфере электронных медкарт, систем для клиник, учёта пациентов."
+        "title": "Healthcare and Document Management",
+        "description": "Solutions for electronic medical records, clinic management, and patient tracking."
       },
       {
         "icon": "shoppingCart",
-        "title": "Электронная коммерция",
-        "description": "Разработка интернет-магазинов, маркетплейсов и b2b платформ."
+        "title": "E-commerce",
+        "description": "Development of online stores, marketplaces, and B2B platforms."
       },
       {
         "icon": "calculator",
-        "title": "Бухгалтерские системы",
-        "description": "Автоматизация учета, расчёт зарплат, интеграции с налоговыми системами."
+        "title": "Accounting Systems",
+        "description": "Automation of accounting, payroll calculation, and tax system integration."
       },
       {
         "icon": "building",
-        "title": "Управление торговыми центрами",
-        "description": "Платформы для арендаторов, CRM для ТРЦ, системы бронирования."
+        "title": "Mall Management Systems",
+        "description": "CRM solutions for shopping centers, tenant platforms, and booking systems."
       },
       {
         "icon": "banknote",
-        "title": "Финансовые платформы",
-        "description": "Решения для учёта платежей, интеграции с банками, отчётности."
+        "title": "Financial Platforms",
+        "description": "Payment tracking, banking integrations, and financial reporting systems."
       },
       {
         "icon": "activity",
-        "title": "Цифровизация бизнес-процессов",
-        "description": "Автоматизация задач, CRM-системы, электронный документооборот."
+        "title": "Business Process Digitalization",
+        "description": "Automation of operations, CRM development, and electronic document management."
       }
     ]
   },
-
   "whyUs": {
-    "title": "Наш подход к проектам",
+    "title": "Our Project Philosophy",
     "groups": [
       {
-        "title": "Компетенции и опыт",
+        "title": "Expertise and Experience",
         "icon": "Brain",
         "items": [
           {
-            "title": "Глубокая экспертиза",
-            "description": "Разрабатываем решения на основе реального опыта в бизнесе."
+            "title": "Deep Business Expertise",
+            "description": "We deliver solutions based on real business experience and domain knowledge."
           },
           {
-            "title": "Понимание бизнеса",
-            "description": "Фокусируемся на реальных бизнес-целях клиента."
+            "title": "Understanding Business Goals",
+            "description": "We focus on achieving tangible outcomes aligned with client objectives."
           },
           {
-            "title": "Инновационные решения",
-            "description": "Внедряем современные технологии и практики."
+            "title": "Innovation Driven",
+            "description": "We implement cutting-edge technologies and modern practices."
           },
           {
-            "title": "Проверенные технологии",
-            "description": "Используем надёжные и масштабируемые технологии."
+            "title": "Proven Technologies",
+            "description": "We use scalable, secure, and reliable tech stacks."
           }
         ]
       },
       {
-        "title": "Работа с клиентами",
+        "title": "Client Collaboration",
         "icon": "Users",
         "items": [
           {
-            "title": "Индивидуальный подход",
-            "description": "Адаптируем решения под задачи каждого клиента."
+            "title": "Tailored Solutions",
+            "description": "We adapt every solution to the unique needs of each client."
           },
           {
-            "title": "Ориентированность на клиента",
-            "description": "Учитываем ваши цели и строим решения вокруг них."
+            "title": "Client-Centric Approach",
+            "description": "Your goals and priorities shape every stage of the project."
           },
           {
-            "title": "Прозрачность и честность",
-            "description": "Регулярные отчёты и открытая коммуникация."
+            "title": "Transparency and Integrity",
+            "description": "We maintain open communication and regular progress reports."
           },
           {
-            "title": "Эффективная коммуникация",
-            "description": "Быстрая обратная связь и чёткое взаимодействие."
+            "title": "Efficient Communication",
+            "description": "We ensure fast responses and smooth coordination."
           }
         ]
       },
       {
-        "title": "Качество и надёжность",
+        "title": "Quality and Reliability",
         "icon": "ShieldCheck",
         "items": [
           {
-            "title": "Качество и надёжность",
-            "description": "Соблюдаем лучшие практики и обеспечиваем стабильность решений."
+            "title": "Commitment to Quality",
+            "description": "We follow best practices and ensure product stability at every stage."
           },
           {
-            "title": "Контроль качества",
-            "description": "Проводим тщательные проверки на каждом этапе разработки."
+            "title": "Rigorous Quality Assurance",
+            "description": "Every milestone undergoes thorough testing and validation."
           },
           {
-            "title": "Оптимизация производительности",
-            "description": "Ускоряем работу решений без потери качества."
+            "title": "Performance Optimization",
+            "description": "We maximize performance without compromising quality."
           },
           {
-            "title": "Безопасность данных",
-            "description": "Надёжная защита информации клиентов."
+            "title": "Data Security",
+            "description": "We safeguard sensitive client information at all levels."
           }
         ]
       },
       {
-        "title": "Сотрудничество и поддержка",
+        "title": "Partnership and Support",
         "icon": "Handshake",
         "items": [
           {
-            "title": "Долгосрочные отношения",
-            "description": "Поддерживаем проекты и после их запуска."
+            "title": "Long-Term Partnerships",
+            "description": "We support and grow projects even after launch."
           },
           {
-            "title": "Поддержка и сопровождение",
-            "description": "Регулярные обновления и техническая помощь."
+            "title": "Ongoing Maintenance",
+            "description": "Regular updates, technical support, and improvements."
           },
           {
-            "title": "Гибкие условия сотрудничества",
-            "description": "Прозрачная оплата: фиксированные этапы или почасовая модель, без скрытых расходов."
+            "title": "Flexible Collaboration Models",
+            "description": "Fixed-price stages or hourly billing with full transparency."
           },
           {
-            "title": "Постоянная поддержка",
-            "description": "Оперативное решение технических вопросов и развитие продукта."
+            "title": "Responsive Support",
+            "description": "Fast issue resolution and continuous development."
           }
         ]
       }
     ]
   },
   "pricing": {
-    "title": "Цены и сроки",
-    "description": "Мы предлагаем прозрачные расчёты по модели фиксированной цены или почасовой оплаты. Наши проекты обычно делятся на этапы с контролем качества на каждом из них."
+    "title": "Pricing and Engagement Model",
+    "items": [
+      {
+        "title": "Initial Stages — Hourly Billing",
+        "description": "Requirement analysis, architecture design, and specification drafting are billed based on hours required, depending on project complexity and team size."
+      },
+      {
+        "title": "Preliminary Project Estimation",
+        "description": "After the initial analysis and architecture phase, we provide an approximate project cost estimate."
+      },
+      {
+        "title": "Cost Refinement After Specification",
+        "description": "Following the finalization of the technical specification, we deliver a refined and realistic project budget."
+      },
+      {
+        "title": "Agile Scope Adjustments",
+        "description": "During development, new ideas and process optimizations can be incorporated with transparent budget updates."
+      }
+    ]
   },
   "process": {
-    "title": "Как мы работаем",
+    "title": "How We Work",
     "steps": [
       {
-        "title": "Анализ требований",
-        "description": "Понимаем бизнес-цели, анализируем процессы, определяем задачи проекта."
+        "title": "Requirement Analysis",
+        "description": "Understanding business goals, analyzing workflows, and defining project tasks."
       },
       {
-        "title": "Архитектура и технологии",
-        "description": "Проектируем архитектуру решения и выбираем технологический стек."
+        "title": "Architecture and Technology Stack",
+        "description": "Designing the system architecture and selecting the most suitable technologies."
       },
       {
-        "title": "Разработка технического задания (ТЗ)",
-        "description": "Формализуем требования в виде понятного и структурированного документа."
+        "title": "Technical Specification Development",
+        "description": "Formalizing the requirements into a clear, structured technical document."
       },
       {
-        "title": "UX/UI Дизайн",
-        "description": "Проектируем удобные интерфейсы и разрабатываем визуальные макеты."
+        "title": "UX/UI Design",
+        "description": "Creating user-friendly interfaces and professional visual designs."
       },
       {
-        "title": "Разработка MVP",
-        "description": "Создаём первую рабочую версию: бэкенд, API, фронтенд."
+        "title": "MVP Development",
+        "description": "Building the first working version: backend, API, and frontend."
       },
       {
-        "title": "Тестирование и оптимизация",
-        "description": "Проводим всестороннее тестирование и дорабатываем продукт."
+        "title": "Testing and Optimization",
+        "description": "Conducting thorough testing and fine-tuning the product."
       },
       {
-        "title": "Запуск и поддержка",
-        "description": "Разворачиваем проект, обучаем пользователей, сопровождаем и улучшаем."
+        "title": "Launch and Ongoing Support",
+        "description": "Deploying the solution, training users, and providing continuous support and improvements."
       }
     ]
   },
   "contactForm": {
-    "title": "Свяжитесь с нами",
-    "subtitle": "Заполните форму, и мы свяжемся с вами в течение 24 часов.",
+    "title": "Contact Us",
+    "subtitle": "Fill out the form, and we’ll get back to you within 24 hours.",
     "fields": {
-      "name": "Ваше имя",
-      "email": "Ваш Email",
-      "message": "Ваше сообщение"
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message"
     },
-    "buttonText": "Отправить сообщение"
+    "buttonText": "Send Message"
   }
 }

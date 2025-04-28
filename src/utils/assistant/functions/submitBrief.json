@@ -1,0 +1,24 @@
+{
+  "name": "submitBrief",
+  "description": "Send a completed project brief and client contact to internal system.",
+  "strict": true,
+  "parameters": {
+    "type": "object",
+    "required": ["name", "contact", "brief"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Client's full name"
+      },
+      "contact": {
+        "type": "string",
+        "description": "Client's contact information: email or WhatsApp"
+      },
+      "brief": {
+        "type": "string",
+        "description": "Structured technical brief collected during the dialogue"
+      }
+    },
+    "additionalProperties": false
+  }
+}

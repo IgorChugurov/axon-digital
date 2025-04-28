@@ -54,11 +54,11 @@ export default function Header() {
       </div> */}
       <div className="pr-4">
         {isAbout ? (
-          <span className="text-base text-gray-600">About</span>
+          <span className="text-base text-gray-900 font-bold">About</span>
         ) : (
           <Link
             href="/about"
-            className="text-base text-gray-600 hover:text-gray-900 hover:underline"
+            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
           >
             About
           </Link>

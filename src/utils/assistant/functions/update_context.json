@@ -1,0 +1,91 @@
+{
+  "name": "update_context",
+  "description": "Update internal memory context after each user reply based on clarified facts.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "object",
+        "properties": {
+          "goal": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "audience": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "description": { "type": "string" },
+              "specifics": { "type": "string" }
+            }
+          },
+          "industry": { "type": "string" },
+          "usp": { "type": "string" }
+        }
+      },
+      "technical": {
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "object",
+            "properties": {
+              "mustHave": { "type": "array", "items": { "type": "string" } },
+              "niceToHave": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "integrations": {
+            "type": "object",
+            "properties": {
+              "standard": { "type": "array", "items": { "type": "string" } },
+              "custom": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "infrastructure": { "type": "array", "items": { "type": "string" } },
+          "platform": { "type": "string" },
+          "multilingual": { "type": "boolean" },
+          "accessibilityCompliance": {
+            "type": "object",
+            "properties": {
+              "required": { "type": "boolean" },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      },
+      "seoAndPerformance": {
+        "type": "object",
+        "properties": {
+          "advancedSeoRequired": { "type": "boolean" },
+          "notes": { "type": "string" }
+        }
+      },
+      "delivery": {
+        "type": "object",
+        "properties": {
+          "deadline": { "type": "string" },
+          "budget": {
+            "type": "object",
+            "properties": {
+              "range": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "paymentModel": { "type": "string" },
+          "phasedDevelopment": { "type": "boolean" },
+          "supportRequired": { "type": "boolean" }
+        }
+      },
+      "contact": {
+        "type": "object",
+        "properties": {
+          "preferredChannel": { "type": "string" },
+          "value": { "type": "string" }
+        }
+      }
+    },
+    "required": []
+  }
+}

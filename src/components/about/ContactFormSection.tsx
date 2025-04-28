@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
 import { sendMessage } from "@/utils/sendMessage";
 import { toast } from "react-hot-toast";
 
