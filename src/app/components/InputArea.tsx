@@ -118,7 +118,7 @@ export const InputArea = ({
 
   return (
     <>
-      <div className="relative pb-8 flex flex-col rounded-lg border border-gray-300 bg-gray-50 shadow-sm">
+      <div className="relative pb-8 flex flex-col rounded-lg border border-gray-300 bg-[#f0f4f9] shadow-sm">
         {languagePickerOpen && (
           <div className="absolute bottom-16 left-3 z-10 flex flex-wrap gap-2 bg-white p-3 rounded-lg shadow-md">
             {supportedLanguages.map((lang) => (

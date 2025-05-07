@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
-import SocialIcon from "./socilaIcons/SocialIcon";
+
 import ButtonForLeftPanel from "./ButtonForLeftPanel";
 import { usePathname } from "next/navigation";
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header
       style={{
-        backgroundColor: "#f8f9fa",
+        backgroundColor: "#f0f4f9",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",

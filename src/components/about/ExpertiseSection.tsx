@@ -32,7 +32,7 @@ const iconsMap = {
 
 export default function ExpertiseSection({ content }: ExpertiseSectionProps) {
   return (
-    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24 bg-gray-50">
+    <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24 bg-[#f0f4f9]">
       <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-12 text-center">
         {content.title}
       </h2>

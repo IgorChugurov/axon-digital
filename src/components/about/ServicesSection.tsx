@@ -22,7 +22,7 @@ export default function ServicesSection({ content }: ServicesSectionProps) {
         {content.items.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg p-6 bg-gray-50 hover:shadow-md transition duration-300 ease-in-out flex flex-col"
+            className="border border-gray-200 rounded-lg p-6 bg-[#f0f4f9] hover:shadow-md transition duration-300 ease-in-out flex flex-col"
           >
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               {item.title}

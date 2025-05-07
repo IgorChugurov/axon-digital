@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-2 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto flex   justify-between items-center">
+    <footer className="h-[50px]">
+      <div className="max-w-7xl mx-auto flex   justify-between items-center h-[100%]">
         <div className="text-sm text-gray-500">
           © {new Date().getFullYear()} AxonDigital. All rights reserved.
         </div>

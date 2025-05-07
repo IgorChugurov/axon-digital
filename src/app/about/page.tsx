@@ -10,6 +10,7 @@ import ContactFormSection from "@/components/about/ContactFormSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProcessSection from "@/components/about/ProcessSection";
+import FadeInSection from "@/components/FadeInSection";
 
 export default function AboutPage() {
   return (
@@ -23,15 +24,30 @@ export default function AboutPage() {
             <HeroSection content={content.hero} />
           </section>
           {/* Блок 2 — ApproachSection на светлом */}
-          <section className="bg-gray-50">
-            <ApproachSection content={content.approach} />
+
+          <section className="bg-[#f0f4f9]    relative">
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H40' stroke='%23d9e2ec' stroke-width='0.5'/%3E%3Cpath d='M0 0V40' stroke='%23d9e2ec' stroke-width='0.5'/%3E%3C/svg%3E\")",
+                backgroundSize: "40px 40px",
+                backgroundRepeat: "repeat",
+                opacity: 1,
+                maskImage: "linear-gradient(to bottom, black 80%, transparent)",
+              }}
+            />
+            <FadeInSection>
+              <ApproachSection content={content.approach} />
+            </FadeInSection>
+            {/* <ApproachSection content={content.approach} /> */}
           </section>
 
           <section className="bg-white">
             <ServicesSection content={content.services} />
           </section>
 
-          <section className="bg-gray-50">
+          <section className="bg-[#f0f4f9]">
             <ExpertiseSection content={content.expertise} />
           </section>
 
@@ -39,19 +55,18 @@ export default function AboutPage() {
             <WhyUsSection content={content.whyUs} />
           </section>
 
-          <section className="bg-gray-50">
+          <section className="bg-[#f0f4f9]">
             <ProcessSection content={content.process} />
           </section>
           <section className="bg-white">
             <PricingSection content={content.pricing} />
           </section>
 
-          <section className="bg-gray-50">
+          <section className="bg-[#f0f4f9]">
             <ContactFormSection content={content.contactForm} />
           </section>
-
-          <Footer />
         </div>
+        <Footer />
       </div>
     </main>
   );

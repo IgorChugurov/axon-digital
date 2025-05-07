@@ -50,7 +50,7 @@ export default function WhyUsSection({ content }: WhyUsSectionProps) {
                 return (
                   <div
                     key={itemIndex}
-                    className="flex flex-col bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                    className="flex flex-col bg-[#f0f4f9] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-center mb-4">
                       {Icon && (
