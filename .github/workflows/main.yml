@@ -18,6 +18,7 @@ jobs:
           port: 22
           key: ${{ secrets.SSHKEY }}
           script: |
+            export PATH="$HOME/.local/share/pnpm:$PATH"
             cd ~/axon-digital || exit 1
             git fetch origin main
             git reset --hard origin/main
