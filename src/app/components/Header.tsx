@@ -9,6 +9,7 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
+  const isExpertise = pathname === "/expertise";
   return (
     <header
       style={{
@@ -52,7 +53,7 @@ export default function Header() {
           <SocialIcon name="whatsapp" size={30} />
         </a>
       </div> */}
-      <div className="pr-4">
+      <div className="pr-4 flex gap-2">
         {isAbout ? (
           <span className="text-base text-gray-900 font-bold">About</span>
         ) : (
@@ -61,6 +62,16 @@ export default function Header() {
             className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
           >
             About
+          </Link>
+        )}
+        {isExpertise ? (
+          <span className="text-base text-gray-900 font-bold">Expertise</span>
+        ) : (
+          <Link
+            href="/expertise"
+            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+          >
+            Expertise
           </Link>
         )}
       </div>

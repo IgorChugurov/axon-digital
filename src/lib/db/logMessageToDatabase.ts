@@ -2,9 +2,10 @@
 import { getMongoClient, getDatabase } from "@/lib/db/client";
 
 export interface LogMessageInput {
+  assistantId?: string;
   threadId: string;
   role: "user" | "assistant";
-  content: string;
+  content?: string;
   ip?: string;
   timestamp?: Date;
 }
@@ -16,9 +17,10 @@ export async function logMessageToDatabase(data: LogMessageInput) {
     const collection = db.collection("messages");
 
     await collection.insertOne({
+      assistantId: data?.assistantId,
       threadId: data.threadId,
       role: data.role,
-      content: data.content,
+      content: data?.content,
       ip: data.ip,
       timestamp: data.timestamp || new Date(),
     });

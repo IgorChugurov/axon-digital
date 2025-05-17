@@ -6,6 +6,8 @@ import { Toaster } from "react-hot-toast";
 import KeyboardAdaptiveLayout from "./components/KeyboardAdaptiveLayout/KeyboardAdaptiveLayout";
 import CookieConsent from "@/components/CookieConsent";
 import GlobalLoaderOverlay from "./components/GlobalLoaderOverlay";
+import ChatButton from "@/module/copilotChat/components/ChatButton/ChatButton";
+import ConditionalChatButton from "@/module/copilotChat/ConditionalChatButton";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -53,6 +55,14 @@ export default function RootLayout({
             },
           }}
         />
+        {/* <ChatButton
+          apiUrl={"/api/assistant/copilot"}
+          labels={{
+            title: "AI Assistant",
+            placeholder: "Message assistnt",
+          }}
+        /> */}
+        <ConditionalChatButton />
       </body>
     </html>
   );

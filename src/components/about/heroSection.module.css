@@ -1,0 +1,42 @@
+/* .mainTitle {
+  background: url("/gradientbg.avif") center;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  to {
+    background-position-x: -200px;
+  }
+}
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+} */
+
+.mainTitle {
+  background: url("/gradientbg.avif") center;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: animateGradient 6s linear infinite alternate;
+  will-change: background-position;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

@@ -1,0 +1,136 @@
+/* InputArea.module.css */
+
+.container {
+  position: relative;
+  /* padding-bottom: 2rem; */
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: #f0f4f9;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);*/
+}
+
+.languagePicker {
+  position: absolute;
+  bottom: 4rem;
+  left: 0.75rem;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.langButton {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.langButton:hover {
+  background-color: #e5e7eb; /* gray-200 */
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem 3rem 1.5rem 0.75rem;
+  font-size: 1.125rem;
+  resize: none;
+  outline: none;
+  min-height: 50px;
+  max-height: 300px;
+  overflow: auto;
+  color: #111827; /* gray-900 */
+  background: transparent;
+
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: #f0f4f9;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.textarea::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.iconButton {
+  position: absolute;
+  bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+.listenButtonActive {
+  right: 3.25rem;
+  background-color: #ef4444; /* red-500 */
+  color: white;
+}
+
+.listenButtonInactive {
+  right: 3.5rem;
+  background-color: #d1d5db; /* gray-300 */
+  color: #4b5563; /* gray-600 */
+}
+
+.sendButtonActive {
+  right: 1.25rem;
+  background-color: #1f2937; /* gray-800 */
+  color: white;
+}
+
+.sendButtonInactive {
+  right: 1.25rem;
+  background-color: #d1d5db; /* gray-300 */
+  color: #9ca3af; /* gray-500 */
+  cursor: not-allowed;
+}
+
+.listeningIndicator {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 3.5rem;
+  font-size: 0.75rem;
+  color: #ef4444;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.footerButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.footerButton:hover {
+  color: #4b5563;
+}
