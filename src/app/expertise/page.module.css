@@ -1,0 +1,13 @@
+.herosection {
+  background: url("/banner3.webp");
+  background-size: contain;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expertiseGrid:hover > :not(:hover) {
+  filter: blur(2px);
+  opacity: 0.7;
+}

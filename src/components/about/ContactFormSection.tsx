@@ -17,10 +17,12 @@ interface ContactFormContent {
 
 interface ContactFormSectionProps {
   content: ContactFormContent;
+  bgFon?: string; // Optional background class
 }
 
 export default function ContactFormSection({
   content,
+  bgFon,
 }: ContactFormSectionProps) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
@@ -88,7 +90,7 @@ export default function ContactFormSection({
   }
 
   return (
-    <section className="py-20 bg-[#f0f4f9]">
+    <section className={`py-20 ${bgFon ? bgFon : "bg-[#f0f4f9]"}`}>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           {content.title}
