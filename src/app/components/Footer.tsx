@@ -9,7 +9,7 @@ export default function Footer() {
         </div>
         <div className="flex space-x-6 items-center">
           <Link
-            href="/offer"
+            href="/public-offer"
             className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
           >
             Public Offer
