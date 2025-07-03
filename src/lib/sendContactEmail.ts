@@ -17,7 +17,7 @@ export async function sendContactEmail({
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL!,
       to: process.env.RESEND_TO_EMAIL!,
-      subject: "New message from the AxonDigital.eu website",
+      subject: "New message from the AxonDigital.xyz website",
       html: `
         <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #111;">New Contact Message</h2>
@@ -33,7 +33,7 @@ export async function sendContactEmail({
           <hr style="margin: 32px 0; border: none; border-top: 1px solid #ddd;" />
 
           <p style="font-size: 14px; color: #666; text-align: center;">
-            This email was sent automatically from <strong>AxonDigital.eu</strong>.<br/>
+            This email was sent automatically from <strong>AxonDigital.xyz</strong>.<br/>
             Please do not reply to this email.
           </p>
         </div>
@@ -41,6 +41,7 @@ export async function sendContactEmail({
     });
 
     if (error) {
+      console.log(error);
       console.error("Error sending email via Resend:", error);
       throw new Error("Failed to send email");
     }
