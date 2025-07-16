@@ -28,20 +28,34 @@
     "title": "What We Do",
     "items": [
       {
+        "title": "Project and Technical Documentation",
+        "description": "We help you plan your digital product: user flows, tech stack, specs, and timelines.",
+        "slug": "services/spec-documentation"
+      },
+      {
+        "title": "Documentation Audit and Evaluation",
+        "description": "We review your specs and estimates to find gaps, risks, and improvement areas.",
+        "slug": "services/documentation-audit"
+      },
+      {
         "title": "Web Application Development",
-        "description": "Tailored solutions for any business need — from MVPs to complex CRM platforms."
+        "description": "We build scalable web apps — from MVPs to full-featured business platforms.",
+        "slug": "services/web-app-development"
       },
       {
         "title": "Website Creation",
-        "description": "Corporate websites, landing pages, and ecommerce platforms with outstanding design and performance."
+        "description": "We design and build fast, stylish websites for business, content, or ecommerce.",
+        "slug": "services/website-creation"
       },
       {
         "title": "Business Process Automation",
-        "description": "Digitalization of workflows: order management, HR processes, reporting automation, and more."
+        "description": "We digitize and automate internal operations: HR, logistics, analytics, and more.",
+        "slug": "services/process-automation"
       },
       {
         "title": "AI Integration into Business Workflows",
-        "description": "Embedding AI agents and models into existing systems to automate tasks, boost efficiency, and drive growth."
+        "description": "We embed AI agents and models into real business processes to save time and boost accuracy.",
+        "slug": "services/ai-integration"
       }
     ]
   },

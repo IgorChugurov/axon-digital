@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-digital: "IBM Plex Mono", monospace;
   font-family: var(--body-font-family, system-ui, -apple-system, sans-serif);
   font-feature-settings:
     "kern" 1,
@@ -278,4 +280,7 @@ button[type="button"][class*="absolute"][class*="top-4"][class*="right-4"]:hover
   100% {
     background-position: 100% 50%;
   }
+}
+.digital-style {
+  font-family: var(--font-digital);
 }
