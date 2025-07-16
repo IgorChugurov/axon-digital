@@ -1,14 +1,26 @@
 import Header from "@/app/components/Header";
 import servicesPages from "@/content/servicesPages.json";
+import type { Metadata } from "next";
 
-type PageProps = {
-  params: {
-    slug: string;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = servicesPages[slug as keyof typeof servicesPages];
+  return {
+    title: page?.title || "Service",
+    description: page?.description || "",
   };
-};
+}
 
-export default function Page({ params }: PageProps) {
-  const { slug } = params;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const page = servicesPages[slug as keyof typeof servicesPages];
 
   if (!page) {
