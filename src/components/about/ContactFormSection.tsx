@@ -13,6 +13,7 @@ interface ContactFormContent {
     message: string;
   };
   buttonText: string;
+  message?: string;
 }
 
 interface ContactFormSectionProps {
@@ -24,7 +25,12 @@ export default function ContactFormSection({
   content,
   bgFon,
 }: ContactFormSectionProps) {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  console.log(content.message);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: content.message || "",
+  });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (

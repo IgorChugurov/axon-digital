@@ -1,4 +1,5 @@
 import Header from "@/app/components/Header";
+import ContactFormSection from "@/components/about/ContactFormSection";
 import servicesPages from "@/content/servicesPages.json";
 import type { Metadata } from "next";
 
@@ -27,6 +28,18 @@ export default async function Page({
     return <div>Page not found</div>;
   }
 
+  const contactForm = {
+    title: "Contact Us",
+    subtitle: "Fill out the form, and we’ll get back to you within 24 hours.",
+    fields: {
+      name: "Your Name",
+      email: "Your Email",
+      message: "Your Message",
+    },
+    buttonText: "Send Message",
+    message: `I’d like to discuss the service: ${page.title}`,
+  };
+
   return (
     <main className="flex flex-1 flex-col bg-white overflow-auto">
       <Header />
@@ -38,9 +51,18 @@ export default async function Page({
               {page.title}
             </h1>
             <p className="text-gray-700 text-center mb-8">{page.description}</p>
+            <div className="prose prose-lg max-w-none mt-8">
+              <h2 className="text-2xl font-bold mt-4 text-gray-900">
+                When do you need it?
+              </h2>
+              <p className="text-gray-700">{page.whenDoYouNeedIt}</p>
+            </div>
 
-            <div className="prose prose-lg max-w-none">
-              {page.items.map((item) => (
+            <div className="prose prose-lg max-w-none mt-8">
+              <h2 className="text-2xl font-bold mt-4 text-gray-900">
+                What’s included?
+              </h2>
+              {page.whatsIncluded.items.map((item) => (
                 <div key={item.title}>
                   <h2 className="text-xl font-bold mt-4 text-gray-900">
                     {item.title}
@@ -49,7 +71,17 @@ export default async function Page({
                 </div>
               ))}
             </div>
+            <div className="prose prose-lg max-w-none mt-8">
+              <h2 className="text-2xl font-bold mt-4 text-gray-900">
+                What you get
+              </h2>
+              <p className="text-gray-700">{page.whatYouGet}</p>
+            </div>
           </div>
+
+          <section className="bg-[#f0f4f9]">
+            <ContactFormSection content={contactForm} />
+          </section>
         </div>
       </div>
     </main>

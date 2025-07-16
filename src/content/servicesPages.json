@@ -2,181 +2,205 @@
   "spec-documentation": {
     "title": "Project and Technical Documentation",
     "description": "We help you structure your digital product before development starts. You get detailed specifications, clear architecture, technology choices, and timelines — everything needed to plan, estimate, and launch development with confidence.",
-    "items": [
-      {
-        "title": "Understanding the product and goals",
-        "text": "We start with interviews and goal analysis to define a sound product structure and scope."
-      },
-      {
-        "title": "System and process design",
-        "text": "We design user flows, screen maps, and API structure. We define entities and business modules."
-      },
-      {
-        "title": "Tech stack and architecture choice",
-        "text": "We select technologies and structure your app based on scalability, budget, and resources."
-      },
-      {
-        "title": "Specification and documentation",
-        "text": "We deliver full specs: API contracts, database schema, wireframes, and system requirements."
-      },
-      {
-        "title": "Timeline and team composition",
-        "text": "We create a Gantt chart and define team roles and time estimates for each project phase."
-      }
-    ]
+    "whenDoYouNeedIt": "When you’re preparing to build a digital product and need well-structured, technically sound project documentation that reflects best engineering practices. This documentation becomes the foundation for estimating timelines and budgets, aligning all stakeholders, and ensuring your development team has a clear and actionable roadmap.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Understanding the product and goals",
+          "text": "We start with interviews and goal analysis to define a sound product structure and scope."
+        },
+        {
+          "title": "System and process design",
+          "text": "We design user flows, screen maps, and API structure. We define entities and business modules."
+        },
+        {
+          "title": "Tech stack and architecture choice",
+          "text": "We select technologies and structure your app based on scalability, budget, and resources."
+        },
+        {
+          "title": "Specification and documentation",
+          "text": "We deliver full specs: API contracts, database schema, wireframes, and system requirements."
+        },
+        {
+          "title": "Timeline and team composition",
+          "text": "We create a Gantt chart and define team roles and time estimates for each project phase."
+        }
+      ]
+    },
+    "whatYouGet": "A complete set of technical documents — including architecture, data flows, functional specifications, and risk assessments — that serves as a reliable foundation for development. It helps prevent scope creep, miscommunication, and unexpected costs by aligning the entire team around a shared understanding of the product."
   },
   "documentation-audit": {
     "title": "Documentation Audit and Evaluation",
     "description": "We conduct a thorough review of existing project documentation. Our team identifies weak points, gaps, or overestimations in architecture, stack, budget, and schedule — and provides clear recommendations for improvement and risk mitigation.",
-    "items": [
-      {
-        "title": "Business alignment",
-        "text": "We check whether the documentation reflects your goals and fully covers user scenarios."
-      },
-      {
-        "title": "Architecture evaluation",
-        "text": "We review architecture design, system boundaries, abstraction levels, and modularity."
-      },
-      {
-        "title": "Tech stack review",
-        "text": "We assess whether the stack is adequate for the goals, budget, and required performance."
-      },
-      {
-        "title": "Timeline and cost assessment",
-        "text": "We verify if the proposed schedule and budget are realistic and properly justified."
-      },
-      {
-        "title": "Risk analysis and missing elements",
-        "text": "We detect potential gaps, technical debt, unrealistic assumptions, and security issues."
-      }
-    ]
+    "whenDoYouNeedIt": "When you’re planning a serious digital initiative and need to validate the quality and completeness of existing documentation. Expert assessment of project documentation is a best practice in the development of complex and cost-sensitive systems. It helps identify architectural gaps, vague requirements, or unrealistic constraints before you invest in implementation — reducing uncertainty and minimizing project risk.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Business alignment",
+          "text": "We check whether the documentation reflects your goals and fully covers user scenarios."
+        },
+        {
+          "title": "Architecture evaluation",
+          "text": "We review architecture design, system boundaries, abstraction levels, and modularity."
+        },
+        {
+          "title": "Tech stack review",
+          "text": "We assess whether the stack is adequate for the goals, budget, and required performance."
+        },
+        {
+          "title": "Timeline and cost assessment",
+          "text": "We verify if the proposed schedule and budget are realistic and properly justified."
+        },
+        {
+          "title": "Risk analysis and missing elements",
+          "text": "We detect potential gaps, technical debt, unrealistic assumptions, and security issues."
+        }
+      ]
+    },
+    "whatYouGet": "An expert-level analysis of the provided documentation, benchmarked against practical and architectural standards. You’ll receive a detailed report outlining which parts of the documentation are well-structured, which require clarification or additional detail, and which contradict engineering best practices. This helps you make informed decisions and avoid hidden technical or budgetary pitfalls."
   },
   "web-app-development": {
     "title": "Web Application Development",
     "description": "We develop robust, scalable web applications tailored to your business goals. From MVPs to complex CRM systems, our full-cycle team handles backend, frontend, APIs, integrations, testing, and ongoing support — ready to scale with your growth.",
-    "items": [
-      {
-        "title": "Requirement and Business Logic Analysis",
-        "text": "We explore your goals and define the key modules, data flows, and relationships between parts of the system."
-      },
-      {
-        "title": "Architecture and API Design",
-        "text": "We create system architecture, database schema, service boundaries, and the API contract early on."
-      },
-      {
-        "title": "Tech Stack and DevOps Planning",
-        "text": "We select the right backend/frontend stack, databases, queues, and define CI/CD and deployment strategy."
-      },
-      {
-        "title": "Frontend Development and UI Implementation",
-        "text": "We build fast, accessible, and intuitive interfaces with modern frameworks and responsive layouts."
-      },
-      {
-        "title": "Backend Logic and Integrations",
-        "text": "We implement core logic, secure authentication, role-based access, third-party integrations, and storage."
-      },
-      {
-        "title": "Testing and Data Protection",
-        "text": "We write unit and E2E tests, integrate CI pipelines, and ensure data security and compliance."
-      },
-      {
-        "title": "Support, Updates, and Scaling",
-        "text": "We monitor system health, ship new features, and scale the infrastructure as the project grows."
-      }
-    ]
+    "whenDoYouNeedIt": "When you’re building a digital product that must work reliably under real-world load, integrate with external systems, and scale as your business grows. You need more than just code — a well-thought-out architecture, long-term maintainability, and confidence that everything will work as intended from day one.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Requirement and Business Logic Analysis",
+          "text": "We explore your goals and define the key modules, data flows, and relationships between parts of the system."
+        },
+        {
+          "title": "Architecture and API Design",
+          "text": "We create system architecture, database schema, service boundaries, and the API contract early on."
+        },
+        {
+          "title": "Tech Stack and DevOps Planning",
+          "text": "We select the right backend/frontend stack, databases, queues, and define CI/CD and deployment strategy."
+        },
+        {
+          "title": "Frontend Development and UI Implementation",
+          "text": "We build fast, accessible, and intuitive interfaces with modern frameworks and responsive layouts."
+        },
+        {
+          "title": "Backend Logic and Integrations",
+          "text": "We implement core logic, secure authentication, role-based access, third-party integrations, and storage."
+        },
+        {
+          "title": "Testing and Data Protection",
+          "text": "We write unit and E2E tests, integrate CI pipelines, and ensure data security and compliance."
+        },
+        {
+          "title": "Support, Updates, and Scaling",
+          "text": "We monitor system health, ship new features, and scale the infrastructure as the project grows."
+        }
+      ]
+    },
+    "whatYouGet": "A fully functional, robust web application built with production-grade architecture, verified workflows, and smart development practices. Every feature works as expected, and every part of the system is ready to grow with your business. You’ll get exactly what you asked for — and likely discover it goes further than expected."
   },
   "website-creation": {
     "title": "Website Creation",
     "description": "We create high-performance, visually appealing websites — from corporate pages to ecommerce. Our design and development process ensures fast load times, responsive layout, content flexibility, and smooth user experience across all devices.",
-    "items": [
-      {
-        "title": "Goal Setting and Audience Definition",
-        "text": "We define the main purpose of the site (informational, marketing, transactional) and adapt it to the target audience."
-      },
-      {
-        "title": "UX Prototypes and Visual Design",
-        "text": "We design page flows, responsive layouts, animations, and all UI states using modern design tools."
-      },
-      {
-        "title": "Frontend Implementation",
-        "text": "We build high-performance, SEO-friendly websites using Next.js, Tailwind CSS, and optimized HTML/CSS/JS."
-      },
-      {
-        "title": "CMS or Editor Integration",
-        "text": "We integrate headless CMSs like Sanity, Strapi or build custom admin panels for easy content management."
-      },
-      {
-        "title": "SEO, Analytics, and Performance",
-        "text": "We optimize loading speed, set up technical SEO, schema markup, and connect analytics platforms."
-      },
-      {
-        "title": "Deployment and Maintenance",
-        "text": "We configure hosting, domain, HTTPS, uptime monitoring, and provide ongoing support after launch."
-      }
-    ]
+    "whenDoYouNeedIt": "When your website must be more than just a digital presence — fast, visually strong, conversion-optimized, and easy to update. You need a modern, mobile-first solution that performs flawlessly and aligns with your brand and business goals.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Goal Setting and Audience Definition",
+          "text": "We define the main purpose of the site (informational, marketing, transactional) and adapt it to the target audience."
+        },
+        {
+          "title": "UX Prototypes and Visual Design",
+          "text": "We design page flows, responsive layouts, animations, and all UI states using modern design tools."
+        },
+        {
+          "title": "Frontend Implementation",
+          "text": "We build high-performance, SEO-friendly websites using Next.js, Tailwind CSS, and optimized HTML/CSS/JS."
+        },
+        {
+          "title": "CMS or Editor Integration",
+          "text": "We integrate headless CMSs like Sanity, Strapi or build custom admin panels for easy content management."
+        },
+        {
+          "title": "SEO, Analytics, and Performance",
+          "text": "We optimize loading speed, set up technical SEO, schema markup, and connect analytics platforms."
+        },
+        {
+          "title": "Deployment and Maintenance",
+          "text": "We configure hosting, domain, HTTPS, uptime monitoring, and provide ongoing support after launch."
+        }
+      ]
+    },
+    "whatYouGet": "A polished, responsive website built on a solid technical foundation — with fast load times, clean SEO, flexible content management, and pixel-perfect implementation of your brand. The result isn’t just a beautiful site, it’s a high-performance tool that delivers value from day one."
   },
   "process-automation": {
     "title": "Business Process Automation",
     "description": "We digitize and automate internal operations — HR, logistics, reporting, sales, or finance. By eliminating manual steps and integrating your systems, we improve efficiency, reduce errors, and provide full transparency into your workflows.",
-    "items": [
-      {
-        "title": "Process Discovery and Mapping",
-        "text": "We analyze current manual workflows, bottlenecks, and communication gaps to identify automation potential."
-      },
-      {
-        "title": "Designing Digital Workflows",
-        "text": "We create optimized step-by-step flows, user roles, permissions, and validation logic."
-      },
-      {
-        "title": "System Development and Interfaces",
-        "text": "We build internal tools, dashboards, input forms, notification systems, and status tracking."
-      },
-      {
-        "title": "Integration with Internal Systems",
-        "text": "We sync data with ERPs, CRMs, accounting tools, inventory systems, or databases."
-      },
-      {
-        "title": "Access Control and Audit Logs",
-        "text": "We implement permission levels, activity logging, and secure storage for sensitive operations."
-      },
-      {
-        "title": "Analytics and Adaptability",
-        "text": "We provide metrics dashboards, reports, and flexible architecture for evolving business needs."
-      }
-    ]
+    "whenDoYouNeedIt": "When manual work, duplicated effort, or disconnected tools slow your team down — and you’re ready to streamline operations with digital tools that just work. You need a sustainable system tailored to your workflows, not a patchwork of temporary fixes.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Process Discovery and Mapping",
+          "text": "We analyze current manual workflows, bottlenecks, and communication gaps to identify automation potential."
+        },
+        {
+          "title": "Designing Digital Workflows",
+          "text": "We create optimized step-by-step flows, user roles, permissions, and validation logic."
+        },
+        {
+          "title": "System Development and Interfaces",
+          "text": "We build internal tools, dashboards, input forms, notification systems, and status tracking."
+        },
+        {
+          "title": "Integration with Internal Systems",
+          "text": "We sync data with ERPs, CRMs, accounting tools, inventory systems, or databases."
+        },
+        {
+          "title": "Access Control and Audit Logs",
+          "text": "We implement permission levels, activity logging, and secure storage for sensitive operations."
+        },
+        {
+          "title": "Analytics and Adaptability",
+          "text": "We provide metrics dashboards, reports, and flexible architecture for evolving business needs."
+        }
+      ]
+    },
+    "whatYouGet": "A fully digital, transparent, and automated environment where tasks flow smoothly, data is unified, and processes evolve with your needs. The delivered system eliminates chaos and inefficiencies — giving you control, speed, and a foundation for future growth."
   },
   "ai-integration": {
     "title": "AI Integration into Business Workflows",
     "description": "We integrate AI models and agents into real business processes — customer support, document handling, task automation, and more. You get increased speed, accuracy, and insights by using the power of LLMs, chatbots, and intelligent copilots.",
-    "items": [
-      {
-        "title": "Identifying AI Use Cases",
-        "text": "We assess where AI can add value — classification, generation, document analysis, chatbots, or search."
-      },
-      {
-        "title": "Requirements and Constraints",
-        "text": "We evaluate data sensitivity, latency, precision requirements, and user experience expectations."
-      },
-      {
-        "title": "Model Selection and Deployment Strategy",
-        "text": "We choose between OpenAI APIs, open-source models (e.g. Ollama, Llama), or hybrid on-premise setups."
-      },
-      {
-        "title": "Integration into Business Processes",
-        "text": "We embed AI into CRM, ERPs, websites, support flows — as agents, copilots, or background services."
-      },
-      {
-        "title": "Prompt Engineering and Logic Design",
-        "text": "We build prompt frameworks, role definitions, fallback rules, and system behavior for LLMs."
-      },
-      {
-        "title": "Quality Control and Feedback Loops",
-        "text": "We collect user feedback, evaluate AI responses, and implement continuous learning pipelines."
-      },
-      {
-        "title": "Security and Compliance",
-        "text": "We ensure ethical usage, access control, audit trails, and compliance with GDPR, HIPAA, or ISO standards."
-      }
-    ]
+    "whenDoYouNeedIt": "When your business is ready to move beyond experimentation and bring AI into production — not as a trend, but as a working part of your processes. You want results: faster response times, smarter decisions, and real automation that improves quality and saves time.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Identifying AI Use Cases",
+          "text": "We assess where AI can add value — classification, generation, document analysis, chatbots, or search."
+        },
+        {
+          "title": "Requirements and Constraints",
+          "text": "We evaluate data sensitivity, latency, precision requirements, and user experience expectations."
+        },
+        {
+          "title": "Model Selection and Deployment Strategy",
+          "text": "We choose between OpenAI APIs, open-source models (e.g. Ollama, Llama), or hybrid on-premise setups."
+        },
+        {
+          "title": "Integration into Business Processes",
+          "text": "We embed AI into CRM, ERPs, websites, support flows — as agents, copilots, or background services."
+        },
+        {
+          "title": "Prompt Engineering and Logic Design",
+          "text": "We build prompt frameworks, role definitions, fallback rules, and system behavior for LLMs."
+        },
+        {
+          "title": "Quality Control and Feedback Loops",
+          "text": "We collect user feedback, evaluate AI responses, and implement continuous learning pipelines."
+        },
+        {
+          "title": "Security and Compliance",
+          "text": "We ensure ethical usage, access control, audit trails, and compliance with GDPR, HIPAA, or ISO standards."
+        }
+      ]
+    },
+    "whatYouGet": "Tailored, well-integrated AI components that align with your workflows, deliver consistent output, and comply with your requirements for security, ethics, and control. You get working AI solutions — not demos, not labs — ready to deliver measurable value from day one."
   }
 }
