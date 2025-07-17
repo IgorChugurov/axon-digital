@@ -10,6 +10,7 @@ export default function Header() {
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
   const isExpertise = pathname === "/expertise";
+  const isServices = pathname === "/services";
   return (
     <header
       style={{
@@ -54,6 +55,16 @@ export default function Header() {
         </a>
       </div> */}
       <div className="pr-4 flex gap-2">
+        {isServices ? (
+          <span className="text-base text-gray-900 font-bold">Services</span>
+        ) : (
+          <Link
+            href="/services"
+            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+          >
+            Services
+          </Link>
+        )}
         {isAbout ? (
           <span className="text-base text-gray-900 font-bold">About</span>
         ) : (

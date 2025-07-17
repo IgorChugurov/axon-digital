@@ -27,7 +27,8 @@
         }
       ]
     },
-    "whatYouGet": "A complete set of technical documents — including architecture, data flows, functional specifications, and risk assessments — that serves as a reliable foundation for development. It helps prevent scope creep, miscommunication, and unexpected costs by aligning the entire team around a shared understanding of the product."
+    "whatYouGet": "A complete set of technical documents — including architecture, data flows, functional specifications, and risk assessments — that serves as a reliable foundation for development. It helps prevent scope creep, miscommunication, and unexpected costs by aligning the entire team around a shared understanding of the product.",
+    "image": "/spec-documentation.png"
   },
   "documentation-audit": {
     "title": "Documentation Audit and Evaluation",
@@ -57,7 +58,8 @@
         }
       ]
     },
-    "whatYouGet": "An expert-level analysis of the provided documentation, benchmarked against practical and architectural standards. You’ll receive a detailed report outlining which parts of the documentation are well-structured, which require clarification or additional detail, and which contradict engineering best practices. This helps you make informed decisions and avoid hidden technical or budgetary pitfalls."
+    "whatYouGet": "An expert-level analysis of the provided documentation, benchmarked against practical and architectural standards. You’ll receive a detailed report outlining which parts of the documentation are well-structured, which require clarification or additional detail, and which contradict engineering best practices. This helps you make informed decisions and avoid hidden technical or budgetary pitfalls.",
+    "image": "/documentation-audit.png"
   },
   "web-app-development": {
     "title": "Web Application Development",
@@ -95,7 +97,8 @@
         }
       ]
     },
-    "whatYouGet": "A fully functional, robust web application built with production-grade architecture, verified workflows, and smart development practices. Every feature works as expected, and every part of the system is ready to grow with your business. You’ll get exactly what you asked for — and likely discover it goes further than expected."
+    "whatYouGet": "A fully functional, robust web application built with production-grade architecture, verified workflows, and smart development practices. Every feature works as expected, and every part of the system is ready to grow with your business. You’ll get exactly what you asked for — and likely discover it goes further than expected.",
+    "image": "/web-app-development.png"
   },
   "website-creation": {
     "title": "Website Creation",
@@ -129,7 +132,8 @@
         }
       ]
     },
-    "whatYouGet": "A polished, responsive website built on a solid technical foundation — with fast load times, clean SEO, flexible content management, and pixel-perfect implementation of your brand. The result isn’t just a beautiful site, it’s a high-performance tool that delivers value from day one."
+    "whatYouGet": "A polished, responsive website built on a solid technical foundation — with fast load times, clean SEO, flexible content management, and pixel-perfect implementation of your brand. The result isn’t just a beautiful site, it’s a high-performance tool that delivers value from day one.",
+    "image": "/website-creation.png"
   },
   "process-automation": {
     "title": "Business Process Automation",
@@ -163,7 +167,8 @@
         }
       ]
     },
-    "whatYouGet": "A fully digital, transparent, and automated environment where tasks flow smoothly, data is unified, and processes evolve with your needs. The delivered system eliminates chaos and inefficiencies — giving you control, speed, and a foundation for future growth."
+    "whatYouGet": "A fully digital, transparent, and automated environment where tasks flow smoothly, data is unified, and processes evolve with your needs. The delivered system eliminates chaos and inefficiencies — giving you control, speed, and a foundation for future growth.",
+    "image": "/process-automation.png"
   },
   "ai-integration": {
     "title": "AI Integration into Business Workflows",
@@ -201,6 +206,7 @@
         }
       ]
     },
-    "whatYouGet": "Tailored, well-integrated AI components that align with your workflows, deliver consistent output, and comply with your requirements for security, ethics, and control. You get working AI solutions — not demos, not labs — ready to deliver measurable value from day one."
+    "whatYouGet": "Tailored, well-integrated AI components that align with your workflows, deliver consistent output, and comply with your requirements for security, ethics, and control. You get working AI solutions — not demos, not labs — ready to deliver measurable value from day one.",
+    "image": "/ai-integration.png"
   }
 }
