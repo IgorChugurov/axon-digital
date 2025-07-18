@@ -1,102 +1,331 @@
 "use client";
 
 import Link from "next/link";
-
+import { useState, useEffect } from "react";
 import ButtonForLeftPanel from "./ButtonForLeftPanel";
 import { usePathname } from "next/navigation";
+
 export default function Header() {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
-  const isExpertise = pathname === "/expertise";
-  const isServices = pathname === "/services";
+  const isExpertise =
+    pathname === "/expertise" || pathname.startsWith("/expertise/");
+  const isServices =
+    pathname === "/services" || pathname.startsWith("/services/");
   const isPlatform = pathname === "/platform";
+  const isContact = pathname === "/contact";
+
+  // Individual service page checks
+  const isWebAppDev = pathname === "/services/web-app-development";
+  const isWebsiteCreation = pathname === "/services/website-creation";
+  const isAIIntegration = pathname === "/services/ai-integration";
+  const isProcessAutomation = pathname === "/services/process-automation";
+  const isCoreFlowPlatform = pathname === "/services/coreflow-platform";
+  const isSpecDocumentation = pathname === "/services/spec-documentation";
+  const isDocumentationAudit = pathname === "/services/documentation-audit";
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <header
-      style={{
-        backgroundColor: "#f0f4f9",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "100%",
-
-        height: "50px",
-      }}
-    >
-      <div className="flex justify-center align-center items-center pl-4 gap-1">
-        {isHome ? (
-          <>
-            <ButtonForLeftPanel hideWhenExpand={true} />
-            <span className="text-2xl text-black font-bold">AxonDigital</span>
-          </>
-        ) : (
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl text-black font-bold">AxonDigital</span>
-          </Link>
-        )}
-      </div>
-
-      {/* <div
+    <>
+      <header
         style={{
-          width: "190px",
+          backgroundColor: "#f0f4f9",
           display: "flex",
-          justifyContent: "flex-end",
-
-          paddingRight: "2rem",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          height: "50px",
         }}
       >
-        <a
-          href="https://wa.me/YOUR_WHATSAPP_NUMBER"
-          // className={`${styles.frame} ${styles.wa}`}
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="flex justify-center align-center items-center pl-4 gap-1">
+          {isHome ? (
+            <>
+              <ButtonForLeftPanel hideWhenExpand={true} />
+              <span className="text-2xl text-black font-bold">AxonDigital</span>
+            </>
+          ) : (
+            <Link href="/" className="flex items-center">
+              <span className="text-2xl text-black font-bold">AxonDigital</span>
+            </Link>
+          )}
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="pr-4 hidden md:flex gap-2">
+          {isServices ? (
+            <span className="text-base text-gray-900 font-bold">Services</span>
+          ) : (
+            <Link
+              href="/services"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              Services
+            </Link>
+          )}
+          {isAbout ? (
+            <span className="text-base text-gray-900 font-bold">About</span>
+          ) : (
+            <Link
+              href="/about"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              About
+            </Link>
+          )}
+          {isPlatform ? (
+            <span className="text-base text-gray-900 font-bold">Platform</span>
+          ) : (
+            <Link
+              href="/platform"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              Platform
+            </Link>
+          )}
+          {isExpertise ? (
+            <span className="text-base text-gray-900 font-bold">Expertise</span>
+          ) : (
+            <Link
+              href="/expertise"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              Expertise
+            </Link>
+          )}
+        </div>
+
+        {/* Mobile Hamburger Menu Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="md:hidden pr-4 flex flex-col justify-center items-center w-8 h-8 z-[1002]"
+          aria-label="Toggle navigation menu"
         >
-          <SocialIcon name="whatsapp" size={30} />
-        </a>
-      </div> */}
-      <div className="pr-4 flex gap-2">
-        {isServices ? (
-          <span className="text-base text-gray-900 font-bold">Services</span>
-        ) : (
-          <Link
-            href="/services"
-            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
-          >
-            Services
-          </Link>
-        )}
-        {isAbout ? (
-          <span className="text-base text-gray-900 font-bold">About</span>
-        ) : (
-          <Link
-            href="/about"
-            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
-          >
-            About
-          </Link>
-        )}
-        {isPlatform ? (
-          <span className="text-base text-gray-900 font-bold">Platform</span>
-        ) : (
-          <Link
-            href="/platform"
-            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
-          >
-            Platform
-          </Link>
-        )}
-        {isExpertise ? (
-          <span className="text-base text-gray-900 font-bold">Expertise</span>
-        ) : (
-          <Link
-            href="/expertise"
-            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
-          >
-            Expertise
-          </Link>
-        )}
+          <span
+            className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 ${
+              isMobileMenuOpen ? "rotate-45 translate-y-1" : ""
+            }`}
+          />
+          <span
+            className={`block w-5 h-0.5 bg-gray-900 mt-1 transition-all duration-300 ${
+              isMobileMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block w-5 h-0.5 bg-gray-900 mt-1 transition-all duration-300 ${
+              isMobileMenuOpen ? "-rotate-45 -translate-y-1" : ""
+            }`}
+          />
+        </button>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-[1001] md:hidden"
+          onClick={closeMobileMenu}
+        />
+      )}
+
+      {/* Mobile Slide Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-[1002] md:hidden overflow-y-auto ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col p-6 pt-16">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>
+
+          <nav className="flex flex-col space-y-4">
+            {/* Home */}
+            <Link
+              href="/"
+              className={`text-lg font-medium transition-colors py-2 ${
+                isHome
+                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                  : "text-gray-700 hover:text-gray-900 pl-4"
+              }`}
+              onClick={closeMobileMenu}
+            >
+              Home
+            </Link>
+
+            {/* Services Section */}
+            <div className="py-2">
+              <Link
+                href="/services"
+                className={`text-lg font-medium transition-colors py-2 block ${
+                  isServices
+                    ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                    : "text-gray-700 hover:text-gray-900 pl-4"
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Services
+              </Link>
+
+              {/* Services Submenu */}
+              <div className="ml-8 mt-2 space-y-2">
+                <Link
+                  href="/services/web-app-development"
+                  className={`text-sm transition-colors py-1 block ${
+                    isWebAppDev
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Web App Development
+                </Link>
+                <Link
+                  href="/services/website-creation"
+                  className={`text-sm transition-colors py-1 block ${
+                    isWebsiteCreation
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Website Creation
+                </Link>
+                <Link
+                  href="/services/ai-integration"
+                  className={`text-sm transition-colors py-1 block ${
+                    isAIIntegration
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  AI Integration
+                </Link>
+                <Link
+                  href="/services/process-automation"
+                  className={`text-sm transition-colors py-1 block ${
+                    isProcessAutomation
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Process Automation
+                </Link>
+                <Link
+                  href="/services/coreflow-platform"
+                  className={`text-sm transition-colors py-1 block ${
+                    isCoreFlowPlatform
+                      ? "text-gray-900 font-bold underline"
+                      : "text-gray-600 hover:text-gray-900 font-medium"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  CoreFlow Platform
+                </Link>
+                <Link
+                  href="/services/spec-documentation"
+                  className={`text-sm transition-colors py-1 block ${
+                    isSpecDocumentation
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Technical Documentation
+                </Link>
+                <Link
+                  href="/services/documentation-audit"
+                  className={`text-sm transition-colors py-1 block ${
+                    isDocumentationAudit
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Documentation Audit
+                </Link>
+              </div>
+            </div>
+
+            <Link
+              href="/about"
+              className={`text-lg font-medium transition-colors py-2 ${
+                isAbout
+                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                  : "text-gray-700 hover:text-gray-900 pl-4"
+              }`}
+              onClick={closeMobileMenu}
+            >
+              About
+            </Link>
+
+            <Link
+              href="/platform"
+              className={`text-lg font-medium transition-colors py-2 ${
+                isPlatform
+                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                  : "text-gray-700 hover:text-gray-900 pl-4"
+              }`}
+              onClick={closeMobileMenu}
+            >
+              Platform
+            </Link>
+
+            <Link
+              href="/expertise"
+              className={`text-lg font-medium transition-colors py-2 ${
+                isExpertise
+                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                  : "text-gray-700 hover:text-gray-900 pl-4"
+              }`}
+              onClick={closeMobileMenu}
+            >
+              Expertise
+            </Link>
+
+            <div className="border-t border-gray-200 mt-6 pt-6">
+              <Link
+                href="/contact"
+                className={`text-lg font-medium transition-colors py-2 block ${
+                  isContact
+                    ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                    : "text-gray-700 hover:text-gray-900 pl-4"
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Contact
+              </Link>
+            </div>
+          </nav>
+        </div>
       </div>
-    </header>
+    </>
   );
 }
