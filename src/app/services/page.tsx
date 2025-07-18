@@ -111,7 +111,7 @@ export default function ServicesPage() {
 
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors">
                         {service.title}
                       </h3>
                       <p className="text-gray-700 text-sm leading-relaxed flex-1">
@@ -120,7 +120,7 @@ export default function ServicesPage() {
 
                       {/* Read More */}
                       <div className="mt-4 pt-4 border-t border-gray-200">
-                        <span className="text-blue-600 text-sm font-medium group-hover:underline">
+                        <span className="text-gray-700 text-sm font-medium group-hover:underline">
                           Learn more →
                         </span>
                       </div>

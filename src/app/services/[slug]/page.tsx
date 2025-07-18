@@ -11,9 +11,61 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const page = servicesPages[slug as keyof typeof servicesPages];
+
+  if (!page) {
+    return {
+      title: "Service Not Found | AxonDigital",
+      description: "The requested service was not found.",
+    };
+  }
+
   return {
-    title: page?.title || "Service",
-    description: page?.description || "",
+    title: `${page.title} | AxonDigital Services`,
+    description: page.description,
+    keywords: [
+      page.title.toLowerCase(),
+      "AxonDigital services",
+      "digital solutions",
+      "web development",
+      "AI integration",
+      "business automation",
+      "custom software",
+    ],
+    openGraph: {
+      title: `${page.title} | AxonDigital Services`,
+      description: page.description,
+      type: "article",
+      url: `https://axondigital.xyz/services/${slug}`,
+      siteName: "AxonDigital",
+      images: [
+        {
+          url: "/banner.webp",
+          width: 1200,
+          height: 630,
+          alt: `${page.title} - AxonDigital Services`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${page.title} | AxonDigital`,
+      description: page.description,
+      images: ["/banner.webp"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    alternates: {
+      canonical: `https://axondigital.xyz/services/${slug}`,
+    },
   };
 }
 

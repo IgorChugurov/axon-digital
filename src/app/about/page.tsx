@@ -1,4 +1,4 @@
-"use client";
+import type { Metadata } from "next";
 import content from "@/content/aboutPage.json";
 import HeroSection from "@/components/about/HeroSection";
 import ApproachSection from "@/components/about/ApproachSection";
@@ -12,6 +12,59 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProcessSection from "@/components/about/ProcessSection";
 import FadeInSection from "@/components/FadeInSection";
+
+export const metadata: Metadata = {
+  title: "About Us | AxonDigital - Digital Agency & Technology Experts",
+  description:
+    "Learn about AxonDigital's team, approach, and comprehensive digital services. Discover our expertise in web development, AI integration, and CoreFlow Platform solutions.",
+  keywords: [
+    "about AxonDigital",
+    "digital agency team",
+    "technology experts",
+    "web development company",
+    "AI solutions provider",
+    "CoreFlow Platform",
+    "business digitalization",
+    "custom software development",
+  ],
+  openGraph: {
+    title: "About Us | AxonDigital - Digital Technology Experts",
+    description:
+      "Meet the AxonDigital team. Discover our approach to digital solutions, from web development to AI integration and our innovative CoreFlow Platform.",
+    type: "website",
+    url: "https://axondigital.xyz/about",
+    siteName: "AxonDigital",
+    images: [
+      {
+        url: "/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "AxonDigital Team - Digital Technology Experts",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | AxonDigital - Digital Technology Experts",
+    description:
+      "Meet our team of digital experts. Learn about our approach to web development, AI integration, and innovative platform solutions.",
+    images: ["/banner.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://axondigital.xyz/about",
+  },
+};
 
 export default function AboutPage() {
   return (

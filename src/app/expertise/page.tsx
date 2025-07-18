@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./page.module.css"; // Import your CSS module
@@ -14,6 +15,60 @@ const iconMap = {
 };
 type iconKeys = keyof typeof iconMap;
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Our Expertise | AxonDigital - AI, Healthcare & E-commerce Solutions",
+  description:
+    "Explore AxonDigital's expertise in AI-powered workflows, healthcare digitalization, e-commerce automation, and fintech solutions. Industry-specific digital transformation.",
+  keywords: [
+    "AI expertise",
+    "healthcare digitalization",
+    "e-commerce automation",
+    "fintech solutions",
+    "LLM workflows",
+    "AI assistants",
+    "digital transformation",
+    "industry solutions",
+    "business automation",
+  ],
+  openGraph: {
+    title: "Our Expertise | AxonDigital - Industry-Specific Digital Solutions",
+    description:
+      "Discover our deep expertise across industries: AI-powered workflows, healthcare systems, e-commerce automation, and fintech innovations.",
+    type: "website",
+    url: "https://axondigital.xyz/expertise",
+    siteName: "AxonDigital",
+    images: [
+      {
+        url: "/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "AxonDigital Expertise - Industry Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Expertise | AxonDigital - Industry Digital Solutions",
+    description:
+      "Expert solutions across industries: AI workflows, healthcare digitalization, e-commerce automation, and fintech innovations.",
+    images: ["/banner.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://axondigital.xyz/expertise",
+  },
+};
 
 const ExpertiseItem = ({
   icon,

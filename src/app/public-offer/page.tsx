@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
+export const metadata: Metadata = {
+  title: "Public Offer | AxonDigital - Terms of Service",
+  description:
+    "Public offer and terms of service for AxonDigital digital agency services, including AI assistant usage, data processing, and liability limitations.",
+  keywords: [
+    "public offer",
+    "terms of service",
+    "AxonDigital terms",
+    "AI assistant terms",
+    "digital services agreement",
+    "privacy policy",
+    "liability limitations",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://axondigital.xyz/public-offer",
+  },
+};
 
 export default function OfferPage() {
   return (
