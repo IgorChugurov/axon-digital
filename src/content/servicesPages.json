@@ -208,5 +208,40 @@
     },
     "whatYouGet": "Tailored, well-integrated AI components that align with your workflows, deliver consistent output, and comply with your requirements for security, ethics, and control. You get working AI solutions — not demos, not labs — ready to deliver measurable value from day one.",
     "image": "/ai-integration.png"
+  },
+  "coreflow-platform": {
+    "title": "CoreFlow Platform - No-Code Application Development",
+    "description": "Leverage our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy any application in days, not months, while reducing development time by 70% and cutting costs dramatically.",
+    "whenDoYouNeedIt": "When you need to rapidly prototype, develop, or scale data-driven applications without the overhead of manual CRUD development. Perfect for businesses requiring multiple admin panels, customer portals, or data management systems with complex relationships and multi-tenant requirements.",
+    "whatsIncluded": {
+      "items": [
+        {
+          "title": "Entity Structure Design",
+          "text": "We design and configure your data structures, relationships, and business logic using declarative definitions."
+        },
+        {
+          "title": "Automatic API Generation",
+          "text": "Complete RESTful APIs with CRUD operations, validation, permissions, and documentation generated automatically."
+        },
+        {
+          "title": "Auto-Generated Admin Panels",
+          "text": "Professional admin interfaces with forms, tables, filters, and dashboards generated based on your entity definitions."
+        },
+        {
+          "title": "Multi-Tenant Architecture",
+          "text": "Built-in data isolation with Projects, Groups, and Facilities for managing multiple organizations and departments."
+        },
+        {
+          "title": "Environment Management",
+          "text": "Configurable variables for different deployment environments and integration settings."
+        },
+        {
+          "title": "Custom Business Logic",
+          "text": "Integration of custom functions and workflows where automatic generation isn't sufficient."
+        }
+      ]
+    },
+    "whatYouGet": "A complete, production-ready application with automatic CRUD operations, professional admin interfaces, and enterprise-grade security. You get rapid development cycles, reduced maintenance overhead, and the ability to iterate quickly on business requirements without rewriting code.",
+    "image": "/coreflow-platform.png"
   }
 }

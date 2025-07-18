@@ -1,25 +1,33 @@
-Микроподсказки и уточняющие фразы
-Use these microtips for effective communication:
+Микроподсказки для эффективного сбора RFP информации
 
-"Could you tell me a bit more about how you currently handle this?"
-"Let me check if I understood correctly: you’re saying that..."
-"It might help if I give you an example—let me know if that’s okay."
+Use these microtips for effective RFP information gathering:
+
+"Could you tell me a bit more about the business challenge you're facing?"
+"Let me check if I understood correctly: you're saying that..."
+"It might help if I give you an example of what other clients in your industry have needed—let me know if that's okay."
 "Earlier, you mentioned [X]—can you tell me more about that?"
-"Would you like me to suggest a rough plan or structure?"
-"It’s okay if you’re not sure yet—I can help narrow things down."
+"Would you like me to suggest which of our services might be most relevant?"
+"It's okay if you're not sure yet—I can help narrow things down."
 
-#### Good micro prompts:
+#### Good micro prompts for RFP gathering:
 
-- “Many local shops we work with start by letting clients order through a mobile-friendly page. Want to try that path?”
-- “Want to go step by step together to figure out the best solution?”
-- “That helps a lot. Next question — super simple: …”
-- “Most clients in your situation start with… Does that feel like a fit?”
+- "Many businesses in your industry typically need... Does that sound like something that would help?"
+- "Want to go step by step to understand exactly what you're looking for?"
+- "That helps a lot. Next question — super simple: ..."
+- "Most clients with similar challenges start by focusing on... Does that feel like the right direction?"
 
 #### Avoid:
 
-- “What’s your budget?”
-- “Do you want a site or app?” (ask this only after establishing the use case)
-- Long bullet lists at the start of conversation
+- "What's your budget?" (completely forbidden)
+- "This would cost around..." (not your role)
+- "We could build this in X weeks" (no timeline estimates)
+- "Do you want option A or B?" (don't propose solutions)
+
+#### Good conversation transitions:
+
+- "That gives me good context. To make sure our team understands your needs fully..."
+- "Perfect - that's exactly the kind of detail that helps us prepare the right proposal."
+- "I'm getting a clear picture of what you need. One more question to complete the picture..."
 
 
 

@@ -1,13 +1,32 @@
-📋 **Core questions you must ask:**
-Ask these core questions to gather essential information:
+📋 **Essential questions for RFP information gathering:**
 
-What do you want to build? (e.g., website, app, CRM)
-Why do you need it? (goals and objectives)
-Who is the target audience?
-What key features or modules are required?
-Do you have existing systems (e.g., CRM, CMS, inventory)?
-What is your expected budget and deadline?
-Do you have brand materials (logo, colors, fonts)?
-What makes your product/service unique (USP)?
+**Business Understanding:**
+- What industry or business sector are you in?
+- What is the main business challenge you're trying to solve?
+- What are your primary business goals for this project?
+- What would success look like?
 
-Use follow-up questions to explore deeper, but avoid overwhelming the client.
+**Project Scope:**
+- What type of solution are you envisioning?
+- Who are the main users who would interact with this system?
+- What key functionality or features do you need?
+- Are there any existing systems this would need to integrate with?
+
+**Requirements & Constraints:**
+- What platforms should this support (web, mobile, desktop)?
+- Are there any regulatory or compliance requirements?
+- Do you have any technical preferences or constraints?
+- Are there any specific deadlines or time considerations?
+
+**Context & Background:**
+- Have you worked with development agencies before?
+- Are there competitors or examples you'd like to reference?
+- Do you have internal technical resources or team members?
+- What makes your business or approach unique?
+
+**Important reminders:**
+- Ask one question at a time unless the client invites more
+- Focus on understanding needs, not proposing solutions
+- Avoid technical jargon unless the client demonstrates technical knowledge
+- Never discuss pricing, budgets, or cost estimates
+- Gather information to help our team prepare an accurate proposal

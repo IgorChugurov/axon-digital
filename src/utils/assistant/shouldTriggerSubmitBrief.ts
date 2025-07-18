@@ -1,19 +1,22 @@
-import { AssistantContext } from "./generateAdditionalInstructions";
+import { SimplifiedAssistantContext } from "./createEmptyAssistantContext";
 
-export function shouldTriggerSubmitBrief(context: AssistantContext): boolean {
-  const hasGoal = Boolean(context.project?.goal?.description);
-  const hasAudience = Boolean(context.project?.audience?.description);
-  const hasFeatures = Boolean(context.technical?.features?.mustHave?.length);
-  const hasDeadline = Boolean(context.delivery?.deadline);
-  const hasBudget = Boolean(context.delivery?.budget?.range);
-  const hasContact = Boolean(context.contact?.value);
+export function shouldTriggerSubmitBrief(
+  context: SimplifiedAssistantContext
+): boolean {
+  // Check that we have minimum required data to send brief
+  const hasContactInfo = Boolean(context.contact_name && context.contact_info);
+  const hasProjectGoal = Boolean(context.project_goal);
+  const hasProjectType = Boolean(context.project_type);
 
-  return (
-    hasGoal &&
-    hasAudience &&
-    hasFeatures &&
-    hasDeadline &&
-    hasBudget &&
-    hasContact
-  );
+  // Minimum requirements: project goal, type and contact information
+  const readyToSubmit = hasContactInfo && hasProjectGoal && hasProjectType;
+
+  console.log("🎯 Submit brief check:", {
+    hasContactInfo,
+    hasProjectGoal,
+    hasProjectType,
+    readyToSubmit,
+  });
+
+  return readyToSubmit;
 }

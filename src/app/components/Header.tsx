@@ -11,6 +11,7 @@ export default function Header() {
   const isAbout = pathname === "/about";
   const isExpertise = pathname === "/expertise";
   const isServices = pathname === "/services";
+  const isPlatform = pathname === "/platform";
   return (
     <header
       style={{
@@ -73,6 +74,16 @@ export default function Header() {
             className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
           >
             About
+          </Link>
+        )}
+        {isPlatform ? (
+          <span className="text-base text-gray-900 font-bold">Platform</span>
+        ) : (
+          <Link
+            href="/platform"
+            className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+          >
+            Platform
           </Link>
         )}
         {isExpertise ? (

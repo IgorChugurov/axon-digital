@@ -1,9 +1,7 @@
 import OpenAI from "openai";
 
-import {
-  AssistantContext,
-  generateAdditionalInstructions,
-} from "@/utils/assistant/generateAdditionalInstructions";
+import { generateAdditionalInstructions } from "@/utils/assistant/generateAdditionalInstructions";
+import { SimplifiedAssistantContext } from "@/utils/assistant/createEmptyAssistantContext";
 import { updateAssistantContextFromFunctionCall } from "@/utils/assistant/updateAssistantContextFromFunctionCall";
 import { shouldTriggerSubmitBrief } from "@/utils/assistant/shouldTriggerSubmitBrief";
 import { buildSubmitBriefPayload } from "@/utils/assistant/buildSubmitBriefPayload";
@@ -19,7 +17,7 @@ const assistantId = process.env.ASSISTANT_ID!;
 interface HandleUserMessageOptions {
   threadId: string;
   message: string;
-  context: AssistantContext;
+  context: SimplifiedAssistantContext;
   ip: string;
 }
 
@@ -33,13 +31,28 @@ export async function handleUserMessage({
   context,
   ip,
 }: HandleUserMessageOptions) {
+  console.log("🚀 Starting message handling:", {
+    threadId,
+    messageLength: message.length,
+    hasContext: !!context,
+  });
+
   const loadedContext = await loadContextFromDatabase(threadId);
   const latestContext =
     loadedContext || context || createEmptyAssistantContext(threadId);
-  //console.log("context", context);
-  //console.log("latestContext", latestContext);
+
+  console.log("📋 Context loaded:", {
+    hasGoal: !!latestContext.project_goal,
+    hasType: !!latestContext.project_type,
+    hasContact: !!latestContext.contact_info,
+    lastUpdated: latestContext.updatedAt,
+  });
+
   const additionalInstructions = generateAdditionalInstructions(latestContext);
-  //console.log("additionalInstructions", additionalInstructions);
+  console.log(
+    "📝 Generated instructions length:",
+    additionalInstructions.length
+  );
 
   await logMessageToDatabase({
     threadId,
@@ -66,8 +79,8 @@ export async function handleUserMessage({
   const stream = new ReadableStream({
     async start(controller) {
       let requiresActionReceived = false;
+
       for await (const event of runStream as AsyncIterable<any>) {
-        //
         if (event.event === "thread.message.delta") {
           const delta = event.data.delta;
           if (delta?.content?.[0]?.text?.value) {
@@ -79,7 +92,7 @@ export async function handleUserMessage({
 
         if (event.event === "thread.run.requires_action") {
           requiresActionReceived = true;
-          console.log("event.event", event.event);
+          console.log("🔧 Function calls required");
           const run = event.data;
           const toolCalls =
             run.required_action?.submit_tool_outputs?.tool_calls;
@@ -87,26 +100,37 @@ export async function handleUserMessage({
           if (toolCalls) {
             const { outputs, updatedContext: newContext } =
               await handleToolCalls(toolCalls, threadId, updatedContext);
-            console.log("newContext", newContext);
+            console.log("🔄 Context updated by tool calls");
             updatedContext = newContext;
 
             await openai.beta.threads.runs.submitToolOutputs(threadId, run.id, {
               tool_outputs: outputs,
             });
+
+            // Check if submitBrief function was called
+            const hasSubmitBrief = toolCalls.some(
+              (call: any) => call.function.name === "submitBrief"
+            );
+
+            if (hasSubmitBrief) {
+              // Add confirmation message after submitBrief
+              const confirmationMessage = `Thank you! Your request has been received and our team will contact you shortly to discuss the project. We will prepare a detailed proposal based on the information collected.`;
+
+              assistantReply += confirmationMessage;
+              controller.enqueue(encoder.encode(confirmationMessage));
+
+              console.log("✉️ Confirmation message sent after submitBrief");
+            }
           }
         }
+
         if (
           event.event === "thread.run.completed" &&
           requiresActionReceived === false
         ) {
-          // console.log("event.event", event.event);
-          // const res = await ensureUpdateContextAfterMessage(
-          //   openai,
-          //   threadId,
-          //   assistantId,
-          //   updatedContext
-          // );
-          // console.log("res", res);
+          console.log(
+            "⚠️ Run completed without function calls - this might be an issue"
+          );
         }
       }
 
@@ -116,6 +140,12 @@ export async function handleUserMessage({
         content: assistantReply,
         ip,
         timestamp: new Date(),
+      });
+
+      console.log("✅ Message handling completed:", {
+        assistantReplyLength: assistantReply.length,
+        contextUpdated: updatedContext.updatedAt,
+        functionCallsTriggered: requiresActionReceived,
       });
 
       controller.close();

@@ -130,8 +130,8 @@ export default function ServicesPage() {
               ))}
             </div>
           </section>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </main>
   );

@@ -4,6 +4,7 @@ import HeroSection from "@/components/about/HeroSection";
 import ApproachSection from "@/components/about/ApproachSection";
 import ServicesSection from "@/components/about/ServicesSection";
 import ExpertiseSection from "@/components/about/ExpertiseSection";
+import PlatformSection from "@/components/about/PlatformSection";
 import WhyUsSection from "@/components/about/WhyUsSection";
 import PricingSection from "@/components/about/PricingSection";
 import ContactFormSection from "@/components/about/ContactFormSection";
@@ -52,6 +53,10 @@ export default function AboutPage() {
           </section>
 
           <section className="bg-white">
+            <PlatformSection />
+          </section>
+
+          <section className="bg-[#f0f4f9]">
             <WhyUsSection content={content.whyUs} />
           </section>
 
@@ -65,8 +70,8 @@ export default function AboutPage() {
           <section className="bg-[#f0f4f9]">
             <ContactFormSection content={content.contactForm} />
           </section>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </main>
   );

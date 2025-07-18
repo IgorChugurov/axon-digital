@@ -66,6 +66,22 @@ const ChatWindowStream: React.FC = () => {
   }, [messages]);
 
   useEffect(() => {
+    // Auto-scroll to chat if user comes from platform page with #chat hash
+    if (window.location.hash === "#chat") {
+      setTimeout(() => {
+        const chatElement = document.getElementById("chat");
+        if (chatElement) {
+          chatElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Focus input after scroll
+          setTimeout(() => {
+            sendMessage("focusInputArea");
+          }, 500);
+        }
+      }, 100);
+    }
+  }, []);
+
+  useEffect(() => {
     const SpeechRecognition =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition;
@@ -162,6 +178,7 @@ const ChatWindowStream: React.FC = () => {
 
   return (
     <div
+      id="chat"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -199,8 +216,8 @@ const ChatWindowStream: React.FC = () => {
             >
               <h1 className="text-4xl font-bold text-gray-900">
                 We are a digital agency — your partner in building smart digital
-                solutions. Our AI assistant makes it quick and easy to submit a
-                project request.
+                solutions. Our AI assistant helps you create a detailed request
+                so our team can prepare the perfect proposal for your project.
               </h1>
             </div>
             <div
@@ -216,8 +233,9 @@ const ChatWindowStream: React.FC = () => {
                   Start a new conversation
                 </p>
                 <p className="text-lg" style={{ color: "#4B5563" }}>
-                  Just describe your needs, and the assistant will gather
-                  everything required to create a high-quality project brief.
+                  Simply describe your vision and requirements. The assistant
+                  will guide you through gathering all the details our team
+                  needs to create a tailored proposal for your project.
                 </p>
               </div>
             </div>
@@ -246,8 +264,8 @@ const ChatWindowStream: React.FC = () => {
                   msg.sender === "user"
                     ? "bg-gray-100 text-black rounded-tl-none"
                     : msg.error
-                    ? "bg-red-100 text-red-700 border border-red-400"
-                    : "bg-white text-black rounded-tr-none"
+                      ? "bg-red-100 text-red-700 border border-red-400"
+                      : "bg-white text-black rounded-tr-none"
                 }`}
               >
                 {msg.text}

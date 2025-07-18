@@ -49,7 +49,7 @@ export const SidebarDesktop: React.FC = () => {
         .catch(console.error);
     };
 
-    fetchThreads(); // начальная загрузка
+    fetchThreads(); // initial loading
 
     const refreshHandler = () => {
       fetchThreads();

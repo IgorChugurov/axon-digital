@@ -13,6 +13,12 @@ export async function sendContactEmail({
   email,
   message,
 }: SendContactEmailProps) {
+  console.log("📧 SendContactEmail called with:", {
+    name: `'${name}'`,
+    email: `'${email}'`,
+    messageLength: message?.length || 0,
+  });
+
   try {
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL!,

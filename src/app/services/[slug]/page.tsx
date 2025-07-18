@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import ContactFormSection from "@/components/about/ContactFormSection";
 import servicesPages from "@/content/servicesPages.json";
@@ -82,6 +83,7 @@ export default async function Page({
           <section className="bg-[#f0f4f9]">
             <ContactFormSection content={contactForm} />
           </section>
+          <Footer />
         </div>
       </div>
     </main>

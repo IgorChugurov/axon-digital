@@ -1,67 +1,42 @@
 // src/utils/assistant/updateAssistantContextFromFunctionCall.ts
 
-import { AssistantContext } from "./generateAdditionalInstructions";
+import { SimplifiedAssistantContext } from "./createEmptyAssistantContext";
 
 interface ContextUpdatePayload {
-  project?: {
-    goal?: { type: string; description: string };
-    industry?: string;
-    audience?: { type: string; description: string; specifics?: string };
-    usp?: string;
-  };
-  technical?: {
-    features?: { mustHave: string[]; niceToHave?: string[] };
-    integrations?: { standard?: string[]; custom?: string[] };
-    infrastructure?: string[];
-    platform?: string;
-    multilingual?: boolean;
-    accessibilityCompliance?: { required: boolean; notes?: string };
-  };
-  seoAndPerformance?: {
-    advancedSeoRequired?: boolean;
-    notes?: string;
-  };
-  delivery?: {
-    deadline?: string;
-    budget?: { range: string; description?: string };
-    paymentModel?: string;
-    phasedDevelopment?: boolean;
-    supportRequired?: boolean;
-  };
-  contact?: {
-    preferredChannel?: string;
-    value?: string;
-  };
+  project_goal?: string;
+  project_type?: string;
+  target_audience?: string;
+  industry?: string;
+  key_features?: string[];
+  recommended_services?: string[];
+  deadline?: string;
+  budget_range?: string;
+  platform?: string;
+  integrations?: string[];
+  contact_name?: string;
+  contact_info?: string;
 }
 
 export function updateAssistantContextFromFunctionCall(
-  previousContext: AssistantContext,
+  previousContext: SimplifiedAssistantContext,
   updates: ContextUpdatePayload
-): AssistantContext {
-  const updatedContext: AssistantContext = {
+): SimplifiedAssistantContext {
+  const updatedContext: SimplifiedAssistantContext = {
     ...previousContext,
-    project: {
-      ...previousContext.project,
-      ...updates.project,
-    },
-    technical: {
-      ...previousContext.technical,
-      ...updates.technical,
-    },
-    seoAndPerformance: {
-      ...previousContext.seoAndPerformance,
-      ...updates.seoAndPerformance,
-    },
-    delivery: {
-      ...previousContext.delivery,
-      ...updates.delivery,
-    },
-    contact: {
-      ...previousContext.contact,
-      ...updates.contact,
-    },
+    ...updates,
     updatedAt: new Date(),
   };
+
+  // Logging for debugging
+  console.log("🔄 Context updated:", {
+    threadId: updatedContext.threadId,
+    hasGoal: !!updatedContext.project_goal,
+    hasType: !!updatedContext.project_type,
+    hasAudience: !!updatedContext.target_audience,
+    hasContact: !!updatedContext.contact_info,
+    featuresCount: updatedContext.key_features?.length || 0,
+    servicesCount: updatedContext.recommended_services?.length || 0,
+  });
 
   return updatedContext;
 }

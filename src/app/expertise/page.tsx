@@ -217,9 +217,9 @@ export default function Page() {
                 </a>
               </div>
             </section>
+            <Footer />
           </div>
         </div>
-        <Footer />
       </div>
     </main>
   );

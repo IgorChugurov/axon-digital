@@ -16,8 +16,8 @@ export default function AboutPage() {
             content={content.contactForm}
             bgFon={"bg-white"}
           />
+          <Footer />
         </div>
-        <Footer />
       </div>
     </main>
   );

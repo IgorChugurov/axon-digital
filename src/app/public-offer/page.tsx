@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export default function OfferPage() {
@@ -61,6 +62,7 @@ export default function OfferPage() {
               </p>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     </main>

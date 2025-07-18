@@ -1,110 +1,61 @@
-import { fieldInstructions } from "./fieldInstructions";
-// Тип AssistantContext
-export interface AssistantContext {
-  threadId: string;
-  project?: {
-    goal?: { type: string; description: string };
-    industry?: string;
-    audience?: { type: string; description: string; specifics?: string };
-    usp?: string;
-  };
-  technical?: {
-    features?: { mustHave: string[]; niceToHave?: string[] };
-    integrations?: { standard?: string[]; custom?: string[] };
-    infrastructure?: string[];
-    platform?: string;
-    multilingual?: boolean;
-    accessibilityCompliance?: { required: boolean; notes?: string };
-  };
-  seoAndPerformance?: {
-    advancedSeoRequired?: boolean;
-    notes?: string;
-  };
-  delivery?: {
-    deadline?: string;
-    budget?: { range: string; description?: string };
-    paymentModel?: string;
-    phasedDevelopment?: boolean;
-    supportRequired?: boolean;
-  };
-  contact?: {
-    preferredChannel?: string;
-    value?: string;
-  };
-  updatedAt: Date;
-}
+import { SimplifiedAssistantContext } from "./createEmptyAssistantContext";
 
-// Поля и их приоритеты
-const priorityGroups: { fields: string[]; priority: number }[] = [
-  { fields: ["goal", "audience"], priority: 1 },
-  { fields: ["features", "deadline"], priority: 2 },
-  { fields: ["industry", "usp", "platform"], priority: 3 },
-  {
-    fields: [
-      "integrations",
-      "infrastructure",
-      "multilingual",
-      "accessibilityCompliance",
-      "advancedSeoRequired",
-    ],
-    priority: 4,
-  },
-  {
-    fields: ["budget", "phasedDevelopment", "supportRequired", "contact"],
-    priority: 5,
-  },
+// Our services for recommendations
+const AGENCY_SERVICES = [
+  { id: "spec-documentation", name: "Project and Technical Documentation" },
+  { id: "documentation-audit", name: "Documentation Audit and Evaluation" },
+  { id: "web-app-development", name: "Web Application Development" },
+  { id: "website-creation", name: "Website Creation" },
+  { id: "process-automation", name: "Business Process Automation" },
+  { id: "ai-integration", name: "AI Integration into Business Workflows" },
+  { id: "coreflow-platform", name: "CoreFlow Platform - No-Code Development" },
 ];
 
-// Проверка заполненности поля
-const isFilled = (context: AssistantContext, field: string): boolean => {
+// Priorities for fields to collect RFP
+const PRIORITY_FIELDS = [
+  { fields: ["project_goal", "target_audience"], priority: 1 },
+  { fields: ["project_type", "key_features"], priority: 2 },
+  { fields: ["industry", "platform"], priority: 3 },
+  { fields: ["integrations"], priority: 4 },
+  { fields: ["contact_name", "contact_info"], priority: 5 },
+];
+
+// Check if field is filled
+const isFilled = (
+  context: SimplifiedAssistantContext,
+  field: string
+): boolean => {
   switch (field) {
-    case "goal":
-      return Boolean(context.project?.goal?.description);
-    case "audience":
-      return Boolean(context.project?.audience?.description);
-    case "features":
-      return Boolean(context.technical?.features?.mustHave?.length);
-    case "deadline":
-      return Boolean(context.delivery?.deadline);
+    case "project_goal":
+      return Boolean(context.project_goal);
+    case "target_audience":
+      return Boolean(context.target_audience);
+    case "project_type":
+      return Boolean(context.project_type);
+    case "key_features":
+      return Boolean(context.key_features?.length);
     case "industry":
-      return Boolean(context.project?.industry);
-    case "usp":
-      return Boolean(context.project?.usp);
+      return Boolean(context.industry);
     case "platform":
-      return Boolean(context.technical?.platform);
+      return Boolean(context.platform);
     case "integrations":
-      return Boolean(
-        context.technical?.integrations?.standard?.length ||
-          context.technical?.integrations?.custom?.length
-      );
-    case "infrastructure":
-      return Boolean(context.technical?.infrastructure?.length);
-    case "multilingual":
-      return context.technical?.multilingual !== undefined;
-    case "accessibilityCompliance":
-      return context.technical?.accessibilityCompliance !== undefined;
-    case "advancedSeoRequired":
-      return context.seoAndPerformance?.advancedSeoRequired !== undefined;
-    case "budget":
-      return Boolean(context.delivery?.budget?.range);
-    case "phasedDevelopment":
-      return context.delivery?.phasedDevelopment !== undefined;
-    case "supportRequired":
-      return context.delivery?.supportRequired !== undefined;
-    case "contact":
-      return Boolean(context.contact?.value);
+      return Boolean(context.integrations?.length);
+    case "contact_name":
+      return Boolean(context.contact_name);
+    case "contact_info":
+      return Boolean(context.contact_info);
     default:
       return true;
   }
 };
 
-// Генератор инструкции
+// Generator instructions
 export function generateAdditionalInstructions(
-  context: AssistantContext
+  context: SimplifiedAssistantContext
 ): string {
   const missingFields: string[] = [];
 
-  for (const group of priorityGroups) {
+  for (const group of PRIORITY_FIELDS) {
     for (const field of group.fields) {
       if (!isFilled(context, field)) {
         missingFields.push(field);
@@ -112,161 +63,126 @@ export function generateAdditionalInstructions(
     }
   }
 
-  const isStartingPhase = missingFields.length >= 10;
+  const isStartingPhase = missingFields.length >= 6;
+  const readyForServices = context.project_goal && context.project_type;
+  const readyForContact = missingFields.length <= 2;
 
-  const philosophyBlock = isStartingPhase
+  const servicesBlock = readyForServices
     ? `
-🎓 Remember:
-- You represent a professional digital agency.
-- We work iteratively (Agile), focus on real business outcomes, maintain transparency, and adapt solutions to client needs.
-- Your task is to guide the client’s thinking naturally and respectfully — not just ask questions.
-    `.trim()
+📋 **AxonDigital Services:**
+We offer 7 specialized services:
+1. **Project Documentation** - Technical specs, architecture, timelines
+2. **Documentation Audit** - Review existing project documentation
+3. **Web Application Development** - Custom web apps, CRM systems
+4. **Website Creation** - Corporate sites, landing pages, ecommerce
+5. **Process Automation** - Digitize workflows, HR, logistics
+6. **AI Integration** - LLM integration, AI assistants, automation
+7. **CoreFlow Platform** - No-code application development with auto-generated CRUD
+
+Based on what we've discussed, I can recommend specific services that fit your needs.
+  `
     : "";
 
+  const criticalInstructions = `
+🔥 **CRITICAL RFP GATHERING RULES:**
+1. You MUST call update_context function after EVERY user message
+2. Even if no new information was provided - call update_context with empty object {}
+3. This is NON-NEGOTIABLE. Failure to call this function is a system error
+4. When you have comprehensive project information and contact details, immediately call submitBrief
+5. NEVER discuss pricing, budgets, costs, or give any estimates
+6. NEVER propose technical solutions, timelines, or implementation details
+7. Focus ONLY on gathering information for RFP preparation
+  `;
+
+  const knownFactsText = generateKnownFactsBlock(context);
   const missingFieldsText = missingFields.length
     ? buildFocusBlock(missingFields)
-    : "- (None. You can proceed to finalize the project brief.)";
+    : "✅ All key information collected. Ready to request contact details.";
 
   return `
-${philosophyBlock}
+${criticalInstructions}
 
-🧠 Current known facts about the project:
-${generateKnownFactsBlock(context)}
+🧠 **Current RFP Information Collected:**
+${knownFactsText}
 
----
+${servicesBlock}
 
-📝 Focus for this message:
-
-You still need to collect information about:
+📝 **Still Need to Gather:**
 ${missingFieldsText}
 
----
+${
+  readyForContact
+    ? `
+🎯 **Ready for RFP Submission:**
+You have enough information to proceed. Ask for the client's name and contact (email or WhatsApp) to prepare their detailed RFP.
+`
+    : ""
+}
 
-🔧 Function Call Requirements:
-- After EVERY user reply, you MUST immediately call the \`update_context\` function.
-- This is MANDATORY even if the update is small or if no new information was obtained.
-- If no new information was obtained, call \`update_context\` with an empty object \`{}\`.
-- Never skip calling \`update_context\`. Failure to do so is a critical error.
-- After FULLY clarifying the project (requirements, goals, deadlines, and contacts), call \`submitBrief\`.
-- If the user provides name and contact information (email, phone number, WhatsApp), you MUST immediately call \`submitBrief\`, even if some minor clarifications are pending.
-- Do not continue asking questions after receiving contact details unless the user explicitly asks to add something.
-- You are responsible for strictly following these instructions.
-After successfully calling the \`submitBrief\` function, you MUST immediately send a message to the user confirming that their project brief was received and thanking them.
-
----
-
-🎯 Behavioral Rules:
-- Ask no more than one question at a time unless invited.
-- Avoid technical jargon unless the user is technical.
-- Confirm understanding if the topic is complex.
-- Summarize facts if multiple points are clarified.
-- Keep your tone natural, respectful, and professional.
+💡 **Remember:**
+- Ask only ONE question at a time
+- Focus on business needs, not technical solutions
+- Recommend specific services when appropriate
+- NEVER discuss pricing or timelines
+- Call update_context after EVERY response
   `.trim();
 }
 
-// Функция генерации блока фокуса
-function buildFocusBlock(missingFields: string[]): string {
-  return missingFields
-    .map((field) => {
-      const instruction = fieldInstructions[field];
-      if (!instruction) {
-        return `- ${capitalizeFieldName(field)}`;
-      }
-      return `
-  - **${capitalizeFieldName(field)}**:
-    - Tip: ${instruction.microTip}
-    - Example Questions:
-  ${instruction.exampleQuestions.map((q) => `    • ${q}`).join("\n")}
-      `.trim();
-    })
-    .join("\n\n");
-}
-
-// Функция для красивого отображения имени поля
-function capitalizeFieldName(field: string): string {
-  return field
-    .replace(/([A-Z])/g, " $1")
-    .replace(/^./, (str) => str.toUpperCase());
-}
-
-// Генерация описания собранных фактов
-
-function generateKnownFactsBlock(context: AssistantContext): string {
+// Generate known facts block
+function generateKnownFactsBlock(context: SimplifiedAssistantContext): string {
   const facts: string[] = [];
 
-  if (context.project?.goal?.description) {
-    facts.push(`- **Project Goal**: ${context.project.goal.description}`);
+  if (context.project_goal) {
+    facts.push(`- **Business Goal**: ${context.project_goal}`);
   }
-  if (context.project?.audience?.description) {
+  if (context.target_audience) {
+    facts.push(`- **Target Users**: ${context.target_audience}`);
+  }
+  if (context.project_type) {
+    facts.push(`- **Solution Type**: ${context.project_type}`);
+  }
+  if (context.key_features?.length) {
+    facts.push(`- **Key Features**: ${context.key_features.join(", ")}`);
+  }
+  if (context.industry) {
+    facts.push(`- **Industry**: ${context.industry}`);
+  }
+  if (context.platform) {
+    facts.push(`- **Platform**: ${context.platform}`);
+  }
+  if (context.integrations?.length) {
+    facts.push(`- **Integrations**: ${context.integrations.join(", ")}`);
+  }
+  if (context.recommended_services?.length) {
     facts.push(
-      `- **Target Audience**: ${context.project.audience.description}`
+      `- **Recommended Services**: ${context.recommended_services.join(", ")}`
     );
   }
-  if (context.technical?.features?.mustHave?.length) {
-    facts.push(
-      `- **Core Features**: ${context.technical.features.mustHave.join(", ")}`
-    );
-  }
-  if (context.delivery?.deadline) {
-    facts.push(`- **Estimated Deadline**: ${context.delivery.deadline}`);
-  }
-  if (context.project?.industry) {
-    facts.push(`- **Business Industry**: ${context.project.industry}`);
-  }
-  if (context.project?.usp) {
-    facts.push(`- **Unique Value Proposition (USP)**: ${context.project.usp}`);
-  }
-  if (context.technical?.platform) {
-    facts.push(`- **Target Platforms**: ${context.technical.platform}`);
-  }
-  if (
-    context.technical?.integrations?.standard?.length ||
-    context.technical?.integrations?.custom?.length
-  ) {
-    const integrations = [
-      ...(context.technical.integrations?.standard || []),
-      ...(context.technical.integrations?.custom || []),
-    ];
-    facts.push(`- **Required Integrations**: ${integrations.join(", ")}`);
-  }
-  if (context.technical?.infrastructure?.length) {
-    facts.push(
-      `- **Existing Infrastructure**: ${context.technical.infrastructure.join(", ")}`
-    );
-  }
-  if (context.technical?.multilingual !== undefined) {
-    facts.push(
-      `- **Multilingual Support**: ${context.technical.multilingual ? "Yes" : "No"}`
-    );
-  }
-  if (context.technical?.accessibilityCompliance !== undefined) {
-    facts.push(
-      `- **Accessibility Requirements**: ${context.technical.accessibilityCompliance.required ? "Special standards required" : "Basic compliance"}`
-    );
-  }
-  if (context.seoAndPerformance?.advancedSeoRequired !== undefined) {
-    facts.push(
-      `- **Advanced SEO Focus**: ${context.seoAndPerformance.advancedSeoRequired ? "Yes" : "No"}`
-    );
-  }
-  if (context.delivery?.budget?.range) {
-    facts.push(`- **Budget Estimate**: ${context.delivery.budget.range}`);
-  }
-  if (context.delivery?.phasedDevelopment !== undefined) {
-    facts.push(
-      `- **Phased Development Plan**: ${context.delivery.phasedDevelopment ? "Yes" : "No"}`
-    );
-  }
-  if (context.delivery?.supportRequired !== undefined) {
-    facts.push(
-      `- **Post-Launch Support Needed**: ${context.delivery.supportRequired ? "Yes" : "No"}`
-    );
-  }
-  if (context.contact?.value) {
-    facts.push(
-      `- **Contact Information**: ${context.contact.preferredChannel}: ${context.contact.value}`
-    );
+  if (context.contact_name) {
+    facts.push(`- **Contact**: ${context.contact_name}`);
   }
 
-  return facts.length ? facts.join("\n") : "- (no confirmed facts yet)";
+  return facts.length ? facts.join("\n") : "- (No information collected yet)";
+}
+
+// Generate missing fields block
+function buildFocusBlock(missingFields: string[]): string {
+  const fieldDescriptions = {
+    project_goal: "What business challenge are they trying to solve?",
+    target_audience: "Who are the main users of this system?",
+    project_type: "What type of solution do they need?",
+    key_features: "What core functionality is required?",
+    industry: "What business sector are they in?",
+    platform: "What platforms should be supported?",
+    integrations: "Any existing systems to integrate with?",
+    contact_name: "Client's name for the RFP",
+    contact_info: "Email or WhatsApp for sending the proposal",
+  };
+
+  return missingFields
+    .map(
+      (field) =>
+        `- **${fieldDescriptions[field as keyof typeof fieldDescriptions] || field}**`
+    )
+    .join("\n");
 }
