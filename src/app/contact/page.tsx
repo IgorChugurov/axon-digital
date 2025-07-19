@@ -8,20 +8,20 @@ import Footer from "../components/Footer";
 export const metadata: Metadata = {
   title: "Contact Us | AxonDigital - Get Your Digital Solution Quote",
   description:
-    "Contact AxonDigital for professional digital solutions. Get expert consultation for web development, AI integration, process automation, and CoreFlow Platform implementation.",
+    "Contact AxonDigital for professional digital solutions. Get expert consultation for web development, AI integration, process automation, and TvorFlow Platform implementation.",
   keywords: [
     "contact AxonDigital",
     "digital agency consultation",
     "web development quote",
     "AI solutions consultation",
-    "CoreFlow Platform demo",
+    "TvorFlow Platform demo",
     "business digitalization",
     "custom software quote",
   ],
   openGraph: {
     title: "Contact Us | AxonDigital - Digital Solutions Consultation",
     description:
-      "Ready to transform your business? Contact AxonDigital for expert consultation on web development, AI integration, and our innovative CoreFlow Platform.",
+      "Ready to transform your business? Contact AxonDigital for expert consultation on web development, AI integration, and our innovative TvorFlow Platform.",
     type: "website",
     url: "https://axondigital.xyz/contact",
     siteName: "AxonDigital",

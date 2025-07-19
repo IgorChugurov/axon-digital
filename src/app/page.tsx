@@ -6,13 +6,13 @@ import { SidebarDesktop } from "./components/SidebarDesktop";
 export const metadata: Metadata = {
   title: "AxonDigital - Digital Agency & AI-Powered Solutions",
   description:
-    "Professional digital agency offering web development, AI integration, process automation, and CoreFlow Platform. Get expert solutions tailored to your business needs.",
+    "Professional digital agency offering web development, AI integration, process automation, and TvorFlow Platform. Get expert solutions tailored to your business needs.",
   keywords: [
     "digital agency",
     "web development",
     "AI solutions",
     "process automation",
-    "CoreFlow Platform",
+    "TvorFlow Platform",
     "custom software development",
     "business digitalization",
     "AI assistant",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AxonDigital - Digital Agency & AI-Powered Solutions",
     description:
-      "Transform your business with our comprehensive digital solutions: web development, AI integration, process automation, and innovative CoreFlow Platform.",
+      "Transform your business with our comprehensive digital solutions: web development, AI integration, process automation, and innovative TvorFlow Platform.",
     type: "website",
     url: "https://axondigital.xyz",
     siteName: "AxonDigital",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AxonDigital - Digital Agency & AI-Powered Solutions",
     description:
-      "Professional digital solutions: web development, AI integration, automation, and CoreFlow Platform. Transform your business today.",
+      "Professional digital solutions: web development, AI integration, automation, and TvorFlow Platform. Transform your business today.",
     images: ["/banner.webp"],
   },
   robots: {

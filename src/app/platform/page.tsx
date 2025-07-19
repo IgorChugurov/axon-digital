@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export const metadata: Metadata = {
-  title: "CoreFlow Platform - No-Code Data Management Solution | AxonDigital",
+  title: "TvorFlow Platform - No-Code Data Management Solution | AxonDigital",
   description:
     "Our proprietary SaaS platform for automated application development. Configure data structures, generate CRUD APIs and admin panels automatically.",
   keywords:
@@ -22,7 +22,7 @@ export default function PlatformPage() {
           <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h1 className="text-5xl font-bold mb-6">CoreFlow Platform</h1>
+                <h1 className="text-5xl font-bold mb-6">TvorFlow Platform</h1>
                 <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                   Our proprietary no-code platform that automatically generates
                   enterprise-grade applications from data structure
@@ -55,7 +55,7 @@ export default function PlatformPage() {
                   Revolutionary Approach to Application Development
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  CoreFlow Platform eliminates the need for manual CRUD
+                  TvorFlow Platform eliminates the need for manual CRUD
                   development, automatically generating APIs and admin
                   interfaces from declarative configurations.
                   <strong>
@@ -141,7 +141,7 @@ export default function PlatformPage() {
                     Two-Tier Administration
                   </h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    CoreFlow Platform uses a sophisticated two-level
+                    TvorFlow Platform uses a sophisticated two-level
                     administration system that scales from single applications
                     to enterprise organizations.
                   </p>
@@ -210,7 +210,7 @@ export default function PlatformPage() {
                       </div>
                     </div>
                     <div className="bg-gray-800 text-white p-4 rounded-xl">
-                      <h4 className="font-bold mb-2">CoreFlow Platform</h4>
+                      <h4 className="font-bold mb-2">TvorFlow Platform</h4>
                       <p className="text-sm text-gray-300">
                         Automatic generation engine
                       </p>
@@ -306,7 +306,7 @@ export default function PlatformPage() {
                   Perfect For Enterprise Applications
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  CoreFlow Platform accelerates development of complex business
+                  TvorFlow Platform accelerates development of complex business
                   applications across various industries and use cases.
                 </p>
               </div>
@@ -389,7 +389,7 @@ export default function PlatformPage() {
                 Ready to Build Your Next Application?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Let&apos;s discuss how CoreFlow Platform can accelerate your
+                Let&apos;s discuss how TvorFlow Platform can accelerate your
                 project development and reduce time-to-market by 70%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

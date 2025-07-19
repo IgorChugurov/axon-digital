@@ -14,7 +14,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-300 text-sm mb-4">
               Professional digital agency building smart solutions with our
-              proprietary CoreFlow Platform. Deploy applications 70% faster.
+              proprietary TvorFlow Platform. Deploy applications 70% faster.
             </p>
             <div className="flex space-x-4">
               <a
@@ -72,10 +72,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/coreflow-platform"
+                  href="/services/tvorflow-platform"
                   className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
                 >
-                  CoreFlow Platform
+                  TvorFlow Platform
                 </Link>
               </li>
             </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
                   href="/platform"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  CoreFlow Platform
+                  TvorFlow Platform
                 </Link>
               </li>
               <li>
@@ -160,7 +160,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6">
               <span className="text-xs text-gray-500 bg-gray-800 px-3 py-1 rounded-full">
-                🚀 CoreFlow Platform - 70% Faster Development
+                🚀 TvorFlow Platform - 70% Faster Development
               </span>
             </div>
           </div>

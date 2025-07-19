@@ -73,18 +73,33 @@ export default function ServicesPage() {
       <div className="flex flex-col flex-1 overflow-hidden">
         <div className="flex-1 flex flex-col overflow-y-auto scrollbar-hide">
           {/* Hero Section */}
-          <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
-              Our Services
-            </h1>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-              We provide comprehensive digital solutions to help your business
-              grow, automate processes, and achieve your strategic goals.
-            </p>
+          <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center">
+                <h1 className="text-5xl font-bold mb-6">Our Services</h1>
+                <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                  Comprehensive digital solutions to transform your business.
+                  From web development to AI integration and our proprietary{" "}
+                  <strong>TvorFlow Platform</strong> — we deliver results{" "}
+                  <strong>70% faster</strong> than traditional approaches.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    Custom Development
+                  </span>
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    AI Integration
+                  </span>
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    TvorFlow Platform
+                  </span>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Services Grid */}
-          <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 pb-16 md:pb-24">
+          <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service) => (
                 <Link

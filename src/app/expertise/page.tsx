@@ -4,13 +4,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./page.module.css"; // Import your CSS module
 const iconMap = {
-  brainCircuit: "🧠",
-  bot: "🤖",
-  stethoscope: "🩺",
-  shoppingCart: "🛒",
-  calculator: "🧮",
+  brainCircuit: "⚡",
+  bot: "🔧",
+  stethoscope: "⚕",
+  shoppingCart: "💼",
+  calculator: "📈",
   building: "🏢",
-  banknote: "💸",
+  banknote: "💰",
   activity: "📊",
 };
 type iconKeys = keyof typeof iconMap;
@@ -122,84 +122,70 @@ export default function Page() {
     slug: string;
   }[] = [
     {
-      icon: "brainCircuit",
-      title: "LLM-Powered Workflows",
+      icon: "banknote",
+      title: "Fintech & Financial Services",
       description:
-        "We integrate large language models into business tools to automate routine tasks, generate content, and provide intelligent assistance to teams and customers.",
-      slug: "llm-workflows",
-    },
-    {
-      icon: "bot",
-      title: "AI Assistants for Web & CRM",
-      description:
-        "Custom assistants that guide users, automate replies, and structure client requests — built into your website, CRM, or internal tools.",
-      slug: "ai-assistants",
+        "Payment systems, financial platforms, banking integrations, and regulatory compliance solutions for fintech startups and established financial institutions.",
+      slug: "fintech-financial",
     },
     {
       icon: "stethoscope",
-      title: "Healthcare Digitalization",
+      title: "Healthcare & Medical Technology",
       description:
-        "Electronic health records, clinic dashboards, document workflows, and analytics tailored for medical institutions.",
-      slug: "healthcare-digitalization",
+        "HIPAA-compliant systems, electronic health records, telemedicine platforms, and clinical workflow management for healthcare providers.",
+      slug: "healthcare-medtech",
     },
     {
       icon: "shoppingCart",
-      title: "E-commerce Platforms",
+      title: "E-commerce & Retail Technology",
       description:
-        "Online stores, B2B portals, and marketplaces with payment systems, logistics, and advanced analytics built in.",
-      slug: "ecommerce-platforms",
-    },
-    {
-      icon: "calculator",
-      title: "Accounting Automation",
-      description:
-        "We build systems for payroll, tax reporting, and expense tracking, fully aligned with local legislation and accounting models.",
-      slug: "accounting-automation",
-    },
-    {
-      icon: "building",
-      title: "Property & Tenant Management",
-      description:
-        "CRMs and booking systems for shopping malls and commercial properties — manage leases, tenants, and contracts with ease.",
-      slug: "property-management",
-    },
-    {
-      icon: "banknote",
-      title: "Finance & Payment Systems",
-      description:
-        "Solutions for bank integrations, transaction tracking, budgeting, and financial reporting — secure and scalable.",
-      slug: "finance-platforms",
+        "Online marketplaces, inventory management, customer experience platforms, and omnichannel retail solutions that drive sales growth.",
+      slug: "ecommerce-retail",
     },
     {
       icon: "activity",
-      title: "Business Process Automation",
+      title: "Education & Learning Platforms",
       description:
-        "We digitize and optimize operations: CRM, document flow, approvals, and data collection — all tailored to your workflow.",
-      slug: "process-automation",
+        "Learning management systems, educational content platforms, student information systems, and interactive learning tools for modern education.",
+      slug: "education-edtech",
+    },
+    {
+      icon: "building",
+      title: "Real Estate & Property Technology",
+      description:
+        "Property management platforms, tenant portals, lease management systems, and smart building solutions for real estate professionals.",
+      slug: "proptech-realestate",
+    },
+    {
+      icon: "calculator",
+      title: "Enterprise & Corporate Solutions",
+      description:
+        "Large-scale business applications, enterprise resource planning, workflow automation, and system integrations for corporate environments.",
+      slug: "enterprise-corporate",
     },
   ];
 
   const caseStudies = [
     {
-      title: "AI-Driven CRM for Retail",
+      title: "Fintech Payment Platform",
       description:
-        "A retail chain with over 40 stores struggled to retain clients and organize sales data. We built a custom CRM with an AI assistant that guided managers, automated responses, and tracked inventory and visits.",
+        "A fintech startup needed a secure payment processing platform with real-time transaction monitoring and compliance features. We built a comprehensive solution with multi-currency support and regulatory compliance.",
       impact:
-        "Client return rate increased by 15%, and average handling time dropped by 40%.",
+        "Processed over $10M in transactions within first quarter, achieved PCI DSS compliance, and reduced transaction processing time by 50%.",
     },
     {
-      title: "Clinic Management Platform",
+      title: "Healthcare Management System",
       description:
-        "A group of private clinics needed better control over appointments, records, and staff workload. We developed a secure, modular platform with scheduling, medical notes, and performance analytics.",
+        "A medical clinic network required a unified system for patient records, appointment scheduling, and clinical workflows. We developed a HIPAA-compliant platform with telemedicine capabilities.",
       impact:
-        "Operational efficiency improved by 30%, and patient satisfaction rose significantly.",
+        "Improved patient satisfaction by 40%, reduced administrative overhead by 35%, and enabled remote consultations during pandemic.",
     },
     {
-      title: "B2B Marketplace with Logistics",
+      title: "E-commerce Marketplace Platform",
       description:
-        "A regional supplier required a scalable e-commerce system for wholesalers. We delivered a B2B marketplace with online payments, delivery tracking, and custom pricing rules.",
+        "A growing retailer needed a scalable e-commerce platform with advanced inventory management and customer analytics. We created a comprehensive solution with real-time reporting.",
       impact:
-        "Transaction volume grew by 25% in the first quarter after launch.",
+        "Increased online sales by 65%, improved inventory accuracy to 99.5%, and provided actionable customer insights that boosted conversion rates.",
     },
   ];
   return (
@@ -209,18 +195,31 @@ export default function Page() {
         <div className="flex-1 flex flex-col overflow-y-auto  scrollbar-hide">
           <div className="min-h-screen  font-sans">
             {/* Hero Section */}
-            <section
-              className={`text-black ${styles.herosection}  w-full  mx-auto px-4 sm:px-6 md:px-8 py-16 md:py-24`}
-            >
-              <div className="container mx-auto px-4 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Our Expertise
-                </h1>
-                <p className="text-lg md:text-xl max-w-2xl mx-auto">
-                  We build tailored digital systems that solve complex business
-                  challenges — from automation and analytics to AI-powered
-                  platforms.
-                </p>
+            <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center">
+                  <h1 className="text-5xl font-bold mb-6">Our Expertise</h1>
+                  <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Deep industry knowledge across AI-powered workflows,
+                    healthcare digitalization, e-commerce automation, and
+                    fintech solutions.{" "}
+                    <strong>
+                      We build tailored digital systems that solve complex
+                      business challenges with our innovative TvorFlow Platform.
+                    </strong>
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                      AI-Powered Solutions
+                    </span>
+                    <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                      Industry Expertise
+                    </span>
+                    <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                      TvorFlow Platform
+                    </span>
+                  </div>
+                </div>
               </div>
             </section>
 

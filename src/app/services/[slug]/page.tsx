@@ -128,7 +128,7 @@ export default async function Page({
               <h2 className="text-2xl font-bold mt-4 text-gray-900">
                 What you get
               </h2>
-              <p className="text-gray-700">{page.whatYouGet}</p>
+              <p className="text-gray-700">{page.result}</p>
             </div>
           </div>
 

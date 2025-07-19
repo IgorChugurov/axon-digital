@@ -21,7 +21,7 @@ export default function PlatformSection() {
             Our Proprietary Technology
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            We&apos;ve developed <strong>CoreFlow Platform</strong> — a
+            We&apos;ve developed <strong>TvorFlow Platform</strong> — a
             revolutionary no-code solution that automatically generates
             enterprise-grade applications from simple data structure
             configurations.
@@ -37,7 +37,7 @@ export default function PlatformSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                CoreFlow Platform
+                TvorFlow Platform
               </h3>
               <p className="text-lg text-gray-600 mb-8">
                 Instead of manually coding every CRUD operation, admin panel,

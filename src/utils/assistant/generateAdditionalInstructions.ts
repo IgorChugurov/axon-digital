@@ -8,7 +8,7 @@ const AGENCY_SERVICES = [
   { id: "website-creation", name: "Website Creation" },
   { id: "process-automation", name: "Business Process Automation" },
   { id: "ai-integration", name: "AI Integration into Business Workflows" },
-  { id: "coreflow-platform", name: "CoreFlow Platform - No-Code Development" },
+  { id: "tvorflow-platform", name: "TvorFlow Platform - No-Code Development" },
 ];
 
 // Priorities for fields to collect RFP
@@ -77,7 +77,7 @@ We offer 7 specialized services:
 4. **Website Creation** - Corporate sites, landing pages, ecommerce
 5. **Process Automation** - Digitize workflows, HR, logistics
 6. **AI Integration** - LLM integration, AI assistants, automation
-7. **CoreFlow Platform** - No-code application development with auto-generated CRUD
+7. **TvorFlow Platform** - No-code application development with auto-generated CRUD
 
 Based on what we've discussed, I can recommend specific services that fit your needs.
   `

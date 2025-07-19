@@ -16,21 +16,21 @@ import FadeInSection from "@/components/FadeInSection";
 export const metadata: Metadata = {
   title: "About Us | AxonDigital - Digital Agency & Technology Experts",
   description:
-    "Learn about AxonDigital's team, approach, and comprehensive digital services. Discover our expertise in web development, AI integration, and CoreFlow Platform solutions.",
+    "Learn about AxonDigital's team, approach, and comprehensive digital services. Discover our expertise in web development, AI integration, and TvorFlow Platform solutions.",
   keywords: [
     "about AxonDigital",
     "digital agency team",
     "technology experts",
     "web development company",
     "AI solutions provider",
-    "CoreFlow Platform",
+    "TvorFlow Platform",
     "business digitalization",
     "custom software development",
   ],
   openGraph: {
     title: "About Us | AxonDigital - Digital Technology Experts",
     description:
-      "Meet the AxonDigital team. Discover our approach to digital solutions, from web development to AI integration and our innovative CoreFlow Platform.",
+      "Meet the AxonDigital team. Discover our approach to digital solutions, from web development to AI integration and our innovative TvorFlow Platform.",
     type: "website",
     url: "https://axondigital.xyz/about",
     siteName: "AxonDigital",
@@ -73,10 +73,38 @@ export default function AboutPage() {
 
       <div className="flex flex-col flex-1  overflow-hidden">
         <div className="flex-1 flex flex-col overflow-y-auto  scrollbar-hide">
-          {/* Блок 1 — HeroSection на белом */}
-          <section className="bg-white">
-            <HeroSection content={content.hero} />
+          {/* Hero Section */}
+          <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center">
+                <h1 className="text-5xl font-bold mb-6">About AxonDigital</h1>
+                <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                  We are a digital engineering agency specializing in
+                  enterprise-grade solutions. From AI integration to our
+                  proprietary <strong>TvorFlow Platform</strong>, we deliver{" "}
+                  <strong>professional, scalable solutions</strong> that drive
+                  business growth.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    Enterprise Solutions
+                  </span>
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    Digital Engineering
+                  </span>
+                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
+                    TvorFlow Platform
+                  </span>
+                </div>
+              </div>
+            </div>
           </section>
+
+          {/* Блок 1 — HeroSection на белом */}
+          {/* <section className="bg-white">
+            <HeroSection content={content.hero} />
+          </section> */}
+
           {/* Блок 2 — ApproachSection на светлом */}
 
           <section className="bg-[#f0f4f9]    relative">

@@ -32,7 +32,7 @@ We offer 7 specialized digital services:
    - Intelligent assistants for websites and CRM platforms
    - AI-powered automation to boost efficiency and drive growth
 
-7. **CoreFlow Platform - No-Code Development** (coreflow-platform)
+7. **TvorFlow Platform - No-Code Development** (tvorflow-platform)
    - Our proprietary platform for automatic application generation
    - Zero-code CRUD operations, admin panels, and APIs
    - Enterprise multi-tenant architecture with 70% faster development

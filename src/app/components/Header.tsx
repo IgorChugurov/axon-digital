@@ -11,19 +11,17 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
-  const isExpertise =
-    pathname === "/expertise" || pathname.startsWith("/expertise/");
-  const isServices =
-    pathname === "/services" || pathname.startsWith("/services/");
+  const isExpertise = pathname === "/expertise"; //|| pathname.startsWith("/expertise/");
+  const isServices = pathname === "/services"; //|| pathname.startsWith("/services/");
   const isPlatform = pathname === "/platform";
   const isContact = pathname === "/contact";
-
+  console.log(pathname, isServices);
   // Individual service page checks
   const isWebAppDev = pathname === "/services/web-app-development";
   const isWebsiteCreation = pathname === "/services/website-creation";
   const isAIIntegration = pathname === "/services/ai-integration";
   const isProcessAutomation = pathname === "/services/process-automation";
-  const isCoreFlowPlatform = pathname === "/services/coreflow-platform";
+  const isTvorFlowPlatform = pathname === "/services/tvorflow-platform";
   const isSpecDocumentation = pathname === "/services/spec-documentation";
   const isDocumentationAudit = pathname === "/services/documentation-audit";
 
@@ -239,15 +237,15 @@ export default function Header() {
                   Process Automation
                 </Link>
                 <Link
-                  href="/services/coreflow-platform"
+                  href="/services/tvorflow-platform"
                   className={`text-sm transition-colors py-1 block ${
-                    isCoreFlowPlatform
+                    isTvorFlowPlatform
                       ? "text-gray-900 font-bold underline"
                       : "text-gray-600 hover:text-gray-900 font-medium"
                   }`}
                   onClick={closeMobileMenu}
                 >
-                  CoreFlow Platform
+                  TvorFlow Platform
                 </Link>
                 <Link
                   href="/services/spec-documentation"
