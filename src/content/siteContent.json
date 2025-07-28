@@ -1,0 +1,1302 @@
+{
+  "meta": {
+    "siteName": "AxonDigital",
+    "domain": "https://axondigital.xyz",
+    "description": "Professional digital agency offering web development, AI integration, process automation, and TvorFlow Platform",
+    "company": {
+      "name": "AxonDigital",
+      "email": "contact@axondigital.xyz",
+      "slogan": "Deploy applications 70% faster with TvorFlow Platform"
+    }
+  },
+  "navigation": {
+    "header": {
+      "logo": "AxonDigital",
+      "mainMenu": [
+        { "title": "Services", "url": "/services", "section": "services" },
+        {
+          "title": "Business Solutions",
+          "url": "/solutions",
+          "section": "solutions"
+        },
+        { "title": "About", "url": "/about", "section": "about" },
+        { "title": "Platform", "url": "/platform", "section": "platform" },
+        { "title": "Expertise", "url": "/expertise", "section": "expertise" }
+      ]
+    },
+    "footer": {
+      "sections": [
+        {
+          "title": "Our Services",
+          "links": [
+            {
+              "title": "Web Applications",
+              "url": "/services/web-app-development"
+            },
+            {
+              "title": "Website Creation",
+              "url": "/services/website-creation"
+            },
+            { "title": "AI Integration", "url": "/services/ai-integration" },
+            {
+              "title": "Process Automation",
+              "url": "/services/process-automation"
+            },
+            {
+              "title": "TvorFlow Platform",
+              "url": "/services/tvorflow-platform"
+            }
+          ]
+        },
+        {
+          "title": "Business Solutions",
+          "links": [
+            { "title": "OblikFlow (EN)", "url": "/solutions/oblikflow-en" },
+            { "title": "OblikFlow (UA)", "url": "/solutions/oblikflow-ua" }
+          ]
+        },
+        {
+          "title": "Technology",
+          "links": [
+            { "title": "TvorFlow Platform", "url": "/platform" },
+            {
+              "title": "Technical Documentation",
+              "url": "/services/spec-documentation"
+            },
+            {
+              "title": "Documentation Audit",
+              "url": "/services/documentation-audit"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "title": "About Us", "url": "/about" },
+            { "title": "Our Expertise", "url": "/expertise" },
+            { "title": "Contact", "url": "/contact" },
+            { "title": "Public Offer", "url": "/public-offer" }
+          ]
+        }
+      ]
+    }
+  },
+  "pages": {
+    "home": {
+      "url": "/",
+      "title": "AxonDigital - Digital Agency & AI-Powered Solutions",
+      "description": "Professional digital agency offering web development, AI integration, process automation, and TvorFlow Platform. Get expert solutions tailored to your business needs.",
+      "sections": {
+        "hero": {
+          "title": "AxonDigital - Digital Agency & AI-Powered Solutions",
+          "description": "Transform your business with our comprehensive digital solutions: web development, AI integration, process automation, and innovative TvorFlow Platform.",
+          "features": [
+            "Custom Development",
+            "AI Integration",
+            "TvorFlow Platform"
+          ]
+        },
+        "chat": {
+          "title": "AI Assistant",
+          "description": "Get expert consultation and project briefing through our AI assistant"
+        }
+      },
+      "relatedPages": [
+        "/about",
+        "/services",
+        "/solutions",
+        "/platform",
+        "/expertise"
+      ]
+    },
+    "solutions": {
+      "url": "/solutions",
+      "title": "Business Solutions | AxonDigital - Enterprise Business Systems",
+      "description": "Comprehensive business solutions tailored to your needs. From accounting automation to industry-specific platforms, we offer proven systems that accelerate your digital transformation.",
+      "sections": {
+        "hero": {
+          "title": "Business Solutions",
+          "description": "Proven business systems tailored and adapted to your specific needs. Our solutions combine industry expertise with cutting-edge technology and are customized for your business.",
+          "features": ["Custom-Adapted", "Industry-Proven", "Full Support"]
+        },
+        "solutionsGrid": {
+          "title": "Our Business Solutions Portfolio",
+          "solutions": [
+            {
+              "slug": "oblikflow-en",
+              "title": "OblikFlow (English)",
+              "shortDescription": "A powerful cloud-based accounting and tax platform for service firms and their clients.",
+              "category": "Accounting & Tax Management",
+              "language": "en",
+              "link": "/solutions/oblikflow-en",
+              "image": "/oblikflow-platform.png"
+            },
+            {
+              "slug": "oblikflow-ua",
+              "title": "OblikFlow (Українська)",
+              "shortDescription": "Потужна хмарна платформа для бухгалтерського та податкового обліку клієнтів.",
+              "category": "Бухгалтерський та податковий облік",
+              "language": "ua",
+              "link": "/solutions/oblikflow-ua",
+              "image": "/oblikflow-platform.png"
+            }
+          ]
+        }
+      },
+      "relatedPages": ["/services", "/about", "/platform", "/expertise"]
+    },
+    "about": {
+      "url": "/about",
+      "title": "About Us | AxonDigital - Digital Agency & Technology Experts",
+      "description": "Learn about AxonDigital's team, approach, and comprehensive digital services. Discover our expertise in web development, AI integration, and TvorFlow Platform solutions.",
+      "sections": {
+        "hero": {
+          "title": "About AxonDigital",
+          "description": "We are a digital engineering agency specializing in enterprise-grade solutions. From AI integration to our proprietary TvorFlow Platform, we deliver professional, scalable solutions that drive business growth.",
+          "features": [
+            "Enterprise Solutions",
+            "Digital Engineering",
+            "TvorFlow Platform"
+          ]
+        },
+        "approach": {
+          "title": "Our Approach",
+          "items": [
+            {
+              "title": "Agile and Flexibility",
+              "description": "We work fast, iteratively, and adaptively. Each phase delivers measurable results and tangible value to the client."
+            },
+            {
+              "title": "Structured Development Process",
+              "description": "Requirement analysis, architecture design, prototyping, development, testing, and solution deployment."
+            },
+            {
+              "title": "Transparency and Control",
+              "description": "We fix timelines and budgets, provide regular updates, and maintain open communication throughout the project."
+            },
+            {
+              "title": "Focus on Business Value",
+              "description": "We prioritize real business outcomes over simply delivering features."
+            }
+          ]
+        },
+        "services": {
+          "title": "What We Do",
+          "items": [
+            {
+              "title": "Project and Technical Documentation",
+              "description": "We help you plan your digital product: user flows, tech stack, specs, and timelines.",
+              "link": "/services/spec-documentation"
+            },
+            {
+              "title": "Documentation Audit and Evaluation",
+              "description": "We review your specs and estimates to find gaps, risks, and improvement areas.",
+              "link": "/services/documentation-audit"
+            },
+            {
+              "title": "Web Application Development",
+              "description": "We build scalable web apps — from MVPs to full-featured business platforms.",
+              "link": "/services/web-app-development"
+            },
+            {
+              "title": "Website Creation",
+              "description": "We design and build fast, stylish websites for business, content, or ecommerce.",
+              "link": "/services/website-creation"
+            },
+            {
+              "title": "Business Process Automation",
+              "description": "We digitize and automate internal operations: HR, logistics, analytics, and more.",
+              "link": "/services/process-automation"
+            },
+            {
+              "title": "AI Integration into Business Workflows",
+              "description": "We embed AI agents and models into real business processes to save time and boost accuracy.",
+              "link": "/services/ai-integration"
+            }
+          ]
+        },
+        "expertise": {
+          "title": "Our Expertise",
+          "items": [
+            {
+              "icon": "brainCircuit",
+              "title": "LLM Integration",
+              "description": "Integrating large language models (LLMs) into business systems to automate and optimize operations."
+            },
+            {
+              "icon": "bot",
+              "title": "AI Assistant Development",
+              "description": "Building intelligent assistants for websites, CRM platforms, and internal portals."
+            },
+            {
+              "icon": "stethoscope",
+              "title": "Healthcare and Document Management",
+              "description": "Solutions for electronic medical records, clinic management, and patient tracking."
+            },
+            {
+              "icon": "shoppingCart",
+              "title": "E-commerce",
+              "description": "Development of online stores, marketplaces, and B2B platforms."
+            },
+            {
+              "icon": "calculator",
+              "title": "Accounting Systems",
+              "description": "Automation of accounting, payroll calculation, and tax system integration."
+            },
+            {
+              "icon": "building",
+              "title": "Mall Management Systems",
+              "description": "CRM solutions for shopping centers, tenant platforms, and booking systems."
+            },
+            {
+              "icon": "banknote",
+              "title": "Financial Platforms",
+              "description": "Payment tracking, banking integrations, and financial reporting systems."
+            },
+            {
+              "icon": "activity",
+              "title": "Business Process Digitalization",
+              "description": "Automation of operations, CRM development, and electronic document management."
+            }
+          ]
+        },
+        "whyUs": {
+          "title": "Our Project Philosophy",
+          "groups": [
+            {
+              "title": "Expertise and Experience",
+              "icon": "Brain",
+              "items": [
+                {
+                  "title": "Deep Business Expertise",
+                  "description": "We deliver solutions based on real business experience and domain knowledge."
+                },
+                {
+                  "title": "Understanding Business Goals",
+                  "description": "We focus on achieving tangible outcomes aligned with client objectives."
+                },
+                {
+                  "title": "Innovation Driven",
+                  "description": "We implement cutting-edge technologies and modern practices."
+                },
+                {
+                  "title": "Proven Technologies",
+                  "description": "We use scalable, secure, and reliable tech stacks."
+                }
+              ]
+            },
+            {
+              "title": "Client Collaboration",
+              "icon": "Users",
+              "items": [
+                {
+                  "title": "Tailored Solutions",
+                  "description": "We adapt every solution to the unique needs of each client."
+                },
+                {
+                  "title": "Client-Centric Approach",
+                  "description": "Your goals and priorities shape every stage of the project."
+                },
+                {
+                  "title": "Transparency and Integrity",
+                  "description": "We maintain open communication and regular progress reports."
+                },
+                {
+                  "title": "Efficient Communication",
+                  "description": "We ensure fast responses and smooth coordination."
+                }
+              ]
+            },
+            {
+              "title": "Quality and Reliability",
+              "icon": "ShieldCheck",
+              "items": [
+                {
+                  "title": "Commitment to Quality",
+                  "description": "We follow best practices and ensure product stability at every stage."
+                },
+                {
+                  "title": "Rigorous Quality Assurance",
+                  "description": "Every milestone undergoes thorough testing and validation."
+                },
+                {
+                  "title": "Performance Optimization",
+                  "description": "We maximize performance without compromising quality."
+                },
+                {
+                  "title": "Data Security",
+                  "description": "We safeguard sensitive client information at all levels."
+                }
+              ]
+            },
+            {
+              "title": "Partnership and Support",
+              "icon": "Handshake",
+              "items": [
+                {
+                  "title": "Long-Term Partnerships",
+                  "description": "We support and grow projects even after launch."
+                },
+                {
+                  "title": "Ongoing Maintenance",
+                  "description": "Regular updates, technical support, and improvements."
+                },
+                {
+                  "title": "Flexible Collaboration Models",
+                  "description": "Fixed-price stages or hourly billing with full transparency."
+                },
+                {
+                  "title": "Responsive Support",
+                  "description": "Fast issue resolution and continuous development."
+                }
+              ]
+            }
+          ]
+        },
+        "pricing": {
+          "title": "Pricing and Engagement Model",
+          "items": [
+            {
+              "title": "Initial Stages — Hourly Billing",
+              "description": "Requirement analysis, architecture design, and specification drafting are billed based on hours required, depending on project complexity and team size."
+            },
+            {
+              "title": "Preliminary Project Estimation",
+              "description": "After the initial analysis and architecture phase, we provide an approximate project cost estimate."
+            },
+            {
+              "title": "Cost Refinement After Specification",
+              "description": "Following the finalization of the technical specification, we deliver a refined and realistic project budget."
+            },
+            {
+              "title": "Agile Scope Adjustments",
+              "description": "During development, new ideas and process optimizations can be incorporated with transparent budget updates."
+            }
+          ]
+        },
+        "process": {
+          "title": "How We Work",
+          "steps": [
+            {
+              "title": "Requirement Analysis",
+              "description": "Understanding business goals, analyzing workflows, and defining project tasks."
+            },
+            {
+              "title": "Architecture and Technology Stack",
+              "description": "Designing the system architecture and selecting the most suitable technologies."
+            },
+            {
+              "title": "Technical Specification Development",
+              "description": "Formalizing the requirements into a clear, structured technical document."
+            },
+            {
+              "title": "UX/UI Design",
+              "description": "Creating user-friendly interfaces and professional visual designs."
+            },
+            {
+              "title": "MVP Development",
+              "description": "Building the first working version: backend, API, and frontend."
+            },
+            {
+              "title": "Testing and Optimization",
+              "description": "Conducting thorough testing and fine-tuning the product."
+            },
+            {
+              "title": "Launch and Ongoing Support",
+              "description": "Deploying the solution, training users, and providing continuous support and improvements."
+            }
+          ]
+        },
+        "contactForm": {
+          "title": "Contact Us",
+          "subtitle": "Fill out the form, and we'll get back to you within 24 hours.",
+          "fields": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "message": "Your Message"
+          },
+          "buttonText": "Send Message"
+        }
+      },
+      "relatedPages": ["/services", "/expertise", "/platform", "/contact"]
+    },
+    "services": {
+      "url": "/services",
+      "title": "Our Services | AxonDigital - Full-Cycle Digital Solutions",
+      "description": "Comprehensive digital services: web application development, documentation audit, AI integration, process automation, and website creation. Expert solutions tailored to your business goals.",
+      "sections": {
+        "hero": {
+          "title": "Our Services",
+          "description": "Comprehensive digital solutions to transform your business. From web development to AI integration and our proprietary TvorFlow Platform — we deliver results 70% faster than traditional approaches.",
+          "features": [
+            "Custom Development",
+            "AI Integration",
+            "TvorFlow Platform"
+          ]
+        },
+        "servicesGrid": {
+          "title": "Our Services Portfolio",
+          "services": [
+            {
+              "slug": "web-app-development",
+              "title": "Web Application Development",
+              "description": "Custom web applications built with modern technologies and best practices. From MVP to enterprise-scale solutions, we deliver fast, secure, and scalable applications that grow with your business needs.",
+              "link": "/services/web-app-development",
+              "image": "/web-app-development.png"
+            },
+            {
+              "slug": "website-creation",
+              "title": "Website Creation and Design",
+              "description": "Professional websites that combine beautiful design with optimal performance. From landing pages to complex corporate sites, we create web experiences that convert visitors into customers and reflect your brand perfectly.",
+              "link": "/services/website-creation",
+              "image": "/website-creation.png"
+            },
+            {
+              "slug": "ai-integration",
+              "title": "AI Integration and Smart Solutions",
+              "description": "Integrate artificial intelligence into your existing systems and workflows. From chatbots and automation to data analysis and decision support, we make AI work for your specific business needs without the complexity.",
+              "link": "/services/ai-integration",
+              "image": "/ai-integration.png"
+            },
+            {
+              "slug": "process-automation",
+              "title": "Business Process Automation",
+              "description": "Streamline your operations with intelligent automation solutions. We identify manual, repetitive tasks and create custom automation workflows that save time, reduce errors, and improve efficiency across your organization.",
+              "link": "/services/process-automation",
+              "image": "/process-automation.png"
+            },
+            {
+              "slug": "tvorflow-platform",
+              "title": "TvorFlow Platform - No-Code Application Development",
+              "description": "Our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy complex business applications 70% faster with built-in CRUD operations, admin panels, and multi-tenant architecture.",
+              "link": "/services/tvorflow-platform",
+              "image": "/tvorflow-platform.png"
+            },
+            {
+              "slug": "spec-documentation",
+              "title": "Project and Technical Documentation",
+              "description": "We help you structure your digital product before development starts. You get detailed specifications, clear architecture, technology choices, and timelines — everything needed to plan, estimate, and launch development with confidence.",
+              "link": "/services/spec-documentation",
+              "image": "/spec-documentation.png"
+            },
+            {
+              "slug": "documentation-audit",
+              "title": "Documentation Audit and Optimization",
+              "description": "We analyze your existing project documentation to identify gaps, inconsistencies, and improvement opportunities. You get actionable recommendations to enhance clarity, completeness, and usability of your technical and project documentation.",
+              "link": "/services/documentation-audit",
+              "image": "/documentation-audit.png"
+            }
+          ]
+        }
+      },
+      "relatedPages": ["/about", "/platform", "/expertise", "/contact"]
+    },
+    "servicesDetails": {
+      "web-app-development": {
+        "url": "/services/web-app-development",
+        "title": "Web Application Development | AxonDigital Services",
+        "description": "Custom web applications built with modern technologies and best practices. From MVP to enterprise-scale solutions, we deliver fast, secure, and scalable applications that grow with your business needs.",
+        "sections": {
+          "overview": {
+            "title": "Web Application Development",
+            "description": "Custom web applications built with modern technologies and best practices. From MVP to enterprise-scale solutions, we deliver fast, secure, and scalable applications that grow with your business needs.",
+            "whenDoYouNeedIt": "When you need a custom web application that standard solutions can't provide. Perfect for complex business logic, specific workflow requirements, or when you need full control over features, performance, and scalability.",
+            "whatsIncluded": [
+              {
+                "title": "Full-stack development",
+                "text": "Frontend, backend, database design, and API development using React, Node.js, and modern frameworks."
+              },
+              {
+                "title": "User experience design",
+                "text": "Intuitive interfaces designed for your specific users and business processes."
+              },
+              {
+                "title": "Security and performance optimization",
+                "text": "Built-in security measures, performance optimization, and scalability planning from day one."
+              },
+              {
+                "title": "Testing and deployment",
+                "text": "Comprehensive testing, CI/CD setup, and deployment to your preferred hosting environment."
+              },
+              {
+                "title": "Documentation and training",
+                "text": "Complete technical documentation and team training for ongoing maintenance and updates."
+              }
+            ],
+            "result": "A production-ready web application tailored to your specific requirements. Includes source code, deployment setup, comprehensive documentation, and training for your team. Built with scalability in mind to grow with your business.",
+            "image": "/web-app-development.png"
+          }
+        },
+        "relatedPages": ["/services", "/platform", "/contact"]
+      },
+      "website-creation": {
+        "url": "/services/website-creation",
+        "title": "Website Creation and Design | AxonDigital Services",
+        "description": "Professional websites that combine beautiful design with optimal performance. From landing pages to complex corporate sites, we create web experiences that convert visitors into customers and reflect your brand perfectly.",
+        "sections": {
+          "overview": {
+            "title": "Website Creation and Design",
+            "description": "Professional websites that combine beautiful design with optimal performance. From landing pages to complex corporate sites, we create web experiences that convert visitors into customers and reflect your brand perfectly.",
+            "whenDoYouNeedIt": "When you need a professional web presence that stands out from competitors and drives business results. Perfect for businesses launching online, rebranding, or needing to improve their current website's performance and conversion rates.",
+            "whatsIncluded": [
+              {
+                "title": "Custom design and branding",
+                "text": "Unique visual identity that reflects your brand values and appeals to your target audience."
+              },
+              {
+                "title": "Responsive development",
+                "text": "Mobile-first approach ensuring perfect display and functionality across all devices and screen sizes."
+              },
+              {
+                "title": "Content management system",
+                "text": "Easy-to-use CMS allowing you to update content, images, and pages without technical knowledge."
+              },
+              {
+                "title": "SEO optimization",
+                "text": "Search engine optimization setup to improve visibility and attract organic traffic."
+              },
+              {
+                "title": "Analytics and performance tracking",
+                "text": "Built-in analytics setup to track visitor behavior, conversions, and site performance metrics."
+              }
+            ],
+            "result": "A fully functional, optimized website ready to drive business growth. Includes hosting setup, SSL certificate, analytics integration, and training on content management. Designed for long-term success with built-in SEO and performance optimization.",
+            "image": "/website-creation.png"
+          }
+        },
+        "relatedPages": ["/services", "/about", "/contact"]
+      },
+      "ai-integration": {
+        "url": "/services/ai-integration",
+        "title": "AI Integration and Smart Solutions | AxonDigital Services",
+        "description": "Integrate artificial intelligence into your existing systems and workflows. From chatbots and automation to data analysis and decision support, we make AI work for your specific business needs without the complexity.",
+        "sections": {
+          "overview": {
+            "title": "AI Integration and Smart Solutions",
+            "description": "Integrate artificial intelligence into your existing systems and workflows. From chatbots and automation to data analysis and decision support, we make AI work for your specific business needs without the complexity.",
+            "whenDoYouNeedIt": "When you want to leverage AI to improve customer service, automate decision-making, analyze large datasets, or enhance user experiences. Perfect for businesses ready to gain competitive advantages through intelligent automation.",
+            "whatsIncluded": [
+              {
+                "title": "AI strategy and planning",
+                "text": "Identify the best AI applications for your specific business challenges and goals."
+              },
+              {
+                "title": "Custom AI solution development",
+                "text": "Build and integrate AI tools like chatbots, recommendation systems, or predictive analytics into your workflow."
+              },
+              {
+                "title": "Data preparation and training",
+                "text": "Prepare your data and train AI models to work effectively with your specific business context."
+              },
+              {
+                "title": "Integration with existing systems",
+                "text": "Seamlessly connect AI solutions with your current tools, databases, and business processes."
+              },
+              {
+                "title": "Monitoring and optimization",
+                "text": "Ongoing performance monitoring and model improvements to ensure optimal results over time."
+              }
+            ],
+            "result": "AI-powered features that enhance your business operations and customer experiences. Includes trained models, integration setup, performance monitoring, and documentation. Designed to provide measurable improvements in efficiency and decision-making quality.",
+            "image": "/ai-integration.png"
+          }
+        },
+        "relatedPages": ["/services", "/platform", "/expertise", "/contact"]
+      },
+      "process-automation": {
+        "url": "/services/process-automation",
+        "title": "Business Process Automation | AxonDigital Services",
+        "description": "Streamline your operations with intelligent automation solutions. We identify manual, repetitive tasks and create custom automation workflows that save time, reduce errors, and improve efficiency across your organization.",
+        "sections": {
+          "overview": {
+            "title": "Business Process Automation",
+            "description": "Streamline your operations with intelligent automation solutions. We identify manual, repetitive tasks and create custom automation workflows that save time, reduce errors, and improve efficiency across your organization.",
+            "whenDoYouNeedIt": "When your team spends significant time on repetitive tasks, manual data entry, or complex workflows that could be streamlined. Perfect for scaling businesses that need to maintain quality while reducing operational overhead.",
+            "whatsIncluded": [
+              {
+                "title": "Process analysis and mapping",
+                "text": "We analyze your current workflows to identify automation opportunities and efficiency improvements."
+              },
+              {
+                "title": "Custom automation development",
+                "text": "Build tailored automation solutions using modern tools and APIs to connect your existing systems."
+              },
+              {
+                "title": "Integration with existing tools",
+                "text": "Connect your CRM, email, databases, and other business tools for seamless data flow and process execution."
+              },
+              {
+                "title": "Testing and optimization",
+                "text": "Thorough testing to ensure reliability, with ongoing optimization based on real-world usage patterns."
+              },
+              {
+                "title": "Training and documentation",
+                "text": "Complete documentation and team training to manage and extend your automation solutions."
+              }
+            ],
+            "result": "Automated workflows that run reliably in the background, freeing up your team for higher-value activities. Includes process documentation, monitoring setup, and maintenance guidelines. Typically results in 50-80% time savings on automated processes.",
+            "image": "/process-automation.png"
+          }
+        },
+        "relatedPages": ["/services", "/about", "/contact"]
+      },
+      "tvorflow-platform": {
+        "url": "/services/tvorflow-platform",
+        "title": "TvorFlow Platform - No-Code Application Development | AxonDigital Services",
+        "description": "Our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy complex business applications 70% faster with built-in CRUD operations, admin panels, and multi-tenant architecture.",
+        "sections": {
+          "overview": {
+            "title": "TvorFlow Platform - No-Code Application Development",
+            "description": "Our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy complex business applications 70% faster with built-in CRUD operations, admin panels, and multi-tenant architecture.",
+            "whenDoYouNeedIt": "When you need to rapidly develop and deploy business applications without extensive coding. Perfect for data-driven applications, internal tools, customer portals, and enterprise systems that require quick time-to-market with professional-grade functionality.",
+            "whatsIncluded": [
+              {
+                "title": "Automated application generation",
+                "text": "Define your data structures and automatically generate complete applications with CRUD operations, forms, and admin interfaces."
+              },
+              {
+                "title": "Multi-tenant architecture",
+                "text": "Built-in support for multiple organizations, projects, and user groups with sophisticated access control and data isolation."
+              },
+              {
+                "title": "Enterprise-grade features",
+                "text": "Automatic API generation, role-based permissions, audit logging, and scalable database architecture out of the box."
+              },
+              {
+                "title": "Custom business logic integration",
+                "text": "Extend generated applications with custom workflows, integrations, and business-specific functionality."
+              },
+              {
+                "title": "Deployment and hosting setup",
+                "text": "Complete deployment pipeline with hosting, SSL, monitoring, and backup systems configured for production use."
+              }
+            ],
+            "result": "A fully functional, production-ready application deployed in days instead of months. Includes all source code, documentation, hosting setup, and training. Reduces development costs by up to 70% while maintaining enterprise-grade quality and scalability.",
+            "image": "/tvorflow-platform.png"
+          }
+        },
+        "relatedPages": ["/platform", "/services", "/contact"]
+      },
+      "spec-documentation": {
+        "url": "/services/spec-documentation",
+        "title": "Project and Technical Documentation | AxonDigital Services",
+        "description": "We help you structure your digital product before development starts. You get detailed specifications, clear architecture, technology choices, and timelines — everything needed to plan, estimate, and launch development with confidence.",
+        "sections": {
+          "overview": {
+            "title": "Project and Technical Documentation",
+            "description": "We help you structure your digital product before development starts. You get detailed specifications, clear architecture, technology choices, and timelines — everything needed to plan, estimate, and launch development with confidence.",
+            "whenDoYouNeedIt": "When you're preparing to build a digital product and need well-structured, technically sound project documentation that reflects best engineering practices. This documentation becomes the foundation for estimating timelines and budgets, aligning all stakeholders, and ensuring your development team has a clear and actionable roadmap.",
+            "whatsIncluded": [
+              {
+                "title": "Understanding the product and goals",
+                "text": "We start with interviews and goal analysis to define a sound product structure and scope."
+              },
+              {
+                "title": "System and process design",
+                "text": "We design user flows, screen maps, and API structure. We define entities and business modules."
+              },
+              {
+                "title": "Tech stack and architecture choice",
+                "text": "We select technologies and structure your app based on scalability, budget, and resources."
+              },
+              {
+                "title": "Development plan and milestones",
+                "text": "You get a comprehensive project plan with clear phases, deliverables, and implementation timelines."
+              }
+            ],
+            "result": "You receive detailed documentation that serves as a blueprint for development. This includes technical specifications, user flows, architecture diagrams, and a structured development plan. The documentation helps minimize risks, avoid scope creep, and ensures everyone — developers, designers, and stakeholders — is aligned on the vision and execution strategy.",
+            "image": "/spec-documentation.png"
+          }
+        },
+        "relatedPages": ["/services", "/about", "/contact"]
+      },
+      "documentation-audit": {
+        "url": "/services/documentation-audit",
+        "title": "Documentation Audit and Optimization | AxonDigital Services",
+        "description": "We analyze your existing project documentation to identify gaps, inconsistencies, and improvement opportunities. You get actionable recommendations to enhance clarity, completeness, and usability of your technical and project documentation.",
+        "sections": {
+          "overview": {
+            "title": "Documentation Audit and Optimization",
+            "description": "We analyze your existing project documentation to identify gaps, inconsistencies, and improvement opportunities. You get actionable recommendations to enhance clarity, completeness, and usability of your technical and project documentation.",
+            "whenDoYouNeedIt": "When you have existing documentation that feels incomplete, outdated, or difficult to navigate. Perfect for teams struggling with knowledge gaps, onboarding challenges, or development bottlenecks caused by unclear specifications.",
+            "whatsIncluded": [
+              {
+                "title": "Comprehensive documentation review",
+                "text": "We analyze all existing docs: technical specs, user guides, API documentation, and process documents."
+              },
+              {
+                "title": "Gap analysis and recommendations",
+                "text": "Identify missing information, outdated content, and areas where clarity can be improved."
+              },
+              {
+                "title": "Structure and organization optimization",
+                "text": "Reorganize content for better navigation, searchability, and logical flow of information."
+              },
+              {
+                "title": "Implementation roadmap",
+                "text": "Step-by-step plan for implementing improvements with priority levels and estimated effort."
+              }
+            ],
+            "result": "You receive a detailed audit report with specific recommendations, reorganized content structure, and a clear implementation plan. This leads to more efficient team collaboration, faster onboarding, reduced support requests, and smoother development processes.",
+            "image": "/documentation-audit.png"
+          }
+        },
+        "relatedPages": ["/services", "/about", "/contact"]
+      }
+    },
+    "platform": {
+      "url": "/platform",
+      "title": "TvorFlow Platform - No-Code Data Management Solution | AxonDigital",
+      "description": "Our proprietary SaaS platform for automated application development. Configure data structures, generate CRUD APIs and admin panels automatically.",
+      "sections": {
+        "hero": {
+          "title": "TvorFlow Platform",
+          "description": "Our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy any application in days, not months, and reduce development costs by up to 70%.",
+          "features": [
+            "Automatic API Generation",
+            "Multi-tenant Architecture",
+            "Zero-Code CRUD"
+          ]
+        },
+        "capabilities": {
+          "title": "Revolutionary Approach to Application Development",
+          "description": "TvorFlow Platform eliminates the need for manual CRUD development, automatically generating APIs and admin interfaces from declarative configurations. This approach enables rapid deployment of any data-driven application — from simple management systems to complex enterprise solutions — reducing both time-to-market and development costs dramatically.",
+          "features": [
+            {
+              "title": "Automatic UI Generation",
+              "description": "Admin panels, forms, tables, and validation are automatically generated based on entity definitions. No manual frontend development required.",
+              "icon": "ui"
+            },
+            {
+              "title": "Enterprise Multi-tenancy",
+              "description": "Complete data isolation with Projects, Groups, and Facilities. Perfect for managing multiple organizations and departments.",
+              "icon": "multitenancy"
+            },
+            {
+              "title": "Zero-Code Development",
+              "description": "Define data structures through configuration, not code. The platform handles all CRUD operations, validation, and API endpoints.",
+              "icon": "zerocode"
+            }
+          ]
+        },
+        "architecture": {
+          "title": "Two-Tier Administration",
+          "description": "TvorFlow Platform uses a sophisticated two-level administration system that scales from single applications to enterprise organizations.",
+          "levels": [
+            {
+              "title": "System Administration Panel",
+              "description": "Configure projects, data structures, categories, and global settings. Used by developers and system architects."
+            },
+            {
+              "title": "Data Management Panel",
+              "description": "Manage actual data instances within specific organizations. Used by end-user administrators and content managers."
+            }
+          ]
+        },
+        "features": {
+          "title": "Platform Capabilities",
+          "items": [
+            {
+              "icon": "🏗️",
+              "title": "Entity Definition",
+              "description": "Define data structures declaratively with fields, types, and relationships"
+            },
+            {
+              "icon": "🔄",
+              "title": "Auto CRUD API",
+              "description": "RESTful APIs generated automatically for all entities with full validation"
+            },
+            {
+              "icon": "🎨",
+              "title": "Dynamic UI",
+              "description": "Forms, tables, and pages generated based on entity configurations"
+            },
+            {
+              "icon": "🌍",
+              "title": "Multi-language",
+              "description": "Built-in internationalization support with dynamic language switching"
+            },
+            {
+              "icon": "🔐",
+              "title": "Access Control",
+              "description": "Role-based permissions with facility-level data isolation"
+            },
+            {
+              "icon": "⚙️",
+              "title": "Environment Management",
+              "description": "Configurable variables for different deployment environments"
+            },
+            {
+              "icon": "📊",
+              "title": "Category System",
+              "description": "Global attributes and categories for flexible data classification"
+            },
+            {
+              "icon": "🏢",
+              "title": "Multi-tenant",
+              "description": "Complete isolation with Projects, Groups, and Facilities hierarchy"
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Perfect For Enterprise Applications",
+          "description": "TvorFlow Platform accelerates development of complex business applications across various industries and use cases.",
+          "cases": [
+            {
+              "title": "Healthcare Management",
+              "description": "Patient records, appointment scheduling, medical staff management with complete HIPAA compliance and multi-clinic support.",
+              "features": [
+                "Patient Data Management",
+                "Multi-clinic Isolation",
+                "Appointment Systems",
+                "Staff Scheduling"
+              ]
+            },
+            {
+              "title": "Educational Platforms",
+              "description": "Student information systems, course management, grading platforms with institution-level data separation.",
+              "features": [
+                "Student Records",
+                "Course Management",
+                "Grade Tracking",
+                "Multi-institution"
+              ]
+            },
+            {
+              "title": "Business Operations",
+              "description": "CRM systems, inventory management, project tracking with department-level access control.",
+              "features": [
+                "Customer Management",
+                "Inventory Tracking",
+                "Project Tools",
+                "Department Isolation"
+              ]
+            }
+          ]
+        },
+        "cta": {
+          "title": "Ready to Build Your Next Application?",
+          "description": "Let's discuss how TvorFlow Platform can accelerate your project development and reduce time-to-market by 70%.",
+          "actions": [
+            {
+              "title": "Schedule a Demo",
+              "url": "/contact",
+              "type": "primary"
+            },
+            { "title": "Learn More", "url": "/#chat", "type": "secondary" }
+          ]
+        }
+      },
+      "relatedPages": ["/services/tvorflow-platform", "/about", "/contact"]
+    },
+    "expertise": {
+      "url": "/expertise",
+      "title": "Our Expertise | AxonDigital - Industry-Specific Digital Solutions",
+      "description": "Discover our deep expertise across industries: AI-powered workflows, healthcare systems, e-commerce automation, and fintech innovations.",
+      "sections": {
+        "hero": {
+          "title": "Our Expertise",
+          "description": "Deep industry knowledge across fintech, healthcare, e-commerce, and enterprise solutions. We understand the unique challenges of each sector and deliver tailored digital solutions that drive real business results.",
+          "features": ["Industry Focus", "Proven Results", "Domain Expertise"]
+        },
+        "areas": {
+          "title": "Industry Expertise Areas",
+          "description": "Specialized knowledge and proven experience across key industries",
+          "items": [
+            {
+              "icon": "banknote",
+              "title": "Fintech & Financial Services",
+              "description": "Applied accounting systems with inventory, cash flow, and settlement modules. Automated trial balance generation and financial reporting with real business integrations.",
+              "slug": "fintech-financial",
+              "link": "/expertise/fintech-financial"
+            },
+            {
+              "icon": "stethoscope",
+              "title": "Healthcare & Medical Technology",
+              "description": "HIPAA-compliant systems for clinics: EMR, visit notes, appointment scheduling, medical documentation, and integration with lab equipment and 3D prosthetic printers.",
+              "slug": "healthcare-medtech",
+              "link": "/expertise/healthcare-medtech"
+            },
+            {
+              "icon": "shoppingCart",
+              "title": "E-commerce & Retail Technology",
+              "description": "Integrated e-commerce systems for stores and marketplaces with real-time inventory, accounting integration, storefront analytics, and vendor-friendly tools.",
+              "slug": "ecommerce-retail",
+              "link": "/expertise/ecommerce-retail"
+            },
+            {
+              "icon": "calculator",
+              "title": "Enterprise & Corporate Solutions",
+              "description": "Workflow automation, document control, and integration of new features into legacy systems via micro-frontends — tailored to real enterprise needs.",
+              "slug": "enterprise-corporate",
+              "link": "/expertise/enterprise-corporate"
+            },
+            {
+              "icon": "activity",
+              "title": "Education & Learning Platforms",
+              "description": "Learning management systems, educational content platforms, student information systems, and interactive learning tools for modern education.",
+              "slug": "education-edtech",
+              "link": "/expertise/education-edtech"
+            },
+            {
+              "icon": "building",
+              "title": "Real Estate & Property Technology",
+              "description": "Property platforms with advanced search, map integration, and custom business models connecting clients, property owners, and platform operators.",
+              "slug": "proptech-realestate",
+              "link": "/expertise/proptech-realestate"
+            }
+          ]
+        },
+        "caseStudies": {
+          "title": "Success Stories",
+          "description": "Real results from industry-specific solutions",
+          "cases": [
+            {
+              "title": "Fintech Payment Platform",
+              "description": "A fintech startup needed a secure payment processing platform with real-time transaction monitoring and compliance features. We built a comprehensive solution with multi-currency support and regulatory compliance.",
+              "impact": "Processed over $10M in transactions within first quarter, achieved PCI DSS compliance, and reduced transaction processing time by 50%."
+            },
+            {
+              "title": "Healthcare Management System",
+              "description": "A medical clinic network required a unified system for patient records, appointment scheduling, and clinical workflows. We developed a HIPAA-compliant platform with telemedicine capabilities.",
+              "impact": "Improved patient satisfaction by 40%, reduced administrative overhead by 35%, and enabled remote consultations during pandemic."
+            },
+            {
+              "title": "E-commerce Marketplace Platform",
+              "description": "A growing retailer needed a scalable e-commerce platform with advanced inventory management and customer analytics. We created a comprehensive solution with real-time reporting.",
+              "impact": "Increased online sales by 65%, improved inventory accuracy to 99.5%, and provided actionable customer insights that boosted conversion rates."
+            }
+          ]
+        }
+      },
+      "relatedPages": ["/services", "/about", "/platform"]
+    },
+    "expertiseDetails": {
+      "fintech-financial": {
+        "url": "/expertise/fintech-financial",
+        "title": "Fintech & Financial Services | AxonDigital Expertise",
+        "description": "We develop applied financial solutions grounded in real-world use cases and deep expertise in accounting and business process automation.",
+        "sections": {
+          "overview": {
+            "title": "Fintech & Financial Services",
+            "intro": "We develop applied financial solutions grounded in real-world use cases and deep expertise in accounting and business process automation. Our accounting automation platform covers all core enterprise operations and can be used as a full system or modularly via API.",
+            "content": [
+              "Automated accounting system with inventory and warehouse management, cash flow tracking, settlements with suppliers and customers, and multi-division accounting.",
+              "Automated generation of trial balances (TB) and account-based postings without manual input.",
+              "Comprehensive financial reporting, including balance sheets and profit & loss statements.",
+              "Flexible API enabling integration of individual modules into external systems and workflows.",
+              "Real-world use cases: warehouse and production integration on a fashion e-commerce site; full automation of accounting and CRM in an automotive service network."
+            ]
+          }
+        },
+        "relatedPages": ["/expertise", "/services/ai-integration", "/platform"]
+      },
+      "healthcare-medtech": {
+        "url": "/expertise/healthcare-medtech",
+        "title": "Healthcare & Medical Technology | AxonDigital Expertise",
+        "description": "We develop HIPAA-compliant healthcare solutions. Our focus is on building systems for clinics that center around patient care, treatment workflows, and secure medical documentation.",
+        "sections": {
+          "overview": {
+            "title": "Healthcare & Medical Technology",
+            "intro": "We develop HIPAA-compliant healthcare solutions. Our focus is on building systems for clinics that center around patient care, treatment workflows, and secure medical documentation.",
+            "content": [
+              "Electronic medical records (EMR) with full patient history, attached documents, and visit summaries.",
+              "Appointment scheduling systems, integrated with physician calendars and automated reminders.",
+              "Physician-facing interfaces for recording structured visit notes, diagnoses, and prescribed treatment plans.",
+              "Automated generation of medical documents, including clinical notes, referrals, certificates, and discharge summaries.",
+              "Document workflow management, covering internal records and external document exchange related to patient treatment.",
+              "Integration with medical hardware, including lab systems and 3D printers for custom prosthetics.",
+              "End-to-end data security and full HIPAA compliance in system architecture, storage, and access control."
+            ]
+          }
+        },
+        "relatedPages": [
+          "/expertise",
+          "/services/web-app-development",
+          "/platform"
+        ]
+      },
+      "ecommerce-retail": {
+        "url": "/expertise/ecommerce-retail",
+        "title": "E-commerce & Retail Technology | AxonDigital Expertise",
+        "description": "Our expertise lies in developing integrated e-commerce solutions that ensure a seamless buying experience for customers and provide store owners with simple, effective tools.",
+        "sections": {
+          "overview": {
+            "title": "E-commerce & Retail Technology",
+            "intro": "Our expertise lies in developing integrated e-commerce solutions that ensure a seamless buying experience for customers and provide store owners with simple, effective tools for managing products, stock, and analytics. We build both individual online stores and full-scale marketplaces with real-time inventory tracking and accounting system integrations.",
+            "content": [
+              "User-friendly shopping interfaces that help customers easily find and purchase the products they need — search, filters, personalized recommendations, and streamlined checkout.",
+              "Product management dashboards for store owners: control over product cards, pricing, categories, photos, stock levels, and availability.",
+              "Support for both single-store and marketplace models, including multi-vendor architecture, commission tracking, and internal logistics tools.",
+              "Integration with internal accounting systems, enabling synchronization of sales data, stock movements, and inventory balance.",
+              "Analytics and reporting tools that track sales performance, inventory dynamics, top-performing products, and storefront efficiency.",
+              "Real-time inventory tracking, with automatic updates on sales, arrivals, and returns."
+            ]
+          }
+        },
+        "relatedPages": [
+          "/expertise",
+          "/services/web-app-development",
+          "/platform"
+        ]
+      },
+      "enterprise-corporate": {
+        "url": "/expertise/enterprise-corporate",
+        "title": "Enterprise & Corporate Solutions | AxonDigital Expertise",
+        "description": "We develop corporate systems focused on automating key business processes and internal document workflows.",
+        "sections": {
+          "overview": {
+            "title": "Enterprise & Corporate Solutions",
+            "intro": "We develop corporate systems focused on automating key business processes and internal document workflows. Our solutions reduce manual overhead, improve control, and bring operational transparency to complex enterprise environments.",
+            "content": [
+              "Corporate document workflow systems, with approval routing, status tracking, templates, e-signatures, and archiving.",
+              "Automation of specialized business processes, tailored to the company's internal structure: calculations, data validation, reporting, ledger generation, and more.",
+              "Interfaces for multiple roles and departments, with fine-grained access control, task-specific views, and audit logging.",
+              "Integration with existing IT infrastructure, using APIs or direct connections to internal databases and services.",
+              "Embedding new functionality into legacy systems through micro-frontend architecture — without the need for full UI rework.",
+              "Execution monitoring and reporting, with dashboards, SLA tracking, notifications, and process analytics.",
+              "Scalable architecture, ready to grow with your company and adapt to evolving internal workflows."
+            ]
+          }
+        },
+        "relatedPages": [
+          "/expertise",
+          "/services/process-automation",
+          "/platform"
+        ]
+      },
+      "education-edtech": {
+        "url": "/expertise/education-edtech",
+        "title": "Education & Learning Platforms | AxonDigital Expertise",
+        "description": "We develop educational technology solutions that enhance learning experiences, streamline administrative processes, and improve educational outcomes.",
+        "sections": {
+          "overview": {
+            "title": "Education & Learning Platforms",
+            "intro": "We develop educational technology solutions that enhance learning experiences, streamline administrative processes, and improve educational outcomes. Our platforms serve schools, universities, corporate training, and online education providers.",
+            "content": [
+              "Learning Management Systems (LMS) with course creation, student progress tracking, assessment tools, and collaborative learning environments.",
+              "Student Information Systems with enrollment management, grade tracking, attendance monitoring, and parent-teacher communication portals.",
+              "Online course platforms with video streaming, interactive content, certification tracking, and payment processing for educational institutions.",
+              "Corporate training solutions with skills assessment, compliance training, performance tracking, and integration with HR management systems.",
+              "Educational analytics with learning outcome analysis, student performance prediction, curriculum optimization, and institutional reporting dashboards."
+            ]
+          }
+        },
+        "relatedPages": [
+          "/expertise",
+          "/services/web-app-development",
+          "/platform"
+        ]
+      },
+      "proptech-realestate": {
+        "url": "/expertise/proptech-realestate",
+        "title": "Real Estate & Property Technology | AxonDigital Expertise",
+        "description": "We build real estate platforms focused on advanced property search, listing management, and custom business models.",
+        "sections": {
+          "overview": {
+            "title": "Real Estate & Property Technology",
+            "intro": "We build real estate platforms focused on advanced property search, listing management, and custom business models that define how clients, property owners, and platform operators interact. Our systems are designed for clarity, flexibility, and scale.",
+            "content": [
+              "Property listing platforms with detailed parameters: price, location, size, property type, legal status, availability, and more.",
+              "Advanced filtering and search logic — covering everything from infrastructure and layout to floor level and documentation.",
+              "Map-based search and visualization, allowing users to explore listings geographically and evaluate proximity and infrastructure.",
+              "Owner dashboards with tools for managing listings, statuses, responses, and performance metrics.",
+              "Support for custom business models, including clearly separated roles for clients (buyers/renters), property owners, and platform operators (aggregators, agencies).",
+              "Scalable, high-performance architecture, fully adapted for mobile use and large property databases."
+            ]
+          }
+        },
+        "relatedPages": [
+          "/expertise",
+          "/services/web-app-development",
+          "/platform"
+        ]
+      }
+    },
+    "solutionsDetails": {
+      "oblikflow-en": {
+        "url": "/solutions/oblikflow-en",
+        "title": "OblikFlow - Accounting Automation Platform | AxonDigital Business Solutions",
+        "description": "OblikFlow is an intelligent platform for managing bookkeeping, tax reporting, and financial documents. Designed for accounting firms serving multiple clients, it enables seamless data collection, document processing, and tax compliance through AI and automation.",
+        "sections": {
+          "overview": {
+            "title": "OblikFlow — Client-Centric Accounting Automation",
+            "language": "en",
+            "category": "Accounting & Tax Management",
+            "description": "OblikFlow is an intelligent platform for managing bookkeeping, tax reporting, and financial documents. Designed for accounting firms serving multiple clients, it enables seamless data collection, document processing, and tax compliance through AI and automation.",
+            "features": [
+              "Multi-client management with access control",
+              "AI-powered document recognition and processing",
+              "Automated accounting entries and validation",
+              "Comprehensive tax calculation and reporting",
+              "Client portal for document upload and communication",
+              "Integration with banks and tax portals"
+            ],
+            "architecture": [
+              "Client Management: multi-profile support with access control and taxation settings.",
+              "Client Portal: upload documents, view reports, communicate with accountants.",
+              "Staff Dashboard: manage clients, generate reports, calculate taxes and salaries.",
+              "Document Upload & Parsing: via web, email, API, Excel templates. AI extracts document structure.",
+              "Posting & Validation: automatic accounting entries with rule-based validation.",
+              "Tax Calculation Module: supports different regimes, periods, and currencies.",
+              "Payroll Module: salary by performance, rates, or sales. Integrated with bank exports.",
+              "Inventory Management: product receipts, write-offs, inter-project movement, FX revaluation.",
+              "Reporting: balance sheets, profit/loss, tax filings, VAT, social taxes, dividend tax.",
+              "Analytics & Dashboards: trends, forecasts, obligations, project-level metrics.",
+              "Tax Optimization Suggestions: legal AI-based advice to reduce tax load.",
+              "Integration Layer: sync with CRM, ERP, banks, tax portals via API.",
+              "Task Management: assign and track bookkeeping tasks.",
+              "Security & Compliance: full audit log, GDPR compliance, role-based access."
+            ],
+            "technology": [
+              "OCR + Layout Parsing: for scanned and structured documents.",
+              "GPT-4 Turbo + Finetuned Rules: for document classification and extraction.",
+              "MongoDB + Node.js: core ledger and data processing engine.",
+              "Cloud-first architecture: supports horizontal scaling and multi-tenancy.",
+              "Secure RESTful API: for external integrations and file exchange."
+            ],
+            "useCases": [
+              "A firm manages 150+ clients: documents flow in via web/email/API.",
+              "Invoices and receipts are recognized and auto-posted to journals.",
+              "Accountants validate data and send tax reports directly from OblikFlow.",
+              "Clients track tax obligations and financial performance in the portal.",
+              "System suggests optimized expense handling to reduce tax liability."
+            ],
+            "benefits": [
+              "Reduce manual data entry by 80%",
+              "Automate tax calculations and compliance",
+              "Improve client communication and transparency",
+              "Scale accounting operations efficiently",
+              "Minimize errors through AI validation"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/ai-integration",
+          "/platform",
+          "/contact"
+        ]
+      },
+      "oblikflow-ua": {
+        "url": "/solutions/oblikflow-ua",
+        "title": "OblikFlow - Платформа автоматизації бухгалтерії | Бізнес-рішення AxonDigital",
+        "description": "OblikFlow — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
+        "sections": {
+          "overview": {
+            "title": "OblikFlow — Автоматизація обліку для бухгалтерських фірм",
+            "language": "ua",
+            "category": "Бухгалтерський та податковий облік",
+            "description": "OblikFlow — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
+            "features": [
+              "Управління декількома клієнтами з контролем доступу",
+              "AI-розпізнавання та обробка документів",
+              "Автоматичні бухгалтерські проводки та валідація",
+              "Комплексні податкові розрахунки та звітність",
+              "Клієнтський портал для завантаження документів",
+              "Інтеграція з банками та податковими порталами"
+            ],
+            "architecture": [
+              "Управління клієнтами: підтримка декількох профілів, доступи, податкові режими.",
+              "Клієнтський портал: завантаження документів, перегляд звітів, спілкування з бухгалтером.",
+              "Панель співробітника: управління клієнтами, нарахування ЗП, обробка документів.",
+              "Завантаження документів: через веб, email, API або шаблони Excel. AI проводить розпізнавання.",
+              "Обробка та проводки: автоматичне створення записів згідно з правилами обліку.",
+              "Податковий модуль: підтримка УСН, ОСН, самозайнятих, валют і періодів.",
+              "Модуль зарплати: нарахування по ставці, виручці або відпрацьованому часу.",
+              "Управління складом: прихід, списання, переміщення між проєктами, курсові різниці.",
+              "Звіти: баланс, прибутки/збитки, декларації з ПДВ, ЄСВ, податок на дивіденди.",
+              "Аналітика: динаміка, прогнози, зобов'язання, дохідність проєктів.",
+              "Оптимізація податків: AI-рекомендації з легального зниження податкового навантаження.",
+              "Інтеграція: з CRM, ERP, банками, податковими порталами через API.",
+              "Менеджмент задач: постановка завдань, нагадування, статуси.",
+              "Безпека та комплаєнс: повний журнал дій, GDPR-сумісність, контроль доступу."
+            ],
+            "technology": [
+              "OCR + розбір структури: для сканів та електронних документів.",
+              "GPT-4 Turbo + бізнес-правила: для класифікації та витягання даних.",
+              "MongoDB + Node.js: ядро обробки та збереження даних.",
+              "Хмарна архітектура: масштабування, ізоляція клієнтів, безперебійність.",
+              "RESTful API: безпечний обмін файлами та даними з зовнішніми системами."
+            ],
+            "useCases": [
+              "Бухгалтерська компанія обслуговує 150+ клієнтів через один інтерфейс.",
+              "Документи надходять через портал, email або API й автоматично обробляються.",
+              "Бухгалтер перевіряє дані, підписує декларації та відправляє їх.",
+              "Клієнт бачить фінансову картину та податкові зобов'язання в реальному часі.",
+              "Система пропонує рекомендації щодо оптимізації витрат для зниження податків."
+            ],
+            "benefits": [
+              "Скорочення ручного введення даних на 80%",
+              "Автоматизація податкових розрахунків та комплаєнсу",
+              "Покращення комунікації та прозорості з клієнтами",
+              "Ефективне масштабування бухгалтерських операцій",
+              "Мінімізація помилок через AI-валідацію"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/ai-integration",
+          "/platform",
+          "/contact"
+        ]
+      }
+    },
+    "contact": {
+      "url": "/contact",
+      "title": "Contact Us | AxonDigital - Get Your Digital Solution Quote",
+      "description": "Contact AxonDigital for professional digital solutions. Get expert consultation for web development, AI integration, process automation, and TvorFlow Platform implementation.",
+      "sections": {
+        "form": {
+          "title": "Contact Us",
+          "subtitle": "Fill out the form, and we'll get back to you within 24 hours.",
+          "fields": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "message": "Your Message"
+          },
+          "buttonText": "Send Message"
+        }
+      },
+      "relatedPages": ["/about", "/services", "/platform"]
+    },
+    "publicOffer": {
+      "url": "/public-offer",
+      "title": "Public Offer | AxonDigital - Terms of Service",
+      "description": "Public offer and terms of service for AxonDigital digital agency services, including AI assistant usage, data processing, and liability limitations.",
+      "sections": {
+        "terms": {
+          "title": "Public Offer",
+          "content": [
+            {
+              "title": "1. General Provisions",
+              "text": "This document is a public offer (proposal) of AxonDigital (hereinafter referred to as the \"Provider\") for the provision of information services on the website."
+            },
+            {
+              "title": "2. Subject of the Offer",
+              "text": "The Provider grants the User access to information materials and services available on the website, including AI assistant for collecting information and creating briefs."
+            },
+            {
+              "title": "3. Limitation of Liability",
+              "text": "All information provided on the website, including information generated by the AI assistant, is for informational purposes only. The Provider assumes no responsibility for decisions made by the User based on the information received."
+            },
+            {
+              "title": "4. Use of AI Assistant",
+              "text": "The AI assistant is designed to help create briefs and collect information. Responses generated by the AI assistant are automatically formed based on data provided by the User and do not constitute professional advice."
+            },
+            {
+              "title": "5. Confidentiality",
+              "text": "The Provider undertakes not to disclose information received from the User, except in cases provided for by law. However, the Provider cannot guarantee complete security of data transmission over the Internet."
+            },
+            {
+              "title": "6. Final Provisions",
+              "text": "This offer is valid indefinitely. The Provider reserves the right to make changes to the terms of the offer at any time without prior notice to the User. Continued use of the website after changes are made indicates the User's agreement with the new terms."
+            }
+          ]
+        }
+      },
+      "relatedPages": ["/contact", "/about"]
+    }
+  }
+}

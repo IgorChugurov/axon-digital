@@ -1,0 +1,118 @@
+[
+  {
+    "id": "oblikflow-en",
+    "slug": "oblikflow-en",
+    "language": "en",
+    "title": "OblikFlow",
+    "shortDescription": "A powerful cloud-based accounting and tax platform for service firms and their clients.",
+    "description": "OblikFlow is an intelligent platform for managing bookkeeping, tax reporting, and financial documents. Designed for accounting firms serving multiple clients, it enables seamless data collection, document processing, and tax compliance through AI and automation.",
+    "image": "/oblikflow.png",
+    "category": "Accounting & Tax Management",
+    "features": [
+      "Multi-client management with access control",
+      "AI-powered document recognition and processing",
+      "Automated accounting entries and validation",
+      "Comprehensive tax calculation and reporting",
+      "Client portal for document upload and communication",
+      "Integration with banks and tax portals"
+    ],
+    "architecture": [
+      "Client Management: multi-profile support with access control and taxation settings.",
+      "Client Portal: upload documents, view reports, communicate with accountants.",
+      "Staff Dashboard: manage clients, generate reports, calculate taxes and salaries.",
+      "Document Upload & Parsing: via web, email, API, Excel templates. AI extracts document structure.",
+      "Posting & Validation: automatic accounting entries with rule-based validation.",
+      "Tax Calculation Module: supports different regimes, periods, and currencies.",
+      "Payroll Module: salary by performance, rates, or sales. Integrated with bank exports.",
+      "Inventory Management: product receipts, write-offs, inter-project movement, FX revaluation.",
+      "Reporting: balance sheets, profit/loss, tax filings, VAT, social taxes, dividend tax.",
+      "Analytics & Dashboards: trends, forecasts, obligations, project-level metrics.",
+      "Tax Optimization Suggestions: legal AI-based advice to reduce tax load.",
+      "Integration Layer: sync with CRM, ERP, banks, tax portals via API.",
+      "Task Management: assign and track bookkeeping tasks.",
+      "Security & Compliance: full audit log, GDPR compliance, role-based access."
+    ],
+    "technology": [
+      "OCR + Layout Parsing: for scanned and structured documents.",
+      "GPT-4 Turbo + Finetuned Rules: for document classification and extraction.",
+      "MongoDB + Node.js: core ledger and data processing engine.",
+      "Cloud-first architecture: supports horizontal scaling and multi-tenancy.",
+      "Secure RESTful API: for external integrations and file exchange."
+    ],
+    "useCases": [
+      "A firm manages 150+ clients: documents flow in via web/email/API.",
+      "Invoices and receipts are recognized and auto-posted to journals.",
+      "Accountants validate data and send tax reports directly from OblikFlow.",
+      "Clients track tax obligations and financial performance in the portal.",
+      "System suggests optimized expense handling to reduce tax liability."
+    ],
+    "benefits": [
+      "Reduce manual data entry by 80%",
+      "Automate tax calculations and compliance",
+      "Improve client communication and transparency",
+      "Scale accounting operations efficiently",
+      "Minimize errors through AI validation"
+    ],
+    "implementationTimeline": {
+      "customDevelopment": "up to 6 months for custom development from scratch"
+    }
+  },
+  {
+    "id": "oblikflow-ua",
+    "slug": "oblikflow-ua",
+    "language": "ua",
+    "title": "ОблікФлоу",
+    "shortDescription": "Потужна хмарна платформа для бухгалтерського та податкового обліку клієнтів.",
+    "description": "ОблікФлоу — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
+    "image": "/oblikflow.png",
+    "category": "Бухгалтерський та податковий облік",
+    "features": [
+      "Управління декількома клієнтами з контролем доступу",
+      "AI-розпізнавання та обробка документів",
+      "Автоматичні бухгалтерські проводки та валідація",
+      "Комплексні податкові розрахунки та звітність",
+      "Клієнтський портал для завантаження документів",
+      "Інтеграція з банками та податковими порталами"
+    ],
+    "architecture": [
+      "Управління клієнтами: підтримка декількох профілів, доступи, податкові режими.",
+      "Клієнтський портал: завантаження документів, перегляд звітів, спілкування з бухгалтером.",
+      "Панель співробітника: управління клієнтами, нарахування ЗП, обробка документів.",
+      "Завантаження документів: через веб, email, API або шаблони Excel. AI проводить розпізнавання.",
+      "Обробка та проводки: автоматичне створення записів згідно з правилами обліку.",
+      "Податковий модуль: підтримка УСН, ОСН, самозайнятих, валют і періодів.",
+      "Модуль зарплати: нарахування по ставці, виручці або відпрацьованому часу.",
+      "Управління складом: прихід, списання, переміщення між проєктами, курсові різниці.",
+      "Звіти: баланс, прибутки/збитки, декларації з ПДВ, ЄСВ, податок на дивіденди.",
+      "Аналітика: динаміка, прогнози, зобов'язання, дохідність проєктів.",
+      "Оптимізація податків: AI-рекомендації з легального зниження податкового навантаження.",
+      "Інтеграція: з CRM, ERP, банками, податковими порталами через API.",
+      "Менеджмент задач: постановка завдань, нагадування, статуси.",
+      "Безпека та комплаєнс: повний журнал дій, GDPR-сумісність, контроль доступу."
+    ],
+    "technology": [
+      "OCR + розбір структури: для сканів та електронних документів.",
+      "GPT-4 Turbo + бізнес-правила: для класифікації та витягання даних.",
+      "MongoDB + Node.js: ядро обробки та збереження даних.",
+      "Хмарна архітектура: масштабування, ізоляція клієнтів, безперебійність.",
+      "RESTful API: безпечний обмін файлами та даними з зовнішніми системами."
+    ],
+    "useCases": [
+      "Бухгалтерська компанія обслуговує 150+ клієнтів через один інтерфейс.",
+      "Документи надходять через портал, email або API й автоматично обробляються.",
+      "Бухгалтер перевіряє дані, підписує декларації та відправляє їх.",
+      "Клієнт бачить фінансову картину та податкові зобов'язання в реальному часі.",
+      "Система пропонує рекомендації щодо оптимізації витрат для зниження податків."
+    ],
+    "benefits": [
+      "Скорочення ручного введення даних на 80%",
+      "Автоматизація податкових розрахунків та комплаєнсу",
+      "Покращення комунікації та прозорості з клієнтами",
+      "Ефективне масштабування бухгалтерських операцій",
+      "Мінімізація помилок через AI-валідацію"
+    ],
+    "implementationTimeline": {
+      "customDevelopment": "до 6 місяців для розробки з нуля"
+    }
+  }
+]

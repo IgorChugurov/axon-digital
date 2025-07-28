@@ -13,6 +13,8 @@ export default function Header() {
   const isAbout = pathname === "/about";
   const isExpertise = pathname === "/expertise"; //|| pathname.startsWith("/expertise/");
   const isServices = pathname === "/services"; //|| pathname.startsWith("/services/");
+  const isSolutions = pathname === "/solutions";
+  // || pathname.startsWith("/solutions/");
   const isPlatform = pathname === "/platform";
   const isContact = pathname === "/contact";
   console.log(pathname, isServices);
@@ -24,6 +26,10 @@ export default function Header() {
   const isTvorFlowPlatform = pathname === "/services/tvorflow-platform";
   const isSpecDocumentation = pathname === "/services/spec-documentation";
   const isDocumentationAudit = pathname === "/services/documentation-audit";
+
+  // Individual solution page checks
+  const isOblikFlowEN = pathname === "/solutions/oblikflow-en";
+  const isOblikFlowUA = pathname === "/solutions/oblikflow-ua";
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -87,6 +93,16 @@ export default function Header() {
               className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
             >
               Services
+            </Link>
+          )}
+          {isSolutions ? (
+            <span className="text-base text-gray-900 font-bold">Solutions</span>
+          ) : (
+            <Link
+              href="/solutions"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              Solutions
             </Link>
           )}
           {isAbout ? (
@@ -268,6 +284,47 @@ export default function Header() {
                   onClick={closeMobileMenu}
                 >
                   Documentation Audit
+                </Link>
+              </div>
+            </div>
+
+            {/* Solutions Section */}
+            <div className="py-2">
+              <Link
+                href="/solutions"
+                className={`text-lg font-medium transition-colors py-2 block ${
+                  isSolutions
+                    ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                    : "text-gray-700 hover:text-gray-900 pl-4"
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Business Solutions
+              </Link>
+
+              {/* Solutions Submenu */}
+              <div className="ml-8 mt-2 space-y-2">
+                <Link
+                  href="/solutions/oblikflow-en"
+                  className={`text-sm transition-colors py-1 block ${
+                    isOblikFlowEN
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  OblikFlow
+                </Link>
+                <Link
+                  href="/solutions/oblikflow-ua"
+                  className={`text-sm transition-colors py-1 block ${
+                    isOblikFlowUA
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  ОблікФлоу
                 </Link>
               </div>
             </div>
