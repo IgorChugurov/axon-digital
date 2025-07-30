@@ -13,15 +13,15 @@
     "header": {
       "logo": "AxonDigital",
       "mainMenu": [
-        { "title": "Services", "url": "/services", "section": "services" },
         {
-          "title": "Business Solutions",
+          "title": "Solutions",
           "url": "/solutions",
           "section": "solutions"
         },
+        { "title": "Services", "url": "/services", "section": "services" },
+        { "title": "Expertise", "url": "/expertise", "section": "expertise" },
         { "title": "About", "url": "/about", "section": "about" },
-        { "title": "Platform", "url": "/platform", "section": "platform" },
-        { "title": "Expertise", "url": "/expertise", "section": "expertise" }
+        { "title": "Platform", "url": "/platform", "section": "platform" }
       ]
     },
     "footer": {
@@ -49,10 +49,10 @@
           ]
         },
         {
-          "title": "Business Solutions",
+          "title": "Solutions",
           "links": [
-            { "title": "OblikFlow (EN)", "url": "/solutions/oblikflow-en" },
-            { "title": "OblikFlow (UA)", "url": "/solutions/oblikflow-ua" }
+            { "title": "OblikFlow", "url": "/solutions/oblikflow-en" },
+            { "title": "ОблікФлоу", "url": "/solutions/oblikflow-ua" }
           ]
         },
         {
@@ -102,48 +102,146 @@
         }
       },
       "relatedPages": [
-        "/about",
-        "/services",
         "/solutions",
-        "/platform",
-        "/expertise"
+        "/services",
+        "/expertise",
+        "/about",
+        "/platform"
       ]
     },
     "solutions": {
       "url": "/solutions",
-      "title": "Business Solutions | AxonDigital - Enterprise Business Systems",
-      "description": "Comprehensive business solutions tailored to your needs. From accounting automation to industry-specific platforms, we offer proven systems that accelerate your digital transformation.",
+      "title": "Digital Solutions | AxonDigital - Industry-Tailored Technology Solutions",
+      "description": "Complete digital solutions that combine our technological expertise with deep industry knowledge. From fintech platforms to healthcare systems, we deliver proven solutions tailored to your specific business needs.",
       "sections": {
         "hero": {
-          "title": "Business Solutions",
-          "description": "Proven business systems tailored and adapted to your specific needs. Our solutions combine industry expertise with cutting-edge technology and are customized for your business.",
-          "features": ["Custom-Adapted", "Industry-Proven", "Full Support"]
+          "title": "Digital Solutions for Your Industry",
+          "description": "Where our technological expertise meets your industry needs. We combine proven development capabilities with deep domain knowledge to deliver solutions that truly understand your business context.",
+          "features": [
+            "Technology + Domain Expertise",
+            "Industry-Proven",
+            "Business-Focused"
+          ]
         },
         "solutionsGrid": {
-          "title": "Our Business Solutions Portfolio",
+          "title": "Industry-Focused Digital Solutions",
           "solutions": [
             {
-              "slug": "oblikflow-en",
-              "title": "OblikFlow (English)",
-              "shortDescription": "A powerful cloud-based accounting and tax platform for service firms and their clients.",
-              "category": "Accounting & Tax Management",
-              "language": "en",
-              "link": "/solutions/oblikflow-en",
-              "image": "/oblikflow-platform.png"
+              "slug": "oblikflow-ua",
+              "title": "ОблікФлоу - Платформа автоматизації бухгалтерії",
+              "shortDescription": "Інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів для бухгалтерських фірм.",
+              "category": "Accounting Automation",
+              "technology": [
+                "AI Integration",
+                "Process Automation",
+                "Web Applications"
+              ],
+              "expertise": "Fintech & Financial Services",
+              "link": "/solutions/oblikflow-ua",
+              "image": "/oblikflow-ua.png"
             },
             {
-              "slug": "oblikflow-ua",
-              "title": "OblikFlow (Українська)",
-              "shortDescription": "Потужна хмарна платформа для бухгалтерського та податкового обліку клієнтів.",
-              "category": "Бухгалтерський та податковий облік",
-              "language": "ua",
-              "link": "/solutions/oblikflow-ua",
-              "image": "/oblikflow-platform.png"
+              "slug": "oblikflow-en",
+              "title": "OblikFlow Accounting Platform",
+              "shortDescription": "AI-powered cloud accounting and tax platform for multi-client bookkeeping firms and service companies.",
+              "category": "Accounting Automation",
+              "technology": [
+                "AI Integration",
+                "Process Automation",
+                "Web Applications"
+              ],
+              "expertise": "Fintech & Financial Services",
+              "link": "/solutions/oblikflow-en",
+              "image": "/oblikflow-en.png"
+            },
+            {
+              "slug": "fintech-platforms",
+              "title": "Fintech & Payment Solutions",
+              "shortDescription": "Complete financial technology platforms with automated accounting, payment processing, and compliance management.",
+              "category": "Financial Technology",
+              "technology": [
+                "AI Integration",
+                "Process Automation",
+                "Web Applications"
+              ],
+              "expertise": "Fintech & Financial Services",
+              "link": "/solutions/fintech-platforms",
+              "image": "/fintech-platforms.png"
+            },
+            {
+              "slug": "healthcare-systems",
+              "title": "Healthcare Management Systems",
+              "shortDescription": "HIPAA-compliant healthcare platforms with EMR, appointment scheduling, and clinical workflow automation.",
+              "category": "Healthcare Technology",
+              "technology": [
+                "Web Applications",
+                "AI Integration",
+                "TvorFlow Platform"
+              ],
+              "expertise": "Healthcare & Medical Technology",
+              "link": "/solutions/healthcare-systems",
+              "image": "/healthcare-platform.png"
+            },
+            {
+              "slug": "ecommerce-platforms",
+              "title": "E-commerce & Retail Solutions",
+              "shortDescription": "Integrated e-commerce systems with inventory management, analytics, and multi-vendor marketplace capabilities.",
+              "category": "Retail Technology",
+              "technology": [
+                "Web Applications",
+                "Process Automation",
+                "AI Integration"
+              ],
+              "expertise": "E-commerce & Retail Technology",
+              "link": "/solutions/ecommerce-platforms",
+              "image": "/ecommerce-platform.png"
+            },
+            {
+              "slug": "enterprise-automation",
+              "title": "Enterprise Process Automation",
+              "shortDescription": "Corporate workflow automation systems with document management, approval routing, and legacy system integration.",
+              "category": "Enterprise Solutions",
+              "technology": [
+                "Process Automation",
+                "AI Integration",
+                "TvorFlow Platform"
+              ],
+              "expertise": "Enterprise & Corporate Solutions",
+              "link": "/solutions/enterprise-automation",
+              "image": "/enterprise-platform.png"
+            },
+            {
+              "slug": "education-platform",
+              "title": "Education & Learning Platforms",
+              "shortDescription": "Flexible learning platforms with course management, student progress tracking, and content analytics.",
+              "category": "EdTech & Digital Learning",
+              "technology": [
+                "Web Applications",
+                "AI Integration",
+                "TvorFlow Platform"
+              ],
+              "expertise": "Education & Learning",
+              "link": "/solutions/education-platform",
+              "image": "/education-platform.png"
+            },
+            {
+              "slug": "realestate-platform",
+              "title": "Real Estate Platforms",
+              "shortDescription": "Advanced property platforms with map-based search, CRM, and flexible monetization models.",
+              "category": "PropTech & Real Estate",
+              "technology": [
+                "Web Applications",
+                "Process Automation",
+                "AI Integration"
+              ],
+              "expertise": "Real Estate & Property Technology",
+              "link": "/solutions/realestate-platform",
+              "image": "/realestate-platform.png"
             }
           ]
         }
       },
-      "relatedPages": ["/services", "/about", "/platform", "/expertise"]
+      "relatedPages": ["/services", "/expertise", "/about", "/platform"]
     },
     "about": {
       "url": "/about",
@@ -418,78 +516,78 @@
           "buttonText": "Send Message"
         }
       },
-      "relatedPages": ["/services", "/expertise", "/platform", "/contact"]
+      "relatedPages": ["/solutions", "/services", "/expertise", "/platform"]
     },
     "services": {
       "url": "/services",
-      "title": "Our Services | AxonDigital - Full-Cycle Digital Solutions",
-      "description": "Comprehensive digital services: web application development, documentation audit, AI integration, process automation, and website creation. Expert solutions tailored to your business goals.",
+      "title": "Technology Services | AxonDigital - Advanced Development Capabilities",
+      "description": "Our core technological capabilities: modern web development, AI integration, process automation, no-code platforms, and technical documentation. The foundation for industry-specific solutions.",
       "sections": {
         "hero": {
-          "title": "Our Services",
-          "description": "Comprehensive digital solutions to transform your business. From web development to AI integration and our proprietary TvorFlow Platform — we deliver results 70% faster than traditional approaches.",
+          "title": "Our Technology Services",
+          "description": "Advanced technological capabilities that power industry-specific solutions. From modern development frameworks to AI integration and our proprietary TvorFlow Platform — these are the tools and methods we use to build exceptional digital products.",
           "features": [
-            "Custom Development",
-            "AI Integration",
-            "TvorFlow Platform"
+            "Modern Tech Stack",
+            "AI & Automation",
+            "Proven Methodologies"
           ]
         },
         "servicesGrid": {
-          "title": "Our Services Portfolio",
+          "title": "Technology Capabilities",
           "services": [
             {
               "slug": "web-app-development",
-              "title": "Web Application Development",
-              "description": "Custom web applications built with modern technologies and best practices. From MVP to enterprise-scale solutions, we deliver fast, secure, and scalable applications that grow with your business needs.",
+              "title": "Modern Web Application Development",
+              "description": "Full-stack development using React, Node.js, Next.js, and cloud technologies. We build scalable, secure applications with modern architecture patterns, API-first design, and DevOps practices for enterprise-grade performance.",
               "link": "/services/web-app-development",
               "image": "/web-app-development.png"
             },
             {
               "slug": "website-creation",
-              "title": "Website Creation and Design",
-              "description": "Professional websites that combine beautiful design with optimal performance. From landing pages to complex corporate sites, we create web experiences that convert visitors into customers and reflect your brand perfectly.",
+              "title": "High-Performance Website Development",
+              "description": "Modern website development using Next.js, responsive design principles, and performance optimization techniques. We implement SEO-friendly architecture, progressive web app features, and content management systems for optimal user experience and search rankings.",
               "link": "/services/website-creation",
               "image": "/website-creation.png"
             },
             {
               "slug": "ai-integration",
-              "title": "AI Integration and Smart Solutions",
-              "description": "Integrate artificial intelligence into your existing systems and workflows. From chatbots and automation to data analysis and decision support, we make AI work for your specific business needs without the complexity.",
+              "title": "Advanced AI Integration Technologies",
+              "description": "Implementation of Large Language Models (LLMs), machine learning pipelines, and intelligent automation systems. We work with OpenAI API, vector databases, RAG architectures, and custom AI models to build intelligent systems that learn and adapt.",
               "link": "/services/ai-integration",
               "image": "/ai-integration.png"
             },
             {
               "slug": "process-automation",
-              "title": "Business Process Automation",
-              "description": "Streamline your operations with intelligent automation solutions. We identify manual, repetitive tasks and create custom automation workflows that save time, reduce errors, and improve efficiency across your organization.",
+              "title": "Intelligent Process Automation Technology",
+              "description": "Automation systems using workflow engines, API integrations, robotic process automation (RPA), and event-driven architectures. We implement microservices, queue systems, and real-time processing to create self-managing business workflows.",
               "link": "/services/process-automation",
               "image": "/process-automation.png"
             },
             {
               "slug": "tvorflow-platform",
-              "title": "TvorFlow Platform - No-Code Application Development",
-              "description": "Our proprietary no-code platform that automatically generates enterprise-grade applications from data structure configurations. Deploy complex business applications 70% faster with built-in CRUD operations, admin panels, and multi-tenant architecture.",
+              "title": "TvorFlow Platform - Advanced No-Code Technology",
+              "description": "Proprietary application generation platform with declarative configuration, automatic API generation, and dynamic UI rendering. Built on modern microservices architecture with multi-tenancy, role-based access control, and enterprise-grade scalability patterns.",
               "link": "/services/tvorflow-platform",
               "image": "/tvorflow-platform.png"
             },
             {
               "slug": "spec-documentation",
-              "title": "Project and Technical Documentation",
-              "description": "We help you structure your digital product before development starts. You get detailed specifications, clear architecture, technology choices, and timelines — everything needed to plan, estimate, and launch development with confidence.",
+              "title": "Technical Architecture & Documentation",
+              "description": "Comprehensive technical documentation methodology including system architecture design, API specifications, database schema planning, and development roadmaps. We use industry-standard documentation frameworks and architectural decision records (ADRs).",
               "link": "/services/spec-documentation",
               "image": "/spec-documentation.png"
             },
             {
               "slug": "documentation-audit",
-              "title": "Documentation Audit and Optimization",
-              "description": "We analyze your existing project documentation to identify gaps, inconsistencies, and improvement opportunities. You get actionable recommendations to enhance clarity, completeness, and usability of your technical and project documentation.",
+              "title": "Technical Documentation Analysis & Optimization",
+              "description": "Systematic analysis of technical documentation using established quality frameworks and best practices. We evaluate architecture consistency, API documentation completeness, code quality standards, and knowledge transfer effectiveness.",
               "link": "/services/documentation-audit",
               "image": "/documentation-audit.png"
             }
           ]
         }
       },
-      "relatedPages": ["/about", "/platform", "/expertise", "/contact"]
+      "relatedPages": ["/solutions", "/expertise", "/about", "/platform"]
     },
     "servicesDetails": {
       "web-app-development": {
@@ -887,61 +985,70 @@
           ]
         }
       },
-      "relatedPages": ["/services/tvorflow-platform", "/about", "/contact"]
+      "relatedPages": [
+        "/solutions",
+        "/services/tvorflow-platform",
+        "/expertise",
+        "/about"
+      ]
     },
     "expertise": {
       "url": "/expertise",
-      "title": "Our Expertise | AxonDigital - Industry-Specific Digital Solutions",
-      "description": "Discover our deep expertise across industries: AI-powered workflows, healthcare systems, e-commerce automation, and fintech innovations.",
+      "title": "Industry Expertise | AxonDigital - Proven Domain Knowledge Across Sectors",
+      "description": "Deep industry knowledge and real-world experience across fintech, healthcare, e-commerce, and enterprise sectors. We understand specific business challenges, regulations, and workflows that shape each industry.",
       "sections": {
         "hero": {
-          "title": "Our Expertise",
-          "description": "Deep industry knowledge across fintech, healthcare, e-commerce, and enterprise solutions. We understand the unique challenges of each sector and deliver tailored digital solutions that drive real business results.",
-          "features": ["Industry Focus", "Proven Results", "Domain Expertise"]
+          "title": "Industry Expertise & Domain Knowledge",
+          "description": "Real-world experience in specific industries gives us the context to build solutions that truly work. We understand business processes, regulatory requirements, and industry-specific challenges that generic development teams miss.",
+          "features": [
+            "Industry Experience",
+            "Domain Context",
+            "Business Understanding"
+          ]
         },
         "areas": {
-          "title": "Industry Expertise Areas",
-          "description": "Specialized knowledge and proven experience across key industries",
+          "title": "Industry Experience & Domain Knowledge",
+          "description": "Real business experience and deep understanding of industry-specific challenges, regulations, and workflows",
           "items": [
             {
               "icon": "banknote",
               "title": "Fintech & Financial Services",
-              "description": "Applied accounting systems with inventory, cash flow, and settlement modules. Automated trial balance generation and financial reporting with real business integrations.",
+              "description": "Real-world experience with financial regulations, accounting standards, and payment processing. We understand PCI DSS compliance, KYC/AML requirements, and the complexities of multi-currency operations and financial reporting.",
               "slug": "fintech-financial",
               "link": "/expertise/fintech-financial"
             },
             {
               "icon": "stethoscope",
               "title": "Healthcare & Medical Technology",
-              "description": "HIPAA-compliant systems for clinics: EMR, visit notes, appointment scheduling, medical documentation, and integration with lab equipment and 3D prosthetic printers.",
+              "description": "Deep understanding of healthcare workflows, HIPAA compliance requirements, and medical data standards. Experience with clinical decision-making processes, patient privacy regulations, and integration with medical devices and lab systems.",
               "slug": "healthcare-medtech",
               "link": "/expertise/healthcare-medtech"
             },
             {
               "icon": "shoppingCart",
               "title": "E-commerce & Retail Technology",
-              "description": "Integrated e-commerce systems for stores and marketplaces with real-time inventory, accounting integration, storefront analytics, and vendor-friendly tools.",
+              "description": "Understanding of retail business models, customer journey optimization, and omnichannel strategies. Experience with inventory management challenges, payment processing intricacies, and the complexities of marketplace operations and vendor relationships.",
               "slug": "ecommerce-retail",
               "link": "/expertise/ecommerce-retail"
             },
             {
               "icon": "calculator",
               "title": "Enterprise & Corporate Solutions",
-              "description": "Workflow automation, document control, and integration of new features into legacy systems via micro-frontends — tailored to real enterprise needs.",
+              "description": "Knowledge of corporate governance structures, approval hierarchies, and compliance requirements. Understanding of legacy system constraints, enterprise security policies, and the challenges of digital transformation in large organizations.",
               "slug": "enterprise-corporate",
               "link": "/expertise/enterprise-corporate"
             },
             {
               "icon": "activity",
               "title": "Education & Learning Platforms",
-              "description": "Learning management systems, educational content platforms, student information systems, and interactive learning tools for modern education.",
+              "description": "Understanding of educational methodologies, student assessment frameworks, and institutional administrative processes. Experience with academic compliance requirements, learning outcome tracking, and educational technology integration challenges.",
               "slug": "education-edtech",
               "link": "/expertise/education-edtech"
             },
             {
               "icon": "building",
               "title": "Real Estate & Property Technology",
-              "description": "Property platforms with advanced search, map integration, and custom business models connecting clients, property owners, and platform operators.",
+              "description": "Knowledge of real estate market dynamics, property valuation factors, and legal documentation requirements. Understanding of buyer/seller journeys, agent workflows, and the complexities of property data management and verification.",
               "slug": "proptech-realestate",
               "link": "/expertise/proptech-realestate"
             }
@@ -969,7 +1076,7 @@
           ]
         }
       },
-      "relatedPages": ["/services", "/about", "/platform"]
+      "relatedPages": ["/solutions", "/services", "/about", "/platform"]
     },
     "expertiseDetails": {
       "fintech-financial": {
@@ -1114,9 +1221,347 @@
       }
     },
     "solutionsDetails": {
+      "education-platform": {
+        "url": "/solutions/education-platform",
+        "title": "Custom Education & Learning Platforms | AxonDigital Digital Solutions",
+        "description": "We develop flexible, custom-built learning platforms tailored to your specific needs, with features like course management, student progress tracking, assessments, and content analytics for online and blended education.",
+        "sections": {
+          "overview": {
+            "title": "Custom Education & Learning Platforms",
+            "category": "EdTech & Digital Learning",
+            "description": "At AxonDigital, we specialize in developing modular and fully customized education platforms designed to meet the unique needs of your business. Whether you're a school, university, corporate trainer, or independent educator, we work with you to build a solution that includes only the features you need, ensuring a simple and effective platform for digitizing your educational offerings. Our expertise in EdTech allows us to create tailored solutions that grow with your business.",
+            "features": [
+              "Modular course builder with lessons, video, assignments, and tests",
+              "Student dashboard with progress tracking, certifications, and learning paths",
+              "Teacher tools: grading, feedback, class management, communication",
+              "Assessment system with auto-checking, rubrics, and randomized testing",
+              "Content analytics and dropout prediction using learning data",
+              "Multi-role access control: admin, teacher, student, parent",
+              "Parental tools for monitoring student progress",
+              "Simplified B2C mode for independent educators",
+              "Support for micro-credentials and blockchain-based certification",
+              "Gamification elements to increase student engagement"
+            ],
+            "architecture": [
+              "Modular LMS backend with role-based content access, tailored to your requirements",
+              "Real-time event logging for learning behavior analytics, integrated with your systems",
+              "Cloud storage for multimedia lessons and test results, with scalability in mind",
+              "API layer for seamless integration with your existing HR, SIS, or payment systems",
+              "Scalable frontend for mobile-first and offline usage, designed for your users",
+              "SSO integration and compliance with GDPR/FERPA, ensuring security and privacy"
+            ],
+            "technology": [
+              "Frontend: React, Next.js with Tailwind and SSR, customized for your brand",
+              "Backend: Node.js, PostgreSQL, Redis, built for performance and scalability",
+              "Video: Mux/Vimeo API for content streaming, optimized for your content",
+              "AI/ML: LLM-powered tutor, quiz generator, dropout predictor, tailored to your needs",
+              "Security: OAuth2, RBAC, audit logs, ensuring your data is protected",
+              "Integrations: SCORM/LTI, payment gateways, corporate SSO, connected to your tools"
+            ],
+            "useCases": [
+              "Online school with structured courses and certification, built for your curriculum",
+              "Corporate learning management with internal analytics, aligned with your training goals",
+              "University platform for hybrid/blended learning delivery, integrated with your systems",
+              "Freelancer-led micro-learning platforms with payment features, designed for your audience"
+            ],
+            "benefits": [
+              "Get a fully customized platform built to your exact specifications",
+              "Reduce workload with automated assessments and analytics, tailored to your processes",
+              "Engage students with modern, tailored tools and features",
+              "Scale your solution as your business grows, with ongoing support",
+              "Monetize your content with flexible models like subscriptions or pay-per-course access"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/web-app-development",
+          "/expertise/education-edtech",
+          "/contact"
+        ]
+      },
+      "realestate-platform": {
+        "url": "/solutions/realestate-platform",
+        "title": "Real Estate Platforms | AxonDigital Digital Solutions",
+        "description": "Advanced property platforms with map-based search, CRM, listing moderation, analytics, and flexible monetization for PropTech startups and agencies.",
+        "sections": {
+          "overview": {
+            "title": "Real Estate Platforms",
+            "category": "PropTech & Real Estate",
+            "description": "End-to-end real estate systems designed for agencies, listing platforms, or B2B property exchanges. Combines listing engines, CRM, analytics, and transaction logic to deliver scalable and monetizable real estate experiences.",
+            "features": [
+              "Property search with dynamic filters and map-based visualization",
+              "Listing management with moderation, access control, and media support",
+              "CRM with contact tracking, lead scoring, and agent pipelines",
+              "User roles for buyers, sellers, landlords, and administrators",
+              "Custom monetization: promoted listings, subscription, per-lead pricing",
+              "Analytics: engagement stats, conversion tracking, agent performance"
+            ],
+            "architecture": [
+              "Geospatial database (PostGIS) for location-based filtering",
+              "ElasticSearch layer for full-text and parametric property search",
+              "Modular CRM engine for agents and partners",
+              "Scalable micro-frontend system for partner customization",
+              "API-first backend for mobile and widget integrations",
+              "Cloud-based hosting with media CDN for photos and videos"
+            ],
+            "technology": [
+              "Frontend: Next.js with server-side rendering and Tailwind CSS",
+              "Backend: Node.js, PostgreSQL + PostGIS, Redis, ElasticSearch",
+              "Map Integration: Google Maps / Mapbox / OpenStreetMap",
+              "Search: ElasticSearch with custom ranking logic",
+              "Authentication: multi-role access, OAuth2, JWT",
+              "Hosting: Cloudflare CDN, AWS S3 for media, Docker for scalability"
+            ],
+            "useCases": [
+              "Marketplace for apartments with map-based UI and CRM for agents",
+              "B2B platform for commercial properties and office space",
+              "Franchise model real estate portal with white-labeled partner areas",
+              "Private listing platform with document upload and buyer access control"
+            ],
+            "benefits": [
+              "Improve search UX and time-to-lead with high-performance filters",
+              "Offer differentiated value to agencies and sellers with built-in CRM",
+              "Support regional and multilingual growth with isolated partner zones",
+              "Monetize traffic with advanced listing tiers and lead sales",
+              "Integrate with 3rd-party services (mortgage, legal, analytics)"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/web-app-development",
+          "/expertise/proptech-realestate",
+          "/contact"
+        ]
+      },
+      "fintech-platforms": {
+        "url": "/solutions/fintech-platforms",
+        "title": "Fintech & Payment Solutions | AxonDigital Digital Solutions",
+        "description": "Complete financial technology platforms combining automated accounting, payment processing, compliance management, and regulatory reporting for modern financial services.",
+        "sections": {
+          "overview": {
+            "title": "Fintech & Payment Solutions",
+            "category": "Financial Technology",
+            "description": "Complete financial technology platforms that combine our expertise in modern web development, AI integration, and process automation with deep knowledge of financial regulations, accounting standards, and payment processing requirements.",
+            "features": [
+              "Automated accounting with multi-currency support and real-time reconciliation",
+              "Payment processing with PCI DSS compliance and fraud detection",
+              "KYC/AML automation with document verification and risk scoring",
+              "Regulatory reporting with automated compliance checks and audit trails",
+              "Real-time financial dashboards with analytics and forecasting",
+              "API-first architecture for banking and third-party integrations"
+            ],
+            "architecture": [
+              "Microservices architecture with event-driven processing for high availability",
+              "Secure payment gateway integration with tokenization and encryption",
+              "Real-time data pipelines for transaction monitoring and reporting",
+              "Multi-tenant database design with data isolation and compliance controls",
+              "API layer with rate limiting, authentication, and comprehensive logging",
+              "Automated backup and disaster recovery systems for financial data protection"
+            ],
+            "technology": [
+              "Backend: Node.js, Express, PostgreSQL, Redis for real-time processing",
+              "Frontend: React, Next.js with responsive design and progressive web app features",
+              "AI/ML: OpenAI API for document processing, fraud detection algorithms",
+              "Security: OAuth 2.0, JWT tokens, encryption at rest and in transit",
+              "Infrastructure: AWS/Azure with auto-scaling and monitoring",
+              "Integration: REST APIs, webhooks, and direct banking connections"
+            ],
+            "useCases": [
+              "Digital banking platform with account management and transaction processing",
+              "Automated bookkeeping service for small businesses with AI document recognition",
+              "Payment gateway for e-commerce with subscription billing and marketplace support",
+              "Investment platform with portfolio tracking and automated rebalancing",
+              "Corporate treasury management with cash flow forecasting and risk management"
+            ],
+            "benefits": [
+              "Reduce operational costs by 60% through automated compliance and reporting",
+              "Accelerate time-to-market with pre-built financial components and workflows",
+              "Ensure regulatory compliance with built-in controls and audit capabilities",
+              "Scale efficiently with cloud-native architecture and automated processes",
+              "Enhance customer experience with real-time processing and modern interfaces"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/ai-integration",
+          "/expertise/fintech-financial",
+          "/contact"
+        ]
+      },
+      "healthcare-systems": {
+        "url": "/solutions/healthcare-systems",
+        "title": "Healthcare Management Systems | AxonDigital Digital Solutions",
+        "description": "HIPAA-compliant healthcare platforms with EMR, appointment scheduling, clinical workflow automation, and integration with medical devices for comprehensive patient care.",
+        "sections": {
+          "overview": {
+            "title": "Healthcare Management Systems",
+            "category": "Healthcare Technology",
+            "description": "Comprehensive healthcare platforms that combine modern web application development, AI integration, and TvorFlow Platform capabilities with deep understanding of healthcare workflows, HIPAA compliance, and clinical decision-making processes.",
+            "features": [
+              "Electronic Medical Records (EMR) with comprehensive patient history and clinical notes",
+              "Appointment scheduling with automated reminders and calendar integration",
+              "Clinical workflow automation with structured documentation and care protocols",
+              "Patient portal with secure messaging and document sharing",
+              "Medical device integration for lab results and diagnostic equipment",
+              "Telemedicine capabilities with video consultations and remote monitoring"
+            ],
+            "architecture": [
+              "HIPAA-compliant cloud infrastructure with end-to-end encryption",
+              "Role-based access control with audit logging for all patient data access",
+              "Real-time data synchronization across multiple clinical locations",
+              "Secure API layer for medical device and lab system integration",
+              "Automated backup and disaster recovery with business continuity planning",
+              "Mobile-responsive design for healthcare professionals on-the-go"
+            ],
+            "technology": [
+              "Backend: Node.js with HIPAA-compliant hosting and database encryption",
+              "Frontend: React, Next.js with accessibility compliance and mobile optimization",
+              "Database: PostgreSQL with audit trails and data versioning",
+              "AI/ML: Medical text processing, appointment optimization, clinical decision support",
+              "Security: Multi-factor authentication, encryption, and secure communication protocols",
+              "Integration: HL7 FHIR standards for medical data exchange and device connectivity"
+            ],
+            "useCases": [
+              "Multi-location clinic management with centralized patient records",
+              "Specialized practice management for orthopedics with 3D prosthetic integration",
+              "Telehealth platform with remote patient monitoring and virtual consultations",
+              "Hospital department management with staff scheduling and resource allocation",
+              "Research platform with clinical trial management and data collection"
+            ],
+            "benefits": [
+              "Improve patient care quality with comprehensive medical history access",
+              "Reduce administrative overhead by 50% through workflow automation",
+              "Ensure regulatory compliance with built-in HIPAA and medical standards",
+              "Enhance patient satisfaction with convenient scheduling and communication tools",
+              "Scale operations efficiently with multi-location and department support"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/web-app-development",
+          "/expertise/healthcare-medtech",
+          "/contact"
+        ]
+      },
+      "ecommerce-platforms": {
+        "url": "/solutions/ecommerce-platforms",
+        "title": "E-commerce & Retail Solutions | AxonDigital Digital Solutions",
+        "description": "Integrated e-commerce systems with inventory management, analytics, multi-vendor marketplace capabilities, and omnichannel retail experiences.",
+        "sections": {
+          "overview": {
+            "title": "E-commerce & Retail Solutions",
+            "category": "Retail Technology",
+            "description": "Comprehensive e-commerce platforms that combine web application development, process automation, and AI integration with deep understanding of retail business models, customer journey optimization, and marketplace operations.",
+            "features": [
+              "Multi-vendor marketplace with commission tracking and vendor management",
+              "Real-time inventory management with automatic stock updates and alerts",
+              "Advanced product search with AI-powered recommendations and personalization",
+              "Integrated payment processing with multiple payment methods and currencies",
+              "Order management system with shipping integration and tracking",
+              "Analytics dashboard with sales reporting and customer behavior insights"
+            ],
+            "architecture": [
+              "Scalable microservices architecture with separate catalog and order management",
+              "Real-time inventory synchronization across multiple sales channels",
+              "Content delivery network (CDN) for fast global product image and data delivery",
+              "Event-driven architecture for order processing and notification systems",
+              "API-first design for integration with external systems and mobile apps",
+              "Automated scaling and load balancing for peak shopping periods"
+            ],
+            "technology": [
+              "Backend: Node.js, Express with PostgreSQL for transactional data and Redis for caching",
+              "Frontend: React, Next.js with server-side rendering for SEO optimization",
+              "AI/ML: Product recommendation engine, demand forecasting, and customer segmentation",
+              "Search: Elasticsearch for advanced product search and filtering capabilities",
+              "Payments: Stripe, PayPal integration with fraud detection and secure processing",
+              "Infrastructure: Cloud-native deployment with auto-scaling and monitoring"
+            ],
+            "useCases": [
+              "Fashion e-commerce platform with size recommendations and virtual try-on",
+              "B2B marketplace connecting suppliers with retailers and distributors",
+              "Subscription commerce platform with recurring billing and customer retention",
+              "Omnichannel retail system with online, mobile, and in-store integration",
+              "Digital marketplace for services with booking and payment processing"
+            ],
+            "benefits": [
+              "Increase sales by 40% through AI-powered personalization and recommendations",
+              "Reduce operational costs with automated inventory and order management",
+              "Scale globally with multi-currency, multi-language, and multi-vendor support",
+              "Improve customer retention with personalized shopping experiences",
+              "Gain competitive advantage with real-time analytics and market insights"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/web-app-development",
+          "/expertise/ecommerce-retail",
+          "/contact"
+        ]
+      },
+      "enterprise-automation": {
+        "url": "/solutions/enterprise-automation",
+        "title": "Enterprise Process Automation | AxonDigital Digital Solutions",
+        "description": "Corporate workflow automation systems with document management, approval routing, legacy system integration, and enterprise-grade security.",
+        "sections": {
+          "overview": {
+            "title": "Enterprise Process Automation",
+            "category": "Enterprise Solutions",
+            "description": "Comprehensive automation platforms that combine process automation, AI integration, and TvorFlow Platform with knowledge of corporate governance, approval hierarchies, and enterprise security requirements.",
+            "features": [
+              "Document workflow automation with approval routing and digital signatures",
+              "Legacy system integration through micro-frontends and API connectivity",
+              "Role-based access control with corporate hierarchy and department isolation",
+              "Automated reporting and compliance monitoring with audit trails",
+              "Business process digitization with form builders and workflow designers",
+              "Enterprise integration hub connecting multiple internal and external systems"
+            ],
+            "architecture": [
+              "Service-oriented architecture (SOA) with enterprise service bus for system integration",
+              "Workflow engine with configurable business rules and approval processes",
+              "Document management system with version control and secure storage",
+              "Single sign-on (SSO) integration with Active Directory and enterprise identity providers",
+              "API gateway for secure communication between legacy and modern systems",
+              "Enterprise monitoring and logging with compliance reporting capabilities"
+            ],
+            "technology": [
+              "Backend: Node.js with enterprise security frameworks and database connections",
+              "Frontend: React micro-frontends for gradual legacy system modernization",
+              "Workflow: Business Process Management (BPM) engines with rule-based automation",
+              "Integration: Enterprise Service Bus, REST APIs, and direct database connections",
+              "Security: Enterprise-grade authentication, authorization, and data encryption",
+              "AI/ML: Document processing, workflow optimization, and predictive analytics"
+            ],
+            "useCases": [
+              "Corporate approval workflow system for procurement and expense management",
+              "Document management platform with compliance tracking and retention policies",
+              "HR automation system with employee onboarding and performance management",
+              "Financial reporting automation with data consolidation from multiple sources",
+              "Customer service platform with case management and knowledge base integration"
+            ],
+            "benefits": [
+              "Reduce manual processing time by 70% through intelligent automation",
+              "Ensure compliance with automated policy enforcement and audit trails",
+              "Improve employee productivity with streamlined workflows and reduced bureaucracy",
+              "Enhance data security with enterprise-grade access controls and monitoring",
+              "Accelerate digital transformation while preserving existing system investments"
+            ]
+          }
+        },
+        "relatedPages": [
+          "/solutions",
+          "/services/process-automation",
+          "/expertise/enterprise-corporate",
+          "/contact"
+        ]
+      },
       "oblikflow-en": {
         "url": "/solutions/oblikflow-en",
-        "title": "OblikFlow - Accounting Automation Platform | AxonDigital Business Solutions",
+        "title": "OblikFlow - Accounting Automation Platform | AxonDigital Solutions",
         "description": "OblikFlow is an intelligent platform for managing bookkeeping, tax reporting, and financial documents. Designed for accounting firms serving multiple clients, it enables seamless data collection, document processing, and tax compliance through AI and automation.",
         "sections": {
           "overview": {
@@ -1180,14 +1625,14 @@
       },
       "oblikflow-ua": {
         "url": "/solutions/oblikflow-ua",
-        "title": "OblikFlow - Платформа автоматизації бухгалтерії | Бізнес-рішення AxonDigital",
-        "description": "OblikFlow — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
+        "title": "ОблікФлоу - Платформа автоматизації бухгалтерії | Рішення AxonDigital",
+        "description": "ОблікФлоу  — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
         "sections": {
           "overview": {
-            "title": "OblikFlow — Автоматизація обліку для бухгалтерських фірм",
+            "title": "ОблікФлоу  — Автоматизація обліку для бухгалтерських фірм",
             "language": "ua",
             "category": "Бухгалтерський та податковий облік",
-            "description": "OblikFlow — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
+            "description": "ОблікФлоу  — це інтелектуальна система для ведення бухгалтерії, податкової звітності та обробки первинних документів. Розроблена для компаній, які обслуговують кількох клієнтів одночасно. Забезпечує повний цикл — від завантаження документів до формування звітів.",
             "features": [
               "Управління декількома клієнтами з контролем доступу",
               "AI-розпізнавання та обробка документів",

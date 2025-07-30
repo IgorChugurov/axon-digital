@@ -81,11 +81,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Business Solutions */}
+          {/* Solutions */}
           <div>
-            <h3 className="text-white font-semibold mb-4">
-              Business Solutions
-            </h3>
+            <h3 className="text-white font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -100,7 +98,7 @@ export default function Footer() {
                   href="/solutions/oblikflow-en"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  OblikFlow (EN)
+                  OblikFlow
                 </Link>
               </li>
               <li>
@@ -108,7 +106,7 @@ export default function Footer() {
                   href="/solutions/oblikflow-ua"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  OblikFlow (UA)
+                  OblikFlow
                 </Link>
               </li>
             </ul>

@@ -17,7 +17,7 @@ export default function Header() {
   // || pathname.startsWith("/solutions/");
   const isPlatform = pathname === "/platform";
   const isContact = pathname === "/contact";
-  console.log(pathname, isServices);
+  //console.log(pathname, isServices);
   // Individual service page checks
   const isWebAppDev = pathname === "/services/web-app-development";
   const isWebsiteCreation = pathname === "/services/website-creation";
@@ -85,6 +85,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="pr-4 hidden md:flex gap-2">
+          {isSolutions ? (
+            <span className="text-base text-gray-900 font-bold">Solutions</span>
+          ) : (
+            <Link
+              href="/solutions"
+              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
+            >
+              Solutions
+            </Link>
+          )}
           {isServices ? (
             <span className="text-base text-gray-900 font-bold">Services</span>
           ) : (
@@ -95,14 +105,14 @@ export default function Header() {
               Services
             </Link>
           )}
-          {isSolutions ? (
-            <span className="text-base text-gray-900 font-bold">Solutions</span>
+          {isExpertise ? (
+            <span className="text-base text-gray-900 font-bold">Expertise</span>
           ) : (
             <Link
-              href="/solutions"
+              href="/expertise"
               className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
             >
-              Solutions
+              Expertise
             </Link>
           )}
           {isAbout ? (
@@ -123,16 +133,6 @@ export default function Header() {
               className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
             >
               Platform
-            </Link>
-          )}
-          {isExpertise ? (
-            <span className="text-base text-gray-900 font-bold">Expertise</span>
-          ) : (
-            <Link
-              href="/expertise"
-              className="text-base text-gray-900 font-bold hover:text-gray-900 hover:underline"
-            >
-              Expertise
             </Link>
           )}
         </div>
@@ -191,6 +191,47 @@ export default function Header() {
             >
               Home
             </Link>
+
+            {/* Solutions Section */}
+            <div className="py-2">
+              <Link
+                href="/solutions"
+                className={`text-lg font-medium transition-colors py-2 block ${
+                  isSolutions
+                    ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                    : "text-gray-700 hover:text-gray-900 pl-4"
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Solutions
+              </Link>
+
+              {/* Solutions Submenu */}
+              <div className="ml-8 mt-2 space-y-2">
+                <Link
+                  href="/solutions/oblikflow-en"
+                  className={`text-sm transition-colors py-1 block ${
+                    isOblikFlowEN
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  OblikFlow
+                </Link>
+                <Link
+                  href="/solutions/oblikflow-ua"
+                  className={`text-sm transition-colors py-1 block ${
+                    isOblikFlowUA
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  ОблікФлоу
+                </Link>
+              </div>
+            </div>
 
             {/* Services Section */}
             <div className="py-2">
@@ -288,46 +329,17 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Solutions Section */}
-            <div className="py-2">
-              <Link
-                href="/solutions"
-                className={`text-lg font-medium transition-colors py-2 block ${
-                  isSolutions
-                    ? "text-gray-900 border-l-4 border-gray-900 pl-4"
-                    : "text-gray-700 hover:text-gray-900 pl-4"
-                }`}
-                onClick={closeMobileMenu}
-              >
-                Business Solutions
-              </Link>
-
-              {/* Solutions Submenu */}
-              <div className="ml-8 mt-2 space-y-2">
-                <Link
-                  href="/solutions/oblikflow-en"
-                  className={`text-sm transition-colors py-1 block ${
-                    isOblikFlowEN
-                      ? "text-gray-900 font-semibold underline"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  OblikFlow
-                </Link>
-                <Link
-                  href="/solutions/oblikflow-ua"
-                  className={`text-sm transition-colors py-1 block ${
-                    isOblikFlowUA
-                      ? "text-gray-900 font-semibold underline"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`}
-                  onClick={closeMobileMenu}
-                >
-                  ОблікФлоу
-                </Link>
-              </div>
-            </div>
+            <Link
+              href="/expertise"
+              className={`text-lg font-medium transition-colors py-2 ${
+                isExpertise
+                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
+                  : "text-gray-700 hover:text-gray-900 pl-4"
+              }`}
+              onClick={closeMobileMenu}
+            >
+              Expertise
+            </Link>
 
             <Link
               href="/about"
@@ -351,18 +363,6 @@ export default function Header() {
               onClick={closeMobileMenu}
             >
               Platform
-            </Link>
-
-            <Link
-              href="/expertise"
-              className={`text-lg font-medium transition-colors py-2 ${
-                isExpertise
-                  ? "text-gray-900 border-l-4 border-gray-900 pl-4"
-                  : "text-gray-700 hover:text-gray-900 pl-4"
-              }`}
-              onClick={closeMobileMenu}
-            >
-              Expertise
             </Link>
 
             <div className="border-t border-gray-200 mt-6 pt-6">

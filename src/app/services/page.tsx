@@ -1,4 +1,4 @@
-import content from "@/content/servicesPages.json";
+import siteContent from "@/content/siteContent.json";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -6,10 +6,11 @@ import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+const servicesData = siteContent.pages.services;
+
 export const metadata: Metadata = {
-  title: "Our Services | AxonDigital - Full-Cycle Digital Solutions",
-  description:
-    "Comprehensive digital services: web application development, documentation audit, AI integration, process automation, and website creation. Expert solutions tailored to your business goals.",
+  title: servicesData.title,
+  description: servicesData.description,
   keywords: [
     "web application development",
     "documentation audit",
@@ -21,9 +22,8 @@ export const metadata: Metadata = {
     "business digitalization",
   ],
   openGraph: {
-    title: "Our Services | AxonDigital - Digital Solutions",
-    description:
-      "Expert digital services: web apps, AI integration, process automation, and comprehensive documentation. Transform your business with our tailored solutions.",
+    title: servicesData.title,
+    description: servicesData.description,
     type: "website",
     url: "https://axondigital.xyz/services",
     siteName: "AxonDigital",
@@ -38,9 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Services | AxonDigital - Digital Solutions",
-    description:
-      "Expert digital services: web apps, AI integration, process automation. Transform your business with our tailored solutions.",
+    title: servicesData.title,
+    description: servicesData.description,
     images: ["/banner.webp"],
   },
   robots: {
@@ -60,11 +59,8 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  // Получаем все сервисы как массив с ключами
-  const services = Object.entries(content).map(([slug, service]) => ({
-    slug,
-    ...service,
-  }));
+  // Получаем все сервисы из новой структуры данных
+  const services = servicesData.sections.servicesGrid.services;
 
   return (
     <main className="flex flex-1 flex-col bg-white overflow-auto">
@@ -76,23 +72,23 @@ export default function ServicesPage() {
           <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h1 className="text-5xl font-bold mb-6">Our Services</h1>
+                <h1 className="text-5xl font-bold mb-6">
+                  {servicesData.sections.hero.title}
+                </h1>
                 <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                  Comprehensive digital solutions to transform your business.
-                  From web development to AI integration and our proprietary{" "}
-                  <strong>TvorFlow Platform</strong> — we deliver results{" "}
-                  <strong>70% faster</strong> than traditional approaches.
+                  {servicesData.sections.hero.description}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                    Custom Development
-                  </span>
-                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                    AI Integration
-                  </span>
-                  <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">
-                    TvorFlow Platform
-                  </span>
+                  {servicesData.sections.hero.features.map(
+                    (feature: string, index: number) => (
+                      <span
+                        key={index}
+                        className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium"
+                      >
+                        {feature}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
