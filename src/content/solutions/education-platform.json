@@ -1,0 +1,125 @@
+{
+  "id": "education-platform",
+  "slug": "education-platform",
+  "language": "en",
+  "title": "Custom Education & Learning Platforms",
+  "shortDescription": "Flexible, custom-built learning platforms tailored to your specific needs with course management, student progress tracking, and content analytics.",
+  "description": "At AxonDigital, we specialize in developing modular and fully customized education platforms designed to meet the unique needs of your business. Whether you're a school, university, corporate trainer, or independent educator, we work with you to build a solution that includes only the features you need, ensuring a simple and effective platform for digitizing your educational offerings.",
+  "url": "/solutions/education-platform",
+  "image": "/education-platform.png",
+  "category": "Education & EdTech",
+  "tags": [
+    "education",
+    "learning management",
+    "course management",
+    "student tracking",
+    "online learning",
+    "edtech",
+    "corporate training",
+    "certification"
+  ],
+  "targetAudience": [
+    "Schools and universities",
+    "Corporate training departments",
+    "Independent educators and trainers",
+    "Online course creators",
+    "Professional certification providers"
+  ],
+  "businessChallenges": [
+    "Complex existing LMS systems that are hard to customize",
+    "Need for specific features not available in off-the-shelf solutions",
+    "Integration with existing student information systems",
+    "Scalability for growing educational programs",
+    "Compliance with educational standards and regulations"
+  ],
+  "features": [
+    "Modular course builder with lessons, video, assignments, and tests",
+    "Student dashboard with progress tracking, certifications, and learning paths",
+    "Teacher tools: grading, feedback, class management, communication",
+    "Assessment system with auto-checking, rubrics, and randomized testing",
+    "Content analytics and dropout prediction using learning data",
+    "Multi-role access control: admin, teacher, student, parent"
+  ],
+  "architecture": [
+    "Modular LMS backend with role-based content access",
+    "Real-time event logging for learning behavior analytics",
+    "Cloud storage for multimedia lessons and test results",
+    "API layer for seamless integration with existing HR, SIS, or payment systems",
+    "Scalable frontend for mobile-first and offline usage",
+    "SSO integration and compliance with GDPR/FERPA"
+  ],
+  "technology": [
+    "Frontend: React, Next.js with Tailwind and SSR",
+    "Backend: Node.js, PostgreSQL, Redis",
+    "Video: Mux/Vimeo API for content streaming",
+    "AI/ML: LLM-powered tutor, quiz generator, dropout predictor",
+    "Security: OAuth2, RBAC, audit logs",
+    "Integrations: SCORM/LTI, payment gateways, corporate SSO"
+  ],
+  "useCases": [
+    "Online school with structured courses and certification",
+    "Corporate learning management with internal analytics",
+    "University platform for hybrid/blended learning delivery",
+    "Freelancer-led micro-learning platforms with payment features"
+  ],
+  "benefits": [
+    "Get a fully customized platform built to your exact specifications",
+    "Reduce workload with automated assessments and analytics",
+    "Engage students with modern, tailored tools and features",
+    "Scale your solution as your business grows",
+    "Monetize your content with flexible models"
+  ],
+  "implementationTimeline": {
+    "customDevelopment": "3-6 months for complete custom platform",
+    "modularDevelopment": "2-4 months for modular approach"
+  },
+  "pricing": {
+    "type": "project-based",
+    "model": "custom development",
+    "note": "Pricing based on complexity and required modules"
+  },
+  "competitors": [
+    "Moodle",
+    "Canvas",
+    "Blackboard",
+    "Google Classroom",
+    "Udemy"
+  ],
+  "differentiators": [
+    "Fully customizable to your specific needs",
+    "Modern, responsive design with mobile-first approach",
+    "AI-powered analytics and personalization",
+    "Seamless integration with existing systems",
+    "Scalable architecture for growth"
+  ],
+  "successMetrics": [
+    "90% student engagement improvement",
+    "50% reduction in administrative workload",
+    "3x faster course creation and deployment",
+    "95% user satisfaction rate",
+    "40% increase in course completion rates"
+  ],
+  "integrationCapabilities": [
+    "Student Information Systems (SIS)",
+    "Payment gateways and subscription management",
+    "Video conferencing platforms",
+    "CRM and marketing automation tools",
+    "Analytics and reporting platforms",
+    "Single Sign-On (SSO) systems"
+  ],
+  "securityFeatures": [
+    "Role-based access control (RBAC)",
+    "Data encryption at rest and in transit",
+    "GDPR and FERPA compliance",
+    "Regular security audits and updates",
+    "Secure video content delivery",
+    "Audit logging for all user actions"
+  ],
+  "support": [
+    "Comprehensive training and onboarding",
+    "Technical support and maintenance",
+    "Custom feature development",
+    "Integration assistance",
+    "Regular platform updates and improvements"
+  ]
+}

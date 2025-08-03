@@ -1,0 +1,19 @@
+{
+  "name": "searchSolutions",
+  "description": "Search for business solutions that match the client's needs",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search query describing the business need or challenge"
+      },
+      "language": {
+        "type": "string",
+        "description": "Preferred language for solutions (en, ua)",
+        "enum": ["en", "ua"]
+      }
+    },
+    "required": ["query"]
+  }
+}

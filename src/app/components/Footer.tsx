@@ -98,7 +98,7 @@ export default function Footer() {
                   href="/solutions/oblikflow-en"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  OblikFlow
+                  Accounting Automation
                 </Link>
               </li>
               <li>
@@ -106,7 +106,7 @@ export default function Footer() {
                   href="/solutions/oblikflow-ua"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  OblikFlow
+                  Автоматизація обліку
                 </Link>
               </li>
             </ul>

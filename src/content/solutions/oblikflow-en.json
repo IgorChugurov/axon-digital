@@ -1,0 +1,129 @@
+{
+  "id": "oblikflow-en",
+  "slug": "oblikflow-en",
+  "language": "en",
+  "title": "Accounting Automation Configuration",
+  "shortDescription": "Possible configuration for accounting automation using modern AI technologies and cloud-based workflows.",
+  "description": "This configuration represents a possible approach to building accounting automation systems using modern technologies. It combines AI-powered document processing, cloud-based workflows, and integrated compliance features to create efficient accounting solutions. This is not a ready-made product, but a technological approach we can implement for clients based on their specific needs and requirements.",
+  "url": "/solutions/oblikflow-en",
+  "image": "/oblikflow.png",
+  "category": "Accounting & Tax Management",
+  "tags": [
+    "accounting",
+    "tax management",
+    "document processing",
+    "AI automation",
+    "multi-client",
+    "financial reporting",
+    "compliance",
+    "bookkeeping"
+  ],
+  "targetAudience": [
+    "Accounting firms",
+    "Bookkeeping services",
+    "Financial consultants",
+    "Small to medium businesses",
+    "Multi-client service providers"
+  ],
+  "businessChallenges": [
+    "Manual data entry consuming 80% of time",
+    "Managing multiple clients with different tax regimes",
+    "Document processing and classification",
+    "Tax compliance and reporting",
+    "Client communication and transparency",
+    "Scaling accounting operations"
+  ],
+  "features": [
+    "Multi-client management with access control",
+    "AI-powered document recognition and processing",
+    "Automated accounting entries and validation",
+    "Comprehensive tax calculation and reporting",
+    "Client portal for document upload and communication",
+    "Integration with banks and tax portals"
+  ],
+  "architecture": [
+    "Client Management: multi-profile support with access control and taxation settings.",
+    "Client Portal: upload documents, view reports, communicate with accountants.",
+    "Staff Dashboard: manage clients, generate reports, calculate taxes and salaries.",
+    "Document Upload & Parsing: via web, email, API, Excel templates. AI extracts document structure.",
+    "Posting & Validation: automatic accounting entries with rule-based validation.",
+    "Tax Calculation Module: supports different regimes, periods, and currencies.",
+    "Payroll Module: salary by performance, rates, or sales. Integrated with bank exports.",
+    "Inventory Management: product receipts, write-offs, inter-project movement, FX revaluation.",
+    "Reporting: balance sheets, profit/loss, tax filings, VAT, social taxes, dividend tax.",
+    "Analytics & Dashboards: trends, forecasts, obligations, project-level metrics.",
+    "Tax Optimization Suggestions: legal AI-based advice to reduce tax load.",
+    "Integration Layer: sync with CRM, ERP, banks, tax portals via API.",
+    "Task Management: assign and track bookkeeping tasks.",
+    "Security & Compliance: full audit log, GDPR compliance, role-based access."
+  ],
+  "technology": [
+    "OCR + Layout Parsing: for scanned and structured documents.",
+    "GPT-4 Turbo + Finetuned Rules: for document classification and extraction.",
+    "MongoDB + Node.js: core ledger and data processing engine.",
+    "Cloud-first architecture: supports horizontal scaling and multi-tenancy.",
+    "Secure RESTful API: for external integrations and file exchange."
+  ],
+  "useCases": [
+    "A firm manages 150+ clients: documents flow in via web/email/API.",
+    "Invoices and receipts are recognized and auto-posted to journals.",
+    "Accountants validate data and send tax reports directly from OblikFlow.",
+    "Clients track tax obligations and financial performance in the portal.",
+    "System suggests optimized expense handling to reduce tax liability."
+  ],
+  "benefits": [
+    "Reduce manual data entry by 80%",
+    "Automate tax calculations and compliance",
+    "Improve client communication and transparency",
+    "Scale accounting operations efficiently",
+    "Minimize errors through AI validation"
+  ],
+  "implementationTimeline": {
+    "customDevelopment": "up to 6 months for custom development from scratch",
+    "oblikflowAdaptation": "2-4 weeks for adaptation to specific needs"
+  },
+  "pricing": {
+    "type": "subscription",
+    "model": "per-client-per-month",
+    "note": "Pricing varies based on number of clients and features required"
+  },
+  "competitors": ["QuickBooks Online", "Xero", "FreshBooks", "Wave Accounting"],
+  "differentiators": [
+    "AI-powered document processing",
+    "Multi-client management with access control",
+    "Tax optimization recommendations",
+    "Client portal for transparency",
+    "Ukrainian tax compliance",
+    "Custom adaptation for specific business needs"
+  ],
+  "successMetrics": [
+    "80% reduction in manual data entry time",
+    "50% faster tax reporting",
+    "90% client satisfaction improvement",
+    "3x increase in clients per accountant",
+    "99.9% accuracy in document processing"
+  ],
+  "integrationCapabilities": [
+    "Bank APIs for transaction import",
+    "Tax portal APIs for direct filing",
+    "CRM systems for client management",
+    "ERP systems for inventory sync",
+    "Email systems for document processing",
+    "Excel templates for bulk data import"
+  ],
+  "securityFeatures": [
+    "Role-based access control",
+    "Full audit logging",
+    "GDPR compliance",
+    "Data encryption at rest and in transit",
+    "Multi-factor authentication",
+    "Regular security audits"
+  ],
+  "support": [
+    "24/7 technical support",
+    "Training and onboarding",
+    "Custom integration assistance",
+    "Regular updates and maintenance",
+    "Documentation and tutorials"
+  ]
+}

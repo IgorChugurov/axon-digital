@@ -53,7 +53,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
     >
       <h1
         ref={titleRef}
-        className={`text-4xl md:text-5xl font-bold tracking-tight text-gray-900 ${styles.mainTitle}`}
+        className={`text-3xl md:text-4xl font-bold tracking-tight text-gray-900 ${styles.mainTitle}`}
       >
         {content.title}
       </h1>

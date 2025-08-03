@@ -69,7 +69,7 @@ export default function SolutionsPage() {
           <section className="relative bg-gradient-to-r from-gray-700 to-slate-800 text-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h1 className="text-5xl font-bold mb-6">
+                <h1 className="text-3xl md:text-5xl font-bold mb-6">
                   {solutionsData.sections.hero.title}
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">

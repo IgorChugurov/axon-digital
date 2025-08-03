@@ -11,10 +11,12 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
-  const isExpertise = pathname === "/expertise"; //|| pathname.startsWith("/expertise/");
-  const isServices = pathname === "/services"; //|| pathname.startsWith("/services/");
-  const isSolutions = pathname === "/solutions";
-  // || pathname.startsWith("/solutions/");
+  const isExpertise =
+    pathname === "/expertise" || pathname.startsWith("/expertise/");
+  const isServices =
+    pathname === "/services" || pathname.startsWith("/services/");
+  const isSolutions =
+    pathname === "/solutions" || pathname.startsWith("/solutions/");
   const isPlatform = pathname === "/platform";
   const isContact = pathname === "/contact";
   //console.log(pathname, isServices);
@@ -30,6 +32,14 @@ export default function Header() {
   // Individual solution page checks
   const isOblikFlowEN = pathname === "/solutions/oblikflow-en";
   const isOblikFlowUA = pathname === "/solutions/oblikflow-ua";
+  const isEducationPlatform = pathname === "/solutions/education-platform";
+  const isHealthcarePlatform = pathname === "/solutions/healthcare-systems";
+  const isEcommercePlatform = pathname === "/solutions/ecommerce-platforms";
+  const isRealestatePlatform = pathname === "/solutions/realestate-platform";
+  const isFintechPlatform = pathname === "/solutions/fintech-platform";
+  const isEnterpriseProcessAutomation =
+    pathname === "/solutions/enterprise-process-automation";
+  const isAIIntegrationSolution = pathname === "/solutions/ai-integration";
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -192,7 +202,7 @@ export default function Header() {
               Home
             </Link>
 
-            {/* Solutions Section */}
+            {/* Technology Configurations Section */}
             <div className="py-2">
               <Link
                 href="/solutions"
@@ -203,10 +213,10 @@ export default function Header() {
                 }`}
                 onClick={closeMobileMenu}
               >
-                Solutions
+                Digital Solutions
               </Link>
 
-              {/* Solutions Submenu */}
+              {/* Configurations Submenu */}
               <div className="ml-8 mt-2 space-y-2">
                 <Link
                   href="/solutions/oblikflow-en"
@@ -217,7 +227,7 @@ export default function Header() {
                   }`}
                   onClick={closeMobileMenu}
                 >
-                  OblikFlow
+                  Accounting Automation
                 </Link>
                 <Link
                   href="/solutions/oblikflow-ua"
@@ -228,8 +238,85 @@ export default function Header() {
                   }`}
                   onClick={closeMobileMenu}
                 >
-                  ОблікФлоу
+                  Автоматизація обліку
                 </Link>
+                <Link
+                  href="/solutions/education-platform"
+                  className={`text-sm transition-colors py-1 block ${
+                    isEducationPlatform
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Education Platform
+                </Link>
+                <Link
+                  href="/solutions/healthcare-systems"
+                  className={`text-sm transition-colors py-1 block ${
+                    isHealthcarePlatform
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Healthcare Platform
+                </Link>
+                <Link
+                  href="/solutions/ecommerce-platforms"
+                  className={`text-sm transition-colors py-1 block ${
+                    isEcommercePlatform
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  E-commerce Platform
+                </Link>
+                <Link
+                  href="/solutions/realestate-platform"
+                  className={`text-sm transition-colors py-1 block ${
+                    isRealestatePlatform
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Real Estate Platform
+                </Link>
+                <Link
+                  href="/solutions/fintech-platform"
+                  className={`text-sm transition-colors py-1 block ${
+                    isFintechPlatform
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Fintech Platform
+                </Link>
+                <Link
+                  href="/solutions/enterprise-process-automation"
+                  className={`text-sm transition-colors py-1 block ${
+                    isEnterpriseProcessAutomation
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  Enterprise Process Automation
+                </Link>
+                {/* <Link
+                  href="/solutions/ai-integration"
+                  className={`text-sm transition-colors py-1 block ${
+                    isAIIntegrationSolution
+                      ? "text-gray-900 font-semibold underline"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  AI Integration
+                </Link> */}
               </div>
             </div>
 

@@ -1335,8 +1335,8 @@
           "/contact"
         ]
       },
-      "fintech-platforms": {
-        "url": "/solutions/fintech-platforms",
+      "fintech-platform": {
+        "url": "/solutions/fintech-platform",
         "title": "Fintech & Payment Solutions | AxonDigital Digital Solutions",
         "description": "Complete financial technology platforms combining automated accounting, payment processing, compliance management, and regulatory reporting for modern financial services.",
         "sections": {
@@ -1503,8 +1503,8 @@
           "/contact"
         ]
       },
-      "enterprise-automation": {
-        "url": "/solutions/enterprise-automation",
+      "enterprise-process-automation": {
+        "url": "/solutions/enterprise-process-automation",
         "title": "Enterprise Process Automation | AxonDigital Digital Solutions",
         "description": "Corporate workflow automation systems with document management, approval routing, legacy system integration, and enterprise-grade security.",
         "sections": {

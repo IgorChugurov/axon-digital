@@ -175,7 +175,9 @@ export default async function SolutionPage({
                     {solution.language?.toUpperCase()}
                   </span> */}
                 </div>
-                <h1 className="text-5xl font-bold mb-6">{solution.title}</h1>
+                <h1 className="text-3xl md:text-5xl font-bold mb-6">
+                  {solution.title}
+                </h1>
                 <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                   {solution.description}
                 </p>
