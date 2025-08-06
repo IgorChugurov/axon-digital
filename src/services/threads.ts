@@ -5,13 +5,16 @@ export const getMessagesFromServer = async (threadId: string) => {
     .then((res) => res.json())
     .then((data) => {
       if (Array.isArray(data)) {
-        const messages: Message[] = data.map((msg) => {
-          return {
-            id: new Date(msg.timestamp).getTime(),
-            text: msg.content,
-            sender: msg.role === "assistant" ? "bot" : "user",
-          };
-        });
+        const messages: Message[] = data
+          // Дополнительная фильтрация на уровне приложения
+          .filter((msg) => msg.content && msg.content.trim() !== "")
+          .map((msg) => {
+            return {
+              id: new Date(msg.timestamp).getTime(),
+              text: msg.content,
+              sender: msg.role === "assistant" ? "bot" : "user",
+            };
+          });
         return messages;
       } else {
         return [];

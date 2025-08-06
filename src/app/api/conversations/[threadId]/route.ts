@@ -18,7 +18,15 @@ export async function GET(req: NextRequest, context: any) {
     const collection = db.collection(collectionName);
 
     const messages = await collection
-      .find({ threadId })
+      .find({
+        threadId,
+        // Фильтруем сообщения с пустым или null контентом
+        content: {
+          $exists: true,
+          $ne: null,
+          $not: /^\s*$/,
+        },
+      })
       .sort({ timestamp: 1 })
       .toArray();
 

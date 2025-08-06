@@ -25,6 +25,7 @@ export async function handleUserMessageCopilot({
     assistantId,
     threadId,
     role: "user",
+    content: message,
     ip,
     timestamp: new Date(),
   });
@@ -86,6 +87,7 @@ export async function handleUserMessageCopilot({
         assistantId,
         threadId,
         role: "assistant",
+        content: assistantReply,
         ip,
         timestamp: new Date(),
       });
