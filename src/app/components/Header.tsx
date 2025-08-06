@@ -11,12 +11,9 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isAbout = pathname === "/about";
-  const isExpertise =
-    pathname === "/expertise" || pathname.startsWith("/expertise/");
-  const isServices =
-    pathname === "/services" || pathname.startsWith("/services/");
-  const isSolutions =
-    pathname === "/solutions" || pathname.startsWith("/solutions/");
+  const isExpertise = pathname === "/expertise";
+  const isServices = pathname === "/services";
+  const isSolutions = pathname === "/solutions";
   const isPlatform = pathname === "/platform";
   const isContact = pathname === "/contact";
   //console.log(pathname, isServices);
@@ -67,6 +64,7 @@ export default function Header() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+  //console.log(isSolutions);
 
   return (
     <>

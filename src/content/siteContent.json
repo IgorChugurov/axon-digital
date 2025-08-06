@@ -197,7 +197,7 @@
               "image": "/ecommerce-platform.png"
             },
             {
-              "slug": "enterprise-automation",
+              "slug": "enterprise-process-automation",
               "title": "Enterprise Process Automation",
               "shortDescription": "Corporate workflow automation systems with document management, approval routing, and legacy system integration.",
               "category": "Enterprise Solutions",
@@ -207,7 +207,7 @@
                 "TvorFlow Platform"
               ],
               "expertise": "Enterprise & Corporate Solutions",
-              "link": "/solutions/enterprise-automation",
+              "link": "/solutions/enterprise-process-automation",
               "image": "/enterprise-platform.png"
             },
             {
