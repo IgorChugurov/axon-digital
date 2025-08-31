@@ -1,0 +1,17 @@
+backend/
+backend/**
+**/backend/**
+
+# Build artifacts
+.next/
+out/
+build/
+
+# Misc
+*.map
+*.log
+*.tsbuildinfo
+
+# Env and Vercel metadata
+.env*
+.vercel/
