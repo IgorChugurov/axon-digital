@@ -33,7 +33,11 @@ function getPathFromRequest(req: Request): string[] {
 
 async function proxy(req: Request, path: string[]) {
   const base = BACKEND.endsWith("/") ? BACKEND.slice(0, -1) : BACKEND;
-  const target = `${base}/v1/${path.join("/")}`;
+  const pathSuffix =
+    path.length > 0 && path[0] === "v1"
+      ? path.join("/")
+      : `v1/${path.join("/")}`;
+  const target = `${base}/${pathSuffix}`;
   const origin = req.headers.get("origin");
   const headers = new Headers(req.headers);
 

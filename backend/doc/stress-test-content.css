@@ -1,0 +1,154 @@
+:root {
+  font-size: 14px;
+  line-height: 1.3;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Base text styling */
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+/* Unified table styling for QType tables */
+table.qtable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d0d0d0;
+  border-spacing: 0;
+  margin: 4px 0;
+  table-layout: fixed;
+}
+table.qtable th,
+table.qtable td {
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px;
+  height: 36px;
+  vertical-align: middle;
+}
+table.qtable tr th:last-child,
+table.qtable tr td:last-child {
+  border-right: none;
+}
+table.qtable tr:last-child th,
+table.qtable tr:last-child td {
+  border-bottom: none;
+}
+table.qtable th:first-child,
+table.qtable td:first-child {
+  text-align: left;
+}
+table.qtable th:not(:first-child),
+table.qtable td:not(:first-child) {
+  text-align: center !important;
+}
+
+/* Make paragraph elements inline to prevent breaks */
+p,
+.editor-paragraph {
+  margin: 0 0 0px 0;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* Better spacing for headings */
+h1,
+h2,
+h3,
+h4,
+.editor-heading-h1,
+.editor-heading-h2,
+.editor-heading-h3,
+.editor-heading-h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  margin: 8px 0 8px 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+h1,
+.editor-heading-h1 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+h2,
+.editor-heading-h2 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+h3,
+.editor-heading-h3 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+h4,
+.editor-heading-h4 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.container_checkbox {
+  margin: 0;
+  padding: 0;
+}
+
+/* Важно: убираем отступы у заголовка списка */
+.container_checkbox > span {
+  display: block;
+  margin: 0;
+  padding: 0 0 0px 0;
+  white-space: normal;
+}
+
+/* Списки без отступов сверху */
+ul.editor-list-ul.editor-checklist {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+/* Элементы списка с уменьшенными отступами */
+ul.editor-list-ul.editor-checklist li.editor-listitem {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для чекбоксов */
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0 8px 0 0;
+  flex-shrink: 0;
+}
+
+/* Стили для текста рядом с чекбоксами */
+li.editor-listitem span {
+  margin: 0;
+  padding-left: 4px;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* General text formatting */
+.editor-text-bold,
+b,
+strong {
+  font-weight: bold;
+  display: inline;
+}
+
+.editor-text-italic,
+i,
+em {
+  font-style: italic;
+  display: inline;
+}
+
+.noValue2 {
+  background-color: yellow !important;
+}
