@@ -23,6 +23,14 @@ function withCors(res: Response, origin: string | null) {
   return new Response(res.body, { status: res.status, headers: h });
 }
 
+function getPathFromRequest(req: Request): string[] {
+  const pathname = new URL(req.url).pathname;
+  const basePrefix = "/api/pdf/";
+  const idx = pathname.indexOf(basePrefix);
+  const rest = idx >= 0 ? pathname.slice(idx + basePrefix.length) : "";
+  return rest.split("/").filter(Boolean);
+}
+
 async function proxy(req: Request, path: string[]) {
   const base = BACKEND.endsWith("/") ? BACKEND.slice(0, -1) : BACKEND;
   const target = `${base}/v1/${path.join("/")}`;
@@ -48,10 +56,7 @@ async function proxy(req: Request, path: string[]) {
   return withCors(resp, origin);
 }
 
-export async function OPTIONS(
-  req: Request,
-  { params }: { params: { path: string[] } }
-) {
+export async function OPTIONS(req: Request) {
   const origin = req.headers.get("origin");
   const h = new Headers();
   if (
@@ -67,12 +72,15 @@ export async function OPTIONS(
   return new Response(null, { status: 204, headers: h });
 }
 
-export async function GET(req: Request, ctx: { params: { path: string[] } }) {
-  return proxy(req, ctx.params.path);
+export async function GET(req: Request) {
+  const path = getPathFromRequest(req);
+  return proxy(req, path);
 }
-export async function POST(req: Request, ctx: { params: { path: string[] } }) {
-  return proxy(req, ctx.params.path);
+export async function POST(req: Request) {
+  const path = getPathFromRequest(req);
+  return proxy(req, path);
 }
-export async function HEAD(req: Request, ctx: { params: { path: string[] } }) {
-  return proxy(req, ctx.params.path);
+export async function HEAD(req: Request) {
+  const path = getPathFromRequest(req);
+  return proxy(req, path);
 }
