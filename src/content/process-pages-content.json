@@ -1,0 +1,272 @@
+{
+  "why-this-section-exists": {
+    "title": "Why This Section Exists",
+    "intro": "This section is designed to align expectations between clients and the development team. Many misunderstandings, delays, and disappointments arise from a simple truth: clients and developers often speak different languages. Our goal is to bridge that gap.",
+    "content": [
+      {
+        "subtitle": "\ud83c\udf1f The Goal — Expectation Management",
+        "text": "Clients often see development as a one-time service — like delivering a finished product. But modern digital products are never truly 'done'. They evolve, update, adapt. This section explains why iterative development is the norm, not the exception."
+      },
+      {
+        "subtitle": "\ud83d\udd0d Why Misunderstandings Happen",
+        "text": "Business teams focus on outcomes — leads, revenue, automation. Developers focus on systems — infrastructure, performance, architecture. These perspectives are both valid, but misaligned expectations create tension. This section helps you understand what’s really being built, how, and why it takes time."
+      },
+      {
+        "subtitle": "\ud83d\udcda Based on 100+ Projects",
+        "text": "We’ve delivered over 100 projects — from landing pages to full fintech platforms. This section summarizes lessons learned: what causes delays, what leads to success, and where most clients go wrong (and how to avoid it)."
+      },
+      {
+        "subtitle": "\ud83e\udd1d What You’ll Gain",
+        "text": "A clear understanding of how development works at AxonDigital. Realistic expectations. Awareness of your own role in the process. And fewer surprises along the way."
+      }
+    ]
+  },
+
+  "what-you-should-know": {
+    "title": "What You Should Know About Development",
+    "intro": "Development is not a conveyor belt — it’s a complex, adaptive process that requires analysis, iteration, and feedback. Understanding the nature of this process helps ensure smoother execution and better results.",
+    "content": [
+      {
+        "subtitle": "\u23f3 It’s Not One-and-Done",
+        "text": "Websites and platforms evolve constantly — because user behavior changes, technologies update, regulations shift. Even a well-built product in 2023 might need changes in 2025 due to new compliance laws, devices, or browser updates."
+      },
+      {
+        "subtitle": "\u2696\ufe0f It’s a Collaborative Process",
+        "text": "Your involvement is crucial. Design approvals, content delivery, feedback loops — these are dependencies. Delayed input causes bottlenecks. We recommend assigning a single point of contact who can make decisions and keep the process unblocked."
+      },
+      {
+        "subtitle": "\ud83e\udd16 Technology Moves Fast",
+        "text": "Frameworks like React, Next.js, or NestJS evolve rapidly. Best practices, security patches, and compatibility changes are frequent. Development teams must stay updated — and sometimes, this means reworking or adapting existing codebases."
+      },
+      {
+        "subtitle": "\ud83d\udcc5 Milestones, Not Magic",
+        "text": "We plan around iterations, deliverables, and testing checkpoints — not grand reveals. Each stage brings a usable outcome and a chance for correction. That’s how modern development mitigates risk."
+      }
+    ]
+  },
+
+  "myths-and-expectations": {
+    "title": "Myths and Unrealistic Expectations",
+    "intro": "Many client frustrations stem from common myths about digital development. Clarifying them upfront saves time, money, and stress.",
+    "content": [
+      {
+        "subtitle": "\u274c Myth: 'It Will Be Bug-Free'",
+        "text": "Even world-class products ship with bugs. Why? Because systems are complex, environments differ, and real-world use cases reveal edge cases no testing can fully cover. What matters is how bugs are managed — not avoided at all costs."
+      },
+      {
+        "subtitle": "\u26a0\ufe0f Myth: 'Let’s Do Everything at Once'",
+        "text": "Trying to build everything from day one leads to bloated scope, delays, and burnout. The right path is focused releases with feedback loops. MVP-first is not about compromise — it’s about control."
+      },
+      {
+        "subtitle": "\ud83e\udd75 Myth: 'We’ll Freeze It and Be Done'",
+        "text": "Web products need maintenance: dependency updates, browser compatibility, security patches. Projects that are left untouched degrade in quality and security over time."
+      },
+      {
+        "subtitle": "\ud83e\uddd0 Myth: 'AI Will Do It All'",
+        "text": "AI accelerates development but doesn’t eliminate complexity. LLMs and automation help — but they still require good prompts, validation, and integration with your systems."
+      }
+    ]
+  },
+
+  "agile-vs-waterfall": {
+    "title": "Agile vs Waterfall: Why We Work Iteratively",
+    "intro": "Agile isn’t a buzzword — it’s a response to how modern software is built, validated, and improved. Here's why we use it.",
+    "content": [
+      {
+        "subtitle": "\u269b\ufe0f Waterfall: One Big Plan",
+        "text": "Traditional Waterfall assumes all requirements are known upfront. It works for factories — not for evolving digital products. Change becomes expensive, and feedback comes too late."
+      },
+      {
+        "subtitle": "\u267b\ufe0f Agile: Build, Ship, Learn",
+        "text": "Agile works in 2–4 week sprints. We prioritize, design, develop, demo, and iterate — fast. This gives clients visibility and control, with space to adapt as the business evolves."
+      },
+      {
+        "subtitle": "\ud83d\udd04 What It Means For You",
+        "text": "Expect incremental progress. Expect participation. Expect early visibility into results — and the ability to change course before it’s too late. Agile isn’t chaos; it’s structured adaptation."
+      }
+    ]
+  },
+  "how-to-avoid-chaos": {
+    "title": "How to Stay Agile Without Chaos",
+    "intro": "Agile gives flexibility — but without boundaries, it turns into endless redesigns, shifting goals, and unclear priorities. Here's how we balance adaptation with clarity and control.",
+    "content": [
+      {
+        "subtitle": "\ud83d\udd04 Agile is Not Endless Refactoring",
+        "text": "Ideas are not facts. Design is not truth. Every assumption needs validation — and until then, it’s a hypothesis, not a requirement. A/B testing and analytics must guide decisions — not taste or opinion."
+      },
+      {
+        "subtitle": "\u23f3 Fixed Sprints, Flexible Between",
+        "text": "Every iteration has defined scope. Revisions are welcome — between sprints. Not during. This ensures flow, delivery, and sanity."
+      },
+      {
+        "subtitle": "\ud83d\udd04 Hypothesis-Driven Changes Only",
+        "text": "We ask: what’s the problem, what’s the hypothesis, how do we measure success? No gut-feel changes without a reason, a plan, and a metric."
+      },
+      {
+        "subtitle": "\ud83d\udcc5 Versioning Matters",
+        "text": "We release incrementally and tag versions: v1.0, v1.1. This allows clarity, comparison, and rollback. If everything changes constantly — nothing is finished."
+      },
+      {
+        "subtitle": "\u2705 Optimize, Don’t Perfect",
+        "text": "Perfect UX doesn’t exist. Optimized UX does. Built for your audience, tested in the field, improved over time. Aim for progress, not utopia."
+      },
+      {
+        "subtitle": "\ud83d\udcca Analytics Over Assumptions",
+        "text": "Track behavior. Watch funnels. Study heatmaps. That’s where the real answers come from. Not from more meetings."
+      },
+      {
+        "subtitle": "\ud83d\ude80 Lean UX Principles",
+        "text": "Design → Hypothesis → Test → Learn → Repeat. Quick cycles, fast insights. Build what’s proven, not just what’s imagined."
+      },
+      {
+        "subtitle": "\ud83d\udd12 Guardrails, Not Locks",
+        "text": "Agile needs constraints to work well. Set boundaries — not to limit creativity, but to focus it."
+      }
+    ]
+  },
+  "step-by-step": {
+    "title": "Our Development Process Step by Step",
+    "intro": "Here’s how we turn ideas into scalable products — in clear, structured phases.",
+    "content": [
+      {
+        "subtitle": "1. Pre-Project Analysis",
+        "text": "We identify your business goals, user flows, and technical constraints. This sets the foundation for scope, budget, and architecture."
+      },
+      {
+        "subtitle": "2. UI/UX Design",
+        "text": "We turn ideas into wireframes and interactive prototypes. Every screen, click, and state is defined before coding begins."
+      },
+      {
+        "subtitle": "3. Technical Implementation",
+        "text": "We develop using TypeScript, NestJS, Postgres, and modular architecture. Back-end and front-end teams work in parallel with CI/CD pipelines."
+      },
+      {
+        "subtitle": "4. Content & Launch",
+        "text": "Final texts, images, and data go in. We test, optimize, and deploy to production — with SEO, analytics, and access controls in place."
+      },
+      {
+        "subtitle": "5. Support & Evolution",
+        "text": "We monitor, patch, and scale. Features are added, performance is improved, and new business needs are integrated over time."
+      }
+    ]
+  },
+
+  "roles-and-responsibilities": {
+    "title": "Roles and Responsibilities",
+    "intro": "Successful development depends on collaboration. Here’s what we handle — and what we need from you.",
+    "content": [
+      {
+        "subtitle": "\ud83d\udc68\u200d\ud83d\udcbb Our Role: Engineering, Architecture, and Delivery",
+        "text": "We build, manage, and deliver your product — from infrastructure to UX, from code to deployment."
+      },
+      {
+        "subtitle": "\ud83d\udcbc Your Role: Business Context and Decision Making",
+        "text": "You bring goals, domain expertise, and feedback. You validate what we build. We need access, content, approvals — on time."
+      },
+      {
+        "subtitle": "\u26a1 Where Projects Get Stuck",
+        "text": "Most delays come from missing inputs: no API keys, unclear priorities, delayed decisions. Clear ownership on your side unblocks work."
+      },
+      {
+        "subtitle": "\u2705 Tip: Assign a Single Point of Contact",
+        "text": "Having one empowered person as the main contact streamlines communication and keeps things moving."
+      }
+    ]
+  },
+
+  "whats-included": {
+    "title": "What’s Included — And What’s Not",
+    "intro": "To keep expectations realistic, we clearly define scope boundaries.",
+    "content": [
+      {
+        "subtitle": "\ud83d\udd0d What We Deliver",
+        "text": "Design, code, tests, documentation, deployment setup — that’s our scope. We also support and evolve the product after launch."
+      },
+      {
+        "subtitle": "\u274c What’s Not Included",
+        "text": "We don’t write your marketing strategy, ad copy, or social media plan. We don’t guarantee traffic or conversions — we provide the platform to support them."
+      },
+      {
+        "subtitle": "\ud83e\udef6 Tech ≠ Marketing",
+        "text": "A fast, stable website is the foundation — but marketing is what brings results. Align with your marketing team early."
+      }
+    ]
+  },
+
+  "tech-and-marketing": {
+    "title": "Product as Part of Your Marketing Ecosystem",
+    "intro": "Websites and platforms don’t exist in a vacuum — they support and amplify your broader marketing strategy.",
+    "content": [
+      {
+        "subtitle": "\ud83d\udcc8 Built to Convert",
+        "text": "A website or platform should align with campaign goals — whether lead generation, conversion, or content delivery. That means tracking, testing, and tweaking are built-in."
+      },
+      {
+        "subtitle": "\u2696\ufe0f Strategy Before Execution",
+        "text": "Start with your marketing strategy. Define funnels, messages, and KPIs — then we align the tech to support them."
+      },
+      {
+        "subtitle": "\ud83d\udcca Connected Stack",
+        "text": "Analytics, CRM, A/B testing, ads integration — these should be considered during tech planning."
+      }
+    ]
+  },
+
+  "agency-standards": {
+    "title": "Agency Standards and Practices",
+    "intro": "We follow modern engineering practices to ensure reliability, performance, and maintainability.",
+    "content": [
+      {
+        "subtitle": "\ud83d\ude80 Tech Stack",
+        "text": "TypeScript, NestJS, PostgreSQL, Redis, Docker, GitHub Actions — tested and scalable."
+      },
+      {
+        "subtitle": "\ud83c\udfe1 Architecture",
+        "text": "Modular monolith or microservices — depending on your scale and needs. SOLID principles, separation of concerns."
+      },
+      {
+        "subtitle": "\ud83d\udd12 Security",
+        "text": "JWT, HTTPS, GDPR, input sanitization, RBAC. We take security seriously from day one."
+      },
+      {
+        "subtitle": "\ud83d\udd22 DevOps",
+        "text": "CI/CD pipelines, staging environments, rollbacks, logs, monitoring. No manual FTP uploads."
+      },
+      {
+        "subtitle": "\ud83d\udcda Documentation",
+        "text": "Swagger/OpenAPI for APIs. README and onboarding docs in repos. Clear code and setup guidance."
+      }
+    ]
+  },
+
+  "recommended-reading": {
+    "title": "Recommended Reading",
+    "intro": "Helpful external links and resources to dive deeper into the ideas behind our process.",
+    "content": [
+      {
+        "subtitle": "Agile Manifesto",
+        "text": "https://agilemanifesto.org/"
+      },
+      {
+        "subtitle": "Waterfall vs Agile",
+        "text": "https://www.scrum.org/resources/blog/waterfall-vs-agile-which-right-you"
+      },
+      {
+        "subtitle": "Why Bugs Are Inevitable",
+        "text": "https://www.atlassian.com/confluence/software-development/bug-management"
+      },
+      {
+        "subtitle": "SOLID Principles",
+        "text": "https://clean-code-developer.com/solid-principles"
+      },
+      {
+        "subtitle": "NestJS Best Practices",
+        "text": "https://docs.nestjs.com"
+      },
+      {
+        "subtitle": "TypeORM Documentation",
+        "text": "https://typeorm.io"
+      }
+    ]
+  }
+}

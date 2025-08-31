@@ -1,0 +1,74 @@
+{
+  "process": {
+    "url": "/process",
+    "title": "How Development Actually Works | AxonDigital",
+    "description": "A realistic guide to how digital products are actually built — what to expect, what you’ll get, and how to collaborate effectively with a digital agency.",
+    "sections": {
+      "hero": {
+        "title": "How Digital Product Development Actually Works",
+        "description": "What clients need to know about the development process: realistic expectations, common misconceptions, key phases, and the role of your team. Based on 100+ real-world projects."
+      },
+      "topics": {
+        "title": "Process Topics",
+        "items": [
+          {
+            "title": "1. Why This Section Exists",
+            "description": "Why we created this page: to align expectations and avoid misunderstandings.",
+            "url": "/process/why-this-section-exists"
+          },
+          {
+            "title": "2. What You Should Know About Development",
+            "description": "Development is not a button — it's a process of analysis, design, implementation, and iteration.",
+            "url": "/process/what-you-should-know"
+          },
+          {
+            "title": "3. Myths and Unrealistic Expectations",
+            "description": "Why bugs always exist, why ideal is impossible, and why freeze-and-forget doesn’t work.",
+            "url": "/process/myths-and-expectations"
+          },
+          {
+            "title": "4. Agile vs Waterfall: Why We Work Iteratively",
+            "description": "Agile enables flexibility, early delivery, and feedback loops — essential in modern projects.",
+            "url": "/process/agile-vs-waterfall"
+          },
+          {
+            "title": "5. How to Stay Agile Without Chaos",
+            "description": "Boundaries, versioning, hypothesis-driven changes — how to stay flexible without losing focus.",
+            "url": "/process/how-to-avoid-chaos"
+          },
+          {
+            "title": "6. Our Development Process Step by Step",
+            "description": "From pre-project analysis to support — full breakdown of how we build digital systems.",
+            "url": "/process/step-by-step"
+          },
+          {
+            "title": "7. Roles and Responsibilities",
+            "description": "What the agency is responsible for — and what the client needs to do.",
+            "url": "/process/roles-and-responsibilities"
+          },
+          {
+            "title": "8. What's Included — And What’s Not",
+            "description": "Where our scope ends. Why tech ≠ marketing. What you should plan separately.",
+            "url": "/process/whats-included"
+          },
+          {
+            "title": "9. Product as Part of Your Marketing Ecosystem",
+            "description": "How your website or platform fits into the bigger picture. Why strategy comes first.",
+            "url": "/process/tech-and-marketing"
+          },
+          {
+            "title": "10. Agency Standards and Practices",
+            "description": "Stack, architecture, security, testing, CI/CD — our internal standards.",
+            "url": "/process/agency-standards"
+          },
+          {
+            "title": "11. Recommended Reading",
+            "description": "External links to Agile Manifesto, bug management, testing practices, and more.",
+            "url": "/process/recommended-reading"
+          }
+        ]
+      }
+    },
+    "relatedPages": ["/services", "/about", "/expertise", "/platform"]
+  }
+}
