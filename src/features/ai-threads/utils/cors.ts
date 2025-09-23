@@ -9,21 +9,21 @@ const ALLOW_ORIGINS = (process.env.BEDROCK_CORS_ORIGINS ?? "")
 console.log("🔍 CORS Debug:", {
   BEDROCK_CORS_ORIGINS: process.env.BEDROCK_CORS_ORIGINS,
   ALLOW_ORIGINS,
-  allowOriginsLength: ALLOW_ORIGINS.length
+  allowOriginsLength: ALLOW_ORIGINS.length,
 });
 
 export function withCors(
   response: NextResponse,
   origin: string | null
 ): NextResponse {
-  const shouldAllowOrigin = origin && 
-    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
-    
+  const shouldAllowOrigin =
+    origin && (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
+
   console.log("🔍 CORS Check:", {
     origin,
     allowOriginsLength: ALLOW_ORIGINS.length,
     allowOrigins: ALLOW_ORIGINS,
-    shouldAllowOrigin
+    shouldAllowOrigin,
   });
 
   if (shouldAllowOrigin) {
@@ -50,9 +50,9 @@ export function corsOptionsResponse(
   requestedHeaders?: string | null
 ): NextResponse {
   const headers = new Headers();
-  
-  const shouldAllowOrigin = origin && 
-    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
+
+  const shouldAllowOrigin =
+    origin && (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
 
   console.log("🔍 CORS OPTIONS Check:", {
     origin,
@@ -60,7 +60,7 @@ export function corsOptionsResponse(
     requestedHeaders,
     allowOriginsLength: ALLOW_ORIGINS.length,
     allowOrigins: ALLOW_ORIGINS,
-    shouldAllowOrigin
+    shouldAllowOrigin,
   });
 
   if (shouldAllowOrigin) {
