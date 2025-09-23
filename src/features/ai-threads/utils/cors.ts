@@ -50,16 +50,28 @@ export function corsOptionsResponse(
   requestedHeaders?: string | null
 ): NextResponse {
   const headers = new Headers();
+  
+  const shouldAllowOrigin = origin && 
+    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
 
-  if (
-    origin &&
-    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin))
-  ) {
+  console.log("🔍 CORS OPTIONS Check:", {
+    origin,
+    requestedMethod,
+    requestedHeaders,
+    allowOriginsLength: ALLOW_ORIGINS.length,
+    allowOrigins: ALLOW_ORIGINS,
+    shouldAllowOrigin
+  });
+
+  if (shouldAllowOrigin) {
     headers.set("Access-Control-Allow-Origin", origin);
     headers.set(
       "Vary",
       "Origin, Access-Control-Request-Headers, Access-Control-Request-Method"
     );
+    console.log("✅ CORS Headers set for OPTIONS:", origin);
+  } else {
+    console.log("❌ CORS Headers NOT set for OPTIONS:", origin);
   }
 
   headers.set(
