@@ -10,13 +10,26 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-// OPTIONS handler for CORS preflight
+// OPTIONS handler for CORS preflight - используем точно такую же логику как PDF API
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
   const requestedMethod = req.headers.get("access-control-request-method");
   const requestedHeaders = req.headers.get("access-control-request-headers");
-
-  return corsOptionsResponse(origin, requestedMethod, requestedHeaders);
+  
+  const h = new Headers();
+  
+  // Точно такая же логика как в PDF API
+  if (origin) { // Всегда разрешаем, так как PDF_CORS_ORIGINS не установлена
+    h.set("Access-Control-Allow-Origin", origin);
+    h.set("Vary", "Origin, Access-Control-Request-Headers, Access-Control-Request-Method");
+  }
+  
+  h.set("Access-Control-Allow-Methods", requestedMethod ? requestedMethod : "GET,POST,PATCH,OPTIONS");
+  h.set("Access-Control-Allow-Headers", requestedHeaders ? requestedHeaders : "Content-Type, Authorization, x-api-key, projectid, X-Request-Id, X-Request-Timestamp, X-Admin-Token");
+  h.set("Access-Control-Allow-Credentials", "true");
+  h.set("Access-Control-Max-Age", "86400");
+  
+  return new Response(null, { status: 204, headers: h });
 }
 
 // GET /api/ai-threads/:outputId — загрузка веток (threads) для outputId

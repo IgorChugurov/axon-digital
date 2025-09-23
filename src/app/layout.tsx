@@ -8,6 +8,8 @@ import CookieConsent from "@/components/CookieConsent";
 import GlobalLoaderOverlay from "./components/GlobalLoaderOverlay";
 import ChatButton from "@/module/copilotChat/components/ChatButton/ChatButton";
 import ConditionalChatButton from "@/module/copilotChat/ConditionalChatButton";
+// Импортируем версию для логирования при старте приложения
+import "@/utils/version";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
