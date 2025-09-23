@@ -112,7 +112,7 @@ export class LLMService {
 
           // Формируем системные блоки
           const systemBlocks: SystemContentBlock[] = [];
-          let promptText = prompt;
+          const promptText = prompt;
 
           // Добавляем информацию о документе если есть
           // if (documentName) {
