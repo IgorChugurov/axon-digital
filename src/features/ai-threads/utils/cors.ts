@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 
+// Используем ту же логику, что и PDF API - если переменная не установлена, разрешаем все origins
 const ALLOW_ORIGINS = (process.env.PDF_CORS_ORIGINS ?? "")
   .split(",")
   .map((s) => s.trim())
@@ -74,6 +75,7 @@ export function corsOptionsResponse(
     console.log("❌ CORS Headers NOT set for OPTIONS:", origin);
   }
 
+  // Устанавливаем эти заголовки ВСЕГДА (как в PDF API)
   headers.set(
     "Access-Control-Allow-Methods",
     requestedMethod ? requestedMethod : "GET,POST,PATCH,OPTIONS"
@@ -83,7 +85,7 @@ export function corsOptionsResponse(
     "Access-Control-Allow-Headers",
     requestedHeaders
       ? requestedHeaders
-      : "Content-Type, Authorization, x-api-key"
+      : "Content-Type, Authorization, x-api-key, projectid, X-Request-Id, X-Request-Timestamp, X-Admin-Token"
   );
 
   headers.set("Access-Control-Allow-Credentials", "true");
