@@ -8,12 +8,16 @@ export const revalidate = 0;
 // OPTIONS handler for CORS preflight - используем точно такую же логику как PDF API
 export async function OPTIONS(req: NextRequest) {
   console.log("🔥 UPLOAD-DOCUMENT OPTIONS CALLED! URL:", req.url);
-  
+
   const origin = req.headers.get("origin");
   const requestedMethod = req.headers.get("access-control-request-method");
   const requestedHeaders = req.headers.get("access-control-request-headers");
-  
-  console.log("🔥 UPLOAD OPTIONS Details:", { origin, requestedMethod, requestedHeaders });
+
+  console.log("🔥 UPLOAD OPTIONS Details:", {
+    origin,
+    requestedMethod,
+    requestedHeaders,
+  });
 
   const h = new Headers();
 

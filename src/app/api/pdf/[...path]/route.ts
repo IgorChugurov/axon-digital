@@ -64,6 +64,12 @@ export async function OPTIONS(req: Request) {
   const origin = req.headers.get("origin");
   const requestedMethod = req.headers.get("access-control-request-method");
   const requestedHeaders = req.headers.get("access-control-request-headers");
+  console.log("🧭 PDF OPTIONS:", {
+    url: req.url,
+    origin,
+    requestedMethod,
+    requestedHeaders,
+  });
   const h = new Headers();
   if (
     origin &&
