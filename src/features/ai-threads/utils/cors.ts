@@ -5,14 +5,28 @@ const ALLOW_ORIGINS = (process.env.BEDROCK_CORS_ORIGINS ?? "")
   .map((s) => s.trim())
   .filter(Boolean);
 
+// Временное логирование для диагностики
+console.log("🔍 CORS Debug:", {
+  BEDROCK_CORS_ORIGINS: process.env.BEDROCK_CORS_ORIGINS,
+  ALLOW_ORIGINS,
+  allowOriginsLength: ALLOW_ORIGINS.length
+});
+
 export function withCors(
   response: NextResponse,
   origin: string | null
 ): NextResponse {
-  if (
-    origin &&
-    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin))
-  ) {
+  const shouldAllowOrigin = origin && 
+    (ALLOW_ORIGINS.length === 0 || ALLOW_ORIGINS.includes(origin));
+    
+  console.log("🔍 CORS Check:", {
+    origin,
+    allowOriginsLength: ALLOW_ORIGINS.length,
+    allowOrigins: ALLOW_ORIGINS,
+    shouldAllowOrigin
+  });
+
+  if (shouldAllowOrigin) {
     response.headers.set("Access-Control-Allow-Origin", origin);
     response.headers.set("Vary", "Origin");
     response.headers.set("Access-Control-Allow-Credentials", "true");
