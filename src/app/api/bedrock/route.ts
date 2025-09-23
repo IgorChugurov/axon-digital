@@ -11,7 +11,6 @@ import {
   type InferenceConfiguration,
   type SystemContentBlock,
 } from "@aws-sdk/client-bedrock-runtime";
-import type { DocumentType } from "@smithy/types";
 
 type JsonRecord = Record<string, unknown>;
 
@@ -19,7 +18,7 @@ interface BedrockConverseRequest {
   messages: Message[];
   system?: SystemContentBlock[];
   inferenceConfig?: InferenceConfiguration;
-  additionalModelRequestFields?: DocumentType;
+  additionalModelRequestFields?: Record<string, any>;
 }
 
 type BedrockRequest = BedrockConverseRequest;
@@ -142,7 +141,7 @@ async function parseBody(req: Request): Promise<BedrockRequest> {
       }
     : undefined;
   const additionalModelRequestFields = (json as JsonRecord)
-    .additionalModelRequestFields as unknown as DocumentType | undefined;
+    .additionalModelRequestFields as unknown as Record<string, any> | undefined;
   const result: BedrockConverseRequest = { messages };
   if (systemBlocks.length > 0) result.system = systemBlocks;
   if (inferenceConfig) result.inferenceConfig = inferenceConfig;
