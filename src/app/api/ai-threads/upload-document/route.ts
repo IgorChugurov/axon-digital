@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   authenticateUser,
   jsonResponse,
-  corsOptionsResponse,
 } from "@/features/ai-threads";
 
 export const runtime = "nodejs";
