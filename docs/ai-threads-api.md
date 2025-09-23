@@ -17,6 +17,9 @@ BEDROCK_REGION=us-east-1
 BEDROCK_MODELID=anthropic.claude-3-5-sonnet-20241022-v2:0
 BEDROCK_API_KEY=your-bedrock-api-key
 
+# CORS Configuration (используется та же переменная, что и для PDF API)
+PDF_CORS_ORIGINS=https://dev.opiesoftware.com,https://opiesoftware.com
+
 # Rate Limiting и Retry настройки (опционально)
 BEDROCK_MIN_INTERVAL=1500        # Минимальный интервал между запросами в мс
 BEDROCK_MAX_RETRIES=3           # Максимальное количество повторных попыток

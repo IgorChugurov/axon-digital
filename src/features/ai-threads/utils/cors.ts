@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 
-const ALLOW_ORIGINS = (process.env.BEDROCK_CORS_ORIGINS ?? "")
+const ALLOW_ORIGINS = (process.env.PDF_CORS_ORIGINS ?? "")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
 
 // Временное логирование для диагностики
 console.log("🔍 CORS Debug:", {
-  BEDROCK_CORS_ORIGINS: process.env.BEDROCK_CORS_ORIGINS,
+  PDF_CORS_ORIGINS: process.env.PDF_CORS_ORIGINS,
   ALLOW_ORIGINS,
   allowOriginsLength: ALLOW_ORIGINS.length,
 });
