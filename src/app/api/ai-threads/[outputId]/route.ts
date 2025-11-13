@@ -56,16 +56,11 @@ export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ outputId: string }> }
 ) {
-  console.log("🚀 GET /api/ai-threads/[outputId] - URL:", req.url);
-  console.log("🚀 GET - Method:", req.method);
-
   const origin = req.headers.get("origin");
 
   try {
-    console.log("🚀 About to call authenticateUser...");
     // Проверяем авторизацию
     const user = await authenticateUser(req);
-    console.log("🚀 authenticateUser SUCCESS, userId:", user.opieUserId);
 
     const { outputId } = await params;
 
