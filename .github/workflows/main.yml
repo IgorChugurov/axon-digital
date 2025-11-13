@@ -19,89 +19,134 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           script: |
             set -e
+            # Создаем директорию для логов
+            LOG_DIR="$HOME/deploy-logs"
+            mkdir -p "$LOG_DIR"
+            LOG_FILE="$LOG_DIR/deploy-$(date +%Y%m%d-%H%M%S).log"
+
+            # Функция для логирования (и в консоль, и в файл)
+            log() {
+              echo "$(date '+%Y-%m-%d %H:%M:%S') - $*" | tee -a "$LOG_FILE"
+            }
+
+            log "🚀 Starting deployment..."
             export PATH="$HOME/.local/share/pnpm:$PATH"
             cd ~/axon-digital || exit 1
             git fetch origin main
             git reset --hard origin/main
+            log "✅ Git updated"
 
             # Deploy backend
             cd backend
             pnpm install
             pnpm run build
-            echo "📦 Backend build completed"
+            log "📦 Backend build completed"
 
             # Check if Playwright browsers are installed (only install if missing)
             # This is a one-time setup, but we check to avoid reinstalling on every deploy
             if ! find "$HOME/.cache/ms-playwright" -name "chrome" -o -name "chromium" 2>/dev/null | grep -q .; then
-              echo "📦 Playwright browsers not found, installing (one-time setup)..."
-              npx playwright install --with-deps chromium || echo "⚠️ Playwright install failed, continuing..."
+              log "📦 Playwright browsers not found, installing (one-time setup)..."
+              npx playwright install --with-deps chromium || log "⚠️ Playwright install failed, continuing..."
             else
-              echo "✅ Playwright browsers already installed"
+              log "✅ Playwright browsers already installed"
             fi
 
             # Check if process exists and get status
-            echo "🔍 Checking pm2 status for pdf-service..."
-            pm2 list || echo "⚠️ pm2 list failed"
-            pm2 describe pdf-service 2>/dev/null || echo "⚠️ pdf-service not found in pm2"
+            log "🔍 Checking pm2 status for pdf-service..."
+            pm2 list | tee -a "$LOG_FILE" || log "⚠️ pm2 list failed"
+            pm2 describe pdf-service 2>/dev/null | tee -a "$LOG_FILE" || log "⚠️ pdf-service not found in pm2"
+
+            # Check if process is in error state or has too many restarts
+            PDF_STATUS=$(pm2 describe pdf-service 2>/dev/null | grep "status" | head -1 | awk '{print $4}' || echo "")
+            if [ "$PDF_STATUS" = "errored" ]; then
+              log "⚠️ pdf-service is in errored state, deleting and restarting..."
+              pm2 delete pdf-service 2>/dev/null || true
+              sleep 2
+            fi
 
             # Try to reload, if fails start new
             if pm2 reload pdf-service 2>/dev/null; then
-              echo "✅ pdf-service reloaded successfully"
+              log "✅ pdf-service reloaded successfully"
             else
-              echo "⚠️ pdf-service reload failed, starting new process..."
+              log "⚠️ pdf-service reload failed, starting new process..."
               cd ~/axon-digital/backend
               pm2 start "pnpm run start" --name pdf-service --interpreter bash --cwd ~/axon-digital/backend || {
-                echo "❌ Failed to start pdf-service"
-                pm2 logs pdf-service --lines 50 --nostream || echo "⚠️ Cannot get logs"
+                log "❌ Failed to start pdf-service"
+                pm2 logs pdf-service --lines 50 --nostream | tee -a "$LOG_FILE" || log "⚠️ Cannot get logs"
                 exit 1
               }
-              echo "✅ pdf-service started"
+              log "✅ pdf-service started"
             fi
 
             # Show logs and status
-            echo "📊 pdf-service status:"
-            pm2 status pdf-service || true
-            echo "📋 Last 20 lines of pdf-service logs:"
-            pm2 logs pdf-service --lines 20 --nostream || true
+            log "📊 pdf-service status:"
+            pm2 status pdf-service | tee -a "$LOG_FILE" || true
+            log "📋 Last 20 lines of pdf-service logs:"
+            pm2 logs pdf-service --lines 20 --nostream | tee -a "$LOG_FILE" || true
 
             # Deploy keysui
             cd ~/axon-digital/keysui
             pnpm install
-            echo "📦 Building KeysUI..."
-            pnpm run build || {
-              echo "❌ KeysUI build failed"
-              echo "📋 Build error details:"
-              pnpm run build 2>&1 | tail -50
+            log "📦 Building KeysUI..."
+            pnpm run build 2>&1 | tee -a "$LOG_FILE" || {
+              log "❌ KeysUI build failed"
+              log "📋 Build error details:"
+              pnpm run build 2>&1 | tail -50 | tee -a "$LOG_FILE"
               exit 1
             }
-            echo "📦 KeysUI build completed"
+            log "📦 KeysUI build completed"
 
-            # Check if process exists
-            echo "🔍 Checking pm2 status for keysui..."
-            pm2 describe keysui 2>/dev/null || echo "⚠️ keysui not found in pm2"
+            # Check if process exists and is in error state
+            log "🔍 Checking pm2 status for keysui..."
+            KEYSUI_STATUS=$(pm2 describe keysui 2>/dev/null | grep "status" | head -1 | awk '{print $4}' || echo "")
+
+            # If process is errored, delete it first
+            if [ "$KEYSUI_STATUS" = "errored" ]; then
+              log "⚠️ keysui is in errored state, deleting old process..."
+              pm2 delete keysui 2>/dev/null || true
+              sleep 1
+            fi
 
             # Try to reload, if fails start new
-            if pm2 reload keysui 2>/dev/null; then
-              echo "✅ keysui reloaded successfully"
+            if [ "$KEYSUI_STATUS" != "errored" ] && pm2 reload keysui 2>/dev/null; then
+              log "✅ keysui reloaded successfully"
             else
-              echo "⚠️ keysui reload failed, starting new process..."
+              log "⚠️ keysui reload failed or errored, starting new process..."
               cd ~/axon-digital/keysui
-              # Use pm2 serve for static files (as per README)
-              pm2 serve dist 5175 --name keysui --spa || {
-                echo "❌ Failed to start keysui"
-                pm2 logs keysui --lines 50 --nostream || echo "⚠️ Cannot get logs"
+              
+              # Verify dist directory exists
+              if [ ! -d "dist" ]; then
+                log "❌ dist directory not found in keysui!"
+                exit 1
+              fi
+              
+              # Use pm2 serve with full absolute path
+              pm2 serve ~/axon-digital/keysui/dist 5175 --name keysui --spa || {
+                log "❌ Failed to start keysui"
+                pm2 logs keysui --lines 50 --nostream | tee -a "$LOG_FILE" || log "⚠️ Cannot get logs"
                 exit 1
               }
-              echo "✅ keysui started"
+              log "✅ keysui started"
             fi
 
             # Show logs and status
-            echo "📊 keysui status:"
-            pm2 status keysui || true
-            echo "📋 Last 20 lines of keysui logs:"
-            pm2 logs keysui --lines 20 --nostream || true
+            log "📊 keysui status:"
+            pm2 status keysui | tee -a "$LOG_FILE" || true
+            log "📋 Last 20 lines of keysui logs:"
+            pm2 logs keysui --lines 20 --nostream | tee -a "$LOG_FILE" || true
 
             # Final status
-            echo "📊 Final pm2 status:"
-            pm2 list
-            pm2 save || echo "⚠️ pm2 save failed"
+            log "📊 Final pm2 status:"
+            pm2 list | tee -a "$LOG_FILE"
+            pm2 save || log "⚠️ pm2 save failed"
+
+            log "✅ Deployment completed successfully"
+            log "📝 Full log saved to: $LOG_FILE"
+
+            # Показываем путь к логу
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "📝 Deployment log saved to: $LOG_FILE"
+            echo "📋 View last deployment: tail -f $LOG_FILE"
+            echo "📋 View all logs: ls -lth $LOG_DIR/"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
