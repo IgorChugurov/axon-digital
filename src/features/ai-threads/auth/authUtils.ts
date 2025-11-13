@@ -1,8 +1,8 @@
 import { NextRequest } from "next/server";
 import { AuthUser } from "../types";
 
-let PROXY_AUTH_URL =
-  process.env.PROXY_AUTH_URL || "https://idp.opiesoftware.com/connect/userinfo";
+let PROXY_AUTH_URL = "https://idp.opiesoftware.com/connect/userinfo";
+//process.env.PROXY_AUTH_URL || "https://idp.opiesoftware.com/connect/userinfo";
 //"https://dev-idp.opiesoftware.com/connect/userinfo";
 
 export async function authenticateUser(req: NextRequest): Promise<AuthUser> {
