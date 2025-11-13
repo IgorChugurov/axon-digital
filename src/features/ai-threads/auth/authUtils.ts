@@ -6,12 +6,23 @@ let PROXY_AUTH_URL =
 //"https://dev-idp.opiesoftware.com/connect/userinfo";
 
 export async function authenticateUser(req: NextRequest): Promise<AuthUser> {
+  console.log("🔐 authenticateUser CALLED - URL:", req.url);
+  console.log("🔐 authenticateUser - Method:", req.method);
+
   const authHeader = req.headers.get("authorization");
   const devHeader = req.headers.get("x-dev-header");
+
+  console.log(
+    "🔐 Headers check - authHeader exists:",
+    !!authHeader,
+    "devHeader:",
+    devHeader
+  );
+
   if (devHeader) {
     PROXY_AUTH_URL = "https://dev-idp.opiesoftware.com/connect/userinfo";
   }
-  console.log("PROXY_AUTH_URL", PROXY_AUTH_URL);
+  console.log("🔐 PROXY_AUTH_URL:", PROXY_AUTH_URL);
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     throw new Error("Missing or invalid Authorization header");
@@ -57,8 +68,18 @@ export async function authenticateUser(req: NextRequest): Promise<AuthUser> {
       releaseChannel: userData.ReleaseChannel,
     };
   } catch (error) {
-    console.error("Authentication error:", error);
-    throw new Error("Failed to authenticate user");
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const errorStack = error instanceof Error ? error.stack : undefined;
+
+    console.error("❌ Authentication error caught:", {
+      message: errorMessage,
+      stack: errorStack,
+      errorType: error?.constructor?.name,
+      PROXY_AUTH_URL,
+    });
+
+    // Пробрасываем оригинальную ошибку, чтобы сохранить детали
+    throw error instanceof Error ? error : new Error(errorMessage);
   }
 }
 
