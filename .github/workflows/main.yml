@@ -28,10 +28,64 @@ jobs:
             cd backend
             pnpm install
             pnpm run build
-            pm2 reload pdf-service || pm2 start bash --name pdf-service -c "cd ~/axon-digital/backend && pnpm run start"
+            echo "📦 Backend build completed"
+
+            # Check if process exists and get status
+            echo "🔍 Checking pm2 status for pdf-service..."
+            pm2 list || echo "⚠️ pm2 list failed"
+            pm2 describe pdf-service 2>/dev/null || echo "⚠️ pdf-service not found in pm2"
+
+            # Try to reload, if fails start new
+            if pm2 reload pdf-service 2>/dev/null; then
+              echo "✅ pdf-service reloaded successfully"
+            else
+              echo "⚠️ pdf-service reload failed, starting new process..."
+              cd ~/axon-digital/backend
+              pm2 start "pnpm run start" --name pdf-service --interpreter bash --cwd ~/axon-digital/backend || {
+                echo "❌ Failed to start pdf-service"
+                pm2 logs pdf-service --lines 50 --nostream || echo "⚠️ Cannot get logs"
+                exit 1
+              }
+              echo "✅ pdf-service started"
+            fi
+
+            # Show logs and status
+            echo "📊 pdf-service status:"
+            pm2 status pdf-service || true
+            echo "📋 Last 20 lines of pdf-service logs:"
+            pm2 logs pdf-service --lines 20 --nostream || true
 
             # Deploy keysui
-            cd ../keysui
+            cd ~/axon-digital/keysui
             pnpm install
             pnpm run build
-            pm2 reload keysui || pm2 start bash --name keysui -c "cd ~/axon-digital/keysui && pnpm run start"
+            echo "📦 KeysUI build completed"
+
+            # Check if process exists
+            echo "🔍 Checking pm2 status for keysui..."
+            pm2 describe keysui 2>/dev/null || echo "⚠️ keysui not found in pm2"
+
+            # Try to reload, if fails start new
+            if pm2 reload keysui 2>/dev/null; then
+              echo "✅ keysui reloaded successfully"
+            else
+              echo "⚠️ keysui reload failed, starting new process..."
+              cd ~/axon-digital/keysui
+              pm2 start "pnpm run start" --name keysui --interpreter bash --cwd ~/axon-digital/keysui || {
+                echo "❌ Failed to start keysui"
+                pm2 logs keysui --lines 50 --nostream || echo "⚠️ Cannot get logs"
+                exit 1
+              }
+              echo "✅ keysui started"
+            fi
+
+            # Show logs and status
+            echo "📊 keysui status:"
+            pm2 status keysui || true
+            echo "📋 Last 20 lines of keysui logs:"
+            pm2 logs keysui --lines 20 --nostream || true
+
+            # Final status
+            echo "📊 Final pm2 status:"
+            pm2 list
+            pm2 save || echo "⚠️ pm2 save failed"
