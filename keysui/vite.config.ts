@@ -8,4 +8,6 @@ export default defineConfig({
     port: 5175,
     strictPort: true,
   },
+  // PostCSS отключен через postcss.config.mjs в этой директории
+  // Это предотвращает использование корневого конфига с Tailwind
 });

@@ -30,6 +30,15 @@ jobs:
             pnpm run build
             echo "📦 Backend build completed"
 
+            # Check if Playwright browsers are installed (only install if missing)
+            # This is a one-time setup, but we check to avoid reinstalling on every deploy
+            if ! find "$HOME/.cache/ms-playwright" -name "chrome" -o -name "chromium" 2>/dev/null | grep -q .; then
+              echo "📦 Playwright browsers not found, installing (one-time setup)..."
+              npx playwright install --with-deps chromium || echo "⚠️ Playwright install failed, continuing..."
+            else
+              echo "✅ Playwright browsers already installed"
+            fi
+
             # Check if process exists and get status
             echo "🔍 Checking pm2 status for pdf-service..."
             pm2 list || echo "⚠️ pm2 list failed"
@@ -58,7 +67,13 @@ jobs:
             # Deploy keysui
             cd ~/axon-digital/keysui
             pnpm install
-            pnpm run build
+            echo "📦 Building KeysUI..."
+            pnpm run build || {
+              echo "❌ KeysUI build failed"
+              echo "📋 Build error details:"
+              pnpm run build 2>&1 | tail -50
+              exit 1
+            }
             echo "📦 KeysUI build completed"
 
             # Check if process exists
@@ -71,7 +86,8 @@ jobs:
             else
               echo "⚠️ keysui reload failed, starting new process..."
               cd ~/axon-digital/keysui
-              pm2 start "pnpm run start" --name keysui --interpreter bash --cwd ~/axon-digital/keysui || {
+              # Use pm2 serve for static files (as per README)
+              pm2 serve dist 5175 --name keysui --spa || {
                 echo "❌ Failed to start keysui"
                 pm2 logs keysui --lines 50 --nostream || echo "⚠️ Cannot get logs"
                 exit 1
