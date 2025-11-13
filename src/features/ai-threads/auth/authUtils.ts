@@ -1,19 +1,24 @@
 import { NextRequest } from "next/server";
 import { AuthUser } from "../types";
 
-const PROXY_AUTH_URL =
+let PROXY_AUTH_URL =
   process.env.PROXY_AUTH_URL || "https://idp.opiesoftware.com/connect/userinfo";
 //"https://dev-idp.opiesoftware.com/connect/userinfo";
 
 export async function authenticateUser(req: NextRequest): Promise<AuthUser> {
   const authHeader = req.headers.get("authorization");
+  const devHeader = req.headers.get("x-dev-header");
+  if (devHeader) {
+    PROXY_AUTH_URL = "https://dev-idp.opiesoftware.com/connect/userinfo";
+  }
+  console.log("PROXY_AUTH_URL", PROXY_AUTH_URL);
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     throw new Error("Missing or invalid Authorization header");
   }
 
   const token = authHeader.substring(7);
-
+  console.log("token", token);
   try {
     const response = await fetch(PROXY_AUTH_URL, {
       method: "POST",
