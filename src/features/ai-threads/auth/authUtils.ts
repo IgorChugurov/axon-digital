@@ -2,8 +2,8 @@ import { NextRequest } from "next/server";
 import { AuthUser } from "../types";
 
 const PROXY_AUTH_URL =
-  process.env.PROXY_AUTH_URL ||
-  "https://dev-idp.opiesoftware.com/connect/userinfo";
+  process.env.PROXY_AUTH_URL || "https://idp.opiesoftware.com/connect/userinfo";
+//"https://dev-idp.opiesoftware.com/connect/userinfo";
 
 export async function authenticateUser(req: NextRequest): Promise<AuthUser> {
   const authHeader = req.headers.get("authorization");

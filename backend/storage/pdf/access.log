@@ -37,3 +37,4 @@
 {"at":"2025-11-13T10:15","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"e51d5d29-9ec5-499b-9bcb-9ee3863615b7","fileName":"document-1763028908850.pdf","status":"done","durationMs":801,"htmlBytes":17067,"pdfBytes":33911}
 {"at":"2025-11-13T10:21","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"562a884d-3b5b-4a44-8ea9-cd43a5adb525","fileName":"document-1763029315400.pdf","status":"done","durationMs":722,"htmlBytes":17067,"pdfBytes":33911}
 {"at":"2025-11-13T10:22","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"3e1ac11a-ffb5-4559-91fd-0ba7fc6618e2","fileName":"document-1763029339134.pdf","status":"done","durationMs":658,"htmlBytes":17067,"pdfBytes":33911}
+{"at":"2025-11-13T10:33","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"f8f96b08-8f0e-4add-922a-aa09f4d32118","fileName":"document-1763029986659.pdf","status":"done","durationMs":783,"htmlBytes":17067,"pdfBytes":33911}
