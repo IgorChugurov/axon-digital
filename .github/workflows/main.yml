@@ -13,7 +13,7 @@ jobs:
       - name: Deployment
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 31.220.80.11
+          host: ${{ secrets.SSH_HOST }}
           username: root
           port: 22
           key: ${{ secrets.SSHKEY }}
@@ -70,13 +70,25 @@ jobs:
             else
               log "⚠️ pdf-service reload failed, starting new process..."
               cd ~/axon-digital/backend
-              pm2 start "pnpm run start" --name pdf-service --interpreter bash --cwd ~/axon-digital/backend || {
+              pm2 start pnpm --name pdf-service --cwd ~/axon-digital/backend -- run start || {
                 log "❌ Failed to start pdf-service"
                 pm2 logs pdf-service --lines 50 --nostream | tee -a "$LOG_FILE" || log "⚠️ Cannot get logs"
                 exit 1
               }
               log "✅ pdf-service started"
             fi
+
+            # Health check for pdf-service
+            log "🏥 Running health check for pdf-service..."
+            sleep 3
+            PDF_HEALTH=$(pm2 describe pdf-service 2>/dev/null | grep "status" | head -1 | awk '{print $4}' || echo "")
+            if [ "$PDF_HEALTH" != "online" ]; then
+              log "❌ pdf-service health check failed - status: $PDF_HEALTH"
+              log "📋 Error logs:"
+              pm2 logs pdf-service --lines 100 --nostream | tee -a "$LOG_FILE"
+              exit 1
+            fi
+            log "✅ pdf-service health check passed - service is online"
 
             # Show logs and status
             log "📊 pdf-service status:"
@@ -128,6 +140,18 @@ jobs:
               }
               log "✅ keysui started"
             fi
+
+            # Health check for keysui
+            log "🏥 Running health check for keysui..."
+            sleep 3
+            KEYSUI_HEALTH=$(pm2 describe keysui 2>/dev/null | grep "status" | head -1 | awk '{print $4}' || echo "")
+            if [ "$KEYSUI_HEALTH" != "online" ]; then
+              log "❌ keysui health check failed - status: $KEYSUI_HEALTH"
+              log "📋 Error logs:"
+              pm2 logs keysui --lines 100 --nostream | tee -a "$LOG_FILE"
+              exit 1
+            fi
+            log "✅ keysui health check passed - service is online"
 
             # Show logs and status
             log "📊 keysui status:"
