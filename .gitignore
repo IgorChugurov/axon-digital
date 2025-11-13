@@ -46,3 +46,4 @@ backend/storage/pdf/error.log
 *.log
 keysui/node_modules
 keysui/dist
+keysui/pnpm-lock.yaml

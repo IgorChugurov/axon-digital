@@ -9,30 +9,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Deployment
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: 31.220.80.11
           username: root
           port: 22
           key: ${{ secrets.SSHKEY }}
           script: |
+            set -e
             export PATH="$HOME/.local/share/pnpm:$PATH"
             cd ~/axon-digital || exit 1
             git fetch origin main
             git reset --hard origin/main
 
-
-
+            # Deploy backend
             cd backend
             pnpm install
             pnpm run build
+            pm2 reload pdf-service || pm2 start bash --name pdf-service -c "cd ~/axon-digital/backend && pnpm run start"
 
-            pm2 reload pdf-service || pm2 start pnpm --name pdf-service -- run start
-            cd ..
-            cd keysui
+            # Deploy keysui
+            cd ../keysui
             pnpm install
             pnpm run build
-            pm2 reload keysui || pm2 start pnpm --name keysui -- run start
-            cd ..
+            pm2 reload keysui || pm2 start bash --name keysui -c "cd ~/axon-digital/keysui && pnpm run start"
