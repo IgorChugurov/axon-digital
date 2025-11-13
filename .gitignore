@@ -44,3 +44,5 @@ backend/dist
 backend/storage/pdf/access.log
 backend/storage/pdf/error.log
 *.log
+keysui/node_modules
+keysui/dist

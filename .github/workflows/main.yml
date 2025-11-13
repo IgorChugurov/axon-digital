@@ -25,6 +25,14 @@ jobs:
 
 
 
+            cd backend
+            pnpm install
+            pnpm run build
 
-
-            pm2 reload axon || pm2 start pnpm --name axon -- run start
+            pm2 reload pdf-service || pm2 start pnpm --name pdf-service -- run start
+            cd ..
+            cd keysui
+            pnpm install
+            pnpm run build
+            pm2 reload keysui || pm2 start pnpm --name keysui -- run start
+            cd ..
