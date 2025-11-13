@@ -1,33 +1,9 @@
 [
   {
-    "keyHash": "9c366cbd622e5d09382c31452b8d993382bc203e7c1918f90aa22125b7c61262",
-    "last4": "RBtP",
+    "keyHash": "fb849e4afab83bed1702f92e259d72f1b8e9c60c8134cdc0fe1f7339254d2a7f",
+    "last4": "SA15",
     "owner": "Partner",
-    "createdAt": "2025-08-11T14:34:44.035Z",
-    "expiresAt": "2025-11-09T14:34:44.035Z",
-    "disabled": false
-  },
-  {
-    "keyHash": "2d58ec60f1a9f4603bdffcaefb0989ae87e7f00d75ea765caea553ad7f366a02",
-    "last4": "W0Z_",
-    "owner": "test",
-    "createdAt": "2025-08-11T18:10:41.508Z",
-    "expiresAt": "9999-12-31T00:00:00.000Z",
-    "disabled": true
-  },
-  {
-    "keyHash": "f23601a8145af9f64184eb624f5715fa458b3dec705d667be0a535a4f8503d29",
-    "last4": "tBnP",
-    "owner": "Igor",
-    "createdAt": "2025-08-11T18:15:16.515Z",
-    "expiresAt": "2025-11-09T18:15:16.515Z",
-    "disabled": false
-  },
-  {
-    "keyHash": "379dcd315628861907878658a16d8a2ba985017a1662a163a90af428fbfcdfa7",
-    "last4": "UKgb",
-    "owner": "local",
-    "createdAt": "2025-08-11T19:55:17.113Z",
+    "createdAt": "2025-11-13T10:12:44.293Z",
     "expiresAt": "9999-12-31T00:00:00.000Z",
     "disabled": false
   }

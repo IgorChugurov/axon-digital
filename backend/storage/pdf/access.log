@@ -34,3 +34,6 @@
 {"at":"2025-08-13T19:42","apiKeyMasked":"****UKgb","clientIp":"::1","jobId":"d32f1393-d57e-4de4-87e1-157f49334256","fileName":"document-1755114118537.pdf","status":"done","durationMs":1790,"htmlBytes":306693,"pdfBytes":182936}
 {"at":"2025-08-13T19:42","apiKeyMasked":"****UKgb","clientIp":"::1","jobId":"e847b776-85bb-465e-a041-d7e973db5bbc","fileName":"document-1755114127559.pdf","status":"done","durationMs":596,"htmlBytes":306693,"pdfBytes":182936}
 {"at":"2025-08-13T19:42","apiKeyMasked":"****UKgb","clientIp":"::1","jobId":"6c128e9b-5cc3-4483-84b2-8a980af36cbb","fileName":"document-1755114157094.pdf","status":"done","durationMs":590,"htmlBytes":306693,"pdfBytes":182936}
+{"at":"2025-11-13T10:15","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"e51d5d29-9ec5-499b-9bcb-9ee3863615b7","fileName":"document-1763028908850.pdf","status":"done","durationMs":801,"htmlBytes":17067,"pdfBytes":33911}
+{"at":"2025-11-13T10:21","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"562a884d-3b5b-4a44-8ea9-cd43a5adb525","fileName":"document-1763029315400.pdf","status":"done","durationMs":722,"htmlBytes":17067,"pdfBytes":33911}
+{"at":"2025-11-13T10:22","apiKeyMasked":"****SA15","clientIp":"::1","jobId":"3e1ac11a-ffb5-4559-91fd-0ba7fc6618e2","fileName":"document-1763029339134.pdf","status":"done","durationMs":658,"htmlBytes":17067,"pdfBytes":33911}

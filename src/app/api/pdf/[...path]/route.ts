@@ -1,7 +1,7 @@
 export const runtime = "nodejs"; // нужен Node (не Edge) для стабильного проксирования
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-
+//const BACKEND = "http://localhost:3001"; //process.env.PDF_BACKEND_BASE ?? "http://31.220.80.11:3001";
 const BACKEND = process.env.PDF_BACKEND_BASE ?? "http://31.220.80.11:3001";
 const ALLOW_ORIGINS = (process.env.PDF_CORS_ORIGINS ?? "")
   .split(",")

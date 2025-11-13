@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 backend/node_modules
 backend/dist
+backend/storage/pdf/access.log
+backend/storage/pdf/error.log
