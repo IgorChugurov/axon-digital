@@ -30,5 +30,5 @@
     "scripts/setSystemPrompt.js",
     "scripts/setSystemPrompt.mts"
   ],
-  "exclude": ["node_modules", "backend/**"]
+  "exclude": ["node_modules", "backend/**", "keysui/**"]
 }

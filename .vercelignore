@@ -2,6 +2,10 @@ backend/
 backend/**
 **/backend/**
 
+keysui/
+keysui/**
+**/keysui/**
+
 # Build artifacts
 .next/
 out/
