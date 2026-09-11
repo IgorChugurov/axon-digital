@@ -39,11 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-backend/node_modules
-backend/dist
-backend/storage/pdf/access.log
-backend/storage/pdf/error.log
-*.log
-keysui/node_modules
-keysui/dist
-keysui/pnpm-lock.yaml
