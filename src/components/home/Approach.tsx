@@ -48,7 +48,7 @@ const wordVariants = {
     color: FILL_TO,
     transition: {
       duration: 0.22,
-      ease: [0.3, 0, 0.5, 1],
+      ease: [0.3, 0, 0.5, 1] as const,
     },
   },
 };
