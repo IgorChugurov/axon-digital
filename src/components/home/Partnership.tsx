@@ -3,28 +3,32 @@ import { partnershipLogos, type HomeCopy } from "@/content/home";
 
 export function Partnership({ copy }: { copy: HomeCopy }) {
   return (
-    <section className="px-4 py-20 md:px-8">
-      <p className="text-center text-sm font-medium text-green">
-        {copy.partnershipEyebrow}
-      </p>
-      <h2 className="mt-2 text-center text-[clamp(2rem,4vw,3.5rem)] font-bold tracking-tight">
-        {copy.partnershipTitle}
-      </h2>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-7 text-muted">
-        {copy.partnershipBody}
-      </p>
-      <ul className="mx-auto mt-14 grid max-w-[1376px] grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+    <section className="flex flex-col items-center gap-16 px-8 py-[60px] lg:py-[120px]">
+      <div className="flex w-full flex-col items-center gap-2">
+        <p className="text-center text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
+          {copy.partnershipEyebrow}
+        </p>
+        <div className="flex flex-col items-center gap-6">
+          <h2 className="text-center text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
+            {copy.partnershipTitle}
+          </h2>
+          <p className="max-w-[676px] text-center text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
+            {copy.partnershipBody}
+          </p>
+        </div>
+      </div>
+
+      <ul className="flex w-full flex-wrap justify-center gap-2">
         {partnershipLogos.map((logo) => (
           <li
             key={logo.src}
-            className="flex aspect-square items-center justify-center bg-cream p-6"
+            className="flex size-[222px] items-center justify-center bg-cream"
           >
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={182}
-              height={44}
-              className="max-h-16 w-auto max-w-full object-contain"
+              width={logo.width}
+              height={logo.height}
             />
           </li>
         ))}

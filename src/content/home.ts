@@ -169,10 +169,10 @@ export const homeCopy = {
 export type HomeCopy = (typeof homeCopy)[Locale];
 
 export const partnershipLogos = [
-  { src: "/tech/typescript.svg", alt: "TypeScript" },
-  { src: "/tech/nestjs.svg", alt: "NestJS" },
-  { src: "/tech/nextjs.svg", alt: "Next.js" },
-  { src: "/tech/react.svg", alt: "React" },
-  { src: "/tech/postgresql.svg", alt: "PostgreSQL" },
-  { src: "/tech/docker.svg", alt: "Docker" },
+  { src: "/tech/typescript.svg", alt: "TypeScript", width: 182, height: 44 },
+  { src: "/tech/nestjs.svg", alt: "NestJS", width: 174, height: 62 },
+  { src: "/tech/nextjs.svg", alt: "Next.js", width: 172, height: 94 },
+  { src: "/tech/react.svg", alt: "React", width: 88, height: 78 },
+  { src: "/tech/postgresql.svg", alt: "PostgreSQL", width: 88, height: 88 },
+  { src: "/tech/docker.svg", alt: "Docker", width: 186, height: 42 },
 ] as const;
