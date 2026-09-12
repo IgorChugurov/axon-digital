@@ -12,17 +12,24 @@ export function CtaBanner({ locale, copy }: { locale: Locale; copy: HomeCopy }) 
   const { open } = useContactModal();
 
   return (
-    <section className="px-4 py-10 md:px-8">
-      <div className="relative mx-auto flex max-w-[1376px] flex-col overflow-hidden bg-green px-8 py-16 text-background md:flex-row md:items-center md:justify-between md:px-12 md:py-24">
-        <div className="relative z-10 max-w-xl">
-          <h2 className="text-[clamp(2rem,4vw,3.25rem)] leading-tight font-bold tracking-tight">
-            {copy.ctaTitle}
-          </h2>
-          <p className="mt-4 text-lg">{copy.ctaSubtitle}</p>
+    <section className="px-8">
+      <div className="relative mx-auto h-[580px] w-full max-w-[1376px] overflow-hidden bg-green px-12 py-16 text-background">
+        <div className="relative z-10 flex max-w-[676px] flex-col items-start gap-12">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[64px] leading-[1.2] tracking-[-2.56px]">
+              {copy.ctaTitle}
+            </h2>
+            <p className="text-[32px] leading-[1.2] tracking-[-1.28px]">
+              {copy.ctaSubtitle}
+            </p>
+          </div>
           <button
             type="button"
             onClick={open}
-            className={`${buttonClassName("inverse")} mt-8`}
+            className={buttonClassName(
+              "inverse",
+              "px-6 text-[16px] tracking-[-0.32px]",
+            )}
           >
             {chromeCopy[locale].letsTalk}
             <ArrowUpRight className="size-6" aria-hidden />
@@ -33,7 +40,7 @@ export function CtaBanner({ locale, copy }: { locale: Locale; copy: HomeCopy }) 
           alt=""
           width={448}
           height={436}
-          className="pointer-events-none absolute right-[-40px] bottom-[-80px] w-[min(90%,420px)] md:static md:w-[380px]"
+          className="pointer-events-none absolute top-[72px] left-[880px] h-[436px] w-[448px]"
         />
       </div>
     </section>
