@@ -13,13 +13,13 @@ function MemberCard({
   const accent = person.accent === "green" ? "green" : "orange";
 
   return (
-    <li className="relative flex overflow-hidden bg-cream lg:h-[240px] lg:w-[559px] lg:shrink-0 lg:overflow-visible lg:bg-transparent">
+    <li className="relative flex overflow-hidden bg-cream min-[1440px]:h-[240px] min-[1440px]:w-[559px] min-[1440px]:shrink-0 min-[1440px]:overflow-visible min-[1440px]:bg-transparent">
       <div
-        className={`w-1.5 shrink-0 lg:hidden ${
+        className={`w-1.5 shrink-0 min-[1440px]:hidden ${
           accent === "green" ? "bg-green" : "bg-orange"
         }`}
       />
-      <div className="relative h-[240px] w-40 shrink-0 lg:absolute lg:top-4 lg:left-4 lg:h-[208px] lg:w-[160px]">
+      <div className="relative h-[240px] w-40 shrink-0 min-[1440px]:absolute min-[1440px]:top-4 min-[1440px]:left-4 min-[1440px]:h-[208px] min-[1440px]:w-[160px]">
         <Image
           src={person.photo}
           alt={person.name}
@@ -29,12 +29,12 @@ function MemberCard({
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </div>
-      <div className="flex flex-1 flex-col justify-between p-4 lg:contents">
-        <h3 className="text-2xl leading-tight lg:absolute lg:top-[127px] lg:left-48 lg:w-[200px] lg:text-[32px] lg:leading-[1.1] lg:tracking-[-0.96px]">
+      <div className="flex flex-1 flex-col justify-between p-4 min-[1440px]:contents">
+        <h3 className="text-2xl leading-tight min-[1440px]:absolute min-[1440px]:top-[127px] min-[1440px]:left-48 min-[1440px]:w-[200px] min-[1440px]:text-[32px] min-[1440px]:leading-[1.1] min-[1440px]:tracking-[-0.96px]">
           {person.name}
         </h3>
         <p
-          className={`text-sm lg:absolute lg:top-[205px] lg:left-48 lg:text-[16px] lg:leading-[1.2] lg:tracking-[-0.64px] ${
+          className={`text-sm min-[1440px]:absolute min-[1440px]:top-[205px] min-[1440px]:left-48 min-[1440px]:text-[16px] min-[1440px]:leading-[1.2] min-[1440px]:tracking-[-0.64px] ${
             accent === "green" ? "text-green" : "text-orange"
           }`}
         >
@@ -42,7 +42,7 @@ function MemberCard({
         </p>
       </div>
       <div
-        className={`absolute top-[25px] left-[423px] hidden h-[190px] border-l border-dashed lg:block ${
+        className={`absolute top-[25px] left-[423px] hidden h-[190px] border-l border-dashed min-[1440px]:block ${
           accent === "green" ? "border-green" : "border-orange"
         }`}
       />
@@ -73,7 +73,13 @@ export function Team({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
         ))}
       </ul>
 
-      <div className="mx-auto mt-12 hidden max-w-[1376px] flex-col gap-10 lg:flex">
+      <ul className="mx-auto mt-14 hidden max-w-[1376px] grid-cols-2 gap-4 lg:max-[1440px]:grid">
+        {team.map((person) => (
+          <MemberCard key={person.id} person={person} locale={locale} />
+        ))}
+      </ul>
+
+      <div className="mx-auto mt-12 hidden max-w-[1376px] flex-col gap-10 min-[1440px]:flex">
         <ul className="flex gap-6">
           {team.slice(0, 2).map((person) => (
             <MemberCard key={person.id} person={person} locale={locale} />

@@ -18,11 +18,11 @@ export function Partnership({ copy }: { copy: HomeCopy }) {
         </div>
       </div>
 
-      <ul className="flex w-full flex-wrap justify-center gap-2">
+      <ul className="@container flex w-full flex-wrap justify-center gap-2">
         {partnershipLogos.map((logo) => (
           <li
             key={logo.src}
-            className="flex size-[222px] items-center justify-center bg-cream"
+            className="flex aspect-square w-full shrink-0 items-center justify-center bg-cream @min-[452px]:w-[calc((100%-8px)/2)] @min-[682px]:w-[calc((100%-16px)/3)] @min-[912px]:w-[calc((100%-24px)/4)] @min-[1142px]:w-[calc((100%-32px)/5)] @min-[1372px]:w-[calc((100%-40px)/6)]"
           >
             <Image
               src={logo.src}

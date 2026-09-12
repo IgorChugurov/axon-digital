@@ -13,13 +13,13 @@ export function CtaBanner({ locale, copy }: { locale: Locale; copy: HomeCopy }) 
 
   return (
     <section className="px-8">
-      <div className="relative mx-auto h-[580px] w-full max-w-[1376px] overflow-hidden bg-green px-12 py-16 text-background">
-        <div className="relative z-10 flex max-w-[676px] flex-col items-start gap-12">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-[64px] leading-[1.2] tracking-[-2.56px]">
+      <div className="relative mx-auto h-auto w-full max-w-[1376px] overflow-hidden bg-green px-12 py-16 text-background min-[1440px]:h-[580px]">
+        <div className="relative z-10 flex w-full min-w-0 max-w-[676px] flex-col items-start gap-12">
+          <div className="flex w-full min-w-0 flex-col gap-4">
+            <h2 className="w-full min-w-0 break-words text-[32px] leading-[1.2] tracking-[-0.04em] lg:text-[64px] lg:tracking-[-2.56px]">
               {copy.ctaTitle}
             </h2>
-            <p className="text-[32px] leading-[1.2] tracking-[-1.28px]">
+            <p className="w-full min-w-0 break-words text-[24px] leading-[1.2] tracking-[-0.04em] lg:text-[32px] lg:tracking-[-1.28px]">
               {copy.ctaSubtitle}
             </p>
           </div>
@@ -40,7 +40,7 @@ export function CtaBanner({ locale, copy }: { locale: Locale; copy: HomeCopy }) 
           alt=""
           width={448}
           height={436}
-          className="pointer-events-none absolute top-[72px] left-[880px] h-[436px] w-[448px]"
+          className="pointer-events-none absolute top-[72px] left-[880px] hidden h-[436px] w-[448px] min-[1440px]:block"
         />
       </div>
     </section>
