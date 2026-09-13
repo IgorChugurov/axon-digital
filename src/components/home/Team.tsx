@@ -34,7 +34,7 @@ function MemberCard({
           {person.name}
         </h3>
         <p
-          className={`text-sm min-[1440px]:absolute min-[1440px]:top-[205px] min-[1440px]:left-48 min-[1440px]:text-[16px] min-[1440px]:leading-[1.2] min-[1440px]:tracking-[-0.64px] ${
+          className={`text-balance text-sm min-[1440px]:absolute min-[1440px]:top-[205px] min-[1440px]:left-48 min-[1440px]:text-[16px] min-[1440px]:leading-[1.2] min-[1440px]:tracking-[-0.64px] ${
             accent === "green" ? "text-green" : "text-orange"
           }`}
         >
@@ -62,7 +62,7 @@ export function Team({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
             {copy.teamTitle}
           </h2>
         </div>
-        <p className="max-w-[676px] text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767] lg:text-right">
+        <p className="max-w-[676px] text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767] lg:text-right">
           {copy.teamBody}
         </p>
       </div>

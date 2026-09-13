@@ -39,11 +39,11 @@ export function ExpertiseDetail({
               <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
                 {pageCopy.eyebrow} / {area.id}
               </p>
-              <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+              <h1 className="text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
                 {copy.title}
               </h1>
             </div>
-            <p className="max-w-[793px] text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
+            <p className="max-w-[793px] text-pretty text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
               {copy.hero}
             </p>
           </div>
@@ -56,7 +56,7 @@ export function ExpertiseDetail({
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h2 className="mt-2 max-w-[18ch] text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+            <h2 className="mt-2 max-w-[18ch] text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
               {pageCopy.points}
             </h2>
           </div>
@@ -71,10 +71,10 @@ export function ExpertiseDetail({
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-[28px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
+                  <h3 className="text-balance text-[28px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
                     {point.title}
                   </h3>
-                  <p className="text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
+                  <p className="text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
                     {point.description}
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export function ExpertiseDetail({
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h2 className="text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+            <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
               {pageCopy.situations}
             </h2>
           </div>
@@ -98,7 +98,7 @@ export function ExpertiseDetail({
             {copy.situations.map((situation) => (
               <li
                 key={situation}
-                className="border-t border-muted py-6 text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]"
+                className="border-t border-muted py-6 text-pretty text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]"
               >
                 {situation}
               </li>
@@ -112,7 +112,7 @@ export function ExpertiseDetail({
           <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
             {pageCopy.outcome}
           </p>
-          <p className="mt-6 max-w-[1024px] text-[28px] leading-[1.15] tracking-[-0.04em] text-ink lg:text-[40px]">
+          <p className="mt-6 max-w-[1024px] text-pretty text-[28px] leading-[1.15] tracking-[-0.04em] text-ink lg:text-[40px]">
             {copy.outcome}
           </p>
         </div>
@@ -134,7 +134,7 @@ export function ExpertiseDetail({
                     <span className="text-[32px] leading-[1.1] tracking-[-1.28px]">
                       {service.id}
                     </span>
-                    <span className="text-[24px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
+                    <span className="text-balance text-[24px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
                       {service.copy[locale].title}
                     </span>
                   </span>

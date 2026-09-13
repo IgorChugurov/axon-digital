@@ -43,11 +43,11 @@ export function ServiceDetail({
               <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
                 {pageCopy.eyebrow} / {service.id}
               </p>
-              <h1 className="text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+              <h1 className="text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
                 {copy.title}
               </h1>
             </div>
-            <p className="max-w-[793px] text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
+            <p className="max-w-[793px] text-pretty text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
               {copy.hero}
             </p>
             <button
@@ -68,7 +68,7 @@ export function ServiceDetail({
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h2 className="text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+            <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
               {pageCopy.whenNeeded}
             </h2>
           </div>
@@ -76,7 +76,7 @@ export function ServiceDetail({
             {copy.whenNeeded.map((item) => (
               <li
                 key={item}
-                className="border-t border-muted py-6 text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]"
+                className="border-t border-muted py-6 text-pretty text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]"
               >
                 {item}
               </li>
@@ -91,7 +91,7 @@ export function ServiceDetail({
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h2 className="mt-2 max-w-[18ch] text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+            <h2 className="mt-2 max-w-[18ch] text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
               {pageCopy.included}
             </h2>
           </div>
@@ -104,10 +104,10 @@ export function ServiceDetail({
                 <span className="text-[32px] leading-[1.1] tracking-[-1.28px] text-orange">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-[28px] leading-[1.1] tracking-[-1.12px] lg:text-[32px]">
+                <h3 className="text-balance text-[28px] leading-[1.1] tracking-[-1.12px] lg:text-[32px]">
                   {item.title}
                 </h3>
-                <p className="text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
+                <p className="text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
                   {item.description}
                 </p>
               </li>
@@ -126,20 +126,20 @@ export function ServiceDetail({
           </h2>
         </div>
         <div className="overflow-x-auto px-8 pb-4">
-          <ol className="mx-auto flex w-max max-w-none gap-4 lg:w-full lg:max-w-[1376px]">
+          <ol className="mx-auto flex w-max max-w-none gap-4 min-[1440px]:w-full min-[1440px]:max-w-[1376px]">
             {copy.process.map((step, index) => (
               <li
                 key={step.title}
-                className="flex min-h-[360px] w-[min(82vw,360px)] shrink-0 flex-col justify-between bg-cream p-8 lg:min-w-0 lg:flex-1"
+                className="flex min-h-[360px] w-[min(82vw,360px)] shrink-0 flex-col justify-between bg-cream p-8 min-[1440px]:min-w-0 min-[1440px]:flex-1"
               >
                 <span className="text-[72px] leading-none tracking-[-0.04em] text-orange">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-[28px] leading-[1.1] tracking-[-1.12px]">
+                  <h3 className="text-balance text-[28px] leading-[1.1] tracking-[-1.12px] min-[1440px]:break-words">
                     {step.title}
                   </h3>
-                  <p className="text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
+                  <p className="text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">
                     {step.description}
                   </p>
                 </div>
@@ -157,7 +157,7 @@ export function ServiceDetail({
           <h2 className="text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
             {pageCopy.result}
           </h2>
-          <p className="text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
+          <p className="text-pretty text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
             {copy.result}
           </p>
         </div>
@@ -179,7 +179,7 @@ export function ServiceDetail({
                     <span className="text-[32px] leading-[1.1] tracking-[-1.28px]">
                       {item.id}
                     </span>
-                    <span className="text-[24px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
+                    <span className="text-balance text-[24px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
                       {item.copy[locale].title}
                     </span>
                   </span>
@@ -197,10 +197,10 @@ export function ServiceDetail({
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto flex max-w-[1376px] flex-col items-start gap-10 bg-green px-8 py-12 text-background lg:px-12 lg:py-16">
           <div className="flex max-w-[793px] flex-col gap-4">
-            <h2 className="text-[32px] leading-[1.1] tracking-[-0.04em] lg:text-[64px]">
+            <h2 className="text-balance text-[32px] leading-[1.1] tracking-[-0.04em] lg:text-[64px]">
               {copy.ctaTitle}
             </h2>
-            <p className="text-[24px] leading-[1.2] tracking-[-0.04em] lg:text-[32px]">
+            <p className="text-pretty text-[24px] leading-[1.2] tracking-[-0.04em] lg:text-[32px]">
               {copy.ctaBody}
             </p>
           </div>

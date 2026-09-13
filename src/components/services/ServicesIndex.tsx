@@ -14,11 +14,11 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h1 className="max-w-[18ch] text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+            <h1 className="max-w-[18ch] text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
               {pageCopy.title}
             </h1>
           </div>
-          <p className="max-w-[676px] text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
+          <p className="max-w-[676px] text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
             {pageCopy.intro}
           </p>
         </div>
@@ -39,10 +39,10 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
                   <span className="text-[32px] leading-[1.1] tracking-[-1.28px]">
                     {service.id}
                   </span>
-                  <h2 className="text-[28px] leading-[1.1] tracking-[-1.12px] lg:text-[32px]">
+                  <h2 className="text-balance text-[28px] leading-[1.1] tracking-[-1.12px] lg:text-[32px]">
                     {copy.title}
                   </h2>
-                  <p className="max-w-[560px] text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767] transition-colors group-hover:text-background/80 group-focus-visible:text-background/80">
+                  <p className="max-w-[560px] text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767] transition-colors group-hover:text-background/80 group-focus-visible:text-background/80">
                     {copy.summary}
                   </p>
                   <ArrowUpRight

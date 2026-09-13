@@ -16,10 +16,10 @@ export function CtaBanner({ locale, copy }: { locale: Locale; copy: HomeCopy }) 
       <div className="relative mx-auto h-auto w-full max-w-[1376px] overflow-hidden bg-green px-12 py-16 text-background min-[1440px]:h-[580px]">
         <div className="relative z-10 flex w-full min-w-0 max-w-[676px] flex-col items-start gap-12">
           <div className="flex w-full min-w-0 flex-col gap-4">
-            <h2 className="w-full min-w-0 break-words text-[32px] leading-[1.2] tracking-[-0.04em] lg:text-[64px] lg:tracking-[-2.56px]">
+            <h2 className="w-full min-w-0 text-balance break-words text-[32px] leading-[1.2] tracking-[-0.04em] lg:text-[64px] lg:tracking-[-2.56px]">
               {copy.ctaTitle}
             </h2>
-            <p className="w-full min-w-0 break-words text-[24px] leading-[1.2] tracking-[-0.04em] lg:text-[32px] lg:tracking-[-1.28px]">
+            <p className="w-full min-w-0 text-pretty break-words text-[24px] leading-[1.2] tracking-[-0.04em] lg:text-[32px] lg:tracking-[-1.28px]">
               {copy.ctaSubtitle}
             </p>
           </div>

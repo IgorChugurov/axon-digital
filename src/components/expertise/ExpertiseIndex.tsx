@@ -18,7 +18,7 @@ export function ExpertiseIndex({ locale }: { locale: Locale }) {
               {pageCopy.title}
             </h1>
           </div>
-          <p className="max-w-[793px] text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
+          <p className="max-w-[793px] text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
             {pageCopy.intro}
           </p>
         </div>
@@ -49,10 +49,10 @@ export function ExpertiseIndex({ locale }: { locale: Locale }) {
                     />
                   </div>
                   <div className="flex max-w-[560px] flex-col gap-4">
-                    <h2 className="text-[28px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
+                    <h2 className="text-balance text-[28px] leading-[1.1] tracking-[-0.04em] lg:text-[32px]">
                       {copy.title}
                     </h2>
-                    <p className="text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767] transition-colors group-hover:text-background/80 group-focus-visible:text-background/80">
+                    <p className="text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767] transition-colors group-hover:text-background/80 group-focus-visible:text-background/80">
                       {copy.summary}
                     </p>
                   </div>

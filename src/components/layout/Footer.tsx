@@ -18,7 +18,7 @@ export function Footer({ locale }: { locale: Locale }) {
       <div className="relative z-10 mx-auto grid max-w-[1440px] gap-12 px-8 py-14 lg:grid-cols-[443px_minmax(0,793px)] lg:justify-between lg:gap-x-[140px] lg:pt-14 lg:pb-10">
         <div className="flex flex-col gap-10 lg:min-h-[286px]">
           <Image src="/brand/mark.svg" alt="" width={56} height={56} />
-          <p className="max-w-[443px] text-[24px] leading-normal tracking-[-0.48px] text-[#939393]">
+          <p className="max-w-[443px] text-pretty text-[24px] leading-normal tracking-[-0.48px] text-[#939393]">
             {locale === "uk" ? (
               <>
                 Обговоримо архітектуру проєкту. Відповідь команди протягом{" "}

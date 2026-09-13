@@ -13,7 +13,7 @@ export function Faq({ copy }: { copy: HomeCopy }) {
         <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
           {copy.faqEyebrow}
         </p>
-        <h2 className="max-w-[18ch] text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
+        <h2 className="max-w-[18ch] text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
           {copy.faqTitle}
         </h2>
       </div>
@@ -34,12 +34,12 @@ export function Faq({ copy }: { copy: HomeCopy }) {
                 <span className="flex min-w-0 flex-1 flex-col gap-4 lg:flex-row lg:items-start lg:gap-6">
                   <span className="flex items-center gap-6 lg:w-[561px] lg:shrink-0">
                     <StarIcon active={isOpen} />
-                    <span className="text-[clamp(1.25rem,2.5vw,2rem)] leading-[1.1] tracking-[-0.04em] text-ink">
+                    <span className="text-balance text-[clamp(1.25rem,2.5vw,2rem)] leading-[1.1] tracking-[-0.04em] text-ink">
                       {item.question}
                     </span>
                   </span>
                   {isOpen ? (
-                    <span className="text-[16px] leading-6 tracking-[-0.64px] text-[#676767] lg:w-[560px] lg:pt-1">
+                    <span className="text-pretty text-[16px] leading-6 tracking-[-0.64px] text-[#676767] lg:w-[560px] lg:pt-1">
                       {item.answer}
                     </span>
                   ) : null}

@@ -34,7 +34,7 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
         <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
           {copy.servicesEyebrow}
         </p>
-        <h2 className="max-w-[750px] text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
+        <h2 className="max-w-[750px] text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
           {copy.servicesTitle}
         </h2>
       </div>
@@ -89,12 +89,12 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                       <span className="shrink-0 text-[32px] leading-[1.1] tracking-[-1.28px] lg:w-[93px]">
                         {item.id}
                       </span>
-                      <span className="min-w-0 text-[24px] leading-[1.1] tracking-[-1.28px] lg:text-[32px]">
+                      <span className="min-w-0 text-balance text-[24px] leading-[1.1] tracking-[-1.28px] lg:text-[32px]">
                         {item.title}
                       </span>
                     </span>
                     {isOpen ? (
-                      <span className="max-w-[443px] text-[16px] leading-[1.1] tracking-[-0.32px] lg:pt-2">
+                      <span className="max-w-[443px] text-pretty text-[16px] leading-[1.1] tracking-[-0.32px] lg:pt-2">
                         {item.summary}
                       </span>
                     ) : null}

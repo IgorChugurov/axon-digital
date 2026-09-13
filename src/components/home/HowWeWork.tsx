@@ -152,7 +152,7 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
                       <span className="absolute top-12 right-8 text-[216px] leading-[0.7] tracking-[-8.64px]">
                         {slide.id}
                       </span>
-                      <span className="absolute right-8 bottom-8 left-8 text-[32px] leading-[48px] tracking-[-0.96px]">
+                      <span className="absolute right-8 bottom-8 left-8 text-balance text-[32px] leading-[48px] tracking-[-0.96px]">
                         {slide.title}
                       </span>
                     </span>
@@ -167,10 +167,10 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
                         {slide.id}
                       </span>
                       <span className="flex flex-col gap-6">
-                        <span className="text-[18px] leading-[1.3] tracking-[-0.36px]">
+                        <span className="text-pretty text-[18px] leading-[1.3] tracking-[-0.36px]">
                           {slide.description}
                         </span>
-                        <span className="flex gap-3 border-t border-background/50 pt-4 text-[16px] leading-[1.25] tracking-[-0.32px]">
+                        <span className="flex gap-3 border-t border-background/50 pt-4 text-pretty text-[16px] leading-[1.25] tracking-[-0.32px]">
                           <span aria-hidden>→</span>
                           {slide.output}
                         </span>

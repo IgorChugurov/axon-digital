@@ -12,7 +12,7 @@ export function Partnership({ copy }: { copy: HomeCopy }) {
           <h2 className="text-center text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.2] tracking-[-0.04em] text-ink">
             {copy.partnershipTitle}
           </h2>
-          <p className="max-w-[676px] text-center text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
+          <p className="max-w-[676px] text-center text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767]">
             {copy.partnershipBody}
           </p>
         </div>

@@ -21,10 +21,12 @@ export function Hero({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
         </div>
         <div className="relative z-10 flex max-w-5xl flex-col items-center">
           <p className="text-sm font-medium text-green">{copy.heroEyebrow}</p>
-          <h1 className="mt-4 max-w-[18ch] text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.05] font-bold tracking-tight text-ink">
+          <h1 className="mt-4 max-w-[18ch] text-balance text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.05] font-bold tracking-tight text-ink">
             {copy.heroTitle}
           </h1>
-          <p className="mt-5 text-lg text-muted md:text-xl">{copy.heroSubtitle}</p>
+          <p className="mt-5 text-pretty text-lg text-muted md:text-xl">
+            {copy.heroSubtitle}
+          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <button
               type="button"
