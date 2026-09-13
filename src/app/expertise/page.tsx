@@ -1,14 +1,29 @@
-import { chromeCopy, navItems } from "@/content/site";
+import type { Metadata } from "next";
+import { CtaBanner } from "@/components/home/CtaBanner";
+import { ExpertiseIndex } from "@/components/expertise/ExpertiseIndex";
+import { expertisePageCopy } from "@/content/expertise";
+import { homeCopy } from "@/content/home";
 import { getLocale } from "@/i18n/get-locale";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const copy = expertisePageCopy[locale];
+
+  return {
+    title: `${copy.title} | Axon Digital`,
+    description: copy.intro,
+  };
+}
 
 export default async function ExpertisePage() {
   const locale = await getLocale();
-  const title = navItems[2].label[locale];
 
   return (
-    <main className="flex flex-1 flex-col items-center justify-center px-8 py-24">
-      <h1 className="text-4xl font-bold">{title}</h1>
-      <p className="mt-4 text-muted">{chromeCopy[locale].pageStub}</p>
+    <main className="flex-1">
+      <ExpertiseIndex locale={locale} />
+      <div className="py-[60px] lg:py-[120px]">
+        <CtaBanner locale={locale} copy={homeCopy[locale]} />
+      </div>
     </main>
   );
 }
