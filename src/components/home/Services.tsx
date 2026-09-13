@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import type { Locale } from "@/i18n/config";
 import { chromeCopy } from "@/content/site";
 import type { HomeCopy } from "@/content/home";
+import { services, servicesPageCopy } from "@/content/services";
 import { useContactModal } from "@/components/contact/ContactModalProvider";
 import { buttonClassName } from "@/components/ui/Button";
 import { ArrowUpRight, Plus, X } from "lucide-react";
@@ -12,6 +14,12 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const { open } = useContactModal();
   const letsTalk = chromeCopy[locale].letsTalk;
+  const serviceUi = servicesPageCopy[locale];
+  const items = services.map((service) => ({
+    id: service.id,
+    slug: service.slug,
+    ...service.copy[locale],
+  }));
 
   function toggle(id: string) {
     setOpenId((current) => (current === id ? null : id));
@@ -32,10 +40,9 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
       </div>
 
       <ul className="mx-auto w-full max-w-[1440px]">
-        {copy.services.map((item, index) => {
+        {items.map((item, index) => {
           const isOpen = openId === item.id;
-          const prevOpen =
-            index > 0 && openId === copy.services[index - 1].id;
+          const prevOpen = index > 0 && openId === items[index - 1].id;
           const showDivider = !isOpen && index > 0 && !prevOpen;
 
           return (
@@ -88,7 +95,7 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                     </span>
                     {isOpen ? (
                       <span className="max-w-[443px] text-[16px] leading-[1.1] tracking-[-0.32px] lg:pt-2">
-                        {item.body}
+                        {item.summary}
                       </span>
                     ) : null}
                   </span>
@@ -103,7 +110,14 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                 </button>
 
                 {isOpen ? (
-                  <div className="lg:pl-[233px]">
+                  <div className="flex flex-wrap gap-3 lg:pl-[233px]">
+                    <Link
+                      href={`/services/${item.slug}`}
+                      className={buttonClassName("inverse")}
+                    >
+                      {serviceUi.openService}
+                      <ArrowUpRight className="size-6" aria-hidden />
+                    </Link>
                     <button
                       type="button"
                       onClick={open}

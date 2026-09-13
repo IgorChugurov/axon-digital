@@ -1,8 +1,5 @@
 import type { Locale } from "@/i18n/config";
 
-const serviceDraft =
-  "Deep analysis of existing docs for gaps and risks. You receive an improvement roadmap to eliminate development bottlenecks.";
-
 export const homeCopy = {
   en: {
     heroEyebrow: "Full-cycle engineering studio",
@@ -23,20 +20,6 @@ export const homeCopy = {
     ],
     servicesEyebrow: "Services",
     servicesTitle: "Strategic Technology & Development Services",
-    services: [
-      { id: "01", title: "Project & Tech Docs", body: serviceDraft },
-      {
-        id: "02",
-        title: "Documentation Audit",
-        body: "Deep analysis of existing docs for gaps and risks. You receive an improvement roadmap to eliminate development bottlenecks.",
-      },
-      { id: "03", title: "Web App Development", body: serviceDraft },
-      { id: "04", title: "Website Creation", body: serviceDraft },
-      { id: "05", title: "Business Automation", body: serviceDraft },
-      { id: "06", title: "AI Integration", body: serviceDraft },
-      { id: "07", title: "No-Code Platform", body: serviceDraft },
-      { id: "08", title: "Custom Admin Panels", body: serviceDraft },
-    ],
     partnershipEyebrow: "Technology",
     partnershipTitle: "Partnership & Responsibility",
     partnershipBody:
@@ -101,24 +84,6 @@ export const homeCopy = {
     ],
     servicesEyebrow: "Послуги",
     servicesTitle: "Стратегічні технологічні та розробницькі послуги",
-    services: [
-      {
-        id: "01",
-        title: "Проєктна та технічна документація",
-        body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки.",
-      },
-      {
-        id: "02",
-        title: "Аудит документації",
-        body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки.",
-      },
-      { id: "03", title: "Розробка вебзастосунків", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-      { id: "04", title: "Створення сайтів", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-      { id: "05", title: "Автоматизація бізнесу", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-      { id: "06", title: "Інтеграція ШІ", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-      { id: "07", title: "No-code платформи", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-      { id: "08", title: "Кастомні адмінпанелі", body: "Глибокий аналіз наявної документації на прогалини та ризики. Ви отримуєте план покращень, щоб прибрати вузькі місця розробки." },
-    ],
     partnershipEyebrow: "Технології",
     partnershipTitle: "Партнерство і відповідальність",
     partnershipBody:
