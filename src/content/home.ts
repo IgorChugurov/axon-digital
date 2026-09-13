@@ -13,10 +13,39 @@ export const homeCopy = {
     processEyebrow: "Process",
     processTitle: "How we work",
     processSlides: [
-      { id: "01", title: "Goal Analysis", tone: "green" },
-      { id: "02", title: "Architecture", tone: "green" },
-      { id: "03", title: "Tech Specs", tone: "orange" },
-      { id: "04", title: "Delivery", tone: "green" },
+      {
+        id: "01",
+        title: "Discovery & Alignment",
+        description:
+          "We align business goals, user needs, domain rules, constraints, and success criteria, then define the first valuable vertical slice. Living documentation connects these decisions and evolves whenever working software provides new evidence.",
+        output: "Aligned problem frame and prioritized vertical slice.",
+        tone: "green",
+      },
+      {
+        id: "02",
+        title: "Architecture & Living Specification",
+        description:
+          "We connect domain logic and UX with data, system boundaries, and implementation decisions. Models, technical experiments, and early executable slices continuously validate and refine the living specification throughout delivery.",
+        output:
+          "Implementable increment specification and recorded architecture decisions.",
+        tone: "green",
+      },
+      {
+        id: "03",
+        title: "Design & Iterative Delivery",
+        description:
+          "We design and build complete vertical slices, demonstrate working software, and use feedback to adjust priorities. Documentation evolves with implementation, keeping each increment aligned, correct, understandable, and maintainable.",
+        output: "Tested working increment ready for demonstration.",
+        tone: "orange",
+      },
+      {
+        id: "04",
+        title: "Validation, Launch & Evolution",
+        description:
+          "We validate each increment against agreed outcomes, prepare it for operation, release it, and observe real use. Test results, production evidence, and updated documentation shape the priorities for the next iteration.",
+        output: "Released increment and priorities for the next iteration.",
+        tone: "green",
+      },
     ],
     servicesEyebrow: "Services",
     servicesTitle: "Strategic Technology & Development Services",
@@ -77,10 +106,41 @@ export const homeCopy = {
     processEyebrow: "Процес",
     processTitle: "Як ми працюємо",
     processSlides: [
-      { id: "01", title: "Аналіз цілей", tone: "green" },
-      { id: "02", title: "Архітектура", tone: "green" },
-      { id: "03", title: "Технічне завдання", tone: "orange" },
-      { id: "04", title: "Поставка", tone: "green" },
+      {
+        id: "01",
+        title: "Дослідження та узгодження",
+        description:
+          "Узгоджуємо бізнес-цілі, потреби користувачів, правила домену, обмеження та критерії успіху, а потім визначаємо перший цінний вертикальний зріз. Жива документація пов’язує ці рішення й оновлюється, коли робочий продукт дає нові дані.",
+        output:
+          "Узгоджена постановка задачі та пріоритетний вертикальний зріз.",
+        tone: "green",
+      },
+      {
+        id: "02",
+        title: "Архітектура та жива специфікація",
+        description:
+          "Поєднуємо доменну логіку та UX із даними, межами системи й рішеннями щодо реалізації. Моделі, технічні експерименти та ранні робочі зрізи постійно перевіряють і уточнюють живу специфікацію.",
+        output:
+          "Реалізовна специфікація інкремента та зафіксовані архітектурні рішення.",
+        tone: "green",
+      },
+      {
+        id: "03",
+        title: "Дизайн та ітеративна реалізація",
+        description:
+          "Проєктуємо й реалізуємо завершені вертикальні зрізи, демонструємо робочий продукт і коригуємо пріоритети за відгуками. Документація розвивається разом із реалізацією, щоб кожен інкремент залишався узгодженим, коректним, зрозумілим і супроводжуваним.",
+        output:
+          "Протестований робочий інкремент, готовий до демонстрації.",
+        tone: "orange",
+      },
+      {
+        id: "04",
+        title: "Перевірка, запуск та розвиток",
+        description:
+          "Перевіряємо кожен інкремент за узгодженими результатами, готуємо до експлуатації, випускаємо й спостерігаємо за реальним використанням. Результати тестування, дані з робочого середовища та оновлена документація визначають пріоритети наступної ітерації.",
+        output: "Випущений інкремент і пріоритети наступної ітерації.",
+        tone: "green",
+      },
     ],
     servicesEyebrow: "Послуги",
     servicesTitle: "Стратегічні технологічні та розробницькі послуги",

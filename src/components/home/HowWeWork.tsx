@@ -1,12 +1,25 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type PointerEvent } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type MouseEvent,
+  type PointerEvent,
+} from "react";
 import type { HomeCopy } from "@/content/home";
 
 export function HowWeWork({ copy }: { copy: HomeCopy }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const drag = useRef({ active: false, startX: 0, startScroll: 0 });
+  const drag = useRef({
+    active: false,
+    startX: 0,
+    startScroll: 0,
+    moved: false,
+  });
   const [progress, setProgress] = useState({ ratio: 0, thumb: 0.24 });
+  const [flippedId, setFlippedId] = useState<string | null>(null);
 
   const updateProgress = useCallback(() => {
     const el = scrollerRef.current;
@@ -30,6 +43,7 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
       active: true,
       startX: event.clientX,
       startScroll: el.scrollLeft,
+      moved: false,
     };
     el.setPointerCapture(event.pointerId);
   }
@@ -37,14 +51,38 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
   function onPointerMove(event: PointerEvent<HTMLDivElement>) {
     const el = scrollerRef.current;
     if (!el || !drag.current.active) return;
-    el.scrollLeft = drag.current.startScroll - (event.clientX - drag.current.startX);
+    const delta = event.clientX - drag.current.startX;
+    if (Math.abs(delta) > 8) {
+      drag.current.moved = true;
+    }
+    el.scrollLeft = drag.current.startScroll - delta;
   }
 
   function onPointerUp(event: PointerEvent<HTMLDivElement>) {
     drag.current.active = false;
+
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
+  }
+
+  function onPointerCancel(event: PointerEvent<HTMLDivElement>) {
+    drag.current.active = false;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  function onCardClick(
+    event: MouseEvent<HTMLButtonElement>,
+    cardId: string,
+  ) {
+    if (event.detail > 0 && drag.current.moved) {
+      drag.current.moved = false;
+      return;
+    }
+
+    setFlippedId((current) => (current === cardId ? null : cardId));
   }
 
   return (
@@ -66,7 +104,7 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
+          onPointerCancel={onPointerCancel}
         >
           <div className="flex w-max items-center p-2">
             {copy.processSlides.map((slide, index) => (
@@ -77,28 +115,69 @@ export function HowWeWork({ copy }: { copy: HomeCopy }) {
                 }`}
                 style={{ zIndex: index + 1 }}
               >
-                <article
-                  className={`absolute top-1/2 left-1/2 h-[470px] w-[410px] -translate-x-1/2 -translate-y-1/2 overflow-hidden text-background select-none ${
-                    slide.tone === "orange" ? "bg-orange" : "bg-green rotate-3"
+                <button
+                  type="button"
+                  data-process-card={slide.id}
+                  aria-label={`${slide.title}. ${slide.description} ${slide.output}`}
+                  aria-pressed={flippedId === slide.id}
+                  onClick={(event) => onCardClick(event, slide.id)}
+                  className={`group absolute top-1/2 left-1/2 h-[470px] w-[410px] -translate-x-1/2 -translate-y-1/2 text-left text-background select-none [perspective:1200px] focus-visible:outline-2 focus-visible:outline-offset-4 ${
+                    slide.tone === "orange"
+                      ? "focus-visible:outline-green"
+                      : "rotate-3 focus-visible:outline-orange"
                   }`}
                 >
-                  {slide.tone === "orange" ? (
-                    <img
-                      src="/icons/process-orbit.svg"
-                      alt=""
-                      width={311}
-                      height={311}
-                      className="pointer-events-none absolute top-[231px] left-[171px] size-[311px]"
+                  <span
+                    className={`relative block h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${
+                      flippedId === slide.id
+                        ? "[transform:rotateY(180deg)]"
+                        : ""
+                    }`}
+                  >
+                    <span
                       aria-hidden
-                    />
-                  ) : null}
-                  <p className="absolute top-8 right-8 text-[216px] leading-[0.7] tracking-[-8.64px]">
-                    {slide.id}
-                  </p>
-                  <p className="absolute bottom-8 left-8 text-[32px] leading-[48px] tracking-[-0.96px]">
-                    {slide.title}
-                  </p>
-                </article>
+                      className={`absolute inset-0 block overflow-hidden [backface-visibility:hidden] ${
+                        slide.tone === "orange" ? "bg-orange" : "bg-green"
+                      }`}
+                    >
+                      {slide.tone === "orange" ? (
+                        <img
+                          src="/icons/process-orbit.svg"
+                          alt=""
+                          width={311}
+                          height={311}
+                          className="pointer-events-none absolute top-[231px] left-[171px] size-[311px]"
+                        />
+                      ) : null}
+                      <span className="absolute top-12 right-8 text-[216px] leading-[0.7] tracking-[-8.64px]">
+                        {slide.id}
+                      </span>
+                      <span className="absolute right-8 bottom-8 left-8 text-[32px] leading-[48px] tracking-[-0.96px]">
+                        {slide.title}
+                      </span>
+                    </span>
+
+                    <span
+                      aria-hidden
+                      className={`absolute inset-0 flex flex-col justify-between overflow-hidden p-8 [backface-visibility:hidden] [transform:rotateY(180deg)] ${
+                        slide.tone === "orange" ? "bg-orange" : "bg-green"
+                      }`}
+                    >
+                      <span className="text-[72px] leading-none tracking-[-2.88px] opacity-50">
+                        {slide.id}
+                      </span>
+                      <span className="flex flex-col gap-6">
+                        <span className="text-[18px] leading-[1.3] tracking-[-0.36px]">
+                          {slide.description}
+                        </span>
+                        <span className="flex gap-3 border-t border-background/50 pt-4 text-[16px] leading-[1.25] tracking-[-0.32px]">
+                          <span aria-hidden>→</span>
+                          {slide.output}
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </button>
               </div>
             ))}
           </div>
