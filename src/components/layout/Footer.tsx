@@ -14,7 +14,10 @@ export function Footer({ locale }: { locale: Locale }) {
   const copy = chromeCopy[locale];
 
   return (
-    <footer className="relative overflow-hidden bg-ink text-background">
+    <footer
+      id="contact"
+      className="scroll-mt-20 relative overflow-hidden bg-ink text-background"
+    >
       <div className="relative z-10 mx-auto grid max-w-[1440px] gap-12 px-8 py-14 lg:grid-cols-[443px_minmax(0,793px)] lg:justify-between lg:gap-x-[140px] lg:pt-14 lg:pb-10">
         <div className="flex flex-col gap-10 lg:min-h-[286px]">
           <Image src="/brand/mark.svg" alt="" width={56} height={56} />
@@ -37,21 +40,6 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <div className="flex flex-col gap-10 lg:gap-[72px]">
-          <div>
-            <p className="mb-3 text-[16px] tracking-[-0.32px]">{copy.socials}</p>
-            <ul className="flex flex-wrap gap-x-10 gap-y-2 text-[16px] tracking-[-0.32px] text-[#939393] lg:justify-between lg:gap-x-0">
-              {site.socials.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={item.href}
-                    className="hover:text-orange hover:underline"
-                  >
-                    {item.label[locale]}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
           <a
             href={`mailto:${site.email}`}
             className="border-b border-[#939393] pb-1 text-3xl leading-normal tracking-[-0.02em] text-orange lg:text-[64px]"

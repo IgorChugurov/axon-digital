@@ -1,10 +1,10 @@
 import type { Locale } from "@/i18n/config";
 
 export const navItems = [
-  { href: "/about", label: { en: "About", uk: "Про нас" } },
+  { href: "/#about", label: { en: "About", uk: "Про нас" } },
   { href: "/services", label: { en: "Services", uk: "Послуги" } },
   { href: "/expertise", label: { en: "Expertise", uk: "Експертиза" } },
-  { href: "/contacts", label: { en: "Contacts", uk: "Контакти" } },
+  { href: "/#contact", label: { en: "Contacts", uk: "Контакти" } },
 ] as const;
 
 export const site = {

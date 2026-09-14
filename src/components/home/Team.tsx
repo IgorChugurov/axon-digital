@@ -52,7 +52,10 @@ function MemberCard({
 
 export function Team({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
   return (
-    <section className="px-8 py-[60px] lg:py-[120px]">
+    <section
+      id="about"
+      className="scroll-mt-20 px-8 py-[60px] lg:py-[120px]"
+    >
       <div className="mx-auto flex max-w-[1376px] flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-2">
           <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
