@@ -48,22 +48,22 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
           return (
             <li
               key={item.id}
-              className={`relative overflow-hidden ${
+              className={`relative overflow-hidden transition-colors duration-200 ease-out ${
                 isOpen ? "bg-orange text-background" : "bg-background text-ink"
               } ${showDivider ? "border-t border-muted" : ""}`}
             >
-              {isOpen ? (
-                <img
-                  src="/icons/process-orbit.svg"
-                  alt=""
-                  width={311}
-                  height={311}
-                  className="pointer-events-none absolute top-[85px] right-0 size-[311px]"
-                  aria-hidden
-                />
-              ) : null}
+              <img
+                src="/icons/process-orbit.svg"
+                alt=""
+                width={311}
+                height={311}
+                className={`pointer-events-none absolute top-[85px] right-0 size-[311px] transition-opacity duration-200 ease-out ${
+                  isOpen ? "opacity-100" : "opacity-0"
+                }`}
+                aria-hidden
+              />
 
-              <div className="relative z-10 flex flex-col gap-6 p-8">
+              <div className="relative z-10 flex flex-col p-8">
                 <button
                   type="button"
                   className={`flex w-full gap-4 text-left ${
@@ -73,19 +73,9 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                   onClick={() => toggle(item.id)}
                 >
                   <span
-                    className={`flex min-w-0 flex-1 ${
-                      isOpen
-                        ? "flex-col gap-6 lg:flex-row lg:items-start lg:gap-6"
-                        : "items-center gap-4 lg:gap-[140px]"
-                    }`}
+                    className="flex min-w-0 flex-1 flex-col lg:flex-row lg:items-start lg:gap-6"
                   >
-                    <span
-                      className={`flex min-w-0 ${
-                        isOpen
-                          ? "items-center gap-4 lg:w-[676px] lg:shrink-0 lg:gap-[140px]"
-                          : "items-center gap-4 lg:gap-[140px]"
-                      }`}
-                    >
+                    <span className="flex min-w-0 items-center gap-4 lg:w-[676px] lg:shrink-0 lg:gap-[140px]">
                       <span className="shrink-0 text-[32px] leading-[1.1] tracking-[-1.28px] lg:w-[93px]">
                         {item.id}
                       </span>
@@ -93,11 +83,18 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                         {item.title}
                       </span>
                     </span>
-                    {isOpen ? (
-                      <span className="max-w-[443px] text-pretty text-[16px] leading-[1.1] tracking-[-0.32px] lg:pt-2">
+                    <span
+                      aria-hidden={!isOpen}
+                      className={`grid w-full max-w-[443px] transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <span className="min-h-0 overflow-hidden pt-6 text-pretty text-[16px] leading-[1.1] tracking-[-0.32px] lg:pt-2">
                         {item.summary}
                       </span>
-                    ) : null}
+                    </span>
                   </span>
                   {isOpen ? (
                     <X className="size-8 shrink-0" aria-hidden />
@@ -109,25 +106,37 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                   )}
                 </button>
 
-                {isOpen ? (
-                  <div className="flex flex-wrap gap-3 lg:pl-[233px]">
-                    <Link
-                      href={`/services/${item.slug}`}
-                      className={buttonClassName("inverse")}
-                    >
-                      {serviceUi.openService}
-                      <ArrowUpRight className="size-6" aria-hidden />
-                    </Link>
-                    <button
-                      type="button"
-                      onClick={open}
-                      className={buttonClassName("inverse")}
-                    >
-                      {letsTalk}
-                      <ArrowUpRight className="size-6" aria-hidden />
-                    </button>
+                <div
+                  aria-hidden={!isOpen}
+                  inert={!isOpen}
+                  className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="min-h-0 overflow-hidden">
+                    <div className="flex flex-wrap gap-3 pt-6 lg:pl-[233px]">
+                      <Link
+                        href={`/services/${item.slug}`}
+                        tabIndex={isOpen ? 0 : -1}
+                        className={buttonClassName("inverse")}
+                      >
+                        {serviceUi.openService}
+                        <ArrowUpRight className="size-6" aria-hidden />
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={open}
+                        tabIndex={isOpen ? 0 : -1}
+                        className={buttonClassName("inverse")}
+                      >
+                        {letsTalk}
+                        <ArrowUpRight className="size-6" aria-hidden />
+                      </button>
+                    </div>
                   </div>
-                ) : null}
+                </div>
               </div>
             </li>
           );

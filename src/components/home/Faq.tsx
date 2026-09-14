@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import type { HomeCopy } from "@/content/home";
 import { Plus, X } from "lucide-react";
 
@@ -31,18 +32,29 @@ export function Faq({ copy }: { copy: HomeCopy }) {
                   setOpenId((current) => (current === item.id ? null : item.id))
                 }
               >
-                <span className="flex min-w-0 flex-1 flex-col gap-4 lg:flex-row lg:items-start lg:gap-6">
+                <span className="flex min-w-0 flex-1 flex-col lg:flex-row lg:items-start lg:gap-6">
                   <span className="flex items-center gap-6 lg:w-[561px] lg:shrink-0">
                     <StarIcon active={isOpen} />
                     <span className="text-balance text-[clamp(1.25rem,2.5vw,2rem)] leading-[1.1] tracking-[-0.04em] text-ink">
                       {item.question}
                     </span>
                   </span>
-                  {isOpen ? (
-                    <span className="text-pretty text-[16px] leading-6 tracking-[-0.64px] text-[#676767] lg:w-[560px] lg:pt-1">
-                      {item.answer}
-                    </span>
-                  ) : null}
+                  <AnimatePresence initial={false}>
+                    {isOpen ? (
+                      <motion.span
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{
+                          duration: 0.22,
+                          ease: [0.25, 0.1, 0.25, 1],
+                        }}
+                        className="block overflow-hidden pt-4 text-pretty text-[16px] leading-6 tracking-[-0.64px] text-[#676767] lg:w-[560px] lg:pt-1"
+                      >
+                        {item.answer}
+                      </motion.span>
+                    ) : null}
+                  </AnimatePresence>
                 </span>
                 {isOpen ? (
                   <X className="size-8 shrink-0 text-green" aria-hidden />

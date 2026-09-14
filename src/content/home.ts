@@ -63,34 +63,52 @@ export const homeCopy = {
     faqTitle: "Common Questions, Clear Answers",
     faq: [
       {
-        id: "poc",
-        question: "How long for a PoC?",
+        id: "starting-point",
+        question: "What can we start with?",
         answer:
-          "A focused proof of concept typically takes a few sprints. We scope the smallest slice that proves the architecture and the business case.",
+          "We can begin with an idea, existing documentation, a working system, or a combination of them. We review the available context, identify gaps, and define the first valuable increment.",
       },
       {
-        id: "hipaa",
-        question: "How do we handle HIPAA?",
+        id: "collaboration",
+        question: "How will we collaborate?",
         answer:
-          "We treat compliance as part of the architecture: access control, audit trails, encryption, and documented processes — not a layer added at the end.",
+          "We treat you as the domain expert. Decisions remain visible through shared context, living documentation, regular demonstrations, and feedback.",
       },
       {
-        id: "architecture",
-        question: "Why is architecture more important than code?",
+        id: "delivery-process",
+        question: "How do you organise delivery?",
         answer:
-          "Architecture is more important than code because it provides the foundational structure that ensures scalability, maintainability, and performance, guiding how the code is organized and interacts within the system.",
+          "We work in 2–4-week sprints and deliver complete vertical slices. Each increment is designed, built, tested, demonstrated, and refined using feedback.",
       },
       {
-        id: "poc-2",
-        question: "How long for a PoC?",
+        id: "project-output",
+        question: "What will we receive?",
         answer:
-          "A focused proof of concept typically takes a few sprints. We scope the smallest slice that proves the architecture and the business case.",
+          "The result depends on the service and agreed scope. It may include working software, source code, deployment configuration, integrations, and current product, technical, or operational documentation.",
       },
       {
-        id: "hipaa-2",
-        question: "How do we handle HIPAA?",
+        id: "existing-system",
+        question: "Can you modernize an existing system without rebuilding it?",
         answer:
-          "We treat compliance as part of the architecture: access control, audit trails, encryption, and documented processes — not a layer added at the end.",
+          "Yes, where its condition allows. We assess the current system, define what to preserve, update, replace, or isolate, and introduce changes incrementally.",
+      },
+      {
+        id: "ai-integration",
+        question: "How do you approach AI integration?",
+        answer:
+          "We begin with a defined use case, representative examples, constraints, and evaluation criteria. The solution includes safeguards, fallback behaviour, monitoring, documentation, and human control.",
+      },
+      {
+        id: "security-compliance",
+        question: "How do you address security and compliance?",
+        answer:
+          "We identify the applicable security, privacy, access, auditability, and compliance requirements with you, then address the agreed requirements in architecture, implementation, testing, and documentation.",
+      },
+      {
+        id: "contact",
+        question: "How can we start a conversation?",
+        answer:
+          "Use the “Let’s Talk” form or email contact@axondigital.xyz with a short description of your project.",
       },
     ],
   },
@@ -158,34 +176,52 @@ export const homeCopy = {
     faqTitle: "Типові питання, зрозумілі відповіді",
     faq: [
       {
-        id: "poc",
-        question: "Скільки часу на PoC?",
+        id: "starting-point",
+        question: "З чого можна почати?",
         answer:
-          "Сфокусований proof of concept зазвичай займає кілька спринтів. Ми беремо найменший зріз, який доводить архітектуру і бізнес-кейс.",
+          "Можемо почати з ідеї, наявної документації, робочої системи або їх поєднання. Ми вивчаємо контекст, визначаємо прогалини та формуємо перший цінний інкремент.",
       },
       {
-        id: "hipaa",
-        question: "Як ми працюємо з HIPAA?",
+        id: "collaboration",
+        question: "Як відбуватиметься співпраця?",
         answer:
-          "Комплаєнс закладаємо в архітектуру: доступ, аудит, шифрування і задокументовані процеси — а не шар на фініші.",
+          "Ми сприймаємо вас як експерта домену. Рішення залишаються прозорими завдяки спільному контексту, живій документації, регулярним демо та зворотному зв’язку.",
       },
       {
-        id: "architecture",
-        question: "Чому архітектура важливіша за код?",
+        id: "delivery-process",
+        question: "Як ви організовуєте реалізацію?",
         answer:
-          "Архітектура важливіша за код, бо задає структуру, від якої залежать масштабованість, супровід і продуктивність, і визначає, як код організований і взаємодіє в системі.",
+          "Працюємо спринтами 2–4 тижні та реалізуємо завершені вертикальні зрізи. Кожен інкремент проєктуємо, розробляємо, тестуємо, демонструємо й уточнюємо за відгуками.",
       },
       {
-        id: "poc-2",
-        question: "Скільки часу на PoC?",
+        id: "project-output",
+        question: "Що ми отримаємо?",
         answer:
-          "Сфокусований proof of concept зазвичай займає кілька спринтів. Ми беремо найменший зріз, який доводить архітектуру і бізнес-кейс.",
+          "Результат залежить від послуги та погодженого обсягу. Він може охоплювати робочий продукт, код, конфігурацію розгортання, інтеграції та актуальну продуктову, технічну або операційну документацію.",
       },
       {
-        id: "hipaa-2",
-        question: "Як ми працюємо з HIPAA?",
+        id: "existing-system",
+        question: "Чи можете ви модернізувати систему без повної перебудови?",
         answer:
-          "Комплаєнс закладаємо в архітектуру: доступ, аудит, шифрування і задокументовані процеси — а не шар на фініші.",
+          "Так, якщо це дозволяє її стан. Ми оцінюємо систему, визначаємо, що зберегти, оновити, замінити чи ізолювати, і впроваджуємо зміни поетапно.",
+      },
+      {
+        id: "ai-integration",
+        question: "Як ви підходите до інтеграції ШІ?",
+        answer:
+          "Починаємо з визначеного сценарію, репрезентативних прикладів, обмежень і критеріїв оцінювання. Рішення передбачає запобіжники, резервну поведінку, моніторинг, документацію та контроль людини.",
+      },
+      {
+        id: "security-compliance",
+        question: "Як ви враховуєте безпеку та відповідність вимогам?",
+        answer:
+          "Разом із вами визначаємо вимоги до безпеки, приватності, доступу, простежуваності та нормативної відповідності, а потім враховуємо їх в архітектурі, реалізації, тестуванні й документації.",
+      },
+      {
+        id: "contact",
+        question: "Як розпочати розмову?",
+        answer:
+          "Скористайтеся формою «Давайте поговоримо» або напишіть на contact@axondigital.xyz і коротко опишіть свій проєкт.",
       },
     ],
   },
