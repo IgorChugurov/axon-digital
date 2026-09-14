@@ -33,6 +33,12 @@ export const chromeCopy = {
     modalPhone: "Phone",
     modalMessage: "Message",
     modalSubmit: "Let’s Talk",
+    modalSending: "Sending your message…",
+    modalSuccessTitle: "Thank you",
+    modalSuccessMessage:
+      "Your message has been sent. We’ll get back to you shortly.",
+    modalError:
+      "We couldn’t send your message. Please try again or email contact@axondigital.xyz.",
     footerBlurb: "Discuss your project architecture. Response from the team within 24 hours.",
     socials: "Socials",
     map: "Map",
@@ -51,6 +57,12 @@ export const chromeCopy = {
     modalPhone: "Телефон",
     modalMessage: "Повідомлення",
     modalSubmit: "Давайте поговоримо",
+    modalSending: "Надсилаємо ваше повідомлення…",
+    modalSuccessTitle: "Дякуємо",
+    modalSuccessMessage:
+      "Ваше повідомлення надіслано. Ми зв’яжемося з вами найближчим часом.",
+    modalError:
+      "Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть на contact@axondigital.xyz.",
     footerBlurb:
       "Обговоримо архітектуру проєкту. Відповідь команди протягом 24 годин.",
     socials: "Соцмережі",

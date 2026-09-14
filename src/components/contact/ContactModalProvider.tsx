@@ -7,10 +7,12 @@ import {
   useEffect,
   useId,
   useState,
+  type FormEvent,
   type ReactNode,
 } from "react";
 import type { Locale } from "@/i18n/config";
 import { chromeCopy } from "@/content/site";
+import { HeroGlobe } from "@/components/home/HeroGlobe";
 import { buttonClassName } from "@/components/ui/Button";
 import { ArrowUpRight, X } from "lucide-react";
 
@@ -46,30 +48,28 @@ export function ContactModalProvider({
   return (
     <ContactModalContext.Provider value={{ open, close, isOpen }}>
       {children}
-      <ContactModal locale={locale} isOpen={isOpen} onClose={close} />
+      {isOpen ? <ContactModal locale={locale} onClose={close} /> : null}
     </ContactModalContext.Provider>
   );
 }
 
 function ContactModal({
   locale,
-  isOpen,
   onClose,
 }: {
   locale: Locale;
-  isOpen: boolean;
   onClose: () => void;
 }) {
   const copy = chromeCopy[locale];
   const titleId = useId();
+  const [submissionState, setSubmissionState] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const isSubmitting = submissionState === "submitting";
 
   useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
-
     function onKey(event: KeyboardEvent) {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && !isSubmitting) {
         onClose();
       }
     }
@@ -81,10 +81,36 @@ function ContactModal({
       document.body.style.overflow = previous;
       window.removeEventListener("keydown", onKey);
     };
-  }, [isOpen, onClose]);
+  }, [isSubmitting, onClose]);
 
-  if (!isOpen) {
-    return null;
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    setSubmissionState("submitting");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          message: data.get("message"),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact request failed.");
+      }
+
+      form.reset();
+      setSubmissionState("success");
+    } catch {
+      setSubmissionState("error");
+    }
   }
 
   return (
@@ -103,34 +129,95 @@ function ContactModal({
       >
         <div className="mb-6 flex items-start justify-between gap-4">
           <h2 id={titleId} className="text-2xl font-bold text-ink">
-            {copy.modalTitle}
+            {submissionState === "success"
+              ? copy.modalSuccessTitle
+              : copy.modalTitle}
           </h2>
           <button
             type="button"
             onClick={onClose}
+            disabled={isSubmitting}
             className="text-muted hover:text-ink"
             aria-label={copy.closeModal}
           >
             <X className="size-8" aria-hidden />
           </button>
         </div>
-        <form
-          className="flex flex-col gap-4"
-          onSubmit={(event) => {
-            event.preventDefault();
-            onClose();
-          }}
-        >
-          <Field label={copy.modalName} name="name" />
-          <Field label={copy.modalEmail} name="email" type="email" />
-          <Field label={copy.modalPhone} name="phone" type="tel" />
-          <Field label={copy.modalMessage} name="message" multiline />
-          <button type="submit" className={`${buttonClassName("orange")} mt-2`}>
-            {copy.modalSubmit}
-            <ArrowUpRight className="size-6" aria-hidden />
-          </button>
-        </form>
+
+        {submissionState === "success" ? (
+          <div role="status" className="text-ink">
+            <p className="text-pretty text-muted">{copy.modalSuccessMessage}</p>
+          </div>
+        ) : (
+          <form
+            className="flex flex-col gap-4"
+            aria-busy={isSubmitting}
+            onSubmit={onSubmit}
+          >
+            <fieldset
+              disabled={isSubmitting}
+              className="flex flex-col gap-4"
+            >
+              <Field
+                label={copy.modalName}
+                name="name"
+                autoComplete="name"
+                minLength={2}
+                maxLength={120}
+                required
+              />
+              <Field
+                label={copy.modalEmail}
+                name="email"
+                type="email"
+                autoComplete="email"
+                maxLength={254}
+                required
+              />
+              <Field
+                label={copy.modalPhone}
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                maxLength={50}
+              />
+              <Field
+                label={copy.modalMessage}
+                name="message"
+                minLength={10}
+                maxLength={5000}
+                required
+                multiline
+              />
+              {submissionState === "error" ? (
+                <p role="alert" className="text-pretty text-sm text-orange">
+                  {copy.modalError}
+                </p>
+              ) : null}
+              <button
+                type="submit"
+                className={`${buttonClassName("orange")} mt-2`}
+              >
+                {copy.modalSubmit}
+                <ArrowUpRight className="size-6" aria-hidden />
+              </button>
+            </fieldset>
+          </form>
+        )}
       </div>
+
+      {isSubmitting ? (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/75 backdrop-blur-sm"
+          role="status"
+          aria-live="polite"
+        >
+          <span className="sr-only">{copy.modalSending}</span>
+          <div className="origin-center scale-50">
+            <HeroGlobe />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -139,11 +226,19 @@ function Field({
   label,
   name,
   type = "text",
+  autoComplete,
+  minLength,
+  maxLength,
+  required = false,
   multiline = false,
 }: {
   label: string;
   name: string;
   type?: string;
+  autoComplete?: string;
+  minLength?: number;
+  maxLength?: number;
+  required?: boolean;
   multiline?: boolean;
 }) {
   const id = useId();
@@ -154,9 +249,27 @@ function Field({
     <label className="flex flex-col gap-1.5 text-sm text-muted" htmlFor={id}>
       {label}
       {multiline ? (
-        <textarea id={id} name={name} rows={4} className={fieldClass} />
+        <textarea
+          id={id}
+          name={name}
+          rows={4}
+          autoComplete={autoComplete}
+          minLength={minLength}
+          maxLength={maxLength}
+          required={required}
+          className={fieldClass}
+        />
       ) : (
-        <input id={id} name={name} type={type} className={fieldClass} />
+        <input
+          id={id}
+          name={name}
+          type={type}
+          autoComplete={autoComplete}
+          minLength={minLength}
+          maxLength={maxLength}
+          required={required}
+          className={fieldClass}
+        />
       )}
     </label>
   );
