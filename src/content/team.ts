@@ -20,11 +20,4 @@ export const team = [
     photo: "/team/kateryna-pashkova.jpeg",
     accent: "orange",
   },
-  {
-    id: "anna-mikulova",
-    name: "Anna Mikulova",
-    role: { en: "Designer & Figma", uk: "Дизайнер і Figma" },
-    photo: "/team/anna-mikulova.jpeg",
-    accent: "green",
-  },
 ] as const;
