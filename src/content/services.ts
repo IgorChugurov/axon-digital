@@ -93,6 +93,8 @@ export const services: Service[] = [
         hero:
           "Working software begins before code. We build a living product model that connects business goals, domain logic, user experience, data, architecture, and delivery—and evolves alongside the implemented system.",
         whenNeeded: [
+          "The rules of the business live in spreadsheets, and only a few people know how to work with them.",
+          "The system grew with the business, so decisions were taken along the way and fitted into whatever already existed.",
           "You are preparing a new product or a major new initiative.",
           "Requirements are incomplete, scattered, or understood differently by stakeholders.",
           "The system’s workflows, boundaries, entities, or integrations are unclear.",
@@ -100,6 +102,21 @@ export const services: Service[] = [
           "The team needs a shared foundation for design, estimation, and development.",
         ],
         included: [
+          {
+            title: "Process model",
+            description:
+              "The business process is taken apart into data, processing nodes, the rule behind every change, and three levels of access: reading data, running processing, and changing how processing works. Every rule of change carries its own properties: whether the change is atomic across several sets of data, whether it is recorded as a journal entry or overwrites state in place, and whether it can be reversed. The model then goes through an optimisation pass that removes duplicated data, nodes that change nothing, and rights that repeat one another.",
+          },
+          {
+            title: "Domain vocabulary and taxonomy",
+            description:
+              "We fix the vocabulary of the domain: which things are entities with a life of their own, which are configuration that shapes behaviour, and which are shared classification. The taxonomy built on it keeps one word meaning one thing in the description, the interface, and the data.",
+          },
+          {
+            title: "Layers and responsibilities",
+            description:
+              "Responsibilities are separated into layers before anything is automated: what data exists and how it is related, who maintains that data, and who uses it and what they are allowed to do with it. Access rights are the boundary between those layers, not a setting added afterwards.",
+          },
           {
             title: "Product context and scope",
             description:
@@ -118,7 +135,7 @@ export const services: Service[] = [
           {
             title: "Architecture decisions",
             description:
-              "We document the proposed system structure and technology choices in the context of product requirements and constraints.",
+              "We document the proposed system structure and technology choices in the context of product requirements and constraints. Structure is defined on a graph of relations, where dependencies are directed vectors with weights and layers are separated by responsibility.",
           },
           {
             title: "Living documentation and roadmap",
@@ -169,6 +186,8 @@ export const services: Service[] = [
         hero:
           "Робочий продукт починається ще до написання коду. Ми створюємо живу модель, яка поєднує бізнес-цілі, доменну логіку, користувацький досвід, дані, архітектуру та реалізацію — і розвивається разом із системою.",
         whenNeeded: [
+          "Правила бізнесу живуть у таблицях, і працювати з ними вміють лише кілька людей.",
+          "Система зростала разом із бізнесом, тому рішення ухвалювалися на ходу й вбудовувалися в те, що вже було.",
           "Ви готуєте новий продукт або велику продуктову ініціативу.",
           "Вимоги неповні, розпорошені або учасники розуміють їх по-різному.",
           "Процеси, межі системи, сутності чи інтеграції не визначені.",
@@ -176,6 +195,21 @@ export const services: Service[] = [
           "Команді потрібна спільна основа для дизайну, оцінювання та розробки.",
         ],
         included: [
+          {
+            title: "Модель процесу",
+            description:
+              "Бізнес-процес розкладається на дані, вузли обробки, правило кожної зміни та три рівні доступу: читання даних, запуск обробки і зміна самої обробки. Кожне правило зміни має власні властивості: чи є зміна атомарною по кількох наборах даних, чи фіксується вона записом у журнал, чи перезаписує стан на місці, і чи можна її відкотити. Далі модель проходить оптимізаційний прогін, який знімає дубльовані дані, вузли, що нічого не змінюють, і права, які повторюють одне одного.",
+          },
+          {
+            title: "Вокабуляр і таксономія домену",
+            description:
+              "Ми фіксуємо словник домену: що є сутністю з власним життям, що є конфігурацією, яка задає поведінку, а що — спільною класифікацією. Побудована на ньому таксономія тримає одне значення слова в описі, інтерфейсі та даних.",
+          },
+          {
+            title: "Шари й відповідальності",
+            description:
+              "Відповідальності розводяться по шарах ще до будь-якої автоматизації: які дані існують і як вони пов’язані, хто ці дані веде, хто ними користується і що саме йому дозволено. Права доступу — це межа між шарами, а не налаштування, додане згодом.",
+          },
           {
             title: "Контекст і обсяг продукту",
             description:
@@ -194,7 +228,7 @@ export const services: Service[] = [
           {
             title: "Архітектурні рішення",
             description:
-              "Документуємо структуру системи та вибір технологій у контексті вимог і обмежень продукту.",
+              "Документуємо структуру системи та вибір технологій у контексті вимог і обмежень продукту. Структура визначається на графі зв’язків, де залежності — це спрямовані вектори з вагами, а шари розділені за відповідальністю.",
           },
           {
             title: "Жива документація та план",

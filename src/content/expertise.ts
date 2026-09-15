@@ -30,7 +30,9 @@ export const expertisePageCopy = {
     eyebrow: "Expertise",
     title: "Expertise",
     intro:
-      "Domain contexts for systems with complex data, roles, workflows, and integrations—from financial operations and clinical records to commerce, learning, and enterprise operations.",
+      "Our expertise is a method before it is an industry. We describe a business process as data in motion—what data exists, which nodes change it, by what rule, and who may read data, run processing, or change how processing works—and we give every domain its own vocabulary and taxonomy. The areas below show the method holds where data, roles, workflows, and integrations are complex.",
+    metaDescription:
+      "A method for describing complex domains: data, processing nodes, access rights, vocabulary, and taxonomy — proven in financial operations, clinics, commerce, learning, and enterprise systems.",
     evidence: "What we have already built",
     points: "What we understand and work with",
     situations: "When this expertise is relevant",
@@ -49,7 +51,9 @@ export const expertisePageCopy = {
     eyebrow: "Експертиза",
     title: "Експертиза",
     intro:
-      "Предметні області для систем зі складними даними, ролями, процесами та інтеграціями — від фінансових операцій і медичних записів до торгівлі, навчання та корпоративних операцій.",
+      "Наша експертиза — це насамперед метод, а не галузь. Бізнес-процес ми описуємо як рух даних: які дані існують, у яких вузлах вони змінюються, за яким правилом і хто має право читати дані, запускати обробку та змінювати саму обробку, — і для кожної галузі складаємо власний вокабуляр і таксономію. Напрями нижче показують, що метод витримує там, де дані, ролі, процеси та інтеграції складні.",
+    metaDescription:
+      "Метод опису складних доменів: дані, вузли обробки, права доступу, вокабуляр і таксономія — перевірений у фінансових операціях, клініках, торгівлі, навчанні та корпоративних системах.",
     evidence: "Що ми вже зробили",
     points: "Що ми розуміємо й з чим працюємо",
     situations: "Коли ця експертиза актуальна",

@@ -8,7 +8,7 @@ export const homeCopy = {
     deliveryEyebrow: "Delivery system",
     deliveryLead: "Documentation that runs.",
     deliveryBodyBefore:
-      "Flows become scenarios an agent walks through your product,",
+      "A described business process becomes scenarios an agent walks through your product,",
     deliveryBodyAfter: "so broken rules find us, not your users",
     deliveryLink: "How our delivery works",
     processEyebrow: "Process",
@@ -59,7 +59,7 @@ export const homeCopy = {
     teamEyebrow: "Team",
     teamTitle: "High-density team",
     teamBody:
-      "Senior engineers who own architecture, a product designer, and lean management without bureaucracy.",
+      "Senior engineers who own architecture, a product designer, and lean management without bureaucracy. The engineering core are KhNURE graduates, so systems are discussed in one language.",
     ctaTitle: "Discuss your project architecture?",
     ctaSubtitle: "Response from the team within 24 hours.",
     faqEyebrow: "F.A.Q.",
@@ -71,6 +71,12 @@ export const homeCopy = {
         question: "What can we start with?",
         answer:
           "We can begin with an idea, existing documentation, a working system, or a combination of them. We review the available context, identify gaps, and define the first valuable increment.",
+      },
+      {
+        id: "methodology",
+        question: "What method do you use to describe a system?",
+        answer:
+          "We describe a business process as data in motion: what data exists, which nodes change it, by what rule, and who may read data, run processing, or change how processing works. Alongside it we fix the domain vocabulary — what is an entity, what is configuration, what is shared classification — and build the taxonomy on top. Architecture follows as a graph of relations, with dependencies as directed vectors with weights and responsibilities separated into layers — modelling the data, maintaining it, and using it through an interface — and the model goes through an optimisation pass. Automation often improves the business logic itself, because a process described this way makes redundant steps visible. The engineering core here are KhNURE graduates, so this way of thinking about systems is shared, not personal.",
       },
       {
         id: "collaboration",
@@ -129,7 +135,7 @@ export const homeCopy = {
     deliveryEyebrow: "Система поставки",
     deliveryLead: "Документація як механізм поставки.",
     deliveryBodyBefore:
-      "Флоу стають сценаріями, які агент проходить у вашому продукті,",
+      "Описаний бізнес-процес стає сценаріями, які агент проходить у вашому продукті,",
     deliveryBodyAfter: "тому порушене правило знаходимо ми, а не ваші користувачі",
     deliveryLink: "Як працює наша поставка",
     processEyebrow: "Процес",
@@ -182,7 +188,7 @@ export const homeCopy = {
     teamEyebrow: "Команда",
     teamTitle: "Компактна команда",
     teamBody:
-      "Сеньйорні інженери, які відповідають і за архітектуру, продуктовий дизайнер і lean-менеджмент без бюрократії.",
+      "Сеньйорні інженери, які відповідають і за архітектуру, продуктовий дизайнер і lean-менеджмент без бюрократії. Інженерне ядро — випускники ХНУРЕ, тому про системи ми говоримо однією мовою.",
     ctaTitle: "Обговоримо архітектуру проєкту?",
     ctaSubtitle: "Відповідь команди протягом 24 годин.",
     faqEyebrow: "F.A.Q.",
@@ -194,6 +200,12 @@ export const homeCopy = {
         question: "З чого можна почати?",
         answer:
           "Можемо почати з ідеї, наявної документації, робочої системи або їх поєднання. Ми вивчаємо контекст, визначаємо прогалини та формуємо перший цінний інкремент.",
+      },
+      {
+        id: "methodology",
+        question: "Яким методом ви описуєте систему?",
+        answer:
+          "Бізнес-процес ми описуємо як рух даних: які дані існують, у яких вузлах вони змінюються, за яким правилом і хто має право читати дані, запускати обробку та змінювати саму обробку. Паралельно фіксуємо вокабуляр домену — що є сутністю, що конфігурацією, а що спільною класифікацією — і будуємо на ньому таксономію. З опису виростає архітектура: граф зв’язків, де залежності є спрямованими векторами з вагами, а відповідальності розведені по шарах — моделювання даних, їхнє ведення й користування ними через інтерфейс; модель проходить оптимізаційний прогін. Автоматизація часто покращує саму бізнес-логіку, бо описаний так процес показує зайві кроки. Інженерне ядро команди — випускники ХНУРЕ, тому такий погляд на системи в нас спільний, а не персональний.",
       },
       {
         id: "collaboration",

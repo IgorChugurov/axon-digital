@@ -14,6 +14,11 @@ export const deliveryCopy = {
     chainTitle: "One description, one chain",
     chain: [
       {
+        title: "Business process",
+        description:
+          "Before the first screen exists, the process is taken apart: what data lives in it, which nodes change that data, by what rule each change happens, and who may read data, run processing, or change how processing works. Responsibilities are separated into layers at the same time: modelling the data, maintaining it, and using it through an interface.",
+      },
+      {
         title: "Flow",
         description:
           "Describes the user’s path, the result they receive, and why that result matters to the business — in language a domain expert can verify.",
@@ -57,6 +62,7 @@ export const deliveryCopy = {
     boundaries: [
       "Automation updates facts; it does not rewrite decisions. Architecture contracts, recorded decisions and the intended state of the system change only through a person, and anything ambiguous is escalated instead of guessed.",
       "A check that has nothing to compare against says so instead of producing a verdict. This boundary is part of the process, not a matter of good intentions.",
+      "Describing a process shows where it repeats itself, but deciding to change the process is yours, not ours.",
     ],
     circuitTitle: "People and agents in one circuit",
     circuitBody:
@@ -108,6 +114,11 @@ export const deliveryCopy = {
     chainTitle: "Один опис — один ланцюг",
     chain: [
       {
+        title: "Бізнес-процес",
+        description:
+          "Ще до першого екрана процес розкладається на частини: які дані в ньому живуть, у яких вузлах вони змінюються, за яким правилом відбувається кожна зміна і хто має право читати дані, запускати обробку та змінювати саму обробку. Тоді ж відповідальності розводяться по шарах: моделювання даних, їхнє ведення й користування ними через інтерфейс.",
+      },
+      {
         title: "Флоу",
         description:
           "Описує шлях користувача, результат, який він отримує, і те, чому цей результат важливий для бізнесу — мовою, яку може перевірити експерт домену.",
@@ -151,6 +162,7 @@ export const deliveryCopy = {
     boundaries: [
       "Автоматика оновлює факти, але не переписує рішення. Архітектурні контракти, зафіксовані рішення та цільовий стан системи змінює лише людина, а все неоднозначне передається на розгляд, а не вгадується.",
       "Перевірка, якій немає з чим зіставляти, повідомляє про це, а не видає вердикт. Ця межа закладена в процес, а не залишена на добрі наміри.",
+      "Опис процесу показує, де він повторює сам себе, але рішення змінювати процес — ваше, не наше.",
     ],
     circuitTitle: "Люди й агенти в одному контурі",
     circuitBody:

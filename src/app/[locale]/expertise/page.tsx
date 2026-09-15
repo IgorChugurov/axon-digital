@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata({
     locale,
     title: `${copy.title} | Axon Digital`,
-    description: copy.intro,
+    description: copy.metaDescription,
     path: "/expertise",
   });
 }
