@@ -46,6 +46,16 @@ export function ExpertiseDetail({
             <p className="max-w-[793px] text-pretty text-[24px] leading-[1.15] tracking-[-0.72px] text-[#676767] lg:text-[32px] lg:tracking-[-1.28px]">
               {copy.hero}
             </p>
+            {copy.evidence ? (
+              <div className="max-w-[793px] border-l-2 border-green pl-6">
+                <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
+                  {pageCopy.evidence}
+                </p>
+                <p className="mt-3 text-pretty text-[18px] leading-[1.35] tracking-[-0.36px] text-[#676767] lg:text-[20px]">
+                  {copy.evidence}
+                </p>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>

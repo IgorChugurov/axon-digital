@@ -9,6 +9,8 @@ export type ExpertiseCopy = {
   title: string;
   summary: string;
   hero: string;
+  /** Projects behind the area, anonymised. Omitted where we have none. */
+  evidence?: string;
   points: ExpertisePoint[];
   situations: string[];
   outcome: string;
@@ -28,7 +30,8 @@ export const expertisePageCopy = {
     eyebrow: "Expertise",
     title: "Expertise",
     intro:
-      "Domain contexts for systems with complex data, roles, workflows, and integrations—from financial operations and clinical records to commerce, learning, property, and enterprise operations.",
+      "Domain contexts for systems with complex data, roles, workflows, and integrations—from financial operations and clinical records to commerce, learning, and enterprise operations.",
+    evidence: "What we have already built",
     points: "What we understand and work with",
     situations: "When this expertise is relevant",
     outcome: "System context",
@@ -46,7 +49,8 @@ export const expertisePageCopy = {
     eyebrow: "Експертиза",
     title: "Експертиза",
     intro:
-      "Предметні області для систем зі складними даними, ролями, процесами та інтеграціями — від фінансових операцій і медичних записів до торгівлі, навчання, нерухомості та корпоративних операцій.",
+      "Предметні області для систем зі складними даними, ролями, процесами та інтеграціями — від фінансових операцій і медичних записів до торгівлі, навчання та корпоративних операцій.",
+    evidence: "Що ми вже зробили",
     points: "Що ми розуміємо й з чим працюємо",
     situations: "Коли ця експертиза актуальна",
     outcome: "Контекст системи",
@@ -78,6 +82,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Systems for operational accounting, cash flow, settlements, inventory movements, postings, and financial reporting.",
         hero:
           "Our Fintech expertise is focused on financial operations and accounting—not banking or payment products. We work with systems that connect source records, operational activity, accounting entries, balances, and reports.",
+        evidence:
+          "From 2013 to 2022 we built and ran the operations platform of a vehicle service business: a workstation for every mechanic, warehouse and parts, work orders, customer settlements, and payroll. Operational records and their accounting representation followed one set of rules for nine years.",
         points: [
           {
             title: "Accounting data flows",
@@ -130,6 +136,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Системи для операційного обліку, руху коштів, взаєморозрахунків, складських операцій, проведень і фінансової звітності.",
         hero:
           "Наша Fintech-експертиза зосереджена на фінансових операціях і бухгалтерському обліку, а не на банківських чи платіжних продуктах. Ми працюємо із системами, що поєднують первинні записи, операційну діяльність, бухгалтерські проведення, залишки та звітність.",
+        evidence:
+          "З 2013 до 2022 року ми побудували й супроводжували операційну платформу автосервісу: робоче місце кожного механіка, склад і запчастини, наряд-замовлення, розрахунки з клієнтами та зарплати. Операційні записи та їхнє облікове відображення дев’ять років жили за одними правилами.",
         points: [
           {
             title: "Потоки облікових даних",
@@ -193,6 +201,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Systems for patient records, visits, scheduling, clinical documentation, roles, and connected administrative workflows.",
         hero:
           "We work with clinical and administrative systems that organise patient information, visits, schedules, documents, responsibilities, and related workflows. The focus is on making complex records and actions clear to the people who use and manage them.",
+        evidence:
+          "In 2024 and 2025 we delivered the portals of a clinic network as a multi-domain system: the public site, the administrative workspace, the management workspace, a file service, and the documentation each run as a separate application with its own roles inside one architecture.",
         points: [
           {
             title: "Patient records",
@@ -245,6 +255,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Системи для записів пацієнтів, візитів, розкладу, клінічної документації, ролей і пов’язаних адміністративних процесів.",
         hero:
           "Ми працюємо з клінічними та адміністративними системами, що впорядковують інформацію про пацієнтів, візити, розклад, документи, відповідальність і пов’язані процеси. Основна увага — зрозуміла робота зі складними записами та діями для користувачів і адміністраторів.",
+        evidence:
+          "У 2024–2025 роках ми зробили портали мережі клінік як мультидоменну систему: публічний сайт, адміністративна частина, керівна частина, файловий сервіс і документація працюють як окремі застосунки зі своїми ролями в межах однієї архітектури.",
         points: [
           {
             title: "Записи пацієнтів",
@@ -308,6 +320,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Systems connecting online storefronts, product catalogues, orders, inventory, sellers, and operational data.",
         hero:
           "We work with e-commerce systems that connect the customer-facing storefront with product, order, inventory, and seller operations. The scope may range from an individual online store to a marketplace with multiple participating sellers.",
+        evidence:
+          "Since 2013 we have been developing a platform whose single core is deployed as complete sites; a shopping-mall marketplace runs on it today. Catalogues, storefront journeys, and seller operations are configured per project instead of being rebuilt each time.",
         points: [
           {
             title: "Product catalogues",
@@ -360,6 +374,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Системи, що поєднують онлайн-магазини, каталоги товарів, замовлення, запаси, продавців та операційні дані.",
         hero:
           "Ми працюємо із системами електронної комерції, що поєднують клієнтську частину магазину з керуванням товарами, замовленнями, запасами та продавцями. Обсяг може охоплювати як окремий онлайн-магазин, так і маркетплейс із кількома продавцями.",
+        evidence:
+          "З 2013 року ми розвиваємо платформу, єдине ядро якої розгортається як повноцінні сайти; сьогодні на ній працює маркетплейс супермолу. Каталоги, шлях покупця та операції продавців налаштовуються під проєкт, а не переписуються щоразу заново.",
         points: [
           {
             title: "Каталоги товарів",
@@ -423,6 +439,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Complex internal systems with transactional operations, versioned subscriptions, multi-level access, traceable business events, and structured diagnostics.",
         hero:
           "We understand enterprise systems where access and available capabilities depend on organisational scope, subscription state, plan version, role, and entitlement. These systems must preserve historical meaning, coordinate related state changes, handle repeated or concurrent requests, and keep business history distinct from technical diagnostics.",
+        evidence:
+          "Our current work is an operations platform where the delivery pipeline is part of the product: scenario packages, runners, scheduled runs, and step-level reports live in its administrative workspace. Before that, from 2013 to 2022, we ran the full operational cycle of a vehicle service business, from the shop floor to payroll.",
         points: [
           {
             title: "Organisation-scoped subscriptions",
@@ -475,6 +493,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Складні внутрішні системи з транзакційними операціями, версійними підписками, багаторівневим доступом, простежуваною історією бізнес-подій і структурованою технічною діагностикою.",
         hero:
           "Ми розуміємо корпоративні системи, у яких доступні можливості залежать від організаційного контексту, стану підписки, версії плану, ролі та прав. Такі системи мають зберігати історичний зміст даних, узгоджувати пов’язані зміни стану, опрацьовувати повторні чи одночасні запити та відокремлювати історію бізнес-подій від технічної діагностики.",
+        evidence:
+          "Наша поточна робота — операційна платформа, у якій конвеєр поставки є частиною продукту: пакети сценаріїв, виконавці, запуски за розкладом і покрокові звіти живуть у її адміністративній частині. До того, з 2013 до 2022 року, ми провадили повний операційний цикл автосервісу — від цеху до розрахунку зарплат.",
         points: [
           {
             title: "Підписки в межах організації",
@@ -538,6 +558,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Systems connecting courses, schedules, live classes, access models, broadcast archives, learning activities, and institutional records.",
         hero:
           "We work with education platforms that connect learning administration with live delivery: schedules, classes, participant access, broadcasts organised within the platform, archived sessions, and related learning records.",
+        evidence:
+          "From 2019 to 2022 we built a learning platform with class scheduling, single-session access and subscriptions, broadcasts organised inside the platform, and an archive of recordings, so access rights, payments, and real-time delivery lived in one system.",
         points: [
           {
             title: "Courses and content",
@@ -590,6 +612,8 @@ export const expertiseAreas: ExpertiseArea[] = [
           "Системи, що поєднують курси, розклад, live-заняття, моделі доступу, архіви трансляцій, навчальні активності та інституційні записи.",
         hero:
           "Ми працюємо з освітніми платформами, що поєднують адміністрування навчання з проведенням live-занять: розклад, заняття, доступ учасників, трансляції всередині платформи, архівні записи та пов’язані навчальні дані.",
+        evidence:
+          "З 2019 до 2022 року ми зробили навчальну платформу з розкладом занять, разовим доступом і абонементами, трансляціями всередині платформи та архівом записів, тож права доступу, платежі й робота в реальному часі жили в одній системі.",
         points: [
           {
             title: "Курси й контент",
@@ -635,121 +659,6 @@ export const expertiseAreas: ExpertiseArea[] = [
         metaTitle: "Освітні та навчальні системи",
         metaDescription:
           "Експертиза у розкладах, live-навчанні, разовому й підписному доступі, архівах трансляцій та адмініструванні.",
-      },
-    },
-  },
-  {
-    id: "06",
-    slug: "real-estate-property-systems",
-    relatedServices: [
-      "web-app-development",
-      "business-automation",
-      "custom-admin-panels",
-    ],
-    copy: {
-      en: {
-        title: "Real Estate & Property Systems",
-        summary:
-          "Systems for structured property listings, availability, detailed and map-based search, enquiries, and role-specific operations.",
-        hero:
-          "We work with property systems that connect structured listings, availability, search, enquiries, and operational workspaces. Their workflows reflect the different needs and responsibilities of buyers, renters, owners, agencies, and platform operators.",
-        points: [
-          {
-            title: "Property listings",
-            description:
-              "Records for sale, rental, or other agreed property scenarios.",
-          },
-          {
-            title: "Structured attributes",
-            description:
-              "Location, property type, price, size, layout, floor, condition, amenities, and other searchable characteristics.",
-          },
-          {
-            title: "Availability and status",
-            description:
-              "Publication, review, availability, reservation, closure, and other domain-specific states.",
-          },
-          {
-            title: "Search and maps",
-            description:
-              "Detailed filters, geographical exploration, saved criteria, and location-related information.",
-          },
-          {
-            title: "Operational workspaces",
-            description:
-              "Role-specific tools for owners, agencies, and operators to manage listings, statuses, responses, and responsibilities.",
-          },
-          {
-            title: "Enquiries and participant workflows",
-            description:
-              "Connections between enquiries, properties, buyers or renters, owners, agencies, and platform operators.",
-          },
-        ],
-        situations: [
-          "Property information requires more structure than a basic catalogue can provide.",
-          "Users need to search by multiple property and location criteria.",
-          "Listings pass through review, publication, availability, and closure states.",
-          "Owners, agencies, and operators require different information and available actions.",
-          "Enquiries need to remain connected with properties and responsible participants.",
-          "The platform supports distinct buying, renting, listing, moderation, or operational workflows.",
-        ],
-        outcome:
-          "Depending on the agreed scope, the system may include a property catalogue, public search experience, map interface, enquiry workflow, owner or agency workspace, and operator tools. Its records, roles, states, relationships, and search rules reflect the selected property and operating model.",
-        metaTitle: "Real Estate & Property Systems",
-        metaDescription:
-          "Expertise in property listings, availability, detailed and map-based search, enquiries, and role-specific operations.",
-      },
-      uk: {
-        title: "Системи нерухомості та об’єктів",
-        summary:
-          "Системи для структурованих оголошень, доступності об’єктів, детального пошуку на мапі, звернень і рольових операцій.",
-        hero:
-          "Ми працюємо із системами нерухомості, що поєднують структуровані оголошення, доступність, пошук, звернення та операційні робочі простори. Їхні процеси враховують різні потреби й відповідальність покупців, орендарів, власників, агенцій та операторів платформи.",
-        points: [
-          {
-            title: "Оголошення про об’єкти",
-            description:
-              "Записи для продажу, оренди чи інших погоджених сценаріїв роботи з нерухомістю.",
-          },
-          {
-            title: "Структуровані характеристики",
-            description:
-              "Розташування, тип, ціна, площа, планування, поверх, стан, зручності та інші параметри пошуку.",
-          },
-          {
-            title: "Доступність і статуси",
-            description:
-              "Публікація, перевірка, доступність, резервування, закриття та інші предметні стани.",
-          },
-          {
-            title: "Пошук і мапи",
-            description:
-              "Детальні фільтри, географічний перегляд, збережені критерії та інформація про розташування.",
-          },
-          {
-            title: "Операційні робочі простори",
-            description:
-              "Рольові інструменти для власників, агенцій та операторів для керування оголошеннями, статусами й відповідальністю.",
-          },
-          {
-            title: "Звернення та процеси учасників",
-            description:
-              "Зв’язки між зверненнями, об’єктами, покупцями чи орендарями, власниками, агенціями та операторами.",
-          },
-        ],
-        situations: [
-          "Інформація про нерухомість потребує складнішої структури, ніж звичайний каталог.",
-          "Користувачам потрібен пошук за багатьма характеристиками об’єкта й розташування.",
-          "Оголошення проходять стани перевірки, публікації, доступності та закриття.",
-          "Власникам, агенціям та операторам потрібні різні дані й доступні дії.",
-          "Звернення мають залишатися пов’язаними з об’єктами та відповідальними учасниками.",
-          "Платформа підтримує окремі процеси купівлі, оренди, розміщення, модерації чи керування.",
-        ],
-        outcome:
-          "Залежно від погодженого обсягу система може охоплювати каталог нерухомості, публічний пошук, інтерфейс мапи, процес звернень, робочий простір власника чи агенції та інструменти оператора. Її записи, ролі, стани, зв’язки й правила пошуку відображають обрану модель роботи з нерухомістю.",
-        metaTitle: "Системи нерухомості та об’єктів",
-        metaDescription:
-          "Експертиза у структурованих оголошеннях, доступності об’єктів, пошуку на мапі, зверненнях і рольових операціях.",
       },
     },
   },
