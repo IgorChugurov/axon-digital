@@ -9,7 +9,7 @@ export const homeCopy = {
     deliveryEyebrow: "Delivery system",
     deliveryLead: "Documentation that runs.",
     deliveryBodyBefore:
-      "A described business process becomes scenarios an agent walks through your product,",
+      "Agents build from it and check the live product against the same source,",
     deliveryBodyAfter: "so broken rules find us, not your users",
     deliveryLink: "How our delivery works",
     processEyebrow: "Process",
@@ -137,7 +137,7 @@ export const homeCopy = {
     deliveryEyebrow: "Система поставки",
     deliveryLead: "Документація як механізм поставки.",
     deliveryBodyBefore:
-      "Описаний бізнес-процес стає сценаріями, які агент проходить у вашому продукті,",
+      "Агенти будують за нею і за нею ж перевіряють живий продукт,",
     deliveryBodyAfter: "тому порушене правило знаходимо ми, а не ваші користувачі",
     deliveryLink: "Як працює наша поставка",
     processEyebrow: "Процес",
