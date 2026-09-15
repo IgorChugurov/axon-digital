@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import type { HomeCopy } from "@/content/home";
-import { Plus, X } from "lucide-react";
+import { localeHref, type Locale } from "@/i18n/config";
+import { ArrowUpRight, Plus, X } from "lucide-react";
 
-export function Faq({ copy }: { copy: HomeCopy }) {
+export function Faq({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
@@ -66,6 +68,14 @@ export function Faq({ copy }: { copy: HomeCopy }) {
           );
         })}
       </ul>
+
+      <Link
+        href={localeHref(locale, "/delivery")}
+        className="mx-auto inline-flex items-center gap-2 text-[20px] leading-none tracking-[-0.4px] text-green transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+      >
+        {copy.faqLink}
+        <ArrowUpRight className="size-6" aria-hidden />
+      </Link>
     </section>
   );
 }

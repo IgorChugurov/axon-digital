@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Locale } from "@/i18n/config";
-import { chromeCopy, navItems, site } from "@/content/site";
+import { localeHref, type Locale } from "@/i18n/config";
+import { chromeCopy, navItems, site, teamNavItem } from "@/content/site";
 
 const footerNav = [
   navItems[0],
   navItems[2],
+  teamNavItem,
   navItems[3],
   navItems[1],
 ] as const;
@@ -40,18 +41,27 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
 
         <div className="flex flex-col gap-10 lg:gap-[72px]">
+          {/* The address is one unbreakable word and is longer than the one in
+              the design, so its size is bound to the column width instead of
+              the design's 64px, otherwise it overflows the column. */}
           <a
             href={`mailto:${site.email}`}
-            className="border-b border-[#939393] pb-1 text-3xl leading-normal tracking-[-0.02em] text-orange lg:text-[64px]"
+            className="border-b border-[#939393] pb-1 text-[min(6.6vw_-_4.8px,30px)] leading-normal tracking-[-0.02em] text-orange lg:text-[min(6.7vw_-_44.5px,54px)]"
           >
             {site.email}
           </a>
           <div>
             <p className="mb-3 text-[16px] tracking-[-0.32px]">{copy.map}</p>
-            <ul className="flex flex-wrap gap-x-10 gap-y-2 text-[16px] tracking-[-0.32px] text-[#939393] lg:justify-between lg:gap-x-0">
+            {/* Spreading the labels edge to edge only works once they fit on
+                one line, which the column allows from 1280 up. Below that they
+                keep a fixed gap and wrap. */}
+            <ul className="flex flex-wrap gap-x-10 gap-y-2 text-[16px] tracking-[-0.32px] text-[#939393] xl:justify-between xl:gap-x-0">
               {footerNav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-background">
+                  <Link
+                    href={localeHref(locale, item.href)}
+                    className="hover:text-background"
+                  >
                     {item.label[locale]}
                   </Link>
                 </li>
@@ -62,7 +72,7 @@ export function Footer({ locale }: { locale: Locale }) {
       </div>
       <p
         aria-hidden
-        className="pointer-events-none relative z-0 select-none px-2 text-center text-[18vw] leading-[1.1] tracking-tight text-background/[0.06] lg:bg-clip-text lg:text-[238px] lg:tracking-[-9.52px] lg:text-transparent lg:[background-image:linear-gradient(94.58deg,rgba(16,16,16,0.9)_0.58%,rgba(71,71,71,0.4)_52.31%,rgba(16,16,16,0.9)_99.73%)]"
+        className="pointer-events-none relative z-0 select-none px-2 text-center text-[min(13.6vw_-_4.3px,238px)] leading-[1.1] tracking-[-0.04em] text-background/[0.06] lg:bg-clip-text lg:text-transparent lg:[background-image:linear-gradient(94.58deg,rgba(16,16,16,0.9)_0.58%,rgba(71,71,71,0.4)_52.31%,rgba(16,16,16,0.9)_99.73%)]"
       >
         {site.name}
       </p>

@@ -1,10 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useTransition } from "react";
-import type { Locale } from "@/i18n/config";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { localeHref, stripLocale, type Locale } from "@/i18n/config";
 import { site } from "@/content/site";
-import { setLocale } from "@/i18n/set-locale";
 import { Globe } from "lucide-react";
 
 export function LanguageSwitcher({
@@ -14,27 +13,18 @@ export function LanguageSwitcher({
   current: Locale;
   className?: string;
 }) {
-  const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const pathname = usePathname();
   const next: Locale = current === "en" ? "uk" : "en";
 
-  function onToggle() {
-    startTransition(async () => {
-      await setLocale(next);
-      router.refresh();
-    });
-  }
-
   return (
-    <button
-      type="button"
-      disabled={isPending}
-      onClick={onToggle}
+    <Link
+      href={localeHref(next, stripLocale(pathname))}
+      hrefLang={next}
       className={`inline-flex items-center gap-1 text-base tracking-[-0.32px] text-ink ${className}`}
-      aria-label={`Language: ${site.localeLabel[current]}`}
+      aria-label={`Language: ${site.localeLabel[next]}`}
     >
       <Globe className="size-5" aria-hidden />
-      {site.localeLabel[current]}
-    </button>
+      {site.localeLabel[next]}
+    </Link>
   );
 }

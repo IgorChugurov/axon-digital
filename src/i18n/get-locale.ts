@@ -1,8 +1,7 @@
-import { cookies } from "next/headers";
-import { defaultLocale, isLocale, LOCALE_COOKIE, type Locale } from "./config";
+import { locale } from "next/root-params";
+import { defaultLocale, isLocale, type Locale } from "./config";
 
 export async function getLocale(): Promise<Locale> {
-  const cookieStore = await cookies();
-  const value = cookieStore.get(LOCALE_COOKIE)?.value;
+  const value = await locale();
   return isLocale(value) ? value : defaultLocale;
 }

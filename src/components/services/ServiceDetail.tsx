@@ -10,7 +10,7 @@ import {
   servicesPageCopy,
   type Service,
 } from "@/content/services";
-import type { Locale } from "@/i18n/config";
+import { localeHref, type Locale } from "@/i18n/config";
 
 export function ServiceDetail({
   service,
@@ -31,7 +31,7 @@ export function ServiceDetail({
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto flex max-w-[1376px] flex-col gap-12">
           <Link
-            href="/services"
+            href={localeHref(locale, "/services")}
             className="inline-flex w-fit items-center gap-2 text-[16px] text-green transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
           >
             <ArrowLeft className="size-5" aria-hidden />
@@ -149,6 +149,21 @@ export function ServiceDetail({
         </div>
       </section>
 
+      <section className="px-8 pb-[60px] lg:pb-[120px]">
+        <div className="mx-auto flex max-w-[1376px] flex-col gap-6 border-t border-muted pt-8 lg:flex-row lg:items-start lg:justify-between lg:gap-[48px]">
+          <p className="max-w-[793px] text-pretty text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]">
+            {pageCopy.deliveryNote}
+          </p>
+          <Link
+            href={localeHref(locale, "/delivery")}
+            className="inline-flex shrink-0 items-center gap-2 text-[20px] leading-none tracking-[-0.4px] text-green transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
+          >
+            {pageCopy.deliveryLink}
+            <ArrowUpRight className="size-6" aria-hidden />
+          </Link>
+        </div>
+      </section>
+
       <section className="px-8 py-[60px] text-center lg:py-[120px]">
         <div className="mx-auto flex max-w-[793px] flex-col items-center gap-6">
           <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
@@ -172,7 +187,7 @@ export function ServiceDetail({
             {related.map((item) => (
               <li key={item.slug} className="border-t border-muted">
                 <Link
-                  href={`/services/${item.slug}`}
+                  href={localeHref(locale, `/services/${item.slug}`)}
                   className="group flex items-center justify-between gap-6 px-8 py-8 transition-colors hover:bg-orange hover:text-background focus-visible:bg-orange focus-visible:text-background focus-visible:outline-none"
                 >
                   <span className="flex min-w-0 items-center gap-6 lg:gap-[140px]">

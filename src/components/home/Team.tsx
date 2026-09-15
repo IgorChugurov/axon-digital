@@ -3,6 +3,25 @@ import type { Locale } from "@/i18n/config";
 import type { HomeCopy } from "@/content/home";
 import { team } from "@/content/team";
 
+// Stand-in for members without a photo: a waist-up silhouette cropped by the
+// tile, so the card keeps the same weight as a real portrait.
+function Silhouette() {
+  return (
+    <svg
+      viewBox="0 0 160 208"
+      preserveAspectRatio="xMidYMax meet"
+      className="size-full"
+      aria-hidden
+    >
+      <circle cx="80" cy="72" r="34" fill="currentColor" />
+      <path
+        d="M80 116c-38 0-69 27-69 61v31h138v-31c0-34-31-61-69-61z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 function MemberCard({
   person,
   locale,
@@ -20,13 +39,24 @@ function MemberCard({
         }`}
       />
       <div className="relative h-[240px] w-40 shrink-0 min-[1440px]:absolute min-[1440px]:top-4 min-[1440px]:left-4 min-[1440px]:h-[208px] min-[1440px]:w-[160px]">
-        <Image
-          src={person.photo}
-          alt={person.name}
-          width={160}
-          height={208}
-          className="size-full object-cover grayscale"
-        />
+        {person.photo ? (
+          <Image
+            src={person.photo}
+            alt={person.name}
+            width={160}
+            height={208}
+            className="size-full object-cover grayscale"
+          />
+        ) : (
+          <div
+            aria-hidden
+            className={`flex size-full items-end justify-center bg-[#ecebe4] ${
+              accent === "green" ? "text-green/30" : "text-orange/30"
+            }`}
+          >
+            <Silhouette />
+          </div>
+        )}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </div>
       <div className="flex flex-1 flex-col justify-between p-4 min-[1440px]:contents">

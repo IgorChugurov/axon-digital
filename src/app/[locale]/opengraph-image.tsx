@@ -3,12 +3,20 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { homeCopy } from "@/content/home";
 import { site } from "@/content/site";
+import { defaultLocale, isLocale } from "@/i18n/config";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = site.name;
 
-export default async function OpengraphImage() {
+export default async function OpengraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const copy = homeCopy[isLocale(locale) ? locale : defaultLocale];
+
   const [fontData, mark] = await Promise.all([
     readFile(
       join(
@@ -45,7 +53,7 @@ export default async function OpengraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <span style={{ fontSize: 32, color: "#36632f" }}>
-            {homeCopy.en.heroEyebrow}
+            {copy.heroEyebrow}
           </span>
           <span
             style={{
@@ -54,10 +62,10 @@ export default async function OpengraphImage() {
               letterSpacing: "-0.04em",
             }}
           >
-            {homeCopy.en.heroTitle}
+            {copy.heroTitle}
           </span>
           <span style={{ fontSize: 32, color: "#969a96" }}>
-            {homeCopy.en.heroSubtitle}
+            {copy.heroSubtitle}
           </span>
         </div>
       </div>

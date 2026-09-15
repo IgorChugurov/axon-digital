@@ -4,12 +4,13 @@ import { ContactModalProvider } from "@/components/contact/ContactModalProvider"
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { getLocale } from "@/i18n/get-locale";
+import { locales } from "@/i18n/config";
 import { chromeCopy, site } from "@/content/site";
-import { pageMetadata } from "./shared-metadata";
-import "./globals.css";
+import { pageMetadata } from "../shared-metadata";
+import "../globals.css";
 
 const kharkivTone = localFont({
-  src: "../../public/fonts/Kharkiv-Tone-04-10-2020/KharkivTone-regular.ttf",
+  src: "../../../public/fonts/Kharkiv-Tone-04-10-2020/KharkivTone-regular.ttf",
   variable: "--font-kharkiv",
   display: "swap",
   weight: "400",
@@ -29,7 +30,11 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function RootLayout({ children }: LayoutProps<"/">) {
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({ children }: LayoutProps<"/[locale]">) {
   const locale = await getLocale();
 
   return (

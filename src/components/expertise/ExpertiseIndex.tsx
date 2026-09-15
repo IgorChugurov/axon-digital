@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import type { Locale } from "@/i18n/config";
+import { ContactCta } from "@/components/ui/ContactCta";
+import { localeHref, type Locale } from "@/i18n/config";
 import { expertiseAreas, expertisePageCopy } from "@/content/expertise";
 
 export function ExpertiseIndex({ locale }: { locale: Locale }) {
@@ -35,7 +36,7 @@ export function ExpertiseIndex({ locale }: { locale: Locale }) {
                 className="border-r border-b border-muted"
               >
                 <Link
-                  href={`/expertise/${area.slug}`}
+                  href={localeHref(locale, `/expertise/${area.slug}`)}
                   aria-label={`${pageCopy.openArea}: ${copy.title}`}
                   className="group relative flex min-h-[340px] flex-col justify-between gap-12 bg-cream p-8 transition-colors hover:bg-green hover:text-background focus-visible:bg-green focus-visible:text-background focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-orange"
                 >
@@ -62,6 +63,12 @@ export function ExpertiseIndex({ locale }: { locale: Locale }) {
           })}
         </ul>
       </section>
+
+      <ContactCta
+        locale={locale}
+        title={pageCopy.ctaTitle}
+        body={pageCopy.ctaBody}
+      />
     </>
   );
 }

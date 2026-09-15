@@ -1,32 +1,35 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 import type { HomeCopy } from "@/content/home";
+import { localeHref, type Locale } from "@/i18n/config";
 
 const FILL_FROM = "#C3C3C3";
 const FILL_TO = "#101010";
 
 type WordToken = { type: "word"; text: string; index: number };
 type StampToken = { type: "stamp"; src: string };
-type ApproachToken = WordToken | StampToken;
+type TeaserToken = WordToken | StampToken;
 
 function splitWords(text: string) {
   return text.trim().split(/\s+/).filter(Boolean);
 }
 
-function approachTokens(copy: HomeCopy): ApproachToken[] {
-  const tokens: ApproachToken[] = [];
+function teaserTokens(copy: HomeCopy): TeaserToken[] {
+  const tokens: TeaserToken[] = [];
   let index = 0;
 
-  for (const text of splitWords(copy.approachLead)) {
+  for (const text of splitWords(copy.deliveryLead)) {
     tokens.push({ type: "word", text, index: index++ });
   }
   tokens.push({ type: "stamp", src: "/icons/approach-rocket.svg" });
-  for (const text of splitWords(copy.approachBodyBefore)) {
+  for (const text of splitWords(copy.deliveryBodyBefore)) {
     tokens.push({ type: "word", text, index: index++ });
   }
   tokens.push({ type: "stamp", src: "/icons/approach-eye.svg" });
-  for (const text of splitWords(copy.approachBodyAfter)) {
+  for (const text of splitWords(copy.deliveryBodyAfter)) {
     tokens.push({ type: "word", text, index: index++ });
   }
 
@@ -61,13 +64,19 @@ function AnimatedWord({ text }: { text: string }) {
   );
 }
 
-export function Approach({ copy }: { copy: HomeCopy }) {
-  const tokens = approachTokens(copy);
+export function DeliveryTeaser({
+  copy,
+  locale,
+}: {
+  copy: HomeCopy;
+  locale: Locale;
+}) {
+  const tokens = teaserTokens(copy);
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 px-8 py-[92px] lg:py-[184px]">
       <p className="text-center text-[16px] leading-[1.1] tracking-[-0.64px] text-green">
-        {copy.approachEyebrow}
+        {copy.deliveryEyebrow}
       </p>
       <motion.div
         className="flex max-w-[1376px] flex-wrap items-center justify-center gap-x-4 text-[clamp(2rem,4.45vw,4rem)] leading-[1.1] tracking-[-0.03em]"
@@ -92,6 +101,13 @@ export function Approach({ copy }: { copy: HomeCopy }) {
           ),
         )}
       </motion.div>
+      <Link
+        href={localeHref(locale, "/delivery")}
+        className="mt-6 inline-flex items-center gap-2 text-[20px] leading-none tracking-[-0.4px] text-green transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange lg:text-[24px]"
+      >
+        {copy.deliveryLink}
+        <ArrowUpRight className="size-6" aria-hidden />
+      </Link>
     </section>
   );
 }

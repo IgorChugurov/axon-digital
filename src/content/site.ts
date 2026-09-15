@@ -1,16 +1,21 @@
 import type { Locale } from "@/i18n/config";
 
 export const navItems = [
-  { href: "/#about", label: { en: "About", uk: "Про нас" } },
+  { href: "/delivery", label: { en: "How we work", uk: "Як ми працюємо" } },
   { href: "/services", label: { en: "Services", uk: "Послуги" } },
   { href: "/expertise", label: { en: "Expertise", uk: "Експертиза" } },
   { href: "/#contact", label: { en: "Contacts", uk: "Контакти" } },
 ] as const;
 
+export const teamNavItem = {
+  href: "/#about",
+  label: { en: "Team", uk: "Команда" },
+} as const;
+
 export const site = {
   name: "Axon Digital",
   url: "https://axondigital.xyz",
-  email: "hello@axondigital.com",
+  email: "contact@axondigital.xyz",
   copyrightYear: 2026,
   localeLabel: { en: "EN", uk: "УКР" },
 } as const;

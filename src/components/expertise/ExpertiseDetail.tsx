@@ -7,7 +7,7 @@ import {
 } from "@/content/expertise";
 import { homeCopy } from "@/content/home";
 import { services, type Service } from "@/content/services";
-import type { Locale } from "@/i18n/config";
+import { localeHref, type Locale } from "@/i18n/config";
 
 export function ExpertiseDetail({
   area,
@@ -27,7 +27,7 @@ export function ExpertiseDetail({
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto flex max-w-[1376px] flex-col gap-12">
           <Link
-            href="/expertise"
+            href={localeHref(locale, "/expertise")}
             className="inline-flex w-fit items-center gap-2 text-[16px] text-green transition-colors hover:text-orange focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange"
           >
             <ArrowLeft className="size-5" aria-hidden />
@@ -127,7 +127,7 @@ export function ExpertiseDetail({
             {relatedServices.map((service) => (
               <li key={service.slug} className="border-t border-muted">
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={localeHref(locale, `/services/${service.slug}`)}
                   className="group flex items-center justify-between gap-6 px-8 py-8 transition-colors hover:bg-orange hover:text-background focus-visible:bg-orange focus-visible:text-background focus-visible:outline-none"
                 >
                   <span className="flex min-w-0 items-center gap-6 lg:gap-[140px]">

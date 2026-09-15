@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { buttonClassName } from "@/components/ui/Button";
-import { expertisePageCopy } from "@/content/expertise";
+import { servicesPageCopy } from "@/content/services";
+import { localeHref } from "@/i18n/config";
 import { getLocale } from "@/i18n/get-locale";
 
-export default async function ExpertiseNotFound() {
+export default async function ServiceNotFound() {
   const locale = await getLocale();
-  const copy = expertisePageCopy[locale];
+  const copy = servicesPageCopy[locale];
 
   return (
     <main className="flex flex-1 items-center px-8 py-[120px]">
@@ -23,11 +24,17 @@ export default async function ExpertiseNotFound() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/expertise" className={buttonClassName("green")}>
+          <Link
+            href={localeHref(locale, "/services")}
+            className={buttonClassName("green")}
+          >
             <ArrowLeft className="size-5" aria-hidden />
             {copy.back}
           </Link>
-          <Link href="/" className={buttonClassName("outline")}>
+          <Link
+            href={localeHref(locale, "/")}
+            className={buttonClassName("outline")}
+          >
             {copy.notFoundHome}
             <ArrowUpRight className="size-5" aria-hidden />
           </Link>

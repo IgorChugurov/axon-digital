@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { Locale } from "@/i18n/config";
+import { localeHref, type Locale } from "@/i18n/config";
 import { chromeCopy } from "@/content/site";
 import type { HomeCopy } from "@/content/home";
 import { services, servicesPageCopy } from "@/content/services";
@@ -118,7 +118,7 @@ export function Services({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
                   <div className="min-h-0 overflow-hidden">
                     <div className="flex flex-wrap gap-3 pt-6 lg:pl-[233px]">
                       <Link
-                        href={`/services/${item.slug}`}
+                        href={localeHref(locale, `/services/${item.slug}`)}
                         tabIndex={isOpen ? 0 : -1}
                         className={buttonClassName("inverse")}
                       >

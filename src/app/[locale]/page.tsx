@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Approach } from "@/components/home/Approach";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { DeliveryTeaser } from "@/components/home/DeliveryTeaser";
 import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
 import { HowWeWork } from "@/components/home/HowWeWork";
@@ -10,7 +10,7 @@ import { Team } from "@/components/home/Team";
 import { homeCopy } from "@/content/home";
 import { chromeCopy } from "@/content/site";
 import { getLocale } from "@/i18n/get-locale";
-import { pageMetadata } from "./shared-metadata";
+import { pageMetadata } from "../shared-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -31,13 +31,13 @@ export default async function Home() {
   return (
     <main className="flex-1">
       <Hero locale={locale} copy={copy} />
-      <Approach copy={copy} />
+      <DeliveryTeaser copy={copy} locale={locale} />
       <HowWeWork copy={copy} />
       <Services locale={locale} copy={copy} />
       <Partnership copy={copy} />
       <Team locale={locale} copy={copy} />
       <CtaBanner locale={locale} copy={copy} />
-      <Faq copy={copy} />
+      <Faq copy={copy} locale={locale} />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import type { Locale } from "@/i18n/config";
+import { ContactCta } from "@/components/ui/ContactCta";
+import { localeHref, type Locale } from "@/i18n/config";
 import { services, servicesPageCopy } from "@/content/services";
 
 export function ServicesIndex({ locale }: { locale: Locale }) {
@@ -32,7 +33,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
             return (
               <li key={service.slug} className="border-t border-muted">
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={localeHref(locale, `/services/${service.slug}`)}
                   aria-label={`${pageCopy.openService}: ${copy.title}`}
                   className="group grid gap-6 px-8 py-8 transition-colors hover:bg-orange hover:text-background focus-visible:bg-orange focus-visible:text-background focus-visible:outline-none lg:grid-cols-[93px_minmax(260px,443px)_minmax(0,1fr)_32px] lg:items-center lg:gap-[48px]"
                 >
@@ -55,6 +56,12 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
           })}
         </ul>
       </section>
+
+      <ContactCta
+        locale={locale}
+        title={pageCopy.ctaTitle}
+        body={pageCopy.ctaBody}
+      />
     </>
   );
 }

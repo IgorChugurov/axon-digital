@@ -20,4 +20,11 @@ export const team = [
     photo: "/team/kateryna-pashkova.jpeg",
     accent: "orange",
   },
+  {
+    id: "illia-kirieiev",
+    name: "Illia Kirieiev",
+    role: { en: "Product designer & flows", uk: "Продуктовий дизайнер і флоу" },
+    photo: null,
+    accent: "green",
+  },
 ] as const;

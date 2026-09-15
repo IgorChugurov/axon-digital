@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import type { Locale } from "@/i18n/config";
+import { localeHref, type Locale } from "@/i18n/config";
 import { chromeCopy, navItems, site } from "@/content/site";
 import { useContactModal } from "@/components/contact/ContactModalProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -25,17 +25,19 @@ export function Header({ locale }: { locale: Locale }) {
   return (
     <header className="sticky top-0 z-50 h-20 bg-background">
       <div className="relative mx-auto flex h-full max-w-[1440px] items-center justify-between px-8">
-        <Link href="/" className="relative z-10 flex items-center gap-2">
+        <Link
+          href={localeHref(locale, "/")}
+          className="relative z-10 flex items-center gap-2">
           <Image src="/brand/mark.svg" alt="" width={32} height={32} />
           <span className="whitespace-nowrap text-2xl leading-none tracking-[-0.96px] text-ink">
             {site.name}
           </span>
         </Link>
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 min-[1280px]:flex min-[1440px]:absolute min-[1440px]:left-1/2 min-[1440px]:-translate-x-1/2">
           {navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={localeHref(locale, item.href)}
               className="text-base leading-none tracking-[-0.32px] text-ink hover:text-green"
             >
               {item.label[locale]}
@@ -56,7 +58,7 @@ export function Header({ locale }: { locale: Locale }) {
           </div>
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center text-ink lg:hidden"
+            className="inline-flex size-11 items-center justify-center text-ink min-[1280px]:hidden"
             aria-label={copy.openMenu}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(true)}
@@ -66,7 +68,7 @@ export function Header({ locale }: { locale: Locale }) {
         </div>
       </div>
       {menuOpen ? (
-        <div className="fixed inset-0 z-[60] lg:hidden">
+        <div className="fixed inset-0 z-[60] min-[1280px]:hidden">
           <button
             type="button"
             className="absolute inset-0 bg-ink/40"
@@ -89,7 +91,7 @@ export function Header({ locale }: { locale: Locale }) {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={localeHref(locale, item.href)}
                   className="text-2xl font-medium text-ink"
                   onClick={() => setMenuOpen(false)}
                 >

@@ -1,53 +1,53 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ServiceDetail } from "@/components/services/ServiceDetail";
+import { ExpertiseDetail } from "@/components/expertise/ExpertiseDetail";
 import {
-  getService,
-  services,
-  servicesPageCopy,
-} from "@/content/services";
+  expertiseAreas,
+  expertisePageCopy,
+  getExpertiseArea,
+} from "@/content/expertise";
 import { getLocale } from "@/i18n/get-locale";
-import { pageMetadata } from "../../shared-metadata";
+import { pageMetadata } from "../../../shared-metadata";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return expertiseAreas.map((area) => ({ slug: area.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const [{ slug }, locale] = await Promise.all([params, getLocale()]);
-  const service = getService(slug);
+  const area = getExpertiseArea(slug);
 
-  if (!service) {
+  if (!area) {
     return {
-      title: `${servicesPageCopy[locale].notFoundTitle} | Axon Digital`,
+      title: `${expertisePageCopy[locale].notFoundTitle} | Axon Digital`,
     };
   }
 
-  const copy = service.copy[locale];
+  const copy = area.copy[locale];
 
   return pageMetadata({
     locale,
     title: `${copy.metaTitle} | Axon Digital`,
     description: copy.metaDescription,
-    path: `/services/${service.slug}`,
+    path: `/expertise/${area.slug}`,
   });
 }
 
-export default async function ServicePage({ params }: Props) {
+export default async function ExpertiseAreaPage({ params }: Props) {
   const [{ slug }, locale] = await Promise.all([params, getLocale()]);
-  const service = getService(slug);
+  const area = getExpertiseArea(slug);
 
-  if (!service) {
+  if (!area) {
     notFound();
   }
 
   return (
     <main className="flex-1">
-      <ServiceDetail service={service} locale={locale} />
+      <ExpertiseDetail area={area} locale={locale} />
     </main>
   );
 }

@@ -39,7 +39,7 @@ export const servicesPageCopy = {
       "We turn complex business logic into maintainable digital systems through living documentation, deliberate architecture, and iterative development.",
     whenNeeded: "When you need it",
     included: "What’s included",
-    process: "How we work",
+    process: "Process",
     result: "Result",
     related: "Related services",
     back: "All services",
@@ -47,6 +47,11 @@ export const servicesPageCopy = {
     notFoundTitle: "Service not found",
     notFoundBody: "The requested service does not exist.",
     notFoundHome: "Return home",
+    ctaTitle: "Not sure which service you need?",
+    ctaBody: "Describe the situation and we’ll suggest the starting point.",
+    deliveryNote:
+      "Every service runs on the same delivery system: documented flows become executable scenarios that agents check before you see an increment.",
+    deliveryLink: "How our delivery works",
   },
   uk: {
     eyebrow: "Послуги",
@@ -55,7 +60,7 @@ export const servicesPageCopy = {
       "Перетворюємо складну бізнес-логіку на зручні для розвитку цифрові системи через живу документацію, продуману архітектуру та ітеративну розробку.",
     whenNeeded: "Коли це потрібно",
     included: "Що входить",
-    process: "Як ми працюємо",
+    process: "Процес",
     result: "Результат",
     related: "Пов’язані послуги",
     back: "Усі послуги",
@@ -63,6 +68,11 @@ export const servicesPageCopy = {
     notFoundTitle: "Послугу не знайдено",
     notFoundBody: "Запитаної послуги не існує.",
     notFoundHome: "На головну",
+    ctaTitle: "Не впевнені, яка послуга потрібна?",
+    ctaBody: "Опишіть ситуацію, і ми запропонуємо, з чого почати.",
+    deliveryNote:
+      "Кожна послуга виконується тією самою системою поставки: описані флоу стають виконуваними сценаріями, які агенти перевіряють ще до того, як ви побачите інкремент.",
+    deliveryLink: "Як працює наша поставка",
   },
 } as const satisfies Record<Locale, Record<string, string>>;
 
@@ -755,6 +765,11 @@ export const services: Service[] = [
             description:
               "We document prompts, context sources, limitations, evaluation results, and operating rules.",
           },
+          {
+            title: "Agents that keep working",
+            description:
+              "Where the case calls for it, we set up agents that stay with the product after launch: walking documented flows, reporting divergences, and keeping the description current.",
+          },
         ],
         process: [
           {
@@ -830,6 +845,11 @@ export const services: Service[] = [
             title: "Спостережуваність і документація",
             description:
               "Документуємо промпти, джерела контексту, обмеження, результати оцінювання й операційні правила.",
+          },
+          {
+            title: "Агенти, які продовжують працювати",
+            description:
+              "Якщо сценарій цього вимагає, налаштовуємо агентів, які залишаються з продуктом після запуску: проходять описані флоу, повідомляють про розбіжності й підтримують опис актуальним.",
           },
         ],
         process: [

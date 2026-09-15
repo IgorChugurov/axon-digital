@@ -4,14 +4,15 @@ export const homeCopy = {
   en: {
     heroEyebrow: "Full-cycle engineering studio",
     heroTitle: "Engineering complex business logic since 2013",
-    heroSubtitle: "From architectural blueprints to functional systems.",
-    approachEyebrow: "Our Approach",
-    approachLead: "Working in 2-4 week sprints.",
-    approachBodyBefore:
-      "We focus on real business value rather than just code, ensuring transparency",
-    approachBodyAfter: "through regular demos",
+    heroSubtitle: "Architecture, code and checks grow from one description.",
+    deliveryEyebrow: "Delivery system",
+    deliveryLead: "Documentation that runs.",
+    deliveryBodyBefore:
+      "Flows become scenarios an agent walks through your product,",
+    deliveryBodyAfter: "so broken rules find us, not your users",
+    deliveryLink: "How our delivery works",
     processEyebrow: "Process",
-    processTitle: "How we work",
+    processTitle: "Four phases of a project",
     processSlides: [
       {
         id: "01",
@@ -49,18 +50,21 @@ export const homeCopy = {
     ],
     servicesEyebrow: "Services",
     servicesTitle: "Strategic Technology & Development Services",
-    partnershipEyebrow: "Technology",
-    partnershipTitle: "Partnership & Responsibility",
+    partnershipEyebrow: "Tools",
+    partnershipTitle: "Delivery tools and product stack",
     partnershipBody:
-      "We believe development is a collaborative process. We value the client as a domain expert and ensure stability via rigorous QA standards.",
+      "The first group runs our delivery: agents describe, check, and correct. The second builds your product. We replace a tool as soon as a stronger one appears, because every step it performs is defined independently of it.",
+    partnershipDeliveryLabel: "Delivery tools",
+    partnershipStackLabel: "Product stack",
     teamEyebrow: "Team",
     teamTitle: "High-density team",
     teamBody:
-      "Senior engineers, architects, and flexible-vision designers. Lean management without bureaucracy.",
+      "Senior engineers who own architecture, a product designer, and lean management without bureaucracy.",
     ctaTitle: "Discuss your project architecture?",
     ctaSubtitle: "Response from the team within 24 hours.",
     faqEyebrow: "F.A.Q.",
     faqTitle: "Common Questions, Clear Answers",
+    faqLink: "See how our delivery works",
     faq: [
       {
         id: "starting-point",
@@ -78,7 +82,13 @@ export const homeCopy = {
         id: "delivery-process",
         question: "How do you organise delivery?",
         answer:
-          "We work in 2–4-week sprints and deliver complete vertical slices. Each increment is designed, built, tested, demonstrated, and refined using feedback.",
+          "Every documented flow becomes an executable scenario, and agents check behaviour and design against it before an increment reaches you. On top of that we work in 2–4-week sprints and deliver complete vertical slices, each one designed, built, checked, demonstrated, and refined using your feedback.",
+      },
+      {
+        id: "permanent-agents",
+        question: "Do the agents keep working after launch?",
+        answer:
+          "Yes. Agents are set up on your documentation and scenarios, so they are specific to your product rather than generic. Under a support agreement they keep running after launch: walking flows after each change, reporting divergences, and keeping the description current as the system evolves.",
       },
       {
         id: "project-output",
@@ -115,14 +125,15 @@ export const homeCopy = {
   uk: {
     heroEyebrow: "Інженерна студія повного циклу",
     heroTitle: "Складну бізнес-логіку проєктуємо з 2013",
-    heroSubtitle: "Від архітектурних креслень до робочих систем.",
-    approachEyebrow: "Наш підхід",
-    approachLead: "Працюємо спринтами 2–4 тижні.",
-    approachBodyBefore:
-      "Ми фокусуємось на реальній бізнес-цінності, а не лише на коді, і забезпечуємо прозорість",
-    approachBodyAfter: "через регулярні демо",
+    heroSubtitle: "Архітектура, код і перевірки виростають з одного опису.",
+    deliveryEyebrow: "Система поставки",
+    deliveryLead: "Документація як механізм поставки.",
+    deliveryBodyBefore:
+      "Флоу стають сценаріями, які агент проходить у вашому продукті,",
+    deliveryBodyAfter: "тому порушене правило знаходимо ми, а не ваші користувачі",
+    deliveryLink: "Як працює наша поставка",
     processEyebrow: "Процес",
-    processTitle: "Як ми працюємо",
+    processTitle: "Чотири фази проєкту",
     processSlides: [
       {
         id: "01",
@@ -162,18 +173,21 @@ export const homeCopy = {
     ],
     servicesEyebrow: "Послуги",
     servicesTitle: "Стратегічні технологічні та розробницькі послуги",
-    partnershipEyebrow: "Технології",
-    partnershipTitle: "Партнерство і відповідальність",
+    partnershipEyebrow: "Інструменти",
+    partnershipTitle: "Інструменти поставки і продуктовий стек",
     partnershipBody:
-      "Розробка для нас — спільний процес. Ми цінуємо клієнта як експерта домену і забезпечуємо стабільність через суворий QA.",
+      "Перша група виконує нашу поставку: агенти описують, перевіряють і виправляють. Друга збирає ваш продукт. Інструмент ми змінюємо щойно з’являється сильніший, бо кожен крок, який він виконує, визначений незалежно від нього.",
+    partnershipDeliveryLabel: "Інструменти поставки",
+    partnershipStackLabel: "Продуктовий стек",
     teamEyebrow: "Команда",
     teamTitle: "Компактна команда",
     teamBody:
-      "Сеньйорні інженери, архітектори та дизайнери з гнучким баченням. Lean-менеджмент без бюрократії.",
+      "Сеньйорні інженери, які відповідають і за архітектуру, продуктовий дизайнер і lean-менеджмент без бюрократії.",
     ctaTitle: "Обговоримо архітектуру проєкту?",
     ctaSubtitle: "Відповідь команди протягом 24 годин.",
     faqEyebrow: "F.A.Q.",
     faqTitle: "Типові питання, зрозумілі відповіді",
+    faqLink: "Дивіться, як працює наша поставка",
     faq: [
       {
         id: "starting-point",
@@ -191,7 +205,13 @@ export const homeCopy = {
         id: "delivery-process",
         question: "Як ви організовуєте реалізацію?",
         answer:
-          "Працюємо спринтами 2–4 тижні та реалізуємо завершені вертикальні зрізи. Кожен інкремент проєктуємо, розробляємо, тестуємо, демонструємо й уточнюємо за відгуками.",
+          "Кожне описане флоу стає виконуваним сценарієм, і агенти перевіряють за ним поведінку та дизайн ще до того, як інкремент дійде до вас. Поверх цього ми працюємо спринтами 2–4 тижні та реалізуємо завершені вертикальні зрізи: кожен проєктуємо, розробляємо, перевіряємо, демонструємо й уточнюємо за вашими відгуками.",
+      },
+      {
+        id: "permanent-agents",
+        question: "Чи продовжують агенти працювати після запуску?",
+        answer:
+          "Так. Агентів налаштовують на вашу документацію та сценарії, тому вони специфічні для вашого продукту, а не універсальні. За угодою про підтримку вони працюють і після запуску: проходять флоу після кожної зміни, повідомляють про розбіжності й підтримують опис актуальним разом із розвитком системи.",
       },
       {
         id: "project-output",
@@ -229,11 +249,43 @@ export const homeCopy = {
 
 export type HomeCopy = (typeof homeCopy)[Locale];
 
+// Marks without a wordmark of their own get a caption.
+export const deliveryToolLogos = [
+  {
+    src: "/tools/cursor.svg",
+    alt: "Cursor",
+    width: 88,
+    height: 88,
+    caption: "Cursor",
+  },
+  { src: "/tools/grok.svg", alt: "Grok", width: 88, height: 88, caption: "Grok" },
+  {
+    src: "/tools/claude.svg",
+    alt: "Claude",
+    width: 88,
+    height: 88,
+    caption: "Claude",
+  },
+  {
+    src: "/tools/openai.svg",
+    alt: "OpenAI",
+    width: 88,
+    height: 88,
+    caption: "OpenAI",
+  },
+] as const;
+
 export const partnershipLogos = [
   { src: "/tech/typescript.svg", alt: "TypeScript", width: 182, height: 44 },
   { src: "/tech/nestjs.svg", alt: "NestJS", width: 174, height: 62 },
   { src: "/tech/nextjs.svg", alt: "Next.js", width: 172, height: 94 },
-  { src: "/tech/react.svg", alt: "React", width: 88, height: 78 },
+  {
+    src: "/tech/react.svg",
+    alt: "React",
+    width: 88,
+    height: 78,
+    caption: "React",
+  },
   { src: "/tech/postgresql.svg", alt: "PostgreSQL", width: 88, height: 88 },
   { src: "/tech/docker.svg", alt: "Docker", width: 186, height: 42 },
 ] as const;

@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { CtaBanner } from "@/components/home/CtaBanner";
 import { ExpertiseIndex } from "@/components/expertise/ExpertiseIndex";
 import { expertisePageCopy } from "@/content/expertise";
-import { homeCopy } from "@/content/home";
 import { getLocale } from "@/i18n/get-locale";
-import { pageMetadata } from "../shared-metadata";
+import { pageMetadata } from "../../shared-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -24,9 +22,6 @@ export default async function ExpertisePage() {
   return (
     <main className="flex-1">
       <ExpertiseIndex locale={locale} />
-      <div className="py-[60px] lg:py-[120px]">
-        <CtaBanner locale={locale} copy={homeCopy[locale]} />
-      </div>
     </main>
   );
 }

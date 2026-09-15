@@ -38,6 +38,9 @@ export const expertisePageCopy = {
     notFoundTitle: "Expertise area not found",
     notFoundBody: "The requested expertise area does not exist.",
     notFoundHome: "Return home",
+    ctaTitle: "Working in this domain?",
+    ctaBody:
+      "Let’s map your system and decide which flows to describe and check first.",
   },
   uk: {
     eyebrow: "Експертиза",
@@ -53,6 +56,9 @@ export const expertisePageCopy = {
     notFoundTitle: "Напрям експертизи не знайдено",
     notFoundBody: "Запитаного напряму експертизи не існує.",
     notFoundHome: "На головну",
+    ctaTitle: "Працюєте в цій галузі?",
+    ctaBody:
+      "Складімо карту вашої системи й визначмо, які флоу описати та перевіряти першими.",
   },
 } as const satisfies Record<Locale, Record<string, string>>;
 
