@@ -7,6 +7,7 @@ import {
   getExpertiseArea,
 } from "@/content/expertise";
 import { getLocale } from "@/i18n/get-locale";
+import { pageMetadata } from "../../shared-metadata";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -28,10 +29,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const copy = area.copy[locale];
 
-  return {
+  return pageMetadata({
+    locale,
     title: `${copy.metaTitle} | Axon Digital`,
     description: copy.metaDescription,
-  };
+    path: `/expertise/${area.slug}`,
+  });
 }
 
 export default async function ExpertiseAreaPage({ params }: Props) {

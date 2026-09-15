@@ -4,15 +4,18 @@ import { ExpertiseIndex } from "@/components/expertise/ExpertiseIndex";
 import { expertisePageCopy } from "@/content/expertise";
 import { homeCopy } from "@/content/home";
 import { getLocale } from "@/i18n/get-locale";
+import { pageMetadata } from "../shared-metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const copy = expertisePageCopy[locale];
 
-  return {
+  return pageMetadata({
+    locale,
     title: `${copy.title} | Axon Digital`,
     description: copy.intro,
-  };
+    path: "/expertise",
+  });
 }
 
 export default async function ExpertisePage() {

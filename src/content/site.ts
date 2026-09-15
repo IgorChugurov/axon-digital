@@ -9,6 +9,7 @@ export const navItems = [
 
 export const site = {
   name: "Axon Digital",
+  url: "https://axondigital.xyz",
   email: "hello@axondigital.com",
   copyrightYear: 2026,
   socials: [
@@ -22,6 +23,9 @@ export const site = {
 
 export const chromeCopy = {
   en: {
+    metaTitle: "Axon Digital — Full-cycle engineering studio",
+    metaDescription:
+      "Engineering complex business logic since 2013. From architectural blueprints to functional systems.",
     letsTalk: "Let’s Talk",
     ourServices: "Our services",
     openMenu: "Open menu",
@@ -46,6 +50,9 @@ export const chromeCopy = {
     pageStub: "This page is empty for now.",
   },
   uk: {
+    metaTitle: "Axon Digital — Інженерна студія повного циклу",
+    metaDescription:
+      "Складну бізнес-логіку проєктуємо з 2013. Від архітектурних креслень до робочих систем.",
     letsTalk: "Давайте поговоримо",
     ourServices: "Наші послуги",
     openMenu: "Відкрити меню",

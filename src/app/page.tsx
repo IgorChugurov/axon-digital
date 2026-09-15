@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Approach } from "@/components/home/Approach";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { Faq } from "@/components/home/Faq";
@@ -7,7 +8,21 @@ import { Partnership } from "@/components/home/Partnership";
 import { Services } from "@/components/home/Services";
 import { Team } from "@/components/home/Team";
 import { homeCopy } from "@/content/home";
+import { chromeCopy } from "@/content/site";
 import { getLocale } from "@/i18n/get-locale";
+import { pageMetadata } from "./shared-metadata";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const copy = chromeCopy[locale];
+
+  return pageMetadata({
+    locale,
+    title: copy.metaTitle,
+    description: copy.metaDescription,
+    path: "/",
+  });
+}
 
 export default async function Home() {
   const locale = await getLocale();

@@ -7,6 +7,7 @@ import {
   servicesPageCopy,
 } from "@/content/services";
 import { getLocale } from "@/i18n/get-locale";
+import { pageMetadata } from "../../shared-metadata";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -28,10 +29,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const copy = service.copy[locale];
 
-  return {
+  return pageMetadata({
+    locale,
     title: `${copy.metaTitle} | Axon Digital`,
     description: copy.metaDescription,
-  };
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServicePage({ params }: Props) {

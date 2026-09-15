@@ -4,7 +4,8 @@ import { ContactModalProvider } from "@/components/contact/ContactModalProvider"
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { getLocale } from "@/i18n/get-locale";
-import { site } from "@/content/site";
+import { chromeCopy, site } from "@/content/site";
+import { pageMetadata } from "./shared-metadata";
 import "./globals.css";
 
 const kharkivTone = localFont({
@@ -14,10 +15,19 @@ const kharkivTone = localFont({
   weight: "400",
 });
 
-export const metadata: Metadata = {
-  title: site.name,
-  description: "Full-cycle engineering studio. Engineering complex business logic since 2013.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const copy = chromeCopy[locale];
+
+  return {
+    metadataBase: new URL(site.url),
+    ...pageMetadata({
+      locale,
+      title: copy.metaTitle,
+      description: copy.metaDescription,
+    }),
+  };
+}
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const locale = await getLocale();
