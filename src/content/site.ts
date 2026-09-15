@@ -12,12 +12,6 @@ export const site = {
   url: "https://axondigital.xyz",
   email: "hello@axondigital.com",
   copyrightYear: 2026,
-  socials: [
-    { id: "instagram", href: "#", label: { en: "Instagram", uk: "Instagram" } },
-    { id: "whatsapp", href: "#", label: { en: "Whatsapp", uk: "Whatsapp" } },
-    { id: "telegram", href: "#", label: { en: "Telegram", uk: "Telegram" } },
-    { id: "linkedin", href: "#", label: { en: "LinkedIn", uk: "LinkedIn" } },
-  ],
   localeLabel: { en: "EN", uk: "УКР" },
 } as const;
 
@@ -43,11 +37,8 @@ export const chromeCopy = {
       "Your message has been sent. We’ll get back to you shortly.",
     modalError:
       "We couldn’t send your message. Please try again or email contact@axondigital.xyz.",
-    footerBlurb: "Discuss your project architecture. Response from the team within 24 hours.",
-    socials: "Socials",
     map: "Map",
     rights: "All rights reserved.",
-    pageStub: "This page is empty for now.",
   },
   uk: {
     metaTitle: "Axon Digital — Інженерна студія повного циклу",
@@ -70,11 +61,7 @@ export const chromeCopy = {
       "Ваше повідомлення надіслано. Ми зв’яжемося з вами найближчим часом.",
     modalError:
       "Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть на contact@axondigital.xyz.",
-    footerBlurb:
-      "Обговоримо архітектуру проєкту. Відповідь команди протягом 24 годин.",
-    socials: "Соцмережі",
     map: "Мапа",
     rights: "Усі права захищено.",
-    pageStub: "Ця сторінка поки порожня.",
   },
 } as const satisfies Record<Locale, Record<string, string>>;
