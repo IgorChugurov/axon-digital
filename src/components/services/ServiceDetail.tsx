@@ -43,7 +43,7 @@ export function ServiceDetail({
               <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
                 {pageCopy.eyebrow} / {service.id}
               </p>
-              <h1 className="text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+              <h1 className="text-balance text-[clamp(2rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
                 {copy.title}
               </h1>
             </div>
@@ -136,7 +136,7 @@ export function ServiceDetail({
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-balance text-[28px] leading-[1.1] tracking-[-1.12px] min-[1440px]:break-words">
+                  <h3 className="text-balance text-[28px] leading-[1.1] tracking-[-1.12px] min-[1440px]:text-[24px]">
                     {step.title}
                   </h3>
                   <p className="text-pretty text-[16px] leading-[1.3] tracking-[-0.32px] text-[#676767]">

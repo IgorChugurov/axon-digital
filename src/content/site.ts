@@ -44,6 +44,11 @@ export const chromeCopy = {
       "We couldn’t send your message. Please try again or email contact@axondigital.xyz.",
     map: "Map",
     rights: "All rights reserved.",
+    notFoundMetaTitle: "Page not found | Axon Digital",
+    notFoundTitle: "This page does not exist",
+    notFoundBody:
+      "The address may be mistyped, or the page has moved. Here is where the site actually lives.",
+    notFoundHome: "Go to home page",
   },
   uk: {
     metaTitle: "Axon Digital — Інженерна студія повного циклу",
@@ -68,5 +73,10 @@ export const chromeCopy = {
       "Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть на contact@axondigital.xyz.",
     map: "Мапа",
     rights: "Усі права захищено.",
+    notFoundMetaTitle: "Сторінку не знайдено | Axon Digital",
+    notFoundTitle: "Такої сторінки не існує",
+    notFoundBody:
+      "Можливо, в адресі є помилка або сторінку перенесли. Ось розділи, які на сайті справді є.",
+    notFoundHome: "На головну",
   },
 } as const satisfies Record<Locale, Record<string, string>>;

@@ -19,7 +19,7 @@ export function DeliveryPage({ locale }: { locale: Locale }) {
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {copy.eyebrow}
             </p>
-            <h1 className="max-w-[20ch] text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+            <h1 className="max-w-[20ch] text-balance text-[clamp(2rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
               {copy.title}
             </h1>
           </div>
@@ -39,7 +39,7 @@ export function DeliveryPage({ locale }: { locale: Locale }) {
 
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto grid max-w-[1376px] gap-12 lg:grid-cols-[443px_minmax(0,676px)] lg:justify-between">
-          <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+          <h2 className="text-balance text-[clamp(2.5rem,4vw,3.125rem)] leading-[1.1] tracking-[-0.04em]">
             {copy.problemTitle}
           </h2>
           <ul className="border-b border-muted">
@@ -180,7 +180,7 @@ export function DeliveryPage({ locale }: { locale: Locale }) {
 
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto grid max-w-[1376px] gap-12 lg:grid-cols-[443px_minmax(0,676px)] lg:justify-between">
-          <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+          <h2 className="text-balance text-[clamp(2.5rem,4vw,3.125rem)] leading-[1.1] tracking-[-0.04em]">
             {copy.toolsTitle}
           </h2>
           <p className="text-pretty text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]">
@@ -191,7 +191,7 @@ export function DeliveryPage({ locale }: { locale: Locale }) {
 
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto grid max-w-[1376px] gap-12 lg:grid-cols-[443px_minmax(0,676px)] lg:justify-between">
-          <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+          <h2 className="text-balance text-[clamp(2.5rem,4vw,3.125rem)] leading-[1.1] tracking-[-0.04em]">
             {copy.boundariesTitle}
           </h2>
           <div className="flex flex-col gap-6">
@@ -209,7 +209,7 @@ export function DeliveryPage({ locale }: { locale: Locale }) {
 
       <section className="px-8 py-[60px] lg:py-[120px]">
         <div className="mx-auto grid max-w-[1376px] gap-12 lg:grid-cols-[443px_minmax(0,676px)] lg:justify-between">
-          <h2 className="text-balance text-[clamp(2.5rem,4.5vw,4rem)] leading-[1.1] tracking-[-0.04em]">
+          <h2 className="text-balance text-[clamp(2.5rem,4vw,3.125rem)] leading-[1.1] tracking-[-0.04em]">
             {copy.circuitTitle}
           </h2>
           <p className="text-pretty text-[20px] leading-[1.2] tracking-[-0.6px] text-[#676767] lg:text-[24px]">

@@ -31,15 +31,29 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Long single words in Ukrainian text exceed the fixed columns at large type
-   sizes. Both rules engage only when a word cannot fit as it is. */
+/* Last resort for a word that fits nowhere, such as a long address. */
 h1,
 h2,
 h3,
 p,
 li {
-  hyphens: auto;
   overflow-wrap: break-word;
+}
+
+/* On phones the columns are too narrow for long words, so text is hyphenated
+   there. Wider layouts keep the typography of the design and get the room for
+   long words from their own type sizes instead. Unlike break-word, anywhere
+   also lets a block shrink below the width of its longest word, which the
+   headings of the cover blocks need at 360. */
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    hyphens: auto;
+    overflow-wrap: anywhere;
+  }
 }
 
 @keyframes globe-spin {

@@ -95,7 +95,7 @@ export function Team({ locale, copy }: { locale: Locale; copy: HomeCopy }) {
             {copy.teamTitle}
           </h2>
         </div>
-        <p className="max-w-[676px] text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767] lg:text-right">
+        <p className="max-w-[676px] text-pretty text-[24px] leading-[1.1] tracking-[-0.72px] text-[#676767] lg:max-w-[520px] lg:text-right xl:max-w-[676px]">
           {copy.teamBody}
         </p>
       </div>

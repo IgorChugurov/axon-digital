@@ -15,7 +15,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
             <p className="text-[16px] leading-[1.2] tracking-[-0.64px] text-green">
               {pageCopy.eyebrow}
             </p>
-            <h1 className="max-w-[18ch] text-balance text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+            <h1 className="max-w-[18ch] text-balance text-[clamp(2rem,6vw,5rem)] leading-[1.05] tracking-[-0.04em] text-ink">
               {pageCopy.title}
             </h1>
           </div>

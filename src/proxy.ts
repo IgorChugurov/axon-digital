@@ -1,6 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, locales } from "@/i18n/config";
 
+// The global 404 renders outside the locale segment, so it cannot read the
+// route params. The locale travels to it in this header instead.
+const localeHeader = "x-locale";
+
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -12,17 +16,21 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  const isPrefixed = locales.some(
+  const prefixed = locales.find(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
   );
 
-  if (isPrefixed) {
-    return NextResponse.next();
+  if (prefixed) {
+    const headers = new Headers(request.headers);
+    headers.set(localeHeader, prefixed);
+    return NextResponse.next({ request: { headers } });
   }
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.rewrite(url);
+  const headers = new Headers(request.headers);
+  headers.set(localeHeader, defaultLocale);
+  return NextResponse.rewrite(url, { request: { headers } });
 }
 
 export const config = {
