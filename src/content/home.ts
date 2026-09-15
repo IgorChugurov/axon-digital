@@ -2,9 +2,10 @@ import type { Locale } from "@/i18n/config";
 
 export const homeCopy = {
   en: {
-    heroEyebrow: "Full-cycle engineering studio",
-    heroTitle: "Engineering complex business logic since 2013",
-    heroSubtitle: "Architecture, code and checks grow from one description.",
+    heroEyebrow: "Full-cycle engineering studio since 2013",
+    heroTitle: "First the process, then the code",
+    heroSubtitle:
+      "Data, rules and access rights first — the system and its checks grow from that description.",
     deliveryEyebrow: "Delivery system",
     deliveryLead: "Documentation that runs.",
     deliveryBodyBefore:
@@ -129,9 +130,10 @@ export const homeCopy = {
     ],
   },
   uk: {
-    heroEyebrow: "Інженерна студія повного циклу",
-    heroTitle: "Складну бізнес-логіку проєктуємо з 2013",
-    heroSubtitle: "Архітектура, код і перевірки виростають з одного опису.",
+    heroEyebrow: "Інженерна студія повного циклу з 2013",
+    heroTitle: "Спочатку процес, потім код",
+    heroSubtitle:
+      "Спершу дані, правила й права доступу — з цього опису виростають і система, і її перевірки.",
     deliveryEyebrow: "Система поставки",
     deliveryLead: "Документація як механізм поставки.",
     deliveryBodyBefore:

@@ -24,7 +24,7 @@ export const chromeCopy = {
   en: {
     metaTitle: "Axon Digital — Full-cycle engineering studio",
     metaDescription:
-      "Engineering complex business logic since 2013. From architectural blueprints to functional systems.",
+      "We take a business process apart into data, rules and access rights, then build the system and its checks from that description.",
     letsTalk: "Let’s Talk",
     ourServices: "Our services",
     openMenu: "Open menu",
@@ -53,7 +53,7 @@ export const chromeCopy = {
   uk: {
     metaTitle: "Axon Digital — Інженерна студія повного циклу",
     metaDescription:
-      "Складну бізнес-логіку проєктуємо з 2013. Від архітектурних креслень до робочих систем.",
+      "Розбираємо бізнес-процес на дані, правила й права доступу, а далі з цього опису будуємо систему та її перевірки.",
     letsTalk: "Давайте поговоримо",
     ourServices: "Наші послуги",
     openMenu: "Відкрити меню",
